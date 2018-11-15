@@ -3,7 +3,8 @@ package hu.ibello.tests.ibellohu.steps;
 import hu.ibello.core.Name;
 import hu.ibello.tests.ibellohu.pages.PersonalPage;
 
-public class PersonalPageSteps {
+@Name("Személyes oldal")
+public class PersonalPageSteps extends AbstractSteps{
 	
 	private PersonalPage personalPage;
 	

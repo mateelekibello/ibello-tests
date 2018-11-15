@@ -22,5 +22,3 @@ Step: Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó
 	When Bejelentkező oldal: Beírom a felhasználónevet
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
-
-Step: Személyes oldal: A bejelentkezett felhasználó adatai jelennek meg
