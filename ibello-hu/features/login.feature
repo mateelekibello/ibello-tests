@@ -10,3 +10,13 @@ Feature: Login
 		Given Bejelentkezés: Az ibello bejelentkező oldalán vagyok
 		When Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
 		Then Bejelentkezés: A bejelentkezés sikeres
+
+	Scenario: Nem létező felhasználó bejelentkezése sikertelen
+		Given Bejelentkezés: Az ibello bejelentkező oldalán vagyok
+		When Bejelentkezés: Megpróbálok bejelentkezni egy nem létező felhasználóval
+		Then Bejelentkezés: A bejelentkezés sikertelen
+
+	Scenario: Regisztrált felhasználó belépése e-mail-címmel sikeres
+		Given Bejelentkezés: Az ibello bejelentkező oldalán vagyok
+		When Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó e-mail-címével
+		Then Bejelentkezés: A bejelentkezés sikeres

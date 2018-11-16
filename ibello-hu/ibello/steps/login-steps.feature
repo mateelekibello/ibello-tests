@@ -35,3 +35,7 @@ Step: Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
 
+Step: Bejelentkezés: Kijelentkezek a Személyes oldalról
+	Given Személyes oldal: Kijelentkezek a Személyes oldalról
+	Then Navigáció: Megnyitom a bejelentkező oldalt
+
