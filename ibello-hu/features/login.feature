@@ -10,4 +10,3 @@ Feature: Login
 		Given Bejelentkezés: Az ibello bejelentkező oldalán vagyok
 		When Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
 		Then Bejelentkezés: A bejelentkezés sikeres
-

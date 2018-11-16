@@ -23,19 +23,6 @@ Step: Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
 
-<<<<<<< HEAD
-Step: Bejelentkezés: Belépek a licence tulajdonosával
-	Given Tesztadat: A felhasználónak legyen licence
-	When Bejelentkező oldal: Beírom a  tulajdonos felhasználónevet
-	When Bejelentkező oldal: Beírom a  tulajdonos jelszavát
-	Then Bejelentkező oldal: Bejelentkezek
-
-Step: Bejelentkezés: Belépek a licence felhasználójával
-	Given Tesztadat: A felhasználónak legyen kapott licence
-	When Bejelentkező oldal: Beírom a felhasználó felhasználónevet
-	And Bejelentkező oldal: Beírom a felhasználó jelszavát
-	Then Bejelentkező oldal: Bejelentkezek
-=======
 Step: Bejelentkezés: Megpróbálok bejelentkezni egy nem létező felhasználóval
 	Given Tesztadat: Az aktuális felhasználói adatok azonosítója legyen "nonexisting"
 	When Bejelentkező oldal: Beírom a felhasználónevet
@@ -47,4 +34,3 @@ Step: Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó
 	When Bejelentkező oldal: Beírom az e-mail-címet
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
->>>>>>> 60238c3ed517cee87702f26dbff56d9c41f20316
