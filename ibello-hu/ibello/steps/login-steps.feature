@@ -34,3 +34,4 @@ Step: Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó
 	When Bejelentkező oldal: Beírom az e-mail-címet
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
+
