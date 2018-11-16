@@ -21,3 +21,15 @@ Step: Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó
 	When Bejelentkező oldal: Beírom a felhasználónevet
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
+
+Step: Bejelentkezés: Belépek a licence tulajdonosával
+	Given Tesztadat: A felhasználónak legyen licence
+	When Bejelentkező oldal: Beírom a  tulajdonos felhasználónevet
+	When Bejelentkező oldal: Beírom a  tulajdonos jelszavát
+	Then Bejelentkező oldal: Bejelentkezek
+
+Step: Bejelentkezés: Belépek a licence felhasználójával
+	Given Tesztadat: A felhasználónak legyen kapott licence
+	When Bejelentkező oldal: Beírom a felhasználó felhasználónevet
+	And Bejelentkező oldal: Beírom a felhasználó jelszavát
+	Then Bejelentkező oldal: Bejelentkezek
