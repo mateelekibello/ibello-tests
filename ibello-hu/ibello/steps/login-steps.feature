@@ -22,3 +22,15 @@ Step: Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó
 	When Bejelentkező oldal: Beírom a felhasználónevet
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
+
+Step: Bejelentkezés: Megpróbálok bejelentkezni egy nem létező felhasználóval
+	Given Tesztadat: Az aktuális felhasználói adatok azonosítója legyen "nonexisting"
+	When Bejelentkező oldal: Beírom a felhasználónevet
+	When Bejelentkező oldal: Beírom a jelszót
+	When Bejelentkező oldal: Bejelentkezek
+
+Step: Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó e-mail-címével
+	Given Tesztadat: Az aktuális felhasználói adatok azonosítója legyen "valid"
+	When Bejelentkező oldal: Beírom az e-mail-címet
+	When Bejelentkező oldal: Beírom a jelszót
+	When Bejelentkező oldal: Bejelentkezek
