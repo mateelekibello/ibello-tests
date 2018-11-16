@@ -31,6 +31,12 @@ public class LoginPageSteps extends AbstractSteps {
 		loginPage.felhasználóNév(userName);
 	}
 	
+	@Name("Beírom az e-mail-címet")
+	public void beírom_az_email_címet() {
+		String email = testData.user.email;
+		loginPage.emailCím(email);
+	}
+	
 	@Name("Beírom a jelszót")
 	public void beírom_a_jelszót() {
 		String password = testData.user.password;

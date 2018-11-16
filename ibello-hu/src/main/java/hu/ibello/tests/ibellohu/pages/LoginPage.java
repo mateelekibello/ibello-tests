@@ -41,6 +41,10 @@ public class LoginPage extends AbstractPage {
 		doWith(useridField).setValue(userName);
 	}
 	
+	public void emailCím(String email) {
+		doWith(useridField).setValue(email);
+	}
+	
 	public void jelszó(String password) {
 		doWith(passwordField).setValue(password);
 	}
