@@ -16,5 +16,8 @@ public class TestDataSteps extends AbstractSteps {
 		testData.user = new User();
 		testData.user.username = getConfigurationValue("user." + userId + ".name").toString();
 		testData.user.password = getConfigurationValue("user." + userId + ".password").toString();
+		testData.user.email = getConfigurationValue("user." + userId + ".email").toString();
+		testData.user.firstname = getConfigurationValue("user." + userId + ".firstname").toString();
+		testData.user.lastname = getConfigurationValue("user." + userId + ".lastname").toString();
 	}
 }
