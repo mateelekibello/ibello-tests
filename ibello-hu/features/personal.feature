@@ -2,5 +2,8 @@
 Feature: Personal
 
 	Scenario: Személyes adatok átírása
-		Given Bejelentkezés: Kijelentkezek a Személyes oldalról
-		Then Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
+		Given Személyes: Felhasználói adatok átírása
+		Given Személyes: Kijelentkezek a Személyes oldalról
+		Given Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
+		Given Személyes: Az átírt adatok ellenőrzése
+		Given Személyes: Felhasználói adatok visszaállítása
