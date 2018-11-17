@@ -5,7 +5,7 @@ Step: Bejelentkezés: Az ibello bejelentkező oldalán vagyok
 	When Navigáció: Megnyitom a bejelentkező oldalt
 
 Step: Bejelentkezés: Megpróbálok bejelentkezni egy nem regisztrált felhasználóval
-	Given Tesztadat: Az aktuális felhasználói adatok azonosítója legyen "invalid"
+	Given Tesztadat: Az aktuális személyes adatok azonosítója legyen "invalid"
 	When Bejelentkező oldal: Beírom a felhasználónevet
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
@@ -24,7 +24,7 @@ Step: Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó
 	When Bejelentkező oldal: Bejelentkezek
 
 Step: Bejelentkezés: Megpróbálok bejelentkezni egy nem létező felhasználóval
-	Given Tesztadat: Az aktuális felhasználói adatok azonosítója legyen "nonexisting"
+	Given Tesztadat: Az aktuális belépési adatok azonosítója legyen "nonexisting"
 	When Bejelentkező oldal: Beírom a felhasználónevet
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
