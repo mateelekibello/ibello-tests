@@ -3,26 +3,33 @@ Feature: Licenc kezelés
 
 	@tulajdonos @ervenyes @engedelyez
 	Scenario: Tulajdonos érvényes licencet engedélyez
-		Given Licencek: megnyitom a licencek oldalt
-		When Licencek: engedélyezem a licencem
+		Given Licencek: bejelentkezem tulajdonosként
+		And Licencek: van érvényes licenc
+		When Licencek: megnyitom a licencek oldalt
+		And Licencek: engedélyezem a licencem
 		Then Licencek: licenc engedélyezve lesz a felhasználónak
 
 	@tulajdonos @lejart @engedelyez
 	Scenario: Tulajdonos lejárt licencet engedélyez
-		Given Licencek: megnyitom a licencek oldalt
-		When Licencek: engedélyezem a lejárt licencem
+		Given Licencek: bejelentkezem tulajdonosként
+		And Licencek: van lejárt licenc
+		When Licencek: megnyitom a licencek oldalt
+		And Licencek: engedélyezem a lejárt licencem
 		Then Licencek: lejárt licenc nem engedélyezhető
 
 	@tulajdonos @ervenyes @visszavon
 	Scenario: Tulajdonos érvényes licencet visszavon
-		Given Licencek: megnyitom a licencek oldalt
-		When Licencek: visszavonom az engedélyezett licencem
+		Given Licencek: bejelentkezem tulajdonosként
+		And Licencek: van engedélyezett licencem
+		When Licencek: megnyitom a licencek oldalt
+		And Licencek: visszavonom az engedélyezett licencem
 		Then Licencek: licenc visszavonva a felhasználótól
 
 	@felhasznalo @visszaad
 	Scenario: Felhasználó licencet visszaad
-		Given Licencek: megnyitom a licencek oldalt
-		When Licencek: visszaadom a nekem adott licencet
+		Given Licencek: bejelentkezem felhasználóként
+		When Licencek: megnyitom a licencek oldalt
+		And Licencek: visszaadom a nekem adott licencet
 		Then Licencek: a licenc visszakerül a tulajdonoshoz
 		And Licencek: a licenc törlődik a listáról
 
@@ -39,8 +46,8 @@ Feature: Licenc kezelés
 		Then Licencek: a lejárt licencek is megjelennek a listában
 
 	Scenario: Licenc megrendelése második lépés
-		Given Licencek: megnyitott licenc ablak
-		When Licencek: választok egy előfizetést
+		Given Licencek: megnyitott licenc megrendelő ablak
+		When Licencek: választok előfizetést
 		And Licencek: áttekintem a megrendelést
 		And Licencek: véglegesítem a megrendelést
 		Then Licencek: a licenc meg van rendelve
