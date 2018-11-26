@@ -7,3 +7,9 @@ Feature: Personal
 		Given Személyes: Megpróbálok bejelentkezni egy regisztrált felhasználóval
 		Given Személyes: Az átírt adatok ellenőrzése
 		Given Személyes: Felhasználói adatok visszaállítása
+
+	Scenario: Bejelentkezés
+		When Személyes: Megpróbálok bejelentkezni egy regisztrált felhasználóval
+
+	Scenario: Kijelentkezés
+		When Személyes: Kijelentkezek a Személyes oldalról

@@ -1,0 +1,19 @@
+{
+	"username": "test_valid",
+	"email": "test_valid@nowhere.hu",
+	"firstname": "test",
+	"lastname": "valid",
+	"organisation": "",
+	"billingAddress": {
+		"firstname": "",
+		"lastname": "",
+		"organisation": "",
+		"taxNumber: "",
+		"country: "",
+		"city: "",
+		"state: "",
+		"zipCode: "",
+		"address1: "",
+		"address2: ""
+	}
+}

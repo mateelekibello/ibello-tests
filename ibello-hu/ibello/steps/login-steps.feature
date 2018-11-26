@@ -5,7 +5,7 @@ Step: Bejelentkezés: Az ibello bejelentkező oldalán vagyok
 	When Navigáció: Megnyitom a bejelentkező oldalt
 
 Step: Bejelentkezés: Megpróbálok bejelentkezni egy nem regisztrált felhasználóval
-	Given Tesztadat: Az aktuális személyes adatok azonosítója legyen "invalid"
+	Given Tesztadat: Az Aktuális Felhasználó Azonosítója Legyen "invalid"
 	When Bejelentkező oldal: Beírom a felhasználónevet
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
@@ -16,22 +16,22 @@ Step: Bejelentkezés: A bejelentkezés sikertelen
 
 Step: Bejelentkezés: A bejelentkezés sikeres
 	Then Navigáció: Megnyílik az ibello Személyes oldala
-	Then Személyes oldal: A bejelentkezett felhasználó adatai jelennek meg
+	Then Személyes oldal: A beállított felhasználói adatok jelennek meg
 
 Step: Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
-	Given Tesztadat: Az aktuális felhasználói adatok azonosítója legyen "valid"
+	Given Tesztadat: Az Aktuális Felhasználó Azonosítója Legyen "valid"
 	When Bejelentkező oldal: Beírom a felhasználónevet
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
 
 Step: Bejelentkezés: Megpróbálok bejelentkezni egy nem létező felhasználóval
-	Given Tesztadat: Az aktuális belépési adatok azonosítója legyen "nonexisting"
+	Given Tesztadat: Az Aktuális Felhasználó Azonosítója Legyen "nonexisting"
 	When Bejelentkező oldal: Beírom a felhasználónevet
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
 
 Step: Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó e-mail-címével
-	Given Tesztadat: Az aktuális felhasználói adatok azonosítója legyen "valid"
+	Given Tesztadat: Az Aktuális Felhasználó Azonosítója Legyen "valid"
 	When Bejelentkező oldal: Beírom az e-mail-címet
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
