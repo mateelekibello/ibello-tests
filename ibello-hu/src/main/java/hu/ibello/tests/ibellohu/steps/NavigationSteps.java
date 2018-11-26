@@ -24,6 +24,11 @@ public class NavigationSteps extends AbstractSteps {
 		loginPage.ellenőrzés_hogy_az_oldal_megnyílt();
 	}
 	
+	@Name("Megnyílik az ibello Bejelentkező oldala")
+	public void megnyílik_az_ibello_bejelentkező_oldala() {
+		loginPage.ellenőrzés_hogy_az_oldal_megnyílt();
+	}
+	
 	@Name("Megnyílik az ibello Személyes oldala")
 	public void megnyílik_az_ibello_személyes_oldala() {
 		personalPage.ellenőrzés_hogy_az_oldal_megnyílt();

@@ -1,4 +1,5 @@
 # namespace: Bejelentkezés
+@login
 Feature: Login
 
 	Scenario: Nem regisztrált felhasználó belépése sikertelen
@@ -10,6 +11,7 @@ Feature: Login
 		Given Bejelentkezés: Az ibello bejelentkező oldalán vagyok
 		When Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
 		Then Bejelentkezés: A bejelentkezés sikeres
+		Given Bejelentkezés: Kijelentkezek a Személyes oldalról
 
 	Scenario: Nem létező felhasználó bejelentkezése sikertelen
 		Given Bejelentkezés: Az ibello bejelentkező oldalán vagyok

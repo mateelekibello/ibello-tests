@@ -52,4 +52,9 @@ public class LoginPageSteps extends AbstractSteps {
 	public void felugrik_a_sikertelen_bejelentkezés_üzenetablak() {
 		loginPage.dialógus();
 	}
+	
+	@Name("Bezárom a felugró ablakot")
+	public void bezárom_a_felugró_ablakot() {
+		loginPage.dialógus_bezárás();
+	}
 }

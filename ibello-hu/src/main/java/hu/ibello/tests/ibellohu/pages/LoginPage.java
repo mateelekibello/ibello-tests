@@ -53,4 +53,9 @@ public class LoginPage extends AbstractPage {
 		expectations().expect(dialogContent).toBe().displayed();
 		expectations().expect(okButton).toBe().displayed();
 	}
+
+	public void dialógus_bezárás() {
+		doWith(okButton).click();
+		expectations().expect(dialogContent).toNotBe().displayed();
+	}
 }

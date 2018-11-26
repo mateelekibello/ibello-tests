@@ -30,6 +30,9 @@ public class PersonalPage extends AbstractPage {
 	@Find(by=By.ID, using="lastName")
 	private WebElement lastNameField;
 	
+	@Find(by=By.BUTTON_TEXT, using="Kijelentkezés")
+	private WebElement kijelentkezésLink;
+	
 	@Override
 	public void ellenőrzés_hogy_az_oldal_megnyílt() {
 		expectations().expect(pageTitle).toBe().displayed();
@@ -58,4 +61,7 @@ public class PersonalPage extends AbstractPage {
 		vezetéknév(testData.user.lastname);
 	}
 	
+	public void kijelentkezés() {
+		doWith(kijelentkezésLink).click();
+	}
 }

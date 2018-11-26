@@ -12,5 +12,10 @@ public class PersonalPageSteps extends AbstractSteps{
 	public void a_bejelentkezett_felhasználó_adatai_jelennek_meg() {
 		personalPage.felhasználóiAdatok();
 	}
+	
+	@Name("Kijelentkezek a Személyes oldalról")
+	public void kijelentkezek_a_személyes_oldalról() {
+		personalPage.kijelentkezés();
+	}
 
 }

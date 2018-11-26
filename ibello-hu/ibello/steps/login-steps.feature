@@ -12,6 +12,7 @@ Step: Bejelentkezés: Megpróbálok bejelentkezni egy nem regisztrált felhaszn�
 
 Step: Bejelentkezés: A bejelentkezés sikertelen
 	Then Bejelentkező oldal: Felugrik a sikertelen bejelentkezés üzenetablak
+	When Bejelentkező oldal: Bezárom a felugró ablakot
 
 Step: Bejelentkezés: A bejelentkezés sikeres
 	Then Navigáció: Megnyílik az ibello Személyes oldala
@@ -34,3 +35,9 @@ Step: Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó
 	When Bejelentkező oldal: Beírom az e-mail-címet
 	When Bejelentkező oldal: Beírom a jelszót
 	When Bejelentkező oldal: Bejelentkezek
+
+Step: Bejelentkezés: Megnyílik az ibello bejelentkező oldala
+	Then Navigáció: Megnyílik az ibello Bejelentkező oldala
+
+Step: Bejelentkezés: Kijelentkezek a Személyes oldalról
+	When Személyes: Kijelentkezek a Személyes oldalról
