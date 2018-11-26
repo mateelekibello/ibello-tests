@@ -19,7 +19,7 @@ Step: Személyes: Felhasználói adatok átírása
 
 Step: Személyes: Kijelentkezek a Személyes oldalról
 	When Személyes oldal: Kijelentkezek a Személyes oldalról
-	Then Navigáció: Megnyitom a bejelentkező oldalt
+	Then Navigáció: Megnyílik az ibello Bejelentkező oldala
 
 Step: Személyes: Az átírt adatok ellenőrzése
 	Then Személyes oldal: Az átírt adatok jelennek meg
@@ -40,3 +40,6 @@ Step: Személyes: Felhasználói adatok visszaállítása
 	When Személyes oldal: Beállítom a számlázási cím első részét
 	When Személyes oldal: Beállítom a számlázási cím második részét
 	Given Személyes oldal: Mentem a változásokat
+
+Step: Személyes: Megpróbálok bejelentkezni egy regisztrált felhasználóval
+	When Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
