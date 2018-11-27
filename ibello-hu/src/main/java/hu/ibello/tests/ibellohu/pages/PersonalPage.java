@@ -168,7 +168,7 @@ public class PersonalPage extends AbstractPage {
 	}
 	
 	public void a_számlázási_ország_legyen_$(String value) {
-		doWith(billingCountryField).setValue(value);
+		doWith(billingCountryField).selectOption(value);
 	}
 	
 	public void a_számlázási_város_legyen_$(String value) {

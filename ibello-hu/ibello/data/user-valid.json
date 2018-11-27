@@ -8,12 +8,12 @@
 		"firstname": "",
 		"lastname": "",
 		"organisation": "",
-		"taxNumber: "",
-		"country: "",
-		"city: "",
-		"state: "",
-		"zipCode: "",
-		"address1: "",
-		"address2: ""
+		"taxNumber": "",
+		"country": "",
+		"city": "",
+		"state": "",
+		"zipCode": "",
+		"address1": "",
+		"address2": ""
 	}
 }

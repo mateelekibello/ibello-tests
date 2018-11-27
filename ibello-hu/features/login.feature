@@ -22,3 +22,4 @@ Feature: Login
 		Given Bejelentkezés: Az ibello bejelentkező oldalán vagyok
 		When Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználó e-mail-címével
 		Then Bejelentkezés: A bejelentkezés sikeres
+		Given Bejelentkezés: Kijelentkezek a Személyes oldalról

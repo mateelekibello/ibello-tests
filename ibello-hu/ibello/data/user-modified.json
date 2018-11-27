@@ -8,12 +8,12 @@
 		"firstname": "t",
 		"lastname": "v",
 		"organisation": "elte",
-		"taxNumber: "1234567890",
-		"country: "Mádzsár",
-		"city: "bp",
-		"state: "állami",
-		"zipCode: "1234",
-		"address1: "uccahásszám",
-		"address2: "emeletajtó"
+		"taxNumber": "1234567890",
+		"country": "Aruba",
+		"city": "bp",
+		"state": "állami",
+		"zipCode": "1234",
+		"address1": "uccahásszám",
+		"address2": "emeletajtó"
 	}
 }

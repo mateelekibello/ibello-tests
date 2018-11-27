@@ -46,7 +46,7 @@ public class PersonalPageSteps extends AbstractSteps{
 	@Name("Beállítom a vezetéknevet")
 	public void vezetéknév() {
 		String lastName = testData.user.lastname;
-		personalPage.a_keresztnév_legyen_$(lastName);
+		personalPage.a_vezetéknév_legyen_$(lastName);
 	}
 	
 	@Name("Beállítom a szervezet nevét")

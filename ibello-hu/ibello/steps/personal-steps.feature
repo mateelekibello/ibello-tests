@@ -26,7 +26,7 @@ Step: Személyes: Az átírt adatok ellenőrzése
 Step: Személyes: Felhasználói adatok visszaállítása
 	Given Tesztadat: Az Aktuális Felhasználó Azonosítója Legyen "valid"
 	When Személyes: Felhasználói adatok beállítása
-	Given Személyes oldal: Mentem a változásokat
+	Given Személyes: Mentem a változásokat
 
 Step: Személyes: Megpróbálok bejelentkezni egy regisztrált felhasználóval
 	When Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
@@ -34,4 +34,10 @@ Step: Személyes: Megpróbálok bejelentkezni egy regisztrált felhasználóval
 Step: Személyes: Felhasználói adatok átírása
 	Given Tesztadat: Az Aktuális Felhasználó Azonosítója Legyen "modified"
 	When Személyes: Felhasználói adatok beállítása
+	When Személyes: Mentem a változásokat
+
+Step: Személyes: Mentem a változásokat
 	When Személyes oldal: Mentem a változásokat
+	Then Személyes oldal: Megjelenik a felugró ablak
+	When Személyes oldal: Bezárom a felugró ablakot
+	Then Személyes oldal: eltűnik a felugró ablak
