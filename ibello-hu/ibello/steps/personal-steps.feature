@@ -38,6 +38,5 @@ Step: Személyes: Felhasználói adatok átírása
 
 Step: Személyes: Mentem a változásokat
 	When Személyes oldal: Mentem a változásokat
-	Then Személyes oldal: Megjelenik a felugró ablak
+	Then Személyes oldal: Megjelenik a sikeres mentés üzenetablak
 	When Személyes oldal: Bezárom a felugró ablakot
-	Then Személyes oldal: eltűnik a felugró ablak

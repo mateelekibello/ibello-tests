@@ -1,19 +1,20 @@
 package hu.ibello.tests.ibellohu.pages;
 
 import hu.ibello.elements.WebElement;
-import hu.ibello.inject.Inject;
 import hu.ibello.search.By;
 import hu.ibello.search.Find;
 import hu.ibello.search.Relation;
 import hu.ibello.search.RelationType;
-import hu.ibello.tests.ibellohu.tools.TestData;
-
 
 public class PersonalPage extends AbstractPage {
 	
 	@Relation(type=RelationType.DESCENDANT_OF, by=By.CLASS_NAME, using="page-title")
 	@Find(by=By.TEXT, using="${personalPage.title}")
 	private WebElement pageTitle;
+	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.CLASS_NAME, using="au-target")
+	@Find(by=By.TEXT, using="${personalPage.dialogtext.success}")
+	private WebElement dialogContent;
 	
 	@Find(by=By.ID, using="username")
 	private WebElement usernameField;
@@ -65,6 +66,9 @@ public class PersonalPage extends AbstractPage {
 	
 	@Find(by=By.BUTTON_TEXT, using="Mentés")
 	private WebElement submitButton;
+	
+	@Find(by=By.BUTTON_TEXT, using="Ok")
+	private WebElement okButton;
 	
 	@Override
 	public void ellenőrzés_hogy_az_oldal_megnyílt() {
@@ -197,5 +201,15 @@ public class PersonalPage extends AbstractPage {
 	
 	public void mentés_gomb() {
 		doWith(submitButton).click();
+	}
+	
+	public void dialógus() {
+		expectations().expect(dialogContent).toBe().displayed();
+		expectations().expect(okButton).toBe().displayed();
+	}
+
+	public void dialógus_bezárás() {
+		doWith(okButton).click();
+		expectations().expect(dialogContent).toNotBe().displayed();
 	}
 }
