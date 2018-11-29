@@ -12,7 +12,6 @@ public class PersonalPage extends AbstractPage {
 	@Find(by=By.TEXT, using="${personalPage.title}")
 	private WebElement pageTitle;
 	
-	@Relation(type=RelationType.DESCENDANT_OF, by=By.CLASS_NAME, using="au-target")
 	@Find(by=By.TEXT, using="${personalPage.dialogtext.success}")
 	private WebElement dialogContent;
 	
@@ -100,11 +99,11 @@ public class PersonalPage extends AbstractPage {
 	}
 	
 	public void ellenőrzés_hogy_a_számlázási_vezetéknév_$(String value) {
-		expectations().assume(billingCompanyNameField).toHave().value(value);
+		expectations().assume(billingLastNameField).toHave().value(value);
 	}
 	
 	public void ellenőrzés_hogy_a_számlázási_szervezet_neve_$(String value) {
-		expectations().assume(billingLastNameField).toHave().value(value);
+		expectations().assume(billingCompanyNameField).toHave().value(value);
 	}
 	
 	public void ellenőrzés_hogy_a_számlázási_adószám_$(String value) {
@@ -112,7 +111,7 @@ public class PersonalPage extends AbstractPage {
 	}
 	
 	public void ellenőrzés_hogy_a_számlázási_ország_$(String value) {
-		expectations().assume(billingCountryField).toHave().value(value);
+		expectations().assume(billingCountryField).toHave().selectedOption(value);
 	}
 	
 	public void ellenőrzés_hogy_a_számlázási_város_$(String value) {
