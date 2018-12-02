@@ -41,3 +41,9 @@ Step: Bejelentkezés: Megnyílik az ibello bejelentkező oldala
 
 Step: Bejelentkezés: Kijelentkezek a Személyes oldalról
 	When Személyes: Kijelentkezek a Személyes oldalról
+
+Step: Bejelentkezés: Megpróbálok bejelentkezni egy teszt felhasználóval
+	Given Tesztadat: Az Aktuális Felhasználó Azonosítója Legyen "user"
+	When Bejelentkező oldal: Beírom a felhasználónevet
+	When Bejelentkező oldal: Beírom a jelszót
+	When Bejelentkező oldal: Bejelentkezek

@@ -51,3 +51,6 @@ Feature: Licenc kezelés
 		And Licencek: áttekintem a megrendelést
 		And Licencek: véglegesítem a megrendelést
 		Then Licencek: a licenc meg van rendelve
+
+	Scenario: Kijelentkezés
+		Given Licencek: Kijelentkezek a Licencek oldalról
