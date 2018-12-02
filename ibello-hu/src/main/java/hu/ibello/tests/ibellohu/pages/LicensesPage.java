@@ -9,7 +9,7 @@ import hu.ibello.search.RelationType;
 public class LicensesPage extends AbstractPage {
 	
 	@Relation(type=RelationType.DESCENDANT_OF, by=By.CLASS_NAME, using="page-title")
-	@Find(by=By.TEXT, using="Licencek")
+	@Find(by=By.TEXT, using="${licensesPage.title}")
 	private WebElement pageTitle;
 	
 	@Override
