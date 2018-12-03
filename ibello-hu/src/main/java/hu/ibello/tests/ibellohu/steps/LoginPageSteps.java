@@ -28,33 +28,33 @@ public class LoginPageSteps extends AbstractSteps {
 	@Name("Beírom a felhasználónevet")
 	public void beírom_a_felhasználónevet() {
 		String userName = testData.user.username;
-		loginPage.felhasználóNév(userName);
+		loginPage.felhasználónév_mező_kitöltése(userName);
 	}
 	
 	@Name("Beírom az e-mail-címet")
 	public void beírom_az_email_címet() {
 		String email = testData.user.email;
-		loginPage.emailCím(email);
+		loginPage.emailcím_mező_kitöltése(email);
 	}
 	
 	@Name("Beírom a jelszót")
 	public void beírom_a_jelszót() {
 		String password = testData.user.password;
-		loginPage.jelszó(password);
+		loginPage.jelszó_mező_kitöltése(password);
 	}
 	
 	@Name("Bejelentkezek")
 	public void bejelentkezek() {
-		loginPage.bejelnetkezés_gomb();
+		loginPage.kattintás_a_bejelnetkezés_gombra();
 	}
 	
 	@Name("Felugrik a sikertelen bejelentkezés üzenetablak")
 	public void felugrik_a_sikertelen_bejelentkezés_üzenetablak() {
-		loginPage.dialógus();
+		loginPage.ellenőrzés_hogy_a_dialógusablak_megnyílt();
 	}
 	
 	@Name("Bezárom a felugró ablakot")
 	public void bezárom_a_felugró_ablakot() {
-		loginPage.dialógus_bezárás();
+		loginPage.dialógus_bezárása();
 	}
 }

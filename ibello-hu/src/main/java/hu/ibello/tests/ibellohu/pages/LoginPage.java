@@ -33,28 +33,28 @@ public class LoginPage extends AbstractPage {
 		expectations().expect(pageTitle).toBe().displayed();
 	}
 	
-	public void bejelnetkezés_gomb() {
+	public void kattintás_a_bejelnetkezés_gombra() {
 		doWith(submitButton).click();
 	}
 	
-	public void felhasználóNév(String userName) {
+	public void felhasználónév_mező_kitöltése(String userName) {
 		doWith(useridField).setValue(userName);
 	}
 	
-	public void emailCím(String email) {
+	public void emailcím_mező_kitöltése(String email) {
 		doWith(useridField).setValue(email);
 	}
 	
-	public void jelszó(String password) {
+	public void jelszó_mező_kitöltése(String password) {
 		doWith(passwordField).setValue(password);
 	}
 	
-	public void dialógus() {
+	public void ellenőrzés_hogy_a_dialógusablak_megnyílt() {
 		expectations().expect(dialogContent).toBe().displayed();
 		expectations().expect(okButton).toBe().displayed();
 	}
 
-	public void dialógus_bezárás() {
+	public void dialógus_bezárása() {
 		doWith(okButton).click();
 		expectations().expect(dialogContent).toNotBe().displayed();
 	}
