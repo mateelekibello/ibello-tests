@@ -16,7 +16,7 @@ public class LoginPage extends AbstractPage {
 	@Find(by=By.TEXT, using="${loginPage.dialogtext.incorrect}")
 	private WebElement dialogContent;
 	
-	@Find(by=By.BUTTON_TEXT, using="Ok")
+	@Find(by=By.BUTTON_TEXT, using="${loginPage.okButton}")
 	private WebElement okButton;
 	
 	@Find(by=By.NAME, using="userid")
@@ -25,7 +25,7 @@ public class LoginPage extends AbstractPage {
 	@Find(by=By.NAME, using="password")
 	private WebElement passwordField;
 	
-	@Find(by=By.BUTTON_TEXT, using="Bejelentkezés")
+	@Find(by=By.BUTTON_TEXT, using="${loginPage.menu.login}")
 	private WebElement submitButton;
 	
 	@Override

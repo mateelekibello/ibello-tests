@@ -60,13 +60,13 @@ public class PersonalPage extends AbstractPage {
 	@Find(by=By.ID, using="billingAddressLine2")
 	private WebElement billingAddressLine2Field;
 	
-	@Find(by=By.BUTTON_TEXT, using="Kijelentkezés")
+	@Find(by=By.BUTTON_TEXT, using="${personalPage.menu.logout}")
 	private WebElement kijelentkezésLink;
 	
-	@Find(by=By.BUTTON_TEXT, using="Mentés")
+	@Find(by=By.BUTTON_TEXT, using="${personalPage.submitButton}")
 	private WebElement submitButton;
 	
-	@Find(by=By.BUTTON_TEXT, using="Ok")
+	@Find(by=By.BUTTON_TEXT, using="${personalPage.okButton}")
 	private WebElement okButton;
 	
 	@Override
