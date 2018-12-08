@@ -6,9 +6,8 @@ Step: Licencek: bejelentkezem tulajdonosként
 Step: Licencek: van érvényes licenc
 
 Step: Licencek: megnyitom a licencek oldalt
-	Given Licencek: a bejelentkezett menü látható
-	When Navigáció: megnyitom a Licencek oldalt
-	When Licencek oldal: a Licencek oldalon vagyok
+	Given Navigáció: Ellenőrzöm hogy a bejelentkezett menü látható
+	When Navigáció: Megnyitom a Licencek oldalt
 
 Step: Licencek: engedélyezem a licencem
 	When Licencek oldal: elindítom az engedélyezést
@@ -81,6 +80,3 @@ Step: Licencek: a licenc meg van rendelve
 	When Megrendelés oldal: bezárom a felugró ablakot
 
 Step: Licencek: Kijelentkezek a Licencek oldalról
-
-Step: Licencek: a bejelentkezett menü látható
-	When Navigáció: Ellenőrzöm hogy a bejelentkezett menü látható
