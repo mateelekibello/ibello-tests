@@ -33,7 +33,7 @@ public class LoginPage extends AbstractPage {
 		expectations().expect(pageTitle).toBe().displayed();
 	}
 	
-	public void kattintás_a_bejelnetkezés_gombra() {
+	public void kattintás_a_bejelentkezés_gombra() {
 		doWith(submitButton).click();
 	}
 	

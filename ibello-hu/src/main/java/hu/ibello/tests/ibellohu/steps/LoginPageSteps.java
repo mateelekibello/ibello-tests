@@ -16,15 +16,6 @@ public class LoginPageSteps extends AbstractSteps {
 	
 	private LoginPage loginPage;
 	
-	@Find(by=By.NAME, using="userid")
-	private WebElement useridField;
-	
-	@Find(by=By.NAME, using="password")
-	private WebElement passwordField;
-	
-	@Find(by=By.BUTTON_TEXT, using="Bejelentkezés")
-	private WebElement submitButton;
-	
 	@Name("Beírom a felhasználónevet")
 	public void beírom_a_felhasználónevet() {
 		String userName = testData.user.username;
@@ -45,7 +36,7 @@ public class LoginPageSteps extends AbstractSteps {
 	
 	@Name("Bejelentkezek")
 	public void bejelentkezek() {
-		loginPage.kattintás_a_bejelnetkezés_gombra();
+		loginPage.kattintás_a_bejelentkezés_gombra();
 	}
 	
 	@Name("Felugrik a sikertelen bejelentkezés üzenetablak")

@@ -16,4 +16,34 @@
 		"address1": "uccahásszám",
 		"address2": "emeletajtó"
 	}
+	"license1": {
+		"licenseId": "",
+		"licenseType": "",
+		"licenseClass": "",
+		"licenseOwner": "",
+		"licenseValidThru": "",
+		"licenseUser": "",
+		"licenseLocation": "",
+		"grantable": false
+	}
+	"license2": {
+		"licenseId": "",
+		"licenseType": "",
+		"licenseClass": "",
+		"licenseOwner": "",
+		"licenseValidThru": "",
+		"licenseUser": "",
+		"licenseLocation": "",
+		"grantable": false
+	}
+	"license3": {
+		"licenseId": "",
+		"licenseType": "",
+		"licenseClass": "",
+		"licenseOwner": "",
+		"licenseValidThru": "",
+		"licenseUser": "",
+		"licenseLocation": "",
+		"grantable": false
+	}
 }
