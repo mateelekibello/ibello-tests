@@ -1,4 +1,5 @@
 # namespace: Licencek
+@licenses
 Feature: Licenc kezelés
 
 	@tulajdonos @ervenyes @engedelyez

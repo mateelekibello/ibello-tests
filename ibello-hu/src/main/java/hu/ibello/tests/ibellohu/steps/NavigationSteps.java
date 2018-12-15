@@ -1,12 +1,12 @@
 package hu.ibello.tests.ibellohu.steps;
 
 import hu.ibello.core.Name;
+import hu.ibello.tests.ibellohu.pages.LicensesPage;
+import hu.ibello.tests.ibellohu.pages.LoginPage;
 import hu.ibello.tests.ibellohu.pages.MainPage;
 import hu.ibello.tests.ibellohu.pages.MenuPage;
-import hu.ibello.tests.ibellohu.pages.LoginPage;
-import hu.ibello.tests.ibellohu.pages.PersonalPage;
-import hu.ibello.tests.ibellohu.pages.LicensesPage;
 import hu.ibello.tests.ibellohu.pages.OrderPage;
+import hu.ibello.tests.ibellohu.pages.PersonalPage;
 
 @Name("Navigáció")
 public class NavigationSteps extends AbstractSteps {

@@ -1,4 +1,5 @@
 # namespace: Személyes
+@personal
 Feature: Personal
 
 	Scenario: Bejelentkezés

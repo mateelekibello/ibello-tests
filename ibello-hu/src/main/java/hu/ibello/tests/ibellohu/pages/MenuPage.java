@@ -3,8 +3,6 @@ package hu.ibello.tests.ibellohu.pages;
 import hu.ibello.elements.WebElement;
 import hu.ibello.search.By;
 import hu.ibello.search.Find;
-import hu.ibello.search.Relation;
-import hu.ibello.search.RelationType;
 
 public class MenuPage extends AbstractPage {
 	
