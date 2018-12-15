@@ -12,8 +12,8 @@ Feature: Licenc kezelés
 
 	@tulajdonos @lejart @engedelyez
 	Scenario: Tulajdonos lejárt licencet engedélyez
-		And Licencek: van lejárt licenc
-		Given Licencek: bejelentkezem tulajdonosként
+		Given Licencek: van lejárt licenc
+		And Licencek: bejelentkezem tulajdonosként
 		When Licencek: megnyitom a licencek oldalt
 		And Licencek: engedélyezem a lejárt licencem
 		Then Licencek: lejárt licenc nem engedélyezhető
@@ -28,7 +28,8 @@ Feature: Licenc kezelés
 
 	@felhasznalo @visszaad
 	Scenario: Felhasználó licencet visszaad
-		Given Licencek: bejelentkezem felhasználóként
+		Given Licencek: van engedélyezett licencem
+		And Licencek: bejelentkezem felhasználóként
 		When Licencek: megnyitom a licencek oldalt
 		And Licencek: visszaadom a nekem adott licencet
 		Then Licencek: a licenc visszakerül a tulajdonoshoz
@@ -42,7 +43,8 @@ Feature: Licenc kezelés
 
 	@lejart
 	Scenario: Lejárt licencek megjelenítése
-		Given Licencek: megnyitom a licencek oldalt
+		Given Licencek: van lejárt licenc
+		And Licencek: megnyitom a licencek oldalt
 		When Licencek: kilistáztatom a lejárt licenceket
 		Then Licencek: a lejárt licencek is megjelennek a listában
 
