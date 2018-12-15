@@ -1,6 +1,8 @@
 # namespace: Licencek
 
 Step: Licencek: bejelentkezem tulajdonosként
+	Given Navigáció: Az ibello honlapján vagyok
+	Given Navigáció: Megnyitom a bejelentkező oldalt
 	Given Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
 
 Step: Licencek: van érvényes licenc
@@ -35,6 +37,8 @@ Step: Licencek: visszavonom az engedélyezett licencem
 Step: Licencek: licenc visszavonva a felhasználótól
 
 Step: Licencek: bejelentkezem felhasználóként
+	Given Navigáció: Az ibello honlapján vagyok
+	Given Navigáció: Megnyitom a bejelentkező oldalt
 	Given Bejelentkezés: Megpróbálok bejelentkezni egy teszt felhasználóval
 
 Step: Licencek: visszaadom a nekem adott licencet

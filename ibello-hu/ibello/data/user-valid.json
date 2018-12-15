@@ -15,7 +15,7 @@
 		"zipCode": "",
 		"address1": "",
 		"address2": ""
-	}
+	},
 	"license1": {
 		"licenseId": "0W6S4-C3W5K-1L100-65F53",
 		"licenseType": "ibello",
@@ -25,7 +25,7 @@
 		"licenseUser": "",
 		"licenseLocation": "",
 		"grantable": true
-	}
+	},
 	"license2": {
 		"licenseId": "2F6F5-J1G68-4Z5C1-M2V19",
 		"licenseType": "ibello",
@@ -35,7 +35,7 @@
 		"licenseUser": "",
 		"licenseLocation": "",
 		"grantable": false
-	}
+	},
 	"license3": {
 		"licenseId": "",
 		"licenseType": "",

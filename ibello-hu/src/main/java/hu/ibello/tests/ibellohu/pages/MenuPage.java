@@ -23,7 +23,7 @@ public class MenuPage extends AbstractPage {
 	@Find(by=By.BUTTON_TEXT, using="${personalPage.menu.logout}")
 	private WebElement kijelentkezésLink;
 	
-	@Find(by=By.BUTTON_TEXT, using="${personalPage.menu.licences}")
+	@Find(by=By.BUTTON_TEXT, using="${personalPage.menu.licenses}")
 	private WebElement licencekLink;
 	
 	@Override
