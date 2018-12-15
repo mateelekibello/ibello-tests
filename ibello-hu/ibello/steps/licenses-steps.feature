@@ -42,6 +42,7 @@ Step: Licencek: bejelentkezem felhasználóként
 	Given Bejelentkezés: Megpróbálok bejelentkezni egy teszt felhasználóval
 
 Step: Licencek: visszaadom a nekem adott licencet
+	Given Licencek: van engedélyezett licencem
 	When Licencek oldal: elindítom a licenc visszaadását
 	Then Licencek oldal: megjelenik a licenc visszaadása dialógusablak
 	When Licencek oldal: visszaadom a licencet

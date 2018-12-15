@@ -4,24 +4,24 @@ Feature: Licenc kezelés
 
 	@tulajdonos @ervenyes @engedelyez
 	Scenario: Tulajdonos érvényes licencet engedélyez
-		Given Licencek: bejelentkezem tulajdonosként
-		And Licencek: van érvényes licenc
+		Given Licencek: van érvényes licenc
+		And Licencek: bejelentkezem tulajdonosként
 		When Licencek: megnyitom a licencek oldalt
 		And Licencek: engedélyezem a licencem
 		Then Licencek: licenc engedélyezve lesz a felhasználónak
 
 	@tulajdonos @lejart @engedelyez
 	Scenario: Tulajdonos lejárt licencet engedélyez
-		Given Licencek: bejelentkezem tulajdonosként
 		And Licencek: van lejárt licenc
+		Given Licencek: bejelentkezem tulajdonosként
 		When Licencek: megnyitom a licencek oldalt
 		And Licencek: engedélyezem a lejárt licencem
 		Then Licencek: lejárt licenc nem engedélyezhető
 
 	@tulajdonos @ervenyes @visszavon
 	Scenario: Tulajdonos érvényes licencet visszavon
-		Given Licencek: bejelentkezem tulajdonosként
-		And Licencek: van engedélyezett licencem
+		Given Licencek: van engedélyezett licencem
+		And Licencek: bejelentkezem tulajdonosként
 		When Licencek: megnyitom a licencek oldalt
 		And Licencek: visszavonom az engedélyezett licencem
 		Then Licencek: licenc visszavonva a felhasználótól
