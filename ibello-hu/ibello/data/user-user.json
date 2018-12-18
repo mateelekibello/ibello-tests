@@ -1,8 +1,8 @@
 {
-	"username": "nonexisting",
-	"email": "",
-	"firstname": "",
-	"lastname": "",
+	"username": "test_user",
+	"email": "test_user@nowhere.hu",
+	"firstname": "Test",
+	"lastname": "User",
 	"organisation": "",
 	"billingAddress": {
 		"firstname": "",

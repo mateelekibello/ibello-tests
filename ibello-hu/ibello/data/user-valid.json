@@ -15,35 +15,5 @@
 		"zipCode": "",
 		"address1": "",
 		"address2": ""
-	},
-	"license1": {
-		"licenseId": "0W6S4-C3W5K-1L100-65F53",
-		"licenseType": "ibello",
-		"licenseClass": "Teszt",
-		"licenseOwner": "test_valid",
-		"licenseValidThru": "2020-12-31",
-		"licenseUser": "",
-		"licenseLocation": "",
-		"grantable": true
-	},
-	"license2": {
-		"licenseId": "2F6F5-J1G68-4Z5C1-M2V19",
-		"licenseType": "ibello",
-		"licenseClass": "Teszt",
-		"licenseOwner": "test_valid",
-		"licenseValidThru": "2018-01-01",
-		"licenseUser": "",
-		"licenseLocation": "",
-		"grantable": false
-	},
-	"license3": {
-		"licenseId": "",
-		"licenseType": "",
-		"licenseClass": "",
-		"licenseOwner": "",
-		"licenseValidThru": "",
-		"licenseUser": "",
-		"licenseLocation": "",
-		"grantable": false
 	}
 }

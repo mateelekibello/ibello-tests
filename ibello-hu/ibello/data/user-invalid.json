@@ -15,35 +15,5 @@
 		"zipCode": "",
 		"address1": "",
 		"address2": ""
-	},
-	"license1": {
-		"licenseId": "",
-		"licenseType": "",
-		"licenseClass": "",
-		"licenseOwner": "",
-		"licenseValidThru": "",
-		"licenseUser": "",
-		"licenseLocation": "",
-		"grantable": false
-	},
-	"license2": {
-		"licenseId": "",
-		"licenseType": "",
-		"licenseClass": "",
-		"licenseOwner": "",
-		"licenseValidThru": "",
-		"licenseUser": "",
-		"licenseLocation": "",
-		"grantable": false
-	},
-	"license3": {
-		"licenseId": "",
-		"licenseType": "",
-		"licenseClass": "",
-		"licenseOwner": "",
-		"licenseValidThru": "",
-		"licenseUser": "",
-		"licenseLocation": "",
-		"grantable": false
 	}
 }

@@ -8,5 +8,5 @@ public class License {
 	public String licenseValidThru;
 	public String licenseUser;
 	public String licenseLocation;
-	public boolean grantable; 
+	public boolean grantable;
 }

@@ -14,6 +14,7 @@ Step: Licencek: megnyitom a licencek oldalt
 Step: Licencek: engedélyezem a licencem
 	When Licencek oldal: elindítom az engedélyezést
 	Then Licencek oldal: megnyílik a licenc engedélyezés dialógusablak
+	When Licencek oldal: ellenőrzöm a licenc adatait
 	When Licencek oldal: beírom a felhasználó nevét
 	When Licencek oldal: engedélyezem a licencet
 	Then Licencek oldal: a listában megjelenik az engedélyezett licenc
@@ -85,3 +86,4 @@ Step: Licencek: a licenc meg van rendelve
 	When Megrendelés oldal: bezárom a felugró ablakot
 
 Step: Licencek: Kijelentkezek a Licencek oldalról
+

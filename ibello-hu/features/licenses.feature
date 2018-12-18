@@ -57,3 +57,4 @@ Feature: Licenc kezelés
 
 	Scenario: Kijelentkezés
 		Given Licencek: Kijelentkezek a Licencek oldalról
+
