@@ -21,10 +21,17 @@ Step: Licencek: engedélyezem a licencem
 	Then Licencek oldal: a listában megjelenik az engedélyezett licenc
 
 Step: Licencek: licenc engedélyezve lesz a felhasználónak
+	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
+	Given Licencek: Kijelentkezek a Licencek oldalról
+	When Licencek: bejelentkezem felhasználóként
+	Then Licencek oldal: a licenc visszaadható
+	Given Licencek: Kijelentkezek a Licencek oldalról
 
 Step: Licencek: van lejárt licenc
 
 Step: Licencek: engedélyezem a lejárt licencem
+	Given Tesztadat: Az Aktuális Licenc Neve Legyen "invalid"
+	When Licencek oldal: elindítom az engedélyezést
 
 Step: Licencek: lejárt licenc nem engedélyezhető
 
@@ -70,6 +77,7 @@ Step: Licencek: kilistáztatom a lejárt licenceket
 	Given Licencek oldal: kilistáztatom a lejárt licenceket
 
 Step: Licencek: a lejárt licencek is megjelennek a listában
+	Then Licencek oldal: a lejárt licencek is megjelennek a listában
 
 Step: Licencek: megnyitott licenc megrendelő ablak
 	Given Megrendelés oldal: a Megrendelés oldalon vagyok

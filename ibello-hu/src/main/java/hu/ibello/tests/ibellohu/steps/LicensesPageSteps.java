@@ -84,9 +84,33 @@ public class LicensesPageSteps extends AbstractSteps{
 		licensesPage.ellenőrzés_hogy_a_$_lincenc_engedélyezhető(testData.license.licenseId);
 	}
 	
+	@Name("a licenc visszaadható")
+	public void a_licenc_visszaadható() {
+		licensesPage.ellenőrzés_hogy_a_$_lincenc_visszaadható(testData.license.licenseId);
+	}
+	
 	@Name("a licenc nem visszaadható")
 	public void a_licenc_nem_visszaadható() {
 		licensesPage.ellenőrzés_hogy_a_$_lincenc_nem_visszaadható(testData.license.licenseId);
 	}
 	
+	@Name("frissítem az oldalt")
+	public void frissítem_az_oldalt() {
+		licensesPage.frissítem_az_oldalt();
+	}
+	
+	@Name("a licenc nincs a listán")
+	public void a_licenc_nincs_a_listán() {
+		licensesPage.ellenőrzés_hogy_a_licenc_nincs_a_listán(testData.license.licenseId);
+	}
+	
+	@Name("megrendelem a licencem")
+	public void megrendelem_a_licencem() {
+		licensesPage.kattintás_a_megrendelés_gombra();
+	}
+	
+	@Name("kilistáztatom a lejárt licenceket")
+	public void kilistáztatom_a_lejárt_licenceket() {
+		licensesPage.lejárt_licencek_megjelenítése_választása();
+	}
 }
