@@ -15,17 +15,43 @@ public class LicensesPageSteps extends AbstractSteps{
 	
 	@Name("elindítom az engedélyezést")
 	public void elindítom_az_engedélyezést() {
-		//licensesPage.kattintás_az_engedélyez_gombra();
+		licensesPage.kattintás_az_engedélyez_gombra_a_$_licenchez(testData.license.licenseId);
+	}
+	
+	@Name("elindítom a licenc visszavonását")
+	public void elindítom_a_licenc_visszavonását() {
+		licensesPage.kattintás_a_visszavon_gombra_a_$_licenchez(testData.license.licenseId);
+	}
+	
+	@Name("elindítom a licenc visszaadását")
+	public void elindítom_a_licenc_visszaadását() {
+		licensesPage.kattintás_a_visszaad_gombra_a_$_licenchez(testData.license.licenseId);
 	}
 	
 	@Name("megnyílik a licenc engedélyezés dialógusablak")
 	public void megnyílik_a_licenc_engedélyezés_dialógusablak() {
-		licensesPage.ellenőrzés_hogy_a_dialógusablak_megnyílt();
+		licensesPage.ellenőrzés_hogy_az_engedélyező_dialógusablak_megnyílt();
+	}
+	
+	@Name("megjelenik a licenc visszavonása dialógusablak")
+	public void megjelenik_a_licenc_visszavonása_dialógusablak() {
+		licensesPage.ellenőrzés_hogy_a_visszavonó_dialógusablak_megnyílt();
+	}
+	
+	@Name("megjelenik a licenc visszaadása dialógusablak")
+	public void megjelenik_a_licenc_visszaadása_dialógusablak() {
+		licensesPage.ellenőrzés_hogy_a_visszaadó_dialógusablak_megnyílt();
 	}
 	
 	@Name("ellenőrzöm a licenc adatait")
 	public void ellenőrzöm_a_licenc_adatait() {
-		licensesPage.licenc_adatok_ellenőrzése();
+		licensesPage.licenc_adatok_ellenőrzése(
+				testData.license.licenseId,
+				testData.license.licenseType,
+				testData.license.licenseClass,
+				testData.license.licenseOwner,
+				testData.license.licenseValidThru
+		);
 	}
 	
 	@Name("beírom a felhasználó nevét")
@@ -38,13 +64,29 @@ public class LicensesPageSteps extends AbstractSteps{
 		licensesPage.kattintás_az_engdélyezés_gombra();
 	}
 	
-	@Name("a listában megjelenik az engedélyezett licenc")
-	public void a_listában_megjelenik_az_engedélyezett_licenc() {
-		//licensesPage.ellenőrzés_hogy_a_lincenc_visszavonható();
+	@Name("visszavonom a licencet")
+	public void visszavonom_a_licencet() {
+		licensesPage.kattintás_a_visszavon_gombra();
 	}
 	
-	@Name("elindítom a licenc visszavonását")
-	public void elindítom_a_licenc_visszavonását() {
-		//licensesPage.kattintás_a_visszavon_gombra();
+	@Name("visszaadom a licencet")
+	public void visszaadom_a_licencet() {
+		licensesPage.kattintás_a_visszaad_gombra();
 	}
+	
+	@Name("a listában megjelenik az engedélyezett licenc")
+	public void a_listában_megjelenik_az_engedélyezett_licenc() {
+		licensesPage.ellenőrzés_hogy_a_$_lincenc_visszavonható(testData.license.licenseId);
+	}
+	
+	@Name("a licenc engedélyezhető")
+	public void a_licenc_engedélyezhető() {
+		licensesPage.ellenőrzés_hogy_a_$_lincenc_engedélyezhető(testData.license.licenseId);
+	}
+	
+	@Name("a licenc nem visszaadható")
+	public void a_licenc_nem_visszaadható() {
+		licensesPage.ellenőrzés_hogy_a_$_lincenc_nem_visszaadható(testData.license.licenseId);
+	}
+	
 }

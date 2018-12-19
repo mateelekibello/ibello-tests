@@ -17,7 +17,7 @@ public class TestDataSteps extends AbstractSteps {
 		testData.user.password = getConfigurationValue("user." + userId + ".password").toString();
 	}
 	
-	public void a_licenc_adatainak_beolvasása() {
-		testData.license = testData().fromJson(License.class).withId("user").load();
+	public void az_aktuális_licenc_neve_legyen_$(String licenseId) {
+		testData.license = testData().fromJson(License.class).withId(licenseId).load();
 	}
 }

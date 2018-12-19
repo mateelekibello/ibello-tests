@@ -12,6 +12,7 @@ Step: Licencek: megnyitom a licencek oldalt
 	When Navigáció: Megnyitom a Licencek oldalt
 
 Step: Licencek: engedélyezem a licencem
+	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
 	When Licencek oldal: elindítom az engedélyezést
 	Then Licencek oldal: megnyílik a licenc engedélyezés dialógusablak
 	When Licencek oldal: ellenőrzöm a licenc adatait
@@ -30,8 +31,10 @@ Step: Licencek: lejárt licenc nem engedélyezhető
 Step: Licencek: van engedélyezett licencem
 
 Step: Licencek: visszavonom az engedélyezett licencem
+	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
 	When Licencek oldal: elindítom a licenc visszavonását
 	Then Licencek oldal: megjelenik a licenc visszavonása dialógusablak
+	Given Licencek oldal: ellenőrzöm a licenc adatait
 	When Licencek oldal: visszavonom a licencet
 	Then Licencek oldal: a licenc engedélyezhető
 
@@ -43,8 +46,10 @@ Step: Licencek: bejelentkezem felhasználóként
 	Given Bejelentkezés: Megpróbálok bejelentkezni egy teszt felhasználóval
 
 Step: Licencek: visszaadom a nekem adott licencet
+	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
 	Given Licencek: van engedélyezett licencem
 	When Licencek oldal: elindítom a licenc visszaadását
+	Given Licencek oldal: ellenőrzöm a licenc adatait
 	Then Licencek oldal: megjelenik a licenc visszaadása dialógusablak
 	When Licencek oldal: visszaadom a licencet
 	Then Licencek oldal: a licenc nem visszaadható
@@ -86,4 +91,3 @@ Step: Licencek: a licenc meg van rendelve
 	When Megrendelés oldal: bezárom a felugró ablakot
 
 Step: Licencek: Kijelentkezek a Licencek oldalról
-
