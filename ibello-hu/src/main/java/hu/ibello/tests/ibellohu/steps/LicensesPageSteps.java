@@ -4,6 +4,7 @@ import hu.ibello.core.Name;
 import hu.ibello.inject.Inject;
 import hu.ibello.tests.ibellohu.tools.TestData;
 import hu.ibello.tests.ibellohu.pages.LicensesPage;
+import hu.ibello.tests.ibellohu.pages.MenuPage;
 
 @Name("Licencek oldal")
 public class LicensesPageSteps extends AbstractSteps{
@@ -12,6 +13,7 @@ public class LicensesPageSteps extends AbstractSteps{
 	private TestData testData;
 	
 	private LicensesPage licensesPage;
+	private MenuPage menuPage;
 	
 	@Name("elindítom az engedélyezést")
 	public void elindítom_az_engedélyezést() {
@@ -112,5 +114,10 @@ public class LicensesPageSteps extends AbstractSteps{
 	@Name("kilistáztatom a lejárt licenceket")
 	public void kilistáztatom_a_lejárt_licenceket() {
 		licensesPage.lejárt_licencek_megjelenítése_választása();
+	}
+	
+	@Name("Kijelentkezek a Licencek oldalról")
+	public void Kijelentkezek_a_Licencek_oldalról() {
+		menuPage.bejelentkezett_kijelentkezés_menüelem_választása();
 	}
 }

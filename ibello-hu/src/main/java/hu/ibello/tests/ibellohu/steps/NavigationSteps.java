@@ -26,13 +26,13 @@ public class NavigationSteps extends AbstractSteps {
 	
 	@Name("Megnyitom a bejelentkező oldalt")
 	public void megnyitom_a_bejelentkező_oldalt() {
-		menuPage.ügyfeleknek_menüelem_választása();
+		menuPage.főoldali_ügyfeleknek_menüelem_választása();
 		loginPage.ellenőrzés_hogy_az_oldal_megnyílt();
 	}
 	
 	@Name("Megnyitom a Licencek oldalt")
 	public void megnyitom_a_licencek_oldalt() {
-		menuPage.licencek_menüelem_választása();
+		menuPage.bejelentkezett_licencek_menüelem_választása();
 		licensesPage.ellenőrzés_hogy_az_oldal_megnyílt();
 	}
 	

@@ -3,12 +3,14 @@ package hu.ibello.tests.ibellohu.steps;
 import hu.ibello.core.Name;
 import hu.ibello.inject.Inject;
 import hu.ibello.tests.ibellohu.pages.PersonalPage;
+import hu.ibello.tests.ibellohu.pages.MenuPage;
 import hu.ibello.tests.ibellohu.tools.TestData;
 
 @Name("Személyes oldal")
 public class PersonalPageSteps extends AbstractSteps{
 	
 	private PersonalPage personalPage;
+	private MenuPage menuPage;
 	
 	@Inject
 	private TestData testData;
@@ -34,7 +36,7 @@ public class PersonalPageSteps extends AbstractSteps{
 	
 	@Name("Kijelentkezek a Személyes oldalról")
 	public void kijelentkezek_a_személyes_oldalról() {
-		personalPage.kijelentkezés();
+		menuPage.bejelentkezett_kijelentkezés_menüelem_választása();
 	}
 
 	@Name("Beállítom a keresztnevet")

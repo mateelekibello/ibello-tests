@@ -99,3 +99,5 @@ Step: Licencek: a licenc meg van rendelve
 	When Megrendelés oldal: bezárom a felugró ablakot
 
 Step: Licencek: Kijelentkezek a Licencek oldalról
+	When Licencek oldal: Kijelentkezek a Licencek oldalról
+	Then Navigáció: Megnyílik az ibello Bejelentkező oldala
