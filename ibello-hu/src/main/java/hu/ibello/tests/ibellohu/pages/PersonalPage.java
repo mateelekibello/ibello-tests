@@ -194,10 +194,7 @@ public class PersonalPage extends AbstractPage {
 		doWith(billingAddressLine2Field).setValue(value);
 	}
 	
-/*	public void kijelentkezés() {
-		doWith(kijelentkezésLink).click();
-	}
-	*/
+	
 	public void mentés_gomb() {
 		doWith(submitButton).click();
 	}

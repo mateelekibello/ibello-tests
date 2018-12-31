@@ -10,8 +10,6 @@ import hu.ibello.search.PositionType;
 
 public class LicensesPage extends AbstractPage {
 	
-//	private License license;
-	
 	@Relation(type=RelationType.DESCENDANT_OF, by=By.CLASS_NAME, using="page-title")
 	@Find(by=By.TEXT, using="${licensesPage.title}")
 	private WebElement pageTitle;
@@ -175,7 +173,7 @@ public class LicensesPage extends AbstractPage {
 	}
 	
 	public void kattintás_a_megrendelés_gombra() {
-		doWith(visszaadButton1).click();
+		doWith(megrendelésButton).click();
 	}
 	
 	public void lejárt_licencek_megjelenítése_választása() {

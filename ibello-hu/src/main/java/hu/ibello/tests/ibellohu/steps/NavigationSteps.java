@@ -45,6 +45,16 @@ public class NavigationSteps extends AbstractSteps {
 	public void megnyílik_az_ibello_személyes_oldala() {
 		personalPage.ellenőrzés_hogy_az_oldal_megnyílt();
 	}
+	
+	@Name("Megnyílik a megrendelő oldal")
+	public void megnyílik_a_megrendelő_oldal() {
+		orderPage.ellenőrzés_hogy_az_oldal_megnyílt();
+	}
+	
+	@Name("Megnyílik a licencek oldal")
+	public void megnyílik_a_licencek_oldal() {
+		licensesPage.ellenőrzés_hogy_az_oldal_megnyílt();
+	}
 
 	@Name("Ellenőrzöm hogy a bejelentkezett menü látható")
 	public void ellenőrzöm_hogy_a_bejelentkezett_menü_látható( ) {
