@@ -46,6 +46,10 @@ public class OrderPage extends AbstractPage {
 	@Find(by=By.PARTIAL_TEXT, using="${orderPage.okDialogText}")
 	private WebElement Felirat2;
 	
+	@Position(type=PositionType.ROW, by=By.PARTIAL_TEXT, using="${0}")
+	@Find(by=By.TEXT, using="${1}")
+	private WebElement TételÁra;
+	
 	@Override
 	public void ellenőrzés_hogy_az_oldal_megnyílt() {
 		expectations().expect(pageTitle).toBe().displayed();
@@ -86,7 +90,7 @@ public class OrderPage extends AbstractPage {
 		doWith(okButton).click();
 	}
 	
-	public int tétel_árának_kiolvasása(int number) {
-		return Integer.parseInt("45000 ");
+	public void megrendelés_tételének_ára(String item, String price) {
+		expectations().expect(TételÁra.applyParameters(item,price)).toBe().displayed();
 	}
 }

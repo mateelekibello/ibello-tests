@@ -8,6 +8,9 @@ import hu.ibello.tests.ibellohu.pages.OrderPage;
 @Name("Megrendelés oldal")
 public class OrderPageSteps extends AbstractSteps{
 	
+	@Inject
+	private TestData testData;
+	
 	private OrderPage orderPage;
 	
 	@Name("beállítom a bronz licencek számát") 
@@ -37,7 +40,10 @@ public class OrderPageSteps extends AbstractSteps{
 	
 	@Name("ellenőrzöm a megrendelés adatait")
 	public void ellenőrzöm_a_megrendelés_adatait() {
-		
+		orderPage.megrendelés_tételének_ára(testData.order.bronzeName, testData.order.bronzeItemPrice);
+		orderPage.megrendelés_tételének_ára(testData.order.silverName, testData.order.silverItemPrice);
+		orderPage.megrendelés_tételének_ára(testData.order.goldName, testData.order.goldItemPrice);
+		orderPage.megrendelés_tételének_ára(testData.order.sumName, testData.order.sumPrice);
 	}
 	
 	@Name("véglegesítem a megrendelést")

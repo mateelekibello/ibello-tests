@@ -1,0 +1,12 @@
+{
+	"bronzeName": "bronz",
+	"silverName": "ezüst",
+	"goldName": "arany",
+	"sumName": "Összesen",
+	"bronzePrice": 15000,
+	"silverPrice": 50000,
+	"goldPrice": 300000,
+	"bronzeNumber": 3,
+	"silverNumber":2,
+	"goldNumber": 1
+}
