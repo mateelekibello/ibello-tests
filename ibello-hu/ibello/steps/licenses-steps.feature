@@ -22,8 +22,8 @@ Step: Licencek: engedélyezem a licencem
 
 Step: Licencek: licenc engedélyezve lesz a felhasználónak
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
-	Given Licencek: Kijelentkezek a Licencek oldalról
 	When Licencek: bejelentkezem felhasználóként
+	Given Navigáció: Megnyitom a Licencek oldalt
 	Then Licencek oldal: a licenc visszaadható
 	Given Licencek: Kijelentkezek a Licencek oldalról
 
@@ -46,6 +46,11 @@ Step: Licencek: visszavonom az engedélyezett licencem
 	Then Licencek oldal: a licenc engedélyezhető
 
 Step: Licencek: licenc visszavonva a felhasználótól
+	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
+	Given Licencek: bejelentkezem felhasználóként
+	Given Navigáció: Megnyitom a Licencek oldalt
+	Given Licencek oldal: a licenc nincs a listán
+	Given Licencek oldal: Kijelentkezek a Licencek oldalról
 
 Step: Licencek: bejelentkezem felhasználóként
 	Given Navigáció: Az ibello honlapján vagyok
@@ -71,16 +76,17 @@ Step: Licencek: megrendelem a licencem
 	When Licencek oldal: megrendelem a licencem
 
 Step: Licencek: a licenc megrendelő oldal megnyílik
-	Given Navigáció: A Licenc megrendelő oldalon vagyok
+	Given Navigáció: Megnyílik a megrendelő oldal
 
 Step: Licencek: kilistáztatom a lejárt licenceket
 	Given Licencek oldal: kilistáztatom a lejárt licenceket
 
 Step: Licencek: a lejárt licencek is megjelennek a listában
-	Then Licencek oldal: a lejárt licencek is megjelennek a listában
+	Given Tesztadat: Az Aktuális Licenc Neve Legyen "invalid"
+	Then Licencek oldal: a licenc engedélyezhető
 
 Step: Licencek: megnyitott licenc megrendelő ablak
-	Given Megrendelés oldal: a Megrendelés oldalon vagyok
+	Given Navigáció: Megnyílik a megrendelő oldal
 
 Step: Licencek: választok előfizetést
 	When Megrendelés oldal: beállítom a bronz licencek számát
@@ -90,6 +96,7 @@ Step: Licencek: választok előfizetést
 Step: Licencek: áttekintem a megrendelést
 	Given Megrendelés oldal: áttekintem a megrendelést
 	Given Megrendelés oldal: megjelenik a véglegesítés üzenetablak
+	Given Megrendelés oldal: ellenőrzöm a megrendelés adatait
 
 Step: Licencek: véglegesítem a megrendelést
 	Given Megrendelés oldal: véglegesítem a megrendelést
@@ -97,6 +104,7 @@ Step: Licencek: véglegesítem a megrendelést
 Step: Licencek: a licenc meg van rendelve
 	Then Megrendelés oldal: megjelenik a sikeres megrendelés dialógusablak
 	When Megrendelés oldal: bezárom a felugró ablakot
+	Then Navigáció: Megnyílik a licencek oldal
 
 Step: Licencek: Kijelentkezek a Licencek oldalról
 	When Licencek oldal: Kijelentkezek a Licencek oldalról
