@@ -67,9 +67,17 @@ Step: Licencek: visszaadom a nekem adott licencet
 	Then Licencek oldal: a licenc nem visszaadható
 
 Step: Licencek: a licenc visszakerül a tulajdonoshoz
+	Given Licencek oldal: Kijelentkezek a Licencek oldalról
+	And Licencek: bejelentkezem tulajdonosként
+	And Navigáció: Megnyitom a Licencek oldalt
+	When Tesztadat: Az Aktuális Licenc Neve Legyen "user"
+	Then Licencek oldal: a licenc engedélyezhető
+	Given Licencek: Kijelentkezek a Licencek oldalról
+	And Licencek: bejelentkezem felhasználóként
 
 Step: Licencek: a licenc törlődik a listáról
-	When Licencek oldal: frissítem az oldalt
+	Given Navigáció: Megnyitom a Licencek oldalt
+	When Tesztadat: Az Aktuális Licenc Neve Legyen "user"
 	Then Licencek oldal: a licenc nincs a listán
 
 Step: Licencek: megrendelem a licencem
@@ -89,6 +97,7 @@ Step: Licencek: megnyitott licenc megrendelő ablak
 	Given Navigáció: Megnyílik a megrendelő oldal
 
 Step: Licencek: választok előfizetést
+	Given Tesztadat: Az Aktuális Rendelés Neve Legyen "order"
 	When Megrendelés oldal: beállítom a bronz licencek számát
 	When Megrendelés oldal: beállítom az ezüst licencek számát
 	When Megrendelés oldal: beállítom az arany licencek számát
