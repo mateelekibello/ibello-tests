@@ -1,11 +1,11 @@
 # namespace: Licencek
 
+Step: Licencek: van érvényes licenc
+
 Step: Licencek: bejelentkezem tulajdonosként
 	Given Navigáció: Az ibello honlapján vagyok
 	Given Navigáció: Megnyitom a bejelentkező oldalt
 	Given Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
-
-Step: Licencek: van érvényes licenc
 
 Step: Licencek: megnyitom a licencek oldalt
 	Given Navigáció: Ellenőrzöm hogy a bejelentkezett menü látható
@@ -20,20 +20,16 @@ Step: Licencek: engedélyezem a licencem
 	When Licencek oldal: engedélyezem a licencet
 	Then Licencek oldal: a listában megjelenik az engedélyezett licenc
 
+Step: Licencek: Kijelentkezek a Licencek oldalról
+	When Licencek oldal: Kijelentkezek a Licencek oldalról
+	Then Navigáció: Megnyílik az ibello Bejelentkező oldala
+
 Step: Licencek: licenc engedélyezve lesz a felhasználónak
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
 	When Licencek: bejelentkezem felhasználóként
 	Given Navigáció: Megnyitom a Licencek oldalt
 	Then Licencek oldal: a licenc visszaadható
 	Given Licencek: Kijelentkezek a Licencek oldalról
-
-Step: Licencek: van lejárt licenc
-
-Step: Licencek: engedélyezem a lejárt licencem
-	Given Tesztadat: Az Aktuális Licenc Neve Legyen "invalid"
-	When Licencek oldal: elindítom az engedélyezést
-
-Step: Licencek: lejárt licenc nem engedélyezhető
 
 Step: Licencek: van engedélyezett licencem
 
@@ -80,11 +76,7 @@ Step: Licencek: a licenc törlődik a listáról
 	When Tesztadat: Az Aktuális Licenc Neve Legyen "user"
 	Then Licencek oldal: a licenc nincs a listán
 
-Step: Licencek: megrendelem a licencem
-	When Licencek oldal: megrendelem a licencem
-
-Step: Licencek: a licenc megrendelő oldal megnyílik
-	Given Navigáció: Megnyílik a megrendelő oldal
+Step: Licencek: van lejárt licenc
 
 Step: Licencek: kilistáztatom a lejárt licenceket
 	Given Licencek oldal: kilistáztatom a lejárt licenceket
@@ -93,7 +85,16 @@ Step: Licencek: a lejárt licencek is megjelennek a listában
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "invalid"
 	Then Licencek oldal: a licenc engedélyezhető
 
-Step: Licencek: megnyitott licenc megrendelő ablak
+Step: Licencek: engedélyezem a lejárt licencem
+	Given Tesztadat: Az Aktuális Licenc Neve Legyen "invalid"
+	When Licencek oldal: elindítom az engedélyezést
+
+Step: Licencek: lejárt licenc nem engedélyezhető
+
+Step: Licencek: megrendelem a licencem
+	When Licencek oldal: megrendelem a licencem
+
+Step: Licencek: a licenc megrendelő oldal megnyílik
 	Given Navigáció: Megnyílik a megrendelő oldal
 
 Step: Licencek: választok előfizetést
@@ -115,6 +116,5 @@ Step: Licencek: a licenc meg van rendelve
 	When Megrendelés oldal: bezárom a felugró ablakot
 	Then Navigáció: Megnyílik a licencek oldal
 
-Step: Licencek: Kijelentkezek a Licencek oldalról
-	When Licencek oldal: Kijelentkezek a Licencek oldalról
-	Then Navigáció: Megnyílik az ibello Bejelentkező oldala
+Step: Licencek: megnyitott licenc megrendelő ablak
+	Given Navigáció: Megnyílik a megrendelő oldal
