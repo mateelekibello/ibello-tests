@@ -18,13 +18,13 @@ Step: Licencek: engedélyezem a licencem
 	When Licencek oldal: ellenőrzöm a licenc adatait
 	When Licencek oldal: beírom a felhasználó nevét
 	When Licencek oldal: engedélyezem a licencet
-	Then Licencek oldal: a listában megjelenik az engedélyezett licenc
 
 Step: Licencek: Kijelentkezek a Licencek oldalról
 	When Licencek oldal: Kijelentkezek a Licencek oldalról
 	Then Navigáció: Megnyílik az ibello Bejelentkező oldala
 
 Step: Licencek: licenc engedélyezve lesz a felhasználónak
+	Then Licencek oldal: a listában megjelenik az engedélyezett licenc
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
 	When Licencek: bejelentkezem felhasználóként
 	Given Navigáció: Megnyitom a Licencek oldalt
@@ -43,9 +43,9 @@ Step: Licencek: visszavonom az engedélyezett licencem
 	Then Licencek oldal: megjelenik a licenc visszavonása dialógusablak
 	Given Licencek oldal: ellenőrzöm a licenc adatait
 	When Licencek oldal: visszavonom a licencet
-	Then Licencek oldal: a licenc engedélyezhető
 
 Step: Licencek: licenc visszavonva a felhasználótól
+	Then Licencek oldal: a licenc engedélyezhető
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
 	Given Licencek: bejelentkezem felhasználóként
 	Given Navigáció: Megnyitom a Licencek oldalt
@@ -63,11 +63,11 @@ Step: Licencek: visszaadom a nekem adott licencet
 	Given Licencek oldal: ellenőrzöm a licenc adatait
 	Then Licencek oldal: megjelenik a licenc visszaadása dialógusablak
 	When Licencek oldal: visszaadom a licencet
-	Then Licencek oldal: a licenc nem visszaadható
-	Given Licencek oldal: frissítem az oldalt
-	Then Licencek oldal: a licenc nincs a listán
 
 Step: Licencek: a licenc visszakerül a tulajdonoshoz
+	Then Licencek oldal: a licenc nem visszaadható
+	When Licencek oldal: frissítem az oldalt
+	Then Licencek oldal: a licenc nincs a listán
 	And Licencek: bejelentkezem tulajdonosként
 	And Navigáció: Megnyitom a Licencek oldalt
 	When Tesztadat: Az Aktuális Licenc Neve Legyen "user"
@@ -125,7 +125,7 @@ Step: Licencek: megnyitott licenc megrendelő ablak
 Step: Licencek: a licenc engedélyezhető
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
 	Given Licencek oldal: beállítom a licenc státuszát
-	When Licencek oldal: a licenc legyen engedélyezhető
+	Given Licencek oldal: a licenc legyen engedélyezhető
 
 Step: Licencek: a licenc visszavonható
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"

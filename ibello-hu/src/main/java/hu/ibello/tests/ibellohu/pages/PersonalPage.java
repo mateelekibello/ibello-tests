@@ -196,7 +196,7 @@ public class PersonalPage extends AbstractPage {
 	
 	
 	public void mentés_gomb() {
-		doWith(submitButton).click();
+		doWith(submitButton).withPageRefreshWait().click();
 	}
 	
 	public void dialógus() {

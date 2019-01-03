@@ -7,7 +7,7 @@ import hu.ibello.tests.ibellohu.pages.LicensesPage;
 import hu.ibello.tests.ibellohu.pages.MenuPage;
 
 @Name("Licencek oldal")
-public class LicensesPageSteps extends AbstractSteps{
+public class LicensesPageSteps extends AbstractSteps {
 	
 	@Inject
 	private TestData testData;
@@ -156,7 +156,11 @@ public class LicensesPageSteps extends AbstractSteps{
 	
 	@Name("beállítom a licenc státuszát")
 	public void beállítom_a_licenc_státuszát() {
-		if (licensesPage.az_$_licenchez_az_engedélyez_gomb_megjelent(testData.license.licenseId)) licenseIsGranted = false;
-		if (licensesPage.az_$_licenchez_a_visszavon_gomb_megjelent(testData.license.licenseId)) licenseIsGranted = true;
+		if (licensesPage.az_$_licenchez_az_engedélyez_gomb_megjelent(testData.license.licenseId)) {
+			licenseIsGranted = false;
+		}
+		if (licensesPage.az_$_licenchez_a_visszavon_gomb_megjelent(testData.license.licenseId)) {
+			licenseIsGranted = true;
+		}
 	}
 }
