@@ -93,6 +93,14 @@ public class LicensesPage extends AbstractPage {
 		expectations().expect(pageTitle).toBe().displayed();
 	}
 	
+	public boolean az_$_licenchez_az_engedélyez_gomb_megjelent(String licenceId) {
+		return checkThat(engedélyezButton.applyParameters(licenceId)).isDisplayed();
+	}
+	
+	public boolean az_$_licenchez_a_visszavon_gomb_megjelent(String licenceId) {
+		return checkThat(visszavonButton.applyParameters(licenceId)).isDisplayed();
+	}
+	
 	public void kattintás_az_engedélyez_gombra_a_$_licenchez(String licenceId) {
 		doWith(engedélyezButton.applyParameters(licenceId)).click();
 	}

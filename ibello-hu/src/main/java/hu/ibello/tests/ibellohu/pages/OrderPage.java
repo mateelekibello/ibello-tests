@@ -37,18 +37,18 @@ public class OrderPage extends AbstractPage {
 	
 	@Relation(type=RelationType.DESCENDANT_OF, by=By.TAG_NAME, using="ux-dialog")
 	@Find(by=By.PARTIAL_TEXT, using="${orderPage.finalizeDialogText}")
-	private WebElement Felirat1;
+	private WebElement véglegesítőAblakFelirata;
 	
 	@Find(by=By.BUTTON_TEXT, using="${orderPage.okButton}")
 	private WebElement okButton;
 	
 	@Relation(type=RelationType.DESCENDANT_OF, by=By.TAG_NAME, using="ux-dialog")
 	@Find(by=By.PARTIAL_TEXT, using="${orderPage.okDialogText}")
-	private WebElement Felirat2;
+	private WebElement visszaigazolóAblakFelirata;
 	
 	@Position(type=PositionType.ROW, by=By.PARTIAL_TEXT, using="${0}")
 	@Find(by=By.TEXT, using="${1}")
-	private WebElement TételÁra;
+	private WebElement tételÁra;
 	
 	@Override
 	public void ellenőrzés_hogy_az_oldal_megnyílt() {
@@ -76,13 +76,13 @@ public class OrderPage extends AbstractPage {
 	}
 	
 	public void ellenőrzés_hogy_a_véglegesítő_üzenetablak_megnyílt() {
-		expectations().expect(Felirat1).toBe().displayed();
+		expectations().expect(véglegesítőAblakFelirata).toBe().displayed();
 		expectations().expect(aMegrendelésVéglegesítéseButton).toBe().displayed();
 		expectations().expect(mégsemButton).toBe().displayed();
 	}
 	
 	public void ellenőrzés_hogy_a_visszaigazoló_dialógusablak_megnyílt() {
-		expectations().expect(Felirat2).toBe().displayed();
+		expectations().expect(visszaigazolóAblakFelirata).toBe().displayed();
 		expectations().expect(okButton).toBe().displayed();
 	}
 	
@@ -91,6 +91,6 @@ public class OrderPage extends AbstractPage {
 	}
 	
 	public void megrendelés_tételének_ára(String item, String price) {
-		expectations().expect(TételÁra.applyParameters(item,price)).toBe().displayed();
+		expectations().expect(tételÁra.applyParameters(item,price)).toBe().displayed();
 	}
 }
