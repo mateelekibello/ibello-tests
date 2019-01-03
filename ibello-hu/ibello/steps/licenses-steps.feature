@@ -32,6 +32,10 @@ Step: Licencek: licenc engedélyezve lesz a felhasználónak
 	Given Licencek: Kijelentkezek a Licencek oldalról
 
 Step: Licencek: van engedélyezett licencem
+	Given Licencek: bejelentkezem tulajdonosként
+	Given Navigáció: Megnyitom a Licencek oldalt
+	When Licencek: a licenc visszavonható
+	Given Licencek oldal: Kijelentkezek a Licencek oldalról
 
 Step: Licencek: visszavonom az engedélyezett licencem
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
@@ -55,21 +59,20 @@ Step: Licencek: bejelentkezem felhasználóként
 
 Step: Licencek: visszaadom a nekem adott licencet
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
-	Given Licencek: van engedélyezett licencem
 	When Licencek oldal: elindítom a licenc visszaadását
 	Given Licencek oldal: ellenőrzöm a licenc adatait
 	Then Licencek oldal: megjelenik a licenc visszaadása dialógusablak
 	When Licencek oldal: visszaadom a licencet
 	Then Licencek oldal: a licenc nem visszaadható
+	Given Licencek oldal: frissítem az oldalt
+	Then Licencek oldal: a licenc nincs a listán
 
 Step: Licencek: a licenc visszakerül a tulajdonoshoz
-	Given Licencek oldal: Kijelentkezek a Licencek oldalról
 	And Licencek: bejelentkezem tulajdonosként
 	And Navigáció: Megnyitom a Licencek oldalt
 	When Tesztadat: Az Aktuális Licenc Neve Legyen "user"
 	Then Licencek oldal: a licenc engedélyezhető
 	Given Licencek: Kijelentkezek a Licencek oldalról
-	And Licencek: bejelentkezem felhasználóként
 
 Step: Licencek: a licenc törlődik a listáról
 	Given Navigáció: Megnyitom a Licencek oldalt
@@ -118,3 +121,13 @@ Step: Licencek: a licenc meg van rendelve
 
 Step: Licencek: megnyitott licenc megrendelő ablak
 	Given Navigáció: Megnyílik a megrendelő oldal
+
+Step: Licencek: a licenc engedélyezhető
+	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
+	Given Licencek oldal: beállítom a licenc státuszát
+	When Licencek oldal: a licenc legyen engedélyezhető
+
+Step: Licencek: a licenc visszavonható
+	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
+	Given Licencek oldal: beállítom a licenc státuszát
+	Given Licencek oldal: a licenc legyen visszavonható
