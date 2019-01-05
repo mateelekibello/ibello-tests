@@ -16,18 +16,18 @@ public class LicensesPage extends AbstractPage {
 	
 	@Position(type=PositionType.COLUMN, by=By.TEXT, using="${licensesPage.licenseIdHeather}")
 	@Find(by=By.TEXT, using="${0}")
-	private WebElement azonosítóCella;
+	private WebElement licenseIdCell;
 	
 	@Position(type=PositionType.ROW, by=By.TEXT, using="${0}")
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.grantButton}")
-	private WebElement engedélyezButton;
+	private WebElement grantButton;
 	
 	@Position(type=PositionType.ROW, by=By.TEXT, using="${0}")
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.revokeButton}")
-	private WebElement visszavonButton;
+	private WebElement revokeButton;
 	
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.giveBackButton}")
-	private WebElement visszaadButton;
+	private WebElement giveBackButton;
 	
 	@Relation(type=RelationType.ANCESTOR_OF, by=By.PARTIAL_TEXT, using="${licensesPage.grantDialogText}")
 	@Find(by=By.CLASS_NAME, using="au-target")
@@ -45,25 +45,25 @@ public class LicensesPage extends AbstractPage {
 	private WebElement licentGrantUserField;
 	
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.grantButton}")
-	private WebElement engedélyezButton1;
+	private WebElement grantButton1;
 	
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.cancelButton}")
-	private WebElement mégsemButton;
+	private WebElement cancelButton;
 	
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.revokeButton}")
-	private WebElement visszavonButton1;
+	private WebElement revokeButton1;
 	
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.cancelButton}")
-	private WebElement mégsemButton1;
+	private WebElement cancelButton1;
 	
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.giveBackButton}")
-	private WebElement visszaadButton1;
+	private WebElement giveBackButton1;
 	
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.cancelButton}")
-	private WebElement mégsemButton2;
+	private WebElement cancelButton2;
 	
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.orderButton}")
-	private WebElement megrendelésButton;
+	private WebElement orderButton;
 	
 	@Find(by=By.ID, using="showInvalid")
 	private WebElement showInvalidButton;
@@ -94,42 +94,42 @@ public class LicensesPage extends AbstractPage {
 	}
 	
 	public boolean az_$_licenchez_az_engedélyez_gomb_megjelent(String licenceId) {
-		return checkThat(engedélyezButton.applyParameters(licenceId)).isDisplayed();
+		return checkThat(grantButton.applyParameters(licenceId)).isDisplayed();
 	}
 	
 	public boolean az_$_licenchez_a_visszavon_gomb_megjelent(String licenceId) {
-		return checkThat(visszavonButton.applyParameters(licenceId)).isDisplayed();
+		return checkThat(revokeButton.applyParameters(licenceId)).isDisplayed();
 	}
 	
 	public void kattintás_az_engedélyez_gombra_a_$_licenchez(String licenceId) {
-		doWith(engedélyezButton.applyParameters(licenceId)).click();
+		doWith(grantButton.applyParameters(licenceId)).click();
 	}
 	
 	public void kattintás_a_visszavon_gombra_a_$_licenchez(String licenceId) {
-		doWith(visszavonButton.applyParameters(licenceId)).click();
+		doWith(revokeButton.applyParameters(licenceId)).click();
 	}
 	
 	public void kattintás_a_visszaad_gombra_a_$_licenchez(String licenceId) {
-		doWith(visszaadButton.applyParameters(licenceId)).click();
+		doWith(giveBackButton.applyParameters(licenceId)).click();
 	}
 	
 	public void ellenőrzés_hogy_az_engedélyező_dialógusablak_megnyílt() {
 		expectations().expect(grantDialog).toBe().displayed();
 		expectations().expect(licentGrantUserField).toBe().displayed();
-		expectations().expect(engedélyezButton1).toBe().displayed();
-		expectations().expect(mégsemButton).toBe().displayed();
+		expectations().expect(grantButton1).toBe().displayed();
+		expectations().expect(cancelButton).toBe().displayed();
 	}
 	
 	public void ellenőrzés_hogy_a_visszavonó_dialógusablak_megnyílt() {
 		expectations().expect(revokeDialog).toBe().displayed();
-		expectations().expect(visszavonButton1).toBe().displayed();
-		expectations().expect(mégsemButton1).toBe().displayed();
+		expectations().expect(revokeButton1).toBe().displayed();
+		expectations().expect(cancelButton1).toBe().displayed();
 	}
 	
 	public void ellenőrzés_hogy_a_visszaadó_dialógusablak_megnyílt() {
 		expectations().expect(giveBackDialog).toBe().displayed();
-		expectations().expect(visszaadButton1).toBe().displayed();
-		expectations().expect(mégsemButton2).toBe().displayed();
+		expectations().expect(giveBackButton1).toBe().displayed();
+		expectations().expect(cancelButton2).toBe().displayed();
 	}
 	
 	public void licenc_adatok_ellenőrzése(String lId, String lType, String lClass, String lOwner, String lValidThru) {
@@ -145,31 +145,31 @@ public class LicensesPage extends AbstractPage {
 	}
 	
 	public void kattintás_az_engdélyezés_gombra() {
-		doWith(engedélyezButton1).click();
+		doWith(grantButton1).click();
 	}
 	
 	public void kattintás_a_visszavon_gombra() {
-		doWith(visszavonButton1).click();
+		doWith(revokeButton1).click();
 	}
 	
 	public void kattintás_a_visszaad_gombra() {
-		doWith(visszaadButton1).click();
+		doWith(giveBackButton1).click();
 	}
 	
 	public void ellenőrzés_hogy_a_$_lincenc_visszavonható(String licenseId) {
-		expectations().expect(visszavonButton.applyParameters(licenseId)).toBe().displayed();
+		expectations().expect(revokeButton.applyParameters(licenseId)).toBe().displayed();
 	}
 	
 	public void ellenőrzés_hogy_a_$_lincenc_engedélyezhető(String licenseId) {
-		expectations().expect(engedélyezButton.applyParameters(licenseId)).toBe().displayed();
+		expectations().expect(grantButton.applyParameters(licenseId)).toBe().displayed();
 	}
 	
 	public void ellenőrzés_hogy_a_$_lincenc_nem_visszaadható(String licenseId) {
-		expectations().expect(visszaadButton.applyParameters(licenseId)).toNotBe().displayed();
+		expectations().expect(giveBackButton.applyParameters(licenseId)).toNotBe().displayed();
 	}
 	
 	public void ellenőrzés_hogy_a_$_lincenc_visszaadható(String licenseId) {
-		expectations().expect(visszaadButton.applyParameters(licenseId)).toBe().displayed();
+		expectations().expect(giveBackButton.applyParameters(licenseId)).toBe().displayed();
 	}
 	
 	public void frissítem_az_oldalt() {
@@ -177,11 +177,11 @@ public class LicensesPage extends AbstractPage {
 	}
 	
 	public void ellenőrzés_hogy_a_licenc_nincs_a_listán(String licenseId) {
-		expectations().expect(azonosítóCella.applyParameters(licenseId)).toNotBe().displayed();
+		expectations().expect(licenseIdCell.applyParameters(licenseId)).toNotBe().displayed();
 	}
 	
 	public void kattintás_a_megrendelés_gombra() {
-		doWith(megrendelésButton).click();
+		doWith(orderButton).click();
 	}
 	
 	public void lejárt_licencek_megjelenítése_választása() {

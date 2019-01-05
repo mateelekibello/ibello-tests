@@ -16,39 +16,39 @@ public class OrderPage extends AbstractPage {
 	
 	@Position(type=PositionType.ROW, by=By.PARTIAL_TEXT, using="${orderPage.bronze}")
 	@Find(by=By.TAG_NAME, using="input")
-	private WebElement field1;
+	private WebElement inputNumberBronze;
 	
 	@Position(type=PositionType.ROW, by=By.PARTIAL_TEXT, using="${orderPage.silver}")
 	@Find(by=By.TAG_NAME, using="input")
-	private WebElement field2;
+	private WebElement inputNumberSilver;
 
 	@Position(type=PositionType.ROW, by=By.PARTIAL_TEXT, using="${orderPage.gold}")
 	@Find(by=By.TAG_NAME, using="input")
-	private WebElement field3;
+	private WebElement inputNumberGold;
 	
 	@Find(by=By.BUTTON_TEXT, using="${orderPage.submitButton}")
-	private WebElement aMegrendelésÁttekintéseButton;
+	private WebElement orderSubmitButton;
 	
 	@Find(by=By.BUTTON_TEXT, using="${orderPage.finalizeButton}")
-	private WebElement aMegrendelésVéglegesítéseButton;
+	private WebElement orderfinalizeButton;
 	
 	@Find(by=By.BUTTON_TEXT, using="${orderPage.cancelButton}")
-	private WebElement mégsemButton;
+	private WebElement cancelButton;
 	
 	@Relation(type=RelationType.DESCENDANT_OF, by=By.TAG_NAME, using="ux-dialog")
 	@Find(by=By.PARTIAL_TEXT, using="${orderPage.finalizeDialogText}")
-	private WebElement véglegesítőAblakFelirata;
+	private WebElement finalizeDialogText;
 	
 	@Find(by=By.BUTTON_TEXT, using="${orderPage.okButton}")
 	private WebElement okButton;
 	
 	@Relation(type=RelationType.DESCENDANT_OF, by=By.TAG_NAME, using="ux-dialog")
 	@Find(by=By.PARTIAL_TEXT, using="${orderPage.okDialogText}")
-	private WebElement visszaigazolóAblakFelirata;
+	private WebElement okDialogText;
 	
 	@Position(type=PositionType.ROW, by=By.PARTIAL_TEXT, using="${0}")
 	@Find(by=By.TEXT, using="${1}")
-	private WebElement tételÁra;
+	private WebElement itemPriceField;
 	
 	@Override
 	public void ellenőrzés_hogy_az_oldal_megnyílt() {
@@ -56,33 +56,33 @@ public class OrderPage extends AbstractPage {
 	}
 	
 	public void bronz_licencek_száma_legyen_$(int number) {
-		doWith(field1).setValue(String.valueOf(number));
+		doWith(inputNumberBronze).setValue(String.valueOf(number));
 	}
 	
 	public void ezüst_licencek_száma_legyen_$(int number) {
-		doWith(field2).setValue(String.valueOf(number));
+		doWith(inputNumberSilver).setValue(String.valueOf(number));
 	}
 	
 	public void arany_licencek_száma_legyen_$(int number) {
-		doWith(field3).setValue(String.valueOf(number));
+		doWith(inputNumberGold).setValue(String.valueOf(number));
 	}
 	
 	public void kattintás_az_áttekintő_gombra() {
-		doWith(aMegrendelésÁttekintéseButton).click();
+		doWith(orderSubmitButton).click();
 	}
 	
 	public void kattintás_a_véglegesítő_gombra() {
-		doWith(aMegrendelésVéglegesítéseButton).click();
+		doWith(orderfinalizeButton).click();
 	}
 	
 	public void ellenőrzés_hogy_a_véglegesítő_üzenetablak_megnyílt() {
-		expectations().expect(véglegesítőAblakFelirata).toBe().displayed();
-		expectations().expect(aMegrendelésVéglegesítéseButton).toBe().displayed();
-		expectations().expect(mégsemButton).toBe().displayed();
+		expectations().expect(finalizeDialogText).toBe().displayed();
+		expectations().expect(orderfinalizeButton).toBe().displayed();
+		expectations().expect(cancelButton).toBe().displayed();
 	}
 	
 	public void ellenőrzés_hogy_a_visszaigazoló_dialógusablak_megnyílt() {
-		expectations().expect(visszaigazolóAblakFelirata).toBe().displayed();
+		expectations().expect(okDialogText).toBe().displayed();
 		expectations().expect(okButton).toBe().displayed();
 	}
 	
@@ -91,6 +91,6 @@ public class OrderPage extends AbstractPage {
 	}
 	
 	public void megrendelés_tételének_ára(String item, String price) {
-		expectations().expect(tételÁra.applyParameters(item,price)).toBe().displayed();
+		expectations().expect(itemPriceField.applyParameters(item,price)).toBe().displayed();
 	}
 }

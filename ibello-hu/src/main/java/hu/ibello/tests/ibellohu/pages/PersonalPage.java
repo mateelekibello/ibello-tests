@@ -61,7 +61,7 @@ public class PersonalPage extends AbstractPage {
 	private WebElement billingAddressLine2Field;
 	
 	@Find(by=By.BUTTON_TEXT, using="${personalPage.menu.logout}")
-	private WebElement kijelentkezésLink;
+	private WebElement logoutLink;
 	
 	@Find(by=By.BUTTON_TEXT, using="${personalPage.submitButton}")
 	private WebElement submitButton;
