@@ -1,32 +1,32 @@
 # namespace: Személyes
 
 Step: Személyes: Megpróbálok bejelentkezni egy regisztrált felhasználóval
-	Given Navigáció: Az ibello honlapján vagyok
-	Given Navigáció: Megnyitom a bejelentkező oldalt
+	Given Navigáció: Az Ibello Honlapján Vagyok
+	Given Navigáció: Megnyitom a Bejelentkező Oldalt
 	When Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
 
 Step: Személyes: Felhasználói adatok beállítása
-	When Személyes oldal: Beállítom a keresztnevet
-	When Személyes oldal: Beállítom a vezetéknevet
-	When Személyes oldal: Beállítom a szervezet nevét
-	When Személyes oldal: Beállítom a számlázási keresztnevet
-	When Személyes oldal: Beállítom a számlázási vezetéknevet
-	When Személyes oldal: Beállítom a számlázási szervezet nevét
-	When Személyes oldal: Beállítom a számlázási adószámot
-	When Személyes oldal: Beállítom a számlázási országot
-	When Személyes oldal: Beállítom a számlázási várost
-	When Személyes oldal: Beállítom a számlázási államot
-	When Személyes oldal: Beállítom a számlázási irányítószámot
-	When Személyes oldal: Beállítom a számlázási cím első részét
-	When Személyes oldal: Beállítom a számlázási cím második részét
+	When Személyes oldal: Beállítom a Keresztnevet
+	When Személyes oldal: Beállítom a Vezetéknevet
+	When Személyes oldal: Beállítom a Szervezet Nevét
+	When Személyes oldal: Beállítom a Számlázási Keresztnevet
+	When Személyes oldal: Beállítom a Számlázási Vezetéknevet
+	When Személyes oldal: Beállítom a Számlázási Szervezet Nevét
+	When Személyes oldal: Beállítom a Számlázási Adószámot
+	When Személyes oldal: Beállítom a Számlázási Országot
+	When Személyes oldal: Beállítom a Számlázási Várost
+	When Személyes oldal: Beállítom a Számlázási Államot
+	When Személyes oldal: Beállítom a Számlázási Irányítószámot
+	When Személyes oldal: Beállítom a Számlázási Cím Első Részét
+	When Személyes oldal: Beállítom a Számlázási Cím Második Részét
 
 Step: Személyes: Kijelentkezek a Személyes oldalról
-	When Személyes oldal: Kijelentkezek a Személyes oldalról
-	Then Navigáció: Megnyílik az ibello Bejelentkező oldala
+	When Személyes oldal: Kijelentkezek a Személyes Oldalról
+	Then Navigáció: Megnyílik Az Ibello Bejelentkező Oldala
 
 Step: Személyes: Az átírt adatok ellenőrzése
 	When Tesztadat: Az Aktuális Felhasználó Azonosítója Legyen "modified"
-	Then Személyes oldal: A beállított felhasználói adatok jelennek meg
+	Then Személyes oldal: Az Átírt Felhasználó Adatok Jelennek Meg
 
 Step: Személyes: Felhasználói adatok visszaállítása
 	Given Tesztadat: Az Aktuális Felhasználó Azonosítója Legyen "valid"
@@ -39,6 +39,6 @@ Step: Személyes: Felhasználói adatok átírása
 	When Személyes: Mentem a változásokat
 
 Step: Személyes: Mentem a változásokat
-	When Személyes oldal: Mentem a változásokat
-	Then Személyes oldal: Megjelenik a sikeres mentés üzenetablak
-	When Személyes oldal: Bezárom a felugró ablakot
+	When Személyes oldal: Mentem a Változásokat
+	Then Személyes oldal: Megjelenik a Sikeres Mentés Üzenetablak
+	When Személyes oldal: Bezárom a Felugró Ablakot

@@ -1,133 +1,133 @@
 # namespace: Licencek
 
-Step: Licencek: van érvényes licenc
+Step: Licencek: Van érvényes licenc
 
-Step: Licencek: bejelentkezem tulajdonosként
-	Given Navigáció: Az ibello honlapján vagyok
-	Given Navigáció: Megnyitom a bejelentkező oldalt
+Step: Licencek: Bejelentkezem tulajdonosként
+	Given Navigáció: Az Ibello Honlapján Vagyok
+	Given Navigáció: Megnyitom a Bejelentkező Oldalt
 	Given Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
 
-Step: Licencek: megnyitom a licencek oldalt
-	Given Navigáció: Ellenőrzöm hogy a bejelentkezett menü látható
-	When Navigáció: Megnyitom a Licencek oldalt
+Step: Licencek: Megnyitom a licencek oldalt
+	Given Navigáció: Ellenőrzöm Hogy a Bejelentkezett Menü Látható
+	When Navigáció: Megnyitom a Licencek Oldalt
 
-Step: Licencek: engedélyezem a licencem
+Step: Licencek: A licenc engedélyezhető
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
-	When Licencek oldal: elindítom az engedélyezést
-	Then Licencek oldal: megnyílik a licenc engedélyezés dialógusablak
-	When Licencek oldal: ellenőrzöm a licenc adatait
-	When Licencek oldal: beírom a felhasználó nevét
-	When Licencek oldal: engedélyezem a licencet
+	Given Licencek oldal: Beállítom a Licenc Státuszát
+	Given Licencek oldal: Az Aktuális Licenc Legyen Engedélyezhető
+
+Step: Licencek: Engedélyezem a licencem
+	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
+	When Licencek oldal: Elindítom Az Engedélyezést
+	Then Licencek oldal: Megnyílik a Licenc Engedélyezés Dialógusablak
+	When Licencek oldal: Ellenőrzöm a Licenc Adatait
+	When Licencek oldal: Beírom a Felhasználó Nevét
+	When Licencek oldal: Engedélyezem a Licencet
 
 Step: Licencek: Kijelentkezek a Licencek oldalról
-	When Licencek oldal: Kijelentkezek a Licencek oldalról
-	Then Navigáció: Megnyílik az ibello Bejelentkező oldala
+	When Licencek oldal: Kijelentkezek a Licencek Oldalról
+	Then Navigáció: Megnyílik Az Ibello Bejelentkező Oldala
 
-Step: Licencek: licenc engedélyezve lesz a felhasználónak
-	Then Licencek oldal: a listában megjelenik az engedélyezett licenc
+Step: Licencek: Licenc engedélyezve lesz a felhasználónak
+	Then Licencek oldal: Az Engedélyezett Licenc Megjelenik a Listában
+	Given Licencek oldal: Kijelentkezek a Licencek Oldalról
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
-	When Licencek: bejelentkezem felhasználóként
-	Given Navigáció: Megnyitom a Licencek oldalt
-	Then Licencek oldal: a licenc visszaadható
-	Given Licencek: Kijelentkezek a Licencek oldalról
+	When Licencek: Bejelentkezem felhasználóként
+	Given Navigáció: Megnyitom a Licencek Oldalt
+	Then Licencek oldal: Az Aktuális Licenc Visszaadható
 
-Step: Licencek: van engedélyezett licencem
-	Given Licencek: bejelentkezem tulajdonosként
-	Given Navigáció: Megnyitom a Licencek oldalt
-	When Licencek: a licenc visszavonható
-	Given Licencek oldal: Kijelentkezek a Licencek oldalról
+Step: Licencek: Van engedélyezett licencem
+	Given Licencek: Bejelentkezem tulajdonosként
+	Given Navigáció: Megnyitom a Licencek Oldalt
+	When Licencek oldal: Az Aktuális Licenc Legyen Visszavonható
+	Given Licencek oldal: Kijelentkezek a Licencek Oldalról
 
-Step: Licencek: visszavonom az engedélyezett licencem
+Step: Licencek: Visszavonom az engedélyezett licencem
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
-	When Licencek oldal: elindítom a licenc visszavonását
-	Then Licencek oldal: megjelenik a licenc visszavonása dialógusablak
-	Given Licencek oldal: ellenőrzöm a licenc adatait
-	When Licencek oldal: visszavonom a licencet
+	When Licencek oldal: Elindítom a Licenc Visszavonását
+	Then Licencek oldal: Megjelenik a Licenc Visszavonása Dialógusablak
+	Given Licencek oldal: Ellenőrzöm a Licenc Adatait
+	When Licencek oldal: Visszavonom a Licencet
 
-Step: Licencek: licenc visszavonva a felhasználótól
-	Then Licencek oldal: a licenc engedélyezhető
+Step: Licencek: Licenc visszavonva a felhasználótól
+	Then Licencek oldal: Az Aktuális Licenc Engedélyezhető
+	Given Licencek oldal: Kijelentkezek a Licencek Oldalról
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
-	Given Licencek: bejelentkezem felhasználóként
-	Given Navigáció: Megnyitom a Licencek oldalt
-	Given Licencek oldal: a licenc nincs a listán
-	Given Licencek oldal: Kijelentkezek a Licencek oldalról
+	Given Licencek: Bejelentkezem felhasználóként
+	Given Navigáció: Megnyitom a Licencek Oldalt
+	Given Licencek oldal: Az Aktuális Licenc Nincs a Listán
 
-Step: Licencek: bejelentkezem felhasználóként
-	Given Navigáció: Az ibello honlapján vagyok
-	Given Navigáció: Megnyitom a bejelentkező oldalt
+Step: Licencek: Bejelentkezem felhasználóként
+	Given Navigáció: Az Ibello Honlapján Vagyok
+	Given Navigáció: Megnyitom a Bejelentkező Oldalt
 	Given Bejelentkezés: Megpróbálok bejelentkezni egy teszt felhasználóval
 
-Step: Licencek: visszaadom a nekem adott licencet
+Step: Licencek: Visszaadom a nekem adott licencet
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
-	When Licencek oldal: elindítom a licenc visszaadását
-	Given Licencek oldal: ellenőrzöm a licenc adatait
-	Then Licencek oldal: megjelenik a licenc visszaadása dialógusablak
-	When Licencek oldal: visszaadom a licencet
+	When Licencek oldal: Elindítom a Licenc Visszaadását
+	Given Licencek oldal: Ellenőrzöm a Licenc Adatait
+	Then Licencek oldal: Megjelenik a Licenc Visszaadása Dialógusablak
+	When Licencek oldal: Visszaadom a Licencet
 
-Step: Licencek: a licenc visszakerül a tulajdonoshoz
-	Then Licencek oldal: a licenc nem visszaadható
-	When Licencek oldal: frissítem az oldalt
-	Then Licencek oldal: a licenc nincs a listán
-	And Licencek: bejelentkezem tulajdonosként
-	And Navigáció: Megnyitom a Licencek oldalt
-	When Tesztadat: Az Aktuális Licenc Neve Legyen "user"
-	Then Licencek oldal: a licenc engedélyezhető
+Step: Licencek: A licenc visszakerül a tulajdonoshoz
+	Then Licencek oldal: Az Aktuális Licenc Nem Visszaadható
+	When Licencek oldal: Frissítem Az Oldalt
+	Then Licencek oldal: Az Aktuális Licenc Nincs a Listán
 	Given Licencek: Kijelentkezek a Licencek oldalról
-
-Step: Licencek: a licenc törlődik a listáról
-	Given Navigáció: Megnyitom a Licencek oldalt
+	And Licencek: Bejelentkezem tulajdonosként
+	And Navigáció: Megnyitom a Licencek Oldalt
 	When Tesztadat: Az Aktuális Licenc Neve Legyen "user"
-	Then Licencek oldal: a licenc nincs a listán
+	Then Licencek oldal: Az Aktuális Licenc Engedélyezhető
 
-Step: Licencek: van lejárt licenc
+Step: Licencek: A licenc törlődik a listáról
+	Given Navigáció: Megnyitom a Licencek Oldalt
+	When Tesztadat: Az Aktuális Licenc Neve Legyen "user"
+	Then Licencek oldal: Az Aktuális Licenc Nincs a Listán
 
-Step: Licencek: kilistáztatom a lejárt licenceket
-	Given Licencek oldal: kilistáztatom a lejárt licenceket
+Step: Licencek: Van lejárt licenc
 
-Step: Licencek: a lejárt licencek is megjelennek a listában
+Step: Licencek: Kilistáztatom a lejárt licenceket
+	Given Licencek oldal: Kilistáztatom a Lejárt Licenceket
+
+Step: Licencek: A lejárt licencek is megjelennek a listában
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "invalid"
-	Then Licencek oldal: a licenc engedélyezhető
+	Then Licencek oldal: Az Aktuális Licenc Legyen Engedélyezhető
 
-Step: Licencek: engedélyezem a lejárt licencem
+Step: Licencek: Engedélyezem a lejárt licencem
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "invalid"
-	When Licencek oldal: elindítom az engedélyezést
+	When Licencek oldal: Elindítom Az Engedélyezést
 
-Step: Licencek: lejárt licenc nem engedélyezhető
+Step: Licencek: Lejárt licenc nem engedélyezhető
 
-Step: Licencek: megrendelem a licencem
-	When Licencek oldal: megrendelem a licencem
+Step: Licencek: Megrendelem a licencem
+	When Licencek oldal: Megrendelem a Licencem
 
-Step: Licencek: a licenc megrendelő oldal megnyílik
-	Given Navigáció: Megnyílik a megrendelő oldal
+Step: Licencek: A licenc megrendelő oldal megnyílik
+	Given Navigáció: Megnyílik a Megrendelő Oldal
 
-Step: Licencek: választok előfizetést
+Step: Licencek: Választok előfizetést
 	Given Tesztadat: Az Aktuális Rendelés Neve Legyen "order"
-	When Megrendelés oldal: beállítom a bronz licencek számát
-	When Megrendelés oldal: beállítom az ezüst licencek számát
-	When Megrendelés oldal: beállítom az arany licencek számát
+	When Megrendelés oldal: Beállítom a Bronz Licencek Számát
+	When Megrendelés oldal: Beállítom Az Ezüst Licencek Számát
+	When Megrendelés oldal: Beállítom Az Arany Licencek Számát
 
-Step: Licencek: áttekintem a megrendelést
-	Given Megrendelés oldal: áttekintem a megrendelést
-	Given Megrendelés oldal: megjelenik a véglegesítés üzenetablak
-	Given Megrendelés oldal: ellenőrzöm a megrendelés adatait
+Step: Licencek: Áttekintem a megrendelést
+	Given Megrendelés oldal: Áttekintem a Megrendelést
+	Given Megrendelés oldal: Megjelenik a Véglegesítés Üzenetablak
+	Given Megrendelés oldal: Ellenőrzöm a Megrendelés Adatait
 
-Step: Licencek: véglegesítem a megrendelést
-	Given Megrendelés oldal: véglegesítem a megrendelést
+Step: Licencek: Véglegesítem a megrendelést
+	Given Megrendelés oldal: Véglegesítem a Megrendelést
 
-Step: Licencek: a licenc meg van rendelve
-	Then Megrendelés oldal: megjelenik a sikeres megrendelés dialógusablak
-	When Megrendelés oldal: bezárom a felugró ablakot
-	Then Navigáció: Megnyílik a licencek oldal
+Step: Licencek: A licenc meg van rendelve
+	Then Megrendelés oldal: Megjelenik a Sikeres Megrendelés Dialógusablak
+	When Megrendelés oldal: Bezárom a Felugró Ablakot
+	Then Navigáció: Megnyílik a Licencek Oldal
 
-Step: Licencek: megnyitott licenc megrendelő ablak
-	Given Navigáció: Megnyílik a megrendelő oldal
+Step: Licencek: Megnyitott licenc megrendelő ablak
+	Given Navigáció: Megnyílik a Megrendelő Oldal
 
-Step: Licencek: a licenc engedélyezhető
+Step: Licencek: A licenc visszavonható
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
-	Given Licencek oldal: beállítom a licenc státuszát
-	Given Licencek oldal: a licenc legyen engedélyezhető
-
-Step: Licencek: a licenc visszavonható
-	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
-	Given Licencek oldal: beállítom a licenc státuszát
-	Given Licencek oldal: a licenc legyen visszavonható
+	Given Licencek oldal: Beállítom a Licenc Státuszát
+	Given Licencek oldal: Az Aktuális Licenc Legyen Visszavonható
