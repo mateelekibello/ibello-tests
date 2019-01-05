@@ -13,32 +13,32 @@ public class OrderPageSteps extends AbstractSteps{
 	
 	private OrderPage orderPage;
 	
-	@Name("beállítom a bronz licencek számát") 
+//	@Name("Beállítom a bronz licencek számát") 
 	public void beállítom_a_bronz_licencek_számát() {
 		orderPage.bronz_licencek_száma_legyen_$(3);
 	}
 	
-	@Name("beállítom az ezüst licencek számát") 
+//	@Name("Beállítom az ezüst licencek számát") 
 	public void beállítom_az_ezüst_licencek_számát() {
 		orderPage.ezüst_licencek_száma_legyen_$(2);
 	}
 	
-	@Name("beállítom az arany licencek számát") 
+//	@Name("Beállítom az arany licencek számát") 
 	public void beállítom_az_arany_licencek_számát() {
 		orderPage.arany_licencek_száma_legyen_$(1);
 	}
 	
-	@Name("áttekintem a megrendelést")
+//	@Name("Áttekintem a megrendelést")
 	public void áttekintem_a_megrendelést() {
 		orderPage.kattintás_az_áttekintő_gombra();
 	}
 	
-	@Name("megjelenik a véglegesítés üzenetablak")
+//	@Name("Megjelenik a véglegesítés üzenetablak")
 	public void megjelenik_a_véglegesítés_üzenetablak() {
 		orderPage.ellenőrzés_hogy_a_véglegesítő_üzenetablak_megnyílt();
 	}
 	
-	@Name("ellenőrzöm a megrendelés adatait")
+//	@Name("Ellenőrzöm a megrendelés adatait")
 	public void ellenőrzöm_a_megrendelés_adatait() {
 		orderPage.megrendelés_tételének_ára(testData.order.bronzeName, testData.order.bronzeItemPrice);
 		orderPage.megrendelés_tételének_ára(testData.order.silverName, testData.order.silverItemPrice);
@@ -46,17 +46,17 @@ public class OrderPageSteps extends AbstractSteps{
 		orderPage.megrendelés_tételének_ára(testData.order.sumName, testData.order.sumPrice);
 	}
 	
-	@Name("véglegesítem a megrendelést")
+//	@Name("Véglegesítem a megrendelést")
 	public void véglegesítem_a_megrendelést() {
 		orderPage.kattintás_a_véglegesítő_gombra();
 	}
 	
-	@Name("megjelenik a sikeres megrendelés dialógusablak")
+//	@Name("Megjelenik a sikeres megrendelés dialógusablak")
 	public void megjelenik_a_sikeres_megrendelés_dialógusablak() {
 		orderPage.ellenőrzés_hogy_a_visszaigazoló_dialógusablak_megnyílt();
 	}
 	
-	@Name("bezárom a felugró ablakot")
+//	@Name("Bezárom a felugró ablakot")
 	public void bezárom_a_felugró_ablakot() {
 		orderPage.kattintás_az_Ok_gombra();
 	}

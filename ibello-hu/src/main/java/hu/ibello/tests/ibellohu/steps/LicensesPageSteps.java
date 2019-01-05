@@ -17,37 +17,37 @@ public class LicensesPageSteps extends AbstractSteps {
 	
 	private boolean licenseIsGranted = false;
 	
-	@Name("elindítom az engedélyezést")
+//	@Name("Elindítom az engedélyezést")
 	public void elindítom_az_engedélyezést() {
 		licensesPage.kattintás_az_engedélyez_gombra_a_$_licenchez(testData.license.licenseId);
 	}
 	
-	@Name("elindítom a licenc visszavonását")
+//	@Name("Elindítom a licenc visszavonását")
 	public void elindítom_a_licenc_visszavonását() {
 		licensesPage.kattintás_a_visszavon_gombra_a_$_licenchez(testData.license.licenseId);
 	}
 	
-	@Name("elindítom a licenc visszaadását")
+//	@Name("Elindítom a licenc visszaadását")
 	public void elindítom_a_licenc_visszaadását() {
 		licensesPage.kattintás_a_visszaad_gombra_a_$_licenchez(testData.license.licenseId);
 	}
 	
-	@Name("megnyílik a licenc engedélyezés dialógusablak")
+//	@Name("Megnyílik a licenc engedélyezés dialógusablak")
 	public void megnyílik_a_licenc_engedélyezés_dialógusablak() {
 		licensesPage.ellenőrzés_hogy_az_engedélyező_dialógusablak_megnyílt();
 	}
 	
-	@Name("megjelenik a licenc visszavonása dialógusablak")
+//	@Name("Megjelenik a licenc visszavonása dialógusablak")
 	public void megjelenik_a_licenc_visszavonása_dialógusablak() {
 		licensesPage.ellenőrzés_hogy_a_visszavonó_dialógusablak_megnyílt();
 	}
 	
-	@Name("megjelenik a licenc visszaadása dialógusablak")
+//	@Name("Megjelenik a licenc visszaadása dialógusablak")
 	public void megjelenik_a_licenc_visszaadása_dialógusablak() {
 		licensesPage.ellenőrzés_hogy_a_visszaadó_dialógusablak_megnyílt();
 	}
 	
-	@Name("ellenőrzöm a licenc adatait")
+//	@Name("Ellenőrzöm a licenc adatait")
 	public void ellenőrzöm_a_licenc_adatait() {
 		licensesPage.licenc_adatok_ellenőrzése(
 				testData.license.licenseId,
@@ -58,103 +58,103 @@ public class LicensesPageSteps extends AbstractSteps {
 		);
 	}
 	
-	@Name("beírom a felhasználó nevét")
+//	@Name("Beírom a felhasználó nevét")
 	public void beírom_a_felhasználó_nevét() {
 		licensesPage.felhasználó_nevének_beírása(testData.license.licenseUser);
 	}
 	
-	@Name("engedélyezem a licencet")
+//	@Name("Engedélyezem a licencet")
 	public void engedélyezem_a_licencet() {
 		licensesPage.kattintás_az_engdélyezés_gombra();
 		licenseIsGranted = true;
 	}
 	
-	@Name("visszavonom a licencet")
+//	@Name("Visszavonom a licencet")
 	public void visszavonom_a_licencet() {
 		licensesPage.kattintás_a_visszavon_gombra();
 		licenseIsGranted = false;
 	}
 	
-	@Name("visszaadom a licencet")
+//	@Name("Visszaadom a licencet")
 	public void visszaadom_a_licencet() {
 		licensesPage.kattintás_a_visszaad_gombra();
 		licenseIsGranted = false;
 	}
 	
-	@Name("a listában megjelenik az engedélyezett licenc")
-	public void a_listában_megjelenik_az_engedélyezett_licenc() {
+//	@Name("A listában megjelenik az engedélyezett licenc")
+	public void az_engedélyezett_licenc_megjelenik_a_listában() {
 		licensesPage.ellenőrzés_hogy_a_$_lincenc_visszavonható(testData.license.licenseId);
 		licenseIsGranted = true;
 	}
 	
-	@Name("a licenc engedélyezhető")
-	public void a_licenc_engedélyezhető() {
+//	@Name("A licenc engedélyezhető")
+	public void az_aktuális_licenc_engedélyezhető() {
 		licensesPage.ellenőrzés_hogy_a_$_lincenc_engedélyezhető(testData.license.licenseId);
 		licenseIsGranted = false;
 	}
 	
-	@Name("a licenc visszaadható")
-	public void a_licenc_visszaadható() {
+//	@Name("A licenc visszaadható")
+	public void az_aktuális_licenc_visszaadható() {
 		licensesPage.ellenőrzés_hogy_a_$_lincenc_visszaadható(testData.license.licenseId);
 		licenseIsGranted = false;
 	}
 	
-	@Name("a licenc nem visszaadható")
-	public void a_licenc_nem_visszaadható() {
+//	@Name("A licenc nem visszaadható")
+	public void az_aktuális_licenc_nem_visszaadható() {
 		licensesPage.ellenőrzés_hogy_a_$_lincenc_nem_visszaadható(testData.license.licenseId);
 		licenseIsGranted = false;
 	}
 	
-	@Name("frissítem az oldalt")
+//	@Name("Frissítem az oldalt")
 	public void frissítem_az_oldalt() {
 		licensesPage.frissítem_az_oldalt();
 	}
 	
-	@Name("a licenc nincs a listán")
-	public void a_licenc_nincs_a_listán() {
+//	@Name("A licenc nincs a listán")
+	public void az_aktuális_licenc_nincs_a_listán() {
 		licensesPage.ellenőrzés_hogy_a_licenc_nincs_a_listán(testData.license.licenseId);
 		licenseIsGranted = false;
 	}
 	
-	@Name("megrendelem a licencem")
+//	@Name("Megrendelem a licencem")
 	public void megrendelem_a_licencem() {
 		licensesPage.kattintás_a_megrendelés_gombra();
 	}
 	
-	@Name("kilistáztatom a lejárt licenceket")
+//	@Name("Kilistáztatom a lejárt licenceket")
 	public void kilistáztatom_a_lejárt_licenceket() {
 		licensesPage.lejárt_licencek_megjelenítése_választása();
 	}
 	
-	@Name("Kijelentkezek a Licencek oldalról")
+//	@Name("Kijelentkezek a licencek oldalról")
 	public void Kijelentkezek_a_Licencek_oldalról() {
 		menuPage.bejelentkezett_kijelentkezés_menüelem_választása();
 	}
 	
-	@Name("a licenc legyen engedélyezhető")
-	public void a_licenc_legyen_engedélyezhető() {
+//	@Name("A licenc legyen engedélyezhető")
+	public void az_aktuális_licenc_legyen_engedélyezhető() {
 		if (licenseIsGranted) {
 			elindítom_a_licenc_visszavonását();
 			megjelenik_a_licenc_visszavonása_dialógusablak();
 			ellenőrzöm_a_licenc_adatait();
 			visszavonom_a_licencet();
-			a_licenc_engedélyezhető();
+			az_aktuális_licenc_engedélyezhető();
 		}
 	}
 	
-	@Name("a licenc legyen visszavonható")
-	public void a_licenc_legyen_visszavonható() {
+//	@Name("A licenc legyen visszavonható")
+	public void az_aktuális_licenc_legyen_visszavonható() {
 		if (!licenseIsGranted) {
 			elindítom_az_engedélyezést();
 			megnyílik_a_licenc_engedélyezés_dialógusablak();
 			ellenőrzöm_a_licenc_adatait();
 			beírom_a_felhasználó_nevét();
 			engedélyezem_a_licencet();
-			a_listában_megjelenik_az_engedélyezett_licenc();
+			az_engedélyezett_licenc_megjelenik_a_listában();
 		}
 	}
 	
-	@Name("beállítom a licenc státuszát")
+//	@Name("Beállítom a licenc státuszát")
 	public void beállítom_a_licenc_státuszát() {
 		if (licensesPage.az_$_licenchez_az_engedélyez_gomb_megjelent(testData.license.licenseId)) {
 			licenseIsGranted = false;
