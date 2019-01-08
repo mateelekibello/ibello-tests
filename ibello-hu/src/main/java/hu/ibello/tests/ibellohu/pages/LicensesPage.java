@@ -41,6 +41,10 @@ public class LicensesPage extends AbstractPage {
 	@Find(by=By.CLASS_NAME, using="au-target")
 	private WebElement giveBackDialog;
 	
+	@Relation(type=RelationType.ANCESTOR_OF, by=By.PARTIAL_TEXT, using="${licensesPage.invalidDialogText}")
+	@Find(by=By.CLASS_NAME, using="au-target")
+	private WebElement invalidDialog;
+	
 	@Find(by=By.ID, using="licent_grant_user")
 	private WebElement licentGrantUserField;
 	
@@ -64,6 +68,9 @@ public class LicensesPage extends AbstractPage {
 	
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.orderButton}")
 	private WebElement orderButton;
+	
+	@Find(by=By.BUTTON_TEXT, using="Ok")
+	private WebElement okButton;
 	
 	@Find(by=By.ID, using="showInvalid")
 	private WebElement showInvalidButton;
@@ -113,6 +120,10 @@ public class LicensesPage extends AbstractPage {
 		doWith(giveBackButton.applyParameters(licenceId)).click();
 	}
 	
+	public void kattintás_az_ok_gombra_a_lejárt_licenc_ablakon() {
+		doWith(okButton).click();
+	}
+	
 	public void ellenőrzés_hogy_az_engedélyező_dialógusablak_megnyílt() {
 		expectations().expect(grantDialog).toBe().displayed();
 		expectations().expect(licentGrantUserField).toBe().displayed();
@@ -130,6 +141,11 @@ public class LicensesPage extends AbstractPage {
 		expectations().expect(giveBackDialog).toBe().displayed();
 		expectations().expect(giveBackButton1).toBe().displayed();
 		expectations().expect(cancelButton2).toBe().displayed();
+	}
+	
+	public void ellenőrzés_hogy_a_lejárt_licenc_dialógusablak_megnyílt() {
+		expectations().expect(invalidDialog).toBe().displayed();
+		expectations().expect(okButton).toBe().displayed();
 	}
 	
 	public void licenc_adatok_ellenőrzése(String lId, String lType, String lClass, String lOwner, String lValidThru) {

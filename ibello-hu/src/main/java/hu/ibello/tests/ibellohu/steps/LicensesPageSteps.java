@@ -47,6 +47,11 @@ public class LicensesPageSteps extends AbstractSteps {
 		licensesPage.ellenőrzés_hogy_a_visszaadó_dialógusablak_megnyílt();
 	}
 	
+//	@Name("Megjelenik a lejárt licenc üzenetablak")
+	public void megjelenik_a_lejárt_licenc_üzenetablak() {
+		licensesPage.ellenőrzés_hogy_a_lejárt_licenc_dialógusablak_megnyílt();
+	}
+	
 //	@Name("Ellenőrzöm a licenc adatait")
 	public void ellenőrzöm_a_licenc_adatait() {
 		licensesPage.licenc_adatok_ellenőrzése(
@@ -114,6 +119,11 @@ public class LicensesPageSteps extends AbstractSteps {
 	public void az_aktuális_licenc_nincs_a_listán() {
 		licensesPage.ellenőrzés_hogy_a_licenc_nincs_a_listán(testData.license.licenseId);
 		licenseIsGranted = false;
+	}
+	
+//	@Name("Bezárom az üzenetablakot")
+	public void bezárom_az_üzenetablakot() {
+		licensesPage.kattintás_az_ok_gombra_a_lejárt_licenc_ablakon();
 	}
 	
 //	@Name("Megrendelem a licencem")
