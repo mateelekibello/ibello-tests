@@ -30,4 +30,58 @@
 			<version>${ibello.api.version}</version>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<id>clean-tests</id>
+						<configuration>
+							<target>
+								<condition property="ibello.command"
+									value="ibello.cmd">
+									<os family="windows" />
+								</condition>
+								<property name="ibello.command" value="/opt/ibello/ibello.sh" />
+								<exec executable="${ibello.command}"
+									failonerror="true" failifexecutionfails="true">
+									<arg value="clean" />
+									<arg value="-k0" />
+								</exec>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>run-tests</id>
+						<configuration>
+							<target>
+								<condition property="ibello.command"
+									value="ibello.cmd">
+									<os family="windows" />
+								</condition>
+								<property name="ibello.command" value="/opt/ibello/ibello.sh" />
+								<exec executable="${ibello.command}"
+									failonerror="true" failifexecutionfails="true">
+									<arg value="cucumber" />
+									<arg value="-bchrome" />
+									<arg value="-tlogin" />
+									<arg value="-tpersonal" />
+									<arg value="-tci" />
+									<arg value="-h" />
+								</exec>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
