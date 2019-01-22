@@ -71,6 +71,7 @@
 									<arg value="-bchrome" />
 									<arg value="-tlogin" />
 									<arg value="-tpersonal" />
+									<arg value="-tlicenses" />
 									<arg value="-tci" />
 									<arg value="-h" />
 								</exec>
