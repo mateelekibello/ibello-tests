@@ -12,9 +12,6 @@ public class PersonalPage extends AbstractPage {
 	@Find(by=By.TEXT, using="${personalPage.title}")
 	private WebElement pageTitle;
 	
-	@Find(by=By.TEXT, using="${personalPage.dialogtext.success}")
-	private WebElement dialogContent;
-	
 	@Find(by=By.ID, using="username")
 	private WebElement usernameField;
 	
@@ -66,6 +63,14 @@ public class PersonalPage extends AbstractPage {
 	@Find(by=By.BUTTON_TEXT, using="${personalPage.submitButton}")
 	private WebElement submitButton;
 	
+	@Find(by=By.ID, using="message-dialog")
+	private WebElement messageDialog;
+		
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="message-dialog")
+	@Find(by=By.TEXT, using="${personalPage.dialogtext.success}")
+	private WebElement messageDialogText;
+	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="message-dialog")
 	@Find(by=By.BUTTON_TEXT, using="${personalPage.okButton}")
 	private WebElement okButton;
 	
@@ -194,18 +199,18 @@ public class PersonalPage extends AbstractPage {
 		doWith(billingAddressLine2Field).setValue(value);
 	}
 	
-	
-	public void mentés_gomb() {
+	public void kattintás_a_mentés_gombra() {
 		doWith(submitButton).withPageRefreshWait().click();
 	}
 	
-	public void dialógus() {
-		expectations().expect(dialogContent).toBe().displayed();
+	public void ellenőrzés_hogy_a_sikeres_mentés_dialógusablak_megnyílt() {
+		expectations().expect(messageDialog).toBe().displayed();
+		expectations().expect(messageDialogText).toBe().displayed();
 		expectations().expect(okButton).toBe().displayed();
 	}
 
-	public void dialógus_bezárás() {
+	public void dialógusablak_bezárása() {
 		doWith(okButton).click();
-		expectations().expect(dialogContent).toNotBe().displayed();
+		expectations().expect(messageDialog).toNotBe().displayed();
 	}
 }

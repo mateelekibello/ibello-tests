@@ -12,10 +12,14 @@ public class LoginPage extends AbstractPage {
 	@Find(by=By.TEXT, using="${loginPage.title}")
 	private WebElement pageTitle;
 	
-	@Relation(type=RelationType.DESCENDANT_OF, by=By.CLASS_NAME, using="au-target")
-	@Find(by=By.TEXT, using="${loginPage.dialogtext.incorrect}")
-	private WebElement dialogContent;
+	@Find(by=By.ID, using="message-dialog")
+	private WebElement messageDialog;
 	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="message-dialog")
+	@Find(by=By.TEXT, using="${loginPage.dialogtext.incorrect}")
+	private WebElement dialogText;
+	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="message-dialog")
 	@Find(by=By.BUTTON_TEXT, using="${loginPage.okButton}")
 	private WebElement okButton;
 	
@@ -50,12 +54,13 @@ public class LoginPage extends AbstractPage {
 	}
 	
 	public void ellenőrzés_hogy_a_dialógusablak_megnyílt() {
-		expectations().expect(dialogContent).toBe().displayed();
+		expectations().expect(messageDialog).toBe().displayed();
+		expectations().expect(dialogText).toBe().displayed();
 		expectations().expect(okButton).toBe().displayed();
 	}
 
 	public void dialógus_bezárása() {
 		doWith(okButton).click();
-		expectations().expect(dialogContent).toNotBe().displayed();
+		expectations().expect(messageDialog).toBe().displayed();
 	}
 }

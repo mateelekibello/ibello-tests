@@ -39,6 +39,7 @@ Step: Licencek: Licenc engedélyezve lesz a felhasználónak
 Step: Licencek: Van engedélyezett licencem
 	Given Licencek: Bejelentkezem tulajdonosként
 	Given Navigáció: Megnyitom a Licencek Oldalt
+	Given Licencek oldal: Beállítom a Licenc Státuszát
 	When Licencek oldal: Az Aktuális Licenc Legyen Visszavonható
 	Given Licencek oldal: Kijelentkezek a Licencek Oldalról
 
@@ -98,6 +99,8 @@ Step: Licencek: Engedélyezem a lejárt licencem
 	When Licencek oldal: Elindítom Az Engedélyezést
 
 Step: Licencek: Lejárt licenc nem engedélyezhető
+	Given Licencek oldal: Megjelenik a Lejárt Licenc Üzenetablak
+	Then Licencek oldal: Bezárom Az Üzenetablakot
 
 Step: Licencek: Megrendelem a licencem
 	When Licencek oldal: Megrendelem a Licencem

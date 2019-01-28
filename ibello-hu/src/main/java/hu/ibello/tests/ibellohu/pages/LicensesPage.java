@@ -29,47 +29,66 @@ public class LicensesPage extends AbstractPage {
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.giveBackButton}")
 	private WebElement giveBackButton;
 	
-	@Relation(type=RelationType.ANCESTOR_OF, by=By.PARTIAL_TEXT, using="${licensesPage.grantDialogText}")
-	@Find(by=By.CLASS_NAME, using="au-target")
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="license-dialog")
+	@Find(by=By.PARTIAL_TEXT, using="${licensesPage.grantDialogText}")
+	private WebElement grantText;
+	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="license-dialog")
+	@Find(by=By.PARTIAL_TEXT, using="${licensesPage.revokeDialogText}")
+	private WebElement revokeText;
+	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="license-dialog")
+	@Find(by=By.PARTIAL_TEXT, using="${licensesPage.giveBackDialogText}")
+	private WebElement giveBackText;
+	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="message-dialog")
+	@Find(by=By.PARTIAL_TEXT, using="${licensesPage.invalidDialogText}")
+	private WebElement invalidText;
+	
+	@Find(by=By.ID, using="license-dialog")
 	private WebElement grantDialog;
 	
-	@Relation(type=RelationType.ANCESTOR_OF, by=By.PARTIAL_TEXT, using="${licensesPage.revokeDialogText}")
-	@Find(by=By.CLASS_NAME, using="au-target")
+	@Find(by=By.ID, using="license-dialog")
 	private WebElement revokeDialog;
 	
-	@Relation(type=RelationType.ANCESTOR_OF, by=By.PARTIAL_TEXT, using="${licensesPage.giveBackDialogText}")
-	@Find(by=By.CLASS_NAME, using="au-target")
+	@Find(by=By.ID, using="license-dialog")
 	private WebElement giveBackDialog;
 	
-	@Relation(type=RelationType.ANCESTOR_OF, by=By.PARTIAL_TEXT, using="${licensesPage.invalidDialogText}")
-	@Find(by=By.CLASS_NAME, using="au-target")
+	@Find(by=By.ID, using="message-dialog")
 	private WebElement invalidDialog;
 	
 	@Find(by=By.ID, using="licent_grant_user")
 	private WebElement licentGrantUserField;
 	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="license-dialog")
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.grantButton}")
 	private WebElement grantButton1;
 	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="license-dialog")
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.cancelButton}")
 	private WebElement cancelButton;
 	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="license-dialog")
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.revokeButton}")
 	private WebElement revokeButton1;
 	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="license-dialog")
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.cancelButton}")
 	private WebElement cancelButton1;
 	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="license-dialog")
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.giveBackButton}")
 	private WebElement giveBackButton1;
 	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="license-dialog")
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.cancelButton}")
 	private WebElement cancelButton2;
 	
 	@Find(by=By.BUTTON_TEXT, using="${licensesPage.orderButton}")
 	private WebElement orderButton;
 	
-	@Find(by=By.BUTTON_TEXT, using="Ok")
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="message-dialog")
+	@Find(by=By.BUTTON_TEXT, using="${licensesPage.orderButton}")
 	private WebElement okButton;
 	
 	@Find(by=By.ID, using="showInvalid")
@@ -127,24 +146,28 @@ public class LicensesPage extends AbstractPage {
 	public void ellenőrzés_hogy_az_engedélyező_dialógusablak_megnyílt() {
 		expectations().expect(grantDialog).toBe().displayed();
 		expectations().expect(licentGrantUserField).toBe().displayed();
+		expectations().expect(grantText).toBe().displayed();
 		expectations().expect(grantButton1).toBe().displayed();
 		expectations().expect(cancelButton).toBe().displayed();
 	}
 	
 	public void ellenőrzés_hogy_a_visszavonó_dialógusablak_megnyílt() {
 		expectations().expect(revokeDialog).toBe().displayed();
+		expectations().expect(revokeText).toBe().displayed();
 		expectations().expect(revokeButton1).toBe().displayed();
 		expectations().expect(cancelButton1).toBe().displayed();
 	}
 	
 	public void ellenőrzés_hogy_a_visszaadó_dialógusablak_megnyílt() {
 		expectations().expect(giveBackDialog).toBe().displayed();
+		expectations().expect(giveBackText).toBe().displayed();
 		expectations().expect(giveBackButton1).toBe().displayed();
 		expectations().expect(cancelButton2).toBe().displayed();
 	}
 	
 	public void ellenőrzés_hogy_a_lejárt_licenc_dialógusablak_megnyílt() {
 		expectations().expect(invalidDialog).toBe().displayed();
+		expectations().expect(invalidText).toBe().displayed();
 		expectations().expect(okButton).toBe().displayed();
 	}
 	

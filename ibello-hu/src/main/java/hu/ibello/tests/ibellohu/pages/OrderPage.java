@@ -26,23 +26,32 @@ public class OrderPage extends AbstractPage {
 	@Find(by=By.TAG_NAME, using="input")
 	private WebElement inputNumberGold;
 	
+	@Find(by=By.ID, using="order-dialog")
+	private WebElement finalizeDialog;
+	
+	@Find(by=By.ID, using="message-dialog")
+	private WebElement okDialog;
+	
 	@Find(by=By.BUTTON_TEXT, using="${orderPage.submitButton}")
 	private WebElement orderSubmitButton;
 	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="order-dialog")
 	@Find(by=By.BUTTON_TEXT, using="${orderPage.finalizeButton}")
 	private WebElement orderfinalizeButton;
 	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="order-dialog")
 	@Find(by=By.BUTTON_TEXT, using="${orderPage.cancelButton}")
 	private WebElement cancelButton;
 	
-	@Relation(type=RelationType.DESCENDANT_OF, by=By.TAG_NAME, using="ux-dialog")
-	@Find(by=By.PARTIAL_TEXT, using="${orderPage.finalizeDialogText}")
-	private WebElement finalizeDialogText;
-	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="message-dialog")
 	@Find(by=By.BUTTON_TEXT, using="${orderPage.okButton}")
 	private WebElement okButton;
 	
-	@Relation(type=RelationType.DESCENDANT_OF, by=By.TAG_NAME, using="ux-dialog")
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="order-dialog")
+	@Find(by=By.PARTIAL_TEXT, using="${orderPage.finalizeDialogText}")
+	private WebElement finalizeDialogText;
+	
+	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="message-dialog")
 	@Find(by=By.PARTIAL_TEXT, using="${orderPage.okDialogText}")
 	private WebElement okDialogText;
 	
@@ -76,12 +85,14 @@ public class OrderPage extends AbstractPage {
 	}
 	
 	public void ellenőrzés_hogy_a_véglegesítő_üzenetablak_megnyílt() {
+		expectations().expect(finalizeDialog).toBe().displayed();
 		expectations().expect(finalizeDialogText).toBe().displayed();
 		expectations().expect(orderfinalizeButton).toBe().displayed();
 		expectations().expect(cancelButton).toBe().displayed();
 	}
 	
 	public void ellenőrzés_hogy_a_visszaigazoló_dialógusablak_megnyílt() {
+		expectations().expect(okDialog).toBe().displayed();
 		expectations().expect(okDialogText).toBe().displayed();
 		expectations().expect(okButton).toBe().displayed();
 	}

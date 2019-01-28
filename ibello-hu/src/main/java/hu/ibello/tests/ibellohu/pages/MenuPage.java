@@ -28,8 +28,8 @@ public class MenuPage extends AbstractPage {
 	@Find(by=By.BUTTON_TEXT, using="${mainPage.menu.blog}")
 	private WebElement blogLink;
 	
-	@Find(by=By.BUTTON_TEXT, using="${mainPage.menu.customers}")
-	private WebElement customersLink;
+	@Find(by=By.CSS_SELECTOR, using="[title='${mainPage.menu.login}']")
+	private WebElement loginLink;
 	
 	
 	@Find(by=By.BUTTON_TEXT, using="${loginPage.menu.documentation}")
@@ -41,8 +41,8 @@ public class MenuPage extends AbstractPage {
 	@Find(by=By.BUTTON_TEXT, using="${loginPage.menu.downloads}")
 	private WebElement downloadsLink1;
 	
-	@Find(by=By.BUTTON_TEXT, using="${loginPage.menu.login}")
-	private WebElement loginLink;
+//	@Find(by=By.BUTTON_TEXT, using="${loginPage.menu.login}")
+//	private WebElement loginLink;
 	
 	
 	@Find(by=By.BUTTON_TEXT, using="${personalPage.menu.documentation}")
@@ -122,7 +122,7 @@ public class MenuPage extends AbstractPage {
 	}
 	
 	public void főoldali_ügyfeleknek_menüelem_választása() {
-		doWith(customersLink).click();
+		doWith(loginLink).click();
 	}
 	
 	

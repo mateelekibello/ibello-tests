@@ -119,17 +119,17 @@ public class PersonalPageSteps extends AbstractSteps{
 	
 //	@Name("Mentem a változásokat")
 	public void mentem_a_változásokat() {
-		personalPage.mentés_gomb();
+		personalPage.kattintás_a_mentés_gombra();
 	}
 	
 //	@Name("Megjelenik a sikeres mentés üzenetablak")
 	public void megjelenik_a_sikeres_mentés_üzenetablak() {
-		personalPage.dialógus();
+		personalPage.ellenőrzés_hogy_a_sikeres_mentés_dialógusablak_megnyílt();
 	}
 	
 //	@Name("Bezárom a felugró ablakot")
 	public void bezárom_a_felugró_ablakot() {
-		personalPage.dialógus_bezárás();
+		personalPage.dialógusablak_bezárása();
 	}
 	
 }
