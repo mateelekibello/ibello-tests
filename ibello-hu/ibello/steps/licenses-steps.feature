@@ -8,7 +8,7 @@ Step: Licencek: Bejelentkezem tulajdonosként
 	Given Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
 
 Step: Licencek: Megnyitom a licencek oldalt
-	Given Navigáció: Ellenőrzöm Hogy a Bejelentkezett Menü Látható
+	Given Navigáció: Megnyílik Az Ibello Nyitóoldala
 	When Navigáció: Megnyitom a Licencek Oldalt
 
 Step: Licencek: A licenc engedélyezhető

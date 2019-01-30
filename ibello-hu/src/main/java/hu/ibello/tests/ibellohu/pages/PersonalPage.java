@@ -57,9 +57,6 @@ public class PersonalPage extends AbstractPage {
 	@Find(by=By.ID, using="billingAddressLine2")
 	private WebElement billingAddressLine2Field;
 	
-	@Find(by=By.BUTTON_TEXT, using="${personalPage.menu.logout}")
-	private WebElement logoutLink;
-	
 	@Find(by=By.BUTTON_TEXT, using="${personalPage.submitButton}")
 	private WebElement submitButton;
 	

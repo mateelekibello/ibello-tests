@@ -26,6 +26,7 @@ Step: Személyes: Kijelentkezek a Személyes oldalról
 
 Step: Személyes: Az átírt adatok ellenőrzése
 	When Tesztadat: Az Aktuális Felhasználó Azonosítója Legyen "modified"
+	Given Navigáció: Megnyitom a Személyes Oldalt
 	Then Személyes oldal: Az Átírt Felhasználó Adatok Jelennek Meg
 
 Step: Személyes: Felhasználói adatok visszaállítása
@@ -35,6 +36,7 @@ Step: Személyes: Felhasználói adatok visszaállítása
 
 Step: Személyes: Felhasználói adatok átírása
 	Given Tesztadat: Az Aktuális Felhasználó Azonosítója Legyen "modified"
+	Given Navigáció: Megnyitom a Személyes Oldalt
 	When Személyes: Felhasználói adatok beállítása
 	When Személyes: Mentem a változásokat
 

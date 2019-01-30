@@ -88,7 +88,7 @@ public class LicensesPage extends AbstractPage {
 	private WebElement orderButton;
 	
 	@Relation(type=RelationType.DESCENDANT_OF, by=By.ID, using="message-dialog")
-	@Find(by=By.BUTTON_TEXT, using="${licensesPage.orderButton}")
+	@Find(by=By.BUTTON_TEXT, using="${licensesPage.okButton}")
 	private WebElement okButton;
 	
 	@Find(by=By.ID, using="showInvalid")

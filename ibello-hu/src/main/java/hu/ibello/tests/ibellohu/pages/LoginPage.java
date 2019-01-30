@@ -29,7 +29,7 @@ public class LoginPage extends AbstractPage {
 	@Find(by=By.NAME, using="password")
 	private WebElement passwordField;
 	
-	@Find(by=By.BUTTON_TEXT, using="${loginPage.menu.login}")
+	@Find(by=By.BUTTON_TEXT, using="${loginPage.submitButton}")
 	private WebElement submitButton;
 	
 	@Override

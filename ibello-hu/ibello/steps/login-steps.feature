@@ -15,6 +15,8 @@ Step: Bejelentkezés: A bejelentkezés sikertelen
 	When Bejelentkező oldal: Bezárom a Felugró Ablakot
 
 Step: Bejelentkezés: A bejelentkezés sikeres
+	Given Navigáció: Megnyílik Az Ibello Nyitóoldala
+	Given Navigáció: Megnyitom a Személyes Oldalt
 	Then Navigáció: Megnyílik Az Ibello Személyes Oldala
 	Then Személyes oldal: Az Átírt Felhasználó Adatok Jelennek Meg
 
