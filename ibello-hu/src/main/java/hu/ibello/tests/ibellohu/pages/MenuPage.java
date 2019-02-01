@@ -67,6 +67,9 @@ public class MenuPage extends AbstractPage {
 	@Find(by=By.CSS_SELECTOR, using="[title='${menu.logout}']")
 	private WebElement inOtherLogoutLink;
 	
+	@Find(by=By.TAG_NAME, using="select")
+	private WebElement languageSelectField;
+	
 	
 	@Override
 	public void ellenőrzés_hogy_az_oldal_megnyílt() {
@@ -125,4 +128,9 @@ public class MenuPage extends AbstractPage {
 	public void bejelentkezett_nyitóoldal_menüelem_választása() {
 		doWith(inOtherLandingLink).click();
 	}
+	
+	public void beállítom_a_nyelvválasztót() {
+		doWith(languageSelectField).selectOption("Magyar");
+	}
+	
 }

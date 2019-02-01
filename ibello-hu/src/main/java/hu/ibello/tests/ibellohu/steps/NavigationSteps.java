@@ -74,5 +74,10 @@ public class NavigationSteps extends AbstractSteps {
 	public void megnyílik_a_licencek_oldal() {
 		licensesPage.ellenőrzés_hogy_az_oldal_megnyílt();
 	}
+	
+//	@Name("Magyar nyelv kiválasztása")
+	public void Magyar_Nyelv_Kiválasztása() {
+		menuPage.beállítom_a_nyelvválasztót();
+	}
 
 }
