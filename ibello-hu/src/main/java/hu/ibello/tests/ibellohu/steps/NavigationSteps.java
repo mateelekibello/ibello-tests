@@ -8,6 +8,7 @@ import hu.ibello.tests.ibellohu.pages.OpenPage;
 import hu.ibello.tests.ibellohu.pages.MenuPage;
 import hu.ibello.tests.ibellohu.pages.OrderPage;
 import hu.ibello.tests.ibellohu.pages.PersonalPage;
+import hu.ibello.tests.ibellohu.pages.BlogPage;
 
 @Name("Navigáció")
 public class NavigationSteps extends AbstractSteps {
@@ -19,6 +20,8 @@ public class NavigationSteps extends AbstractSteps {
 	private PersonalPage personalPage;
 	private LicensesPage licensesPage;
 	private OrderPage orderPage;
+	private BlogPage blogPage;
+	
 
 //	@Name("Az ibello honlapján vagyok")
 	public void az_ibello_honlapján_vagyok() {
@@ -30,6 +33,12 @@ public class NavigationSteps extends AbstractSteps {
 	public void megnyitom_a_bejelentkező_oldalt() {
 		menuPage.nyitóoldali_bejelentkezés_menüelem_választása();
 		loginPage.ellenőrzés_hogy_az_oldal_megnyílt();
+	}
+	
+//	@Name("Megnyitom a blog oldalt")
+	public void megnyitom_a_blog_oldalt() {
+		menuPage.blog_menüelem_választása();
+		blogPage.ellenőrzés_hogy_az_oldal_megnyílt();
 	}
 
 //	@Name("Megnyitom a személyes oldalt")
@@ -75,9 +84,14 @@ public class NavigationSteps extends AbstractSteps {
 		licensesPage.ellenőrzés_hogy_az_oldal_megnyílt();
 	}
 	
+//	@Name("Megnyílik a licencek oldal")
+	public void megnyílik_a_blog_oldal() {
+		blogPage.ellenőrzés_hogy_az_oldal_megnyílt();
+	}
+	
 //	@Name("Magyar nyelv kiválasztása")
 	public void Magyar_Nyelv_Kiválasztása() {
-		menuPage.beállítom_a_nyelvválasztót();
+		menuPage.beállítom_a_nyelvválasztót("Magyar");
 	}
 
 }

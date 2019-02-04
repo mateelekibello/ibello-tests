@@ -15,7 +15,6 @@ public class BlogPage extends AbstractPage {
 	@Override
 	public void ellenőrzés_hogy_az_oldal_megnyílt() {
 		expectations().expect(pageTitle).toBe().displayed();
-
 	}
 
 }

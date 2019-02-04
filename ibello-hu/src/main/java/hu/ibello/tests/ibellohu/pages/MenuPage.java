@@ -129,8 +129,8 @@ public class MenuPage extends AbstractPage {
 		doWith(inOtherLandingLink).click();
 	}
 	
-	public void beállítom_a_nyelvválasztót() {
-		doWith(languageSelectField).selectOption("Magyar");
+	public void beállítom_a_nyelvválasztót(String language) {
+		doWith(languageSelectField).selectOption(language);
 	}
 	
 }
