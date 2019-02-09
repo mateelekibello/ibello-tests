@@ -5,6 +5,7 @@ import hu.ibello.inject.Inject;
 import hu.ibello.tests.ibellohu.model.License;
 import hu.ibello.tests.ibellohu.model.User;
 import hu.ibello.tests.ibellohu.model.Order;
+import hu.ibello.tests.ibellohu.model.Post;
 import hu.ibello.tests.ibellohu.tools.TestData;
 
 @Name("Tesztadat")
@@ -36,5 +37,9 @@ public class TestDataSteps extends AbstractSteps {
 		sum += price;
 		testData.order.goldItemPrice = String.valueOf(price) + " Forint";
 		testData.order.sumPrice = String.valueOf(sum) + " Forint";
+	}
+	
+	public void az_aktuális_poszt_címe_legyen_$(String postId) {
+		testData.post = testData().fromJson(Post.class).withId(postId).load();
 	}
 }

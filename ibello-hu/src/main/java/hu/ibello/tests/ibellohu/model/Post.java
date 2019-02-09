@@ -1,6 +1,7 @@
 package hu.ibello.tests.ibellohu.model;
 
 public class Post {
+	public String id;
 	public String title;
 	public String author;
 	public String date;
