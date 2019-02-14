@@ -42,4 +42,5 @@ public class TestDataSteps extends AbstractSteps {
 	public void az_aktuális_poszt_címe_legyen_$(String postId) {
 		testData.post = testData().fromJson(Post.class).withId(postId).load();
 	}
+
 }
