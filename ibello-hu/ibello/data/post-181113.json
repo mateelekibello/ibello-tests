@@ -8,5 +8,7 @@
 	"categoryParancssor": false,
 	"categoryPéldák": false,
 	"categoryTanulmányok": false,
-	"categoryÚjdonságok": true
+	"categoryÚjdonságok": true,
+	"englishVersion": false,
+	"titleInEnglish": ""
 }

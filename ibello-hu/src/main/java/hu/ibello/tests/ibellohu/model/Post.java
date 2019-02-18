@@ -11,4 +11,6 @@ public class Post {
 	public boolean categoryPéldák;
 	public boolean categoryTanulmányok;
 	public boolean categoryÚjdonságok;
+	public boolean englishVersion;
+	public String titleInEnglish;
 }

@@ -34,5 +34,11 @@ public class LanguageSteps extends AbstractSteps {
 		menuPage.beállítom_a_nyelvválasztót("English");
 	}
 
-
+	public void magyarra_állított_nyelvválasztó() {
+		menuPage.a_nyelvválasztó_állásának_ellenőrzése("Magyar");
+	}
+	
+	public void angolra_állított_nyelvválasztó() {
+		menuPage.a_nyelvválasztó_állásának_ellenőrzése("English");
+	}
 }

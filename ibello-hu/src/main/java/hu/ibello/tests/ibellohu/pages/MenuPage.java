@@ -133,4 +133,8 @@ public class MenuPage extends AbstractPage {
 		doWith(languageSelectField).selectOption(language);
 	}
 	
+	public void a_nyelvválasztó_állásának_ellenőrzése(String language) {
+		expectations().expect(languageSelectField).toHave().selectedOption(language);
+	}
+	
 }
