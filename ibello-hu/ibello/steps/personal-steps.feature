@@ -1,8 +1,7 @@
 # namespace: Személyes
 
 Step: Személyes: Megpróbálok bejelentkezni egy regisztrált felhasználóval
-	Given Navigáció: Az Ibello Honlapján Vagyok
-	Given Navigáció: Megnyitom a Bejelentkező Oldalt
+	Given Bejelentkezés: Az ibello bejelentkező oldalán vagyok
 	When Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
 
 Step: Személyes: Felhasználói adatok beállítása
@@ -21,8 +20,9 @@ Step: Személyes: Felhasználói adatok beállítása
 	When Személyes oldal: Beállítom a Számlázási Cím Második Részét
 
 Step: Személyes: Kijelentkezek a Személyes oldalról
-	When Személyes oldal: Kijelentkezek a Személyes Oldalról
-	Then Navigáció: Megnyílik Az Ibello Bejelentkező Oldala
+	When Navigáció: Megnyitom a Főoldalt
+	Given Navigáció: Kijelentkezés
+	Then Navigáció: Az Ibello Honlapján Vagyok
 
 Step: Személyes: Az átírt adatok ellenőrzése
 	When Tesztadat: Az Aktuális Felhasználó Azonosítója Legyen "modified"
