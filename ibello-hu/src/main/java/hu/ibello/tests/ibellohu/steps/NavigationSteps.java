@@ -4,7 +4,7 @@ import hu.ibello.core.Name;
 import hu.ibello.tests.ibellohu.pages.LicensesPage;
 import hu.ibello.tests.ibellohu.pages.LoginPage;
 import hu.ibello.tests.ibellohu.pages.MainPage;
-import hu.ibello.tests.ibellohu.pages.OpenPage;
+import hu.ibello.tests.ibellohu.pages.HomePage;
 import hu.ibello.tests.ibellohu.pages.MenuPage;
 import hu.ibello.tests.ibellohu.pages.OrderPage;
 import hu.ibello.tests.ibellohu.pages.PersonalPage;
@@ -15,8 +15,9 @@ import hu.ibello.tests.ibellohu.pages.BlogPostPage;
 public class NavigationSteps extends AbstractSteps {
 	
 	private MainPage mainPage;
-	private OpenPage openPage;
+//	private OpenPage openPage;
 	private MenuPage menuPage;
+	private HomePage homePage;
 	private LoginPage loginPage;
 	private PersonalPage personalPage;
 	private LicensesPage licensesPage;
@@ -45,20 +46,29 @@ public class NavigationSteps extends AbstractSteps {
 
 //	@Name("Megnyitom a személyes oldalt")
 	public void megnyitom_a_személyes_oldalt() {
-		openPage.kattintás_a_személyes_beállítások_gombra();
+		homePage.kattintás_a_személyes_beállítások_gombra();
 		personalPage.ellenőrzés_hogy_az_oldal_megnyílt();
 	}
 	
 //	@Name("Megnyitom a licencek oldalt")
 	public void megnyitom_a_licencek_oldalt() {
-		openPage.kattintás_a_licencek_kezelése_gomra();
+		homePage.kattintás_a_licencek_kezelése_gomra();
 		licensesPage.ellenőrzés_hogy_az_oldal_megnyílt();
 	}
 	
 //	@Name("Megnyitom a megrendelés oldalt")
 	public void megnyitom_a_megrendelés_oldalt() {
-		openPage.kattintás_az_új_licenc_megrendelése_gomra();
+		homePage.kattintás_az_új_licenc_megrendelése_gomra();
 		licensesPage.ellenőrzés_hogy_az_oldal_megnyílt();
+	}
+	
+	public void kijelentkezés() {
+		homePage.kattintás_a_kilépés_gombra();
+		mainPage.ellenőrzés_hogy_az_oldal_megnyílt();
+	}
+	
+	public void megnyitom_a_főoldalt() {
+		menuPage.főoldal_menüelem_választása();
 	}
 	
 //	@Name("Megnyílik az ibello bejelentkező oldala")
@@ -68,7 +78,7 @@ public class NavigationSteps extends AbstractSteps {
 	
 //	@Name("Megnyílik az ibello nyitóoldala")
 	public void megnyílik_az_ibello_nyitóoldala() {
-		openPage.ellenőrzés_hogy_az_oldal_megnyílt();
+		homePage.ellenőrzés_hogy_az_oldal_megnyílt();
 	}
 	
 //	@Name("Megnyílik az ibello személyes oldala")

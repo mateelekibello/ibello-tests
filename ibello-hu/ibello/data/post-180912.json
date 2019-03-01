@@ -9,6 +9,7 @@
 	"categoryPéldák": false,
 	"categoryTanulmányok": true,
 	"categoryÚjdonságok": false,
+	"categoryÁttekintés": false,
 	"englishVersion": false,
 	"titleInEnglish": "Case study of the testing of a web application"
 }

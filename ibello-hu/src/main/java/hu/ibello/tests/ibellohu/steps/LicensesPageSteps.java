@@ -137,10 +137,10 @@ public class LicensesPageSteps extends AbstractSteps {
 	}
 	
 //	@Name("Kijelentkezek a licencek oldalról")
-	public void Kijelentkezek_a_Licencek_oldalról() {
+/*	public void Kijelentkezek_a_Licencek_oldalról() {
 		menuPage.bejelentkezett_kijelentkezés_menüelem_választása();
 	}
-	
+*/	
 //	@Name("A licenc legyen engedélyezhető")
 	public void az_aktuális_licenc_legyen_engedélyezhető() {
 		if (licenseIsGranted) {

@@ -35,10 +35,10 @@ public class PersonalPageSteps extends AbstractSteps{
 	}
 	
 //	@Name("Kijelentkezek a Személyes oldalról")
-	public void kijelentkezek_a_személyes_oldalról() {
+/*	public void kijelentkezek_a_személyes_oldalról() {
 		menuPage.bejelentkezett_kijelentkezés_menüelem_választása();
 	}
-
+*/
 //	@Name("Beállítom a keresztnevet")
 	public void beállítom_a_keresztnevet() {
 		String firstName = testData.user.firstname;
