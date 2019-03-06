@@ -14,7 +14,26 @@ public class BlogSteps extends AbstractSteps {
 	private TestData testData;
 	
 	private BlogPage blogPage;
+	private MenuPage menuPage;
 	private BlogPostPage blogPostPage;
+	
+	@Name("Magyar nyelv kiválasztása")
+	public void magyar_nyelv_kiválasztása() {
+		menuPage.beállítom_a_nyelvválasztót("Magyar");
+	}
+
+//	@Name("Angol nyelv kiválasztása")
+	public void angol_nyelv_kiválasztása() {
+		menuPage.beállítom_a_nyelvválasztót("English");
+	}
+
+	public void magyarra_állított_nyelvválasztó() {
+		menuPage.a_nyelvválasztó_állásának_ellenőrzése("Magyar");
+	}
+	
+	public void angolra_állított_nyelvválasztó() {
+		menuPage.a_nyelvválasztó_állásának_ellenőrzése("English");
+	}
 	
 	public void kiválasztott_poszt_megjelenik_a_magyar_blog_oldalon() {
 		blogPage.ellenőrzés_hogy_az_aktuális_poszt_megjelenik(testData.post.title);
@@ -36,27 +55,53 @@ public class BlogSteps extends AbstractSteps {
 		
 	}
 	
-	public void poszt_fejléce_magyarul_jelenik_meg() {
+	public void megjelenik_a_kiválasztott_poszt_fejléce_magyarul() {
+		blogPostPage.ellenőrzés_hogy_az_aktuális_poszt_címe_megjelenik(testData.post.title);
+		blogPostPage.ellenőrzés_hogy_az_aktuális_poszt_szerzője_megjelenik(testData.post.author);
+		blogPostPage.ellenőrzés_hogy_az_aktuális_poszt_dátuma_megjelenik(testData.post.date);
+		if (testData.post.categoryBővítmények) blogPostPage.bővítmények_kategória_link_ellenőrzése();
+		if (testData.post.categoryGrafikusFelület) blogPostPage.grafikus_felület_kategória_link_ellenőrzése();
+		if (testData.post.categoryMesterségesIntelligencia) blogPostPage.mesterséges_intelligencia_kategória_link_ellenőrzése();
+		if (testData.post.categoryParancssor) blogPostPage.parancssor_kategória_link_ellenőrzése();
+		if (testData.post.categoryPéldák) blogPostPage.példák_kategória_link_ellenőrzése();
+		if (testData.post.categoryTanulmányok) blogPostPage.tanulmányok_kategória_link_ellenőrzése();
+		if (testData.post.categoryÚjdonságok) blogPostPage.újdonságok_kategória_link_ellenőrzése();
+		if (testData.post.categoryÁttekintés) blogPostPage.áttekintés_kategória_link_ellenőrzése();
+	}
+	
+	public void megjelenik_a_kiválasztott_poszt_fejléce_angolul() {
 		
 	}
 	
-	public void poszt_fejléce_angolul_jelenik_meg() {
+	public void megjelenik_a_kiválasztott_poszt_szövege_magyarul() {
 		
 	}
 	
-	public void poszt_szövege_magyarul_jelenik_meg() {
+	public void megjelenik_a_kiválasztott_poszt_szövege_angolul() {
 		
 	}
 	
-	public void poszt_szövege_angolul_jelenik_meg() {
+	public void megjelenik_az_ibello_blog_poszt_oldala_magyarul() {
 		
 	}
 	
-	public void az_ibello_blog_poszt_oldala_magyarul_jelenik_meg() {
+	public void megjelenik_az_ibello_blog_poszt_oldala_angolul() {
 		
 	}
 	
-	public void az_ibello_blog_poszt_oldala_angolul_jelenik_meg() {
+	public void megjelenik_a_poszt_címe_az_oldal_fejlécében_magyarul() {
+		
+	}
+	
+	public void megjelenik_a_poszt_címe_az_oldal_fejlécében_angolul() {
+		
+	}
+	
+	public void továbblépés_a_következő_posztra() {
+		
+	}
+	
+	public void visszalépés_az_előző_posztra() {
 		
 	}
 	
@@ -119,27 +164,6 @@ public class BlogSteps extends AbstractSteps {
 	public void megnyitom_a_kiválasztott_posztot() {
 		blogPage.kattintás_a_kiválasztott_poszt_címére(testData.post.title);
 	}
-	
-	public void poszt_címe_megjelenik_az_oldal_fejlécében_magyarul() {
-		
-	}
-	
-	public void megjelenik_a_kiválasztott_poszt_fejléce_magyarul() {
-		blogPostPage.ellenőrzés_hogy_az_aktuális_poszt_címe_megjelenik(testData.post.title);
-		blogPostPage.ellenőrzés_hogy_az_aktuális_poszt_szerzője_megjelenik(testData.post.author);
-		blogPostPage.ellenőrzés_hogy_az_aktuális_poszt_dátuma_megjelenik(testData.post.date);
-		if (testData.post.categoryBővítmények) blogPostPage.bővítmények_kategória_link_ellenőrzése();
-		if (testData.post.categoryGrafikusFelület) blogPostPage.grafikus_felület_kategória_link_ellenőrzése();
-		if (testData.post.categoryMesterségesIntelligencia) blogPostPage.mesterséges_intelligencia_kategória_link_ellenőrzése();
-		if (testData.post.categoryParancssor) blogPostPage.parancssor_kategória_link_ellenőrzése();
-		if (testData.post.categoryPéldák) blogPostPage.példák_kategória_link_ellenőrzése();
-		if (testData.post.categoryTanulmányok) blogPostPage.tanulmányok_kategória_link_ellenőrzése();
-		if (testData.post.categoryÚjdonságok) blogPostPage.újdonságok_kategória_link_ellenőrzése();
-		if (testData.post.categoryÁttekintés) blogPostPage.áttekintés_kategória_link_ellenőrzése();
-	}
-	
-	public void megjelenik_a_kiválasztott_poszt_szövege_magyarul() {
-		
-	}
+
 
 }

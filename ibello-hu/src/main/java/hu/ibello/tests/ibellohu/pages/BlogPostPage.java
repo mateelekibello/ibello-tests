@@ -15,6 +15,12 @@ public class BlogPostPage extends AbstractPage {
 	@Find(by=By.BUTTON_TEXT, using="${blogPage.moreInformationButton}")
 	private WebElement moreInformationButton;
 	
+	@Find(by=By.CSS_SELECTOR, using="[title='${blog.previousButton}']")
+	private WebElement previousButton;
+	
+	@Find(by=By.CSS_SELECTOR, using="[title='${blog.nextButton}']")
+	private WebElement nextButton;
+	
 	@Relation(type=RelationType.ANCESTOR_OF, by=By.TEXT, using="${0}")
 	@Find(by=By.CLASS_NAME, using="post")
 	private WebElement postDiv;
