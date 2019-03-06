@@ -25,12 +25,13 @@ Step: Licencek: Engedélyezem a licencem
 	When Licencek oldal: Engedélyezem a Licencet
 
 Step: Licencek: Kijelentkezek a Licencek oldalról
-	When Licencek oldal: Kijelentkezek a Licencek Oldalról
-	Then Navigáció: Megnyílik Az Ibello Bejelentkező Oldala
+	When Navigáció: Megnyitom a Főoldalt
+	Then Navigáció: Kijelentkezés
+	Given Navigáció: Az Ibello Honlapján Vagyok
 
 Step: Licencek: Licenc engedélyezve lesz a felhasználónak
 	Then Licencek oldal: Az Engedélyezett Licenc Megjelenik a Listában
-	Given Licencek oldal: Kijelentkezek a Licencek Oldalról
+	Given Licencek: Kijelentkezek a Licencek oldalról
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
 	When Licencek: Bejelentkezem felhasználóként
 	Given Navigáció: Megnyitom a Licencek Oldalt
@@ -41,7 +42,7 @@ Step: Licencek: Van engedélyezett licencem
 	Given Navigáció: Megnyitom a Licencek Oldalt
 	Given Licencek oldal: Beállítom a Licenc Státuszát
 	When Licencek oldal: Az Aktuális Licenc Legyen Visszavonható
-	Given Licencek oldal: Kijelentkezek a Licencek Oldalról
+	Given Licencek: Kijelentkezek a Licencek oldalról
 
 Step: Licencek: Visszavonom az engedélyezett licencem
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
@@ -52,7 +53,7 @@ Step: Licencek: Visszavonom az engedélyezett licencem
 
 Step: Licencek: Licenc visszavonva a felhasználótól
 	Then Licencek oldal: Az Aktuális Licenc Engedélyezhető
-	Given Licencek oldal: Kijelentkezek a Licencek Oldalról
+	Given Licencek: Kijelentkezek a Licencek oldalról
 	Given Tesztadat: Az Aktuális Licenc Neve Legyen "user"
 	Given Licencek: Bejelentkezem felhasználóként
 	Given Navigáció: Megnyitom a Licencek Oldalt
