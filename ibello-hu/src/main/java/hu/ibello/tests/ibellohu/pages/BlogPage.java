@@ -37,7 +37,7 @@ public class BlogPage extends AbstractPage {
 	public void ellenőrzés_hogy_az_oldal_megnyílt() {
 		expectations().any(() -> {
 			expectations().expect(pageTitle).toBe().displayed();
-			expectations().expect(pageTitle).toBe().displayed();
+			expectations().expect(pageTitleEn).toBe().displayed();
 		});
 	}
 	
@@ -126,12 +126,12 @@ public class BlogPage extends AbstractPage {
 	}
 	
 	public void újdonságok_kategória_link_ellenőrzése() {
-		categoryÚjdonságokLink = postDiv.find().using(By.BUTTON_TEXT,"${blog.categories.newFunction}").first();
+		categoryÚjdonságokLink = postDiv.find().using(By.BUTTON_TEXT,"${blog.categories.newFunctions}").first();
 		expectations().expect(categoryÚjdonságokLink).toBe().displayed();
 	}
 	
 	public void újdonságok_link_választása() {
-		categoryÚjdonságokLink = postDiv.find().using(By.BUTTON_TEXT,"${blog.categories.newFunction}").first();
+		categoryÚjdonságokLink = postDiv.find().using(By.BUTTON_TEXT,"${blog.categories.newFunctions}").first();
 		doWith(categoryÚjdonságokLink).click();
 	}
 	
@@ -146,6 +146,7 @@ public class BlogPage extends AbstractPage {
 	}
 	
 	public void kattintás_a_kiválasztott_poszt_címére(String title) {
+		expectations().expect(postDiv.applyParameters(title)).toBe().displayed();
 		titleLink = postDiv.find().using(By.BUTTON_TEXT,"${0}").first();
 		doWith(titleLink.applyParameters(title)).click();
 	}

@@ -14,4 +14,7 @@ public class Post {
 	public boolean categoryÁttekintés;
 	public boolean englishVersion;
 	public String titleInEnglish;
+	public String authorInEnglish;
+	public String partOfText;
+	public String partOfTextInEnglish;
 }

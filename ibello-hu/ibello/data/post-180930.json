@@ -1,18 +1,18 @@
 {
-	"title": "Tesztlépések szerkesztése",
+	"title": "Böngésző automatizálás ibello-val",
 	"author": "Simon Kornél",
-	"date": "2018-11-13",
+	"date": "2018-09-30",
 	"categoryBővítmények": false,
-	"categoryGrafikusFelület": true,
+	"categoryGrafikusFelület": false,
 	"categoryMesterségesIntelligencia": false,
 	"categoryParancssor": false,
-	"categoryPéldák": false,
+	"categoryPéldák": true,
 	"categoryTanulmányok": false,
 	"categoryÚjdonságok": true,
 	"categoryÁttekintés": false,
 	"englishVersion": false,
 	"titleInEnglish": "",
 	"authorInEnglish" : "Kornél Simon",
-	"partOfText": "Java nyelven írt tesztlépések esetében például a névtér megegyezik a szülő osztály nevével.",
+	"partOfText": "aminek a megjelenése egyenértékű a teszteredmények elkészültének tényével",
 	"partOfTextInEnglish": ""
 }
