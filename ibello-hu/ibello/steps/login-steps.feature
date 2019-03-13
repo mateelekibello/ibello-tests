@@ -2,7 +2,7 @@
 
 Step: Bejelentkezés: Az ibello bejelentkező oldalán vagyok
 	Given Navigáció: Az Ibello Honlapján Vagyok
-	Given Blog oldalak: Magyar nyelv kiválasztása
+	Given Blog oldalak: Magyar Nyelv Kiválasztása
 	When Navigáció: Megnyitom a Bejelentkező Oldalt
 
 Step: Bejelentkezés: Megpróbálok bejelentkezni egy nem regisztrált felhasználóval
