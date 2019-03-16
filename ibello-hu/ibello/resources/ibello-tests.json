@@ -1,0 +1,33 @@
+{
+  "localTests": [
+    {
+      "id": "20190316_170231",
+      "steps": [
+        {
+          "id": "DPhQyJ3vaKZWvQHPqAsFqGbbCalkfiqWWgK4HZSdJIQ\u003d",
+          "outcome": "FAILURE",
+          "durationMs": 10362,
+          "failureReason": "SYSTEM_ERROR"
+        }
+      ]
+    }
+  ],
+  "remoteTests": [
+    {
+      "url": "https://ibello.hu:8543",
+      "tests": [
+        {
+          "id": "49",
+          "steps": [
+            {
+              "id": "7MaklaiRgfK8xTxpuu8qzflzDbSF6AhkNtg7XVVH2P8\u003d",
+              "outcome": "ERROR",
+              "durationMs": 11368,
+              "failureReason": "TEST_ERROR"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
