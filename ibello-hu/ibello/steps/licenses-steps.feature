@@ -3,8 +3,7 @@
 Step: Licencek: Van érvényes licenc
 
 Step: Licencek: Bejelentkezem tulajdonosként
-	Given Navigáció: Az Ibello Honlapján Vagyok
-	Given Navigáció: Megnyitom a Bejelentkező Oldalt
+	Given Bejelentkezés: Az ibello bejelentkező oldalán vagyok
 	Given Bejelentkezés: Megpróbálok bejelentkezni egy regisztrált felhasználóval
 
 Step: Licencek: Megnyitom a licencek oldalt
@@ -60,8 +59,7 @@ Step: Licencek: Licenc visszavonva a felhasználótól
 	Given Licencek oldal: Az Aktuális Licenc Nincs a Listán
 
 Step: Licencek: Bejelentkezem felhasználóként
-	Given Navigáció: Az Ibello Honlapján Vagyok
-	Given Navigáció: Megnyitom a Bejelentkező Oldalt
+	Given Bejelentkezés: Az ibello bejelentkező oldalán vagyok
 	Given Bejelentkezés: Megpróbálok bejelentkezni egy teszt felhasználóval
 
 Step: Licencek: Visszaadom a nekem adott licencet
