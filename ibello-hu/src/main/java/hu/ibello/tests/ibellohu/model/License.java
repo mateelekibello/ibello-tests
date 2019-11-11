@@ -1,5 +1,8 @@
 package hu.ibello.tests.ibellohu.model;
 
+import hu.ibello.data.Model;
+
+@Model
 public class License {
 	public String licenseId;
 	public String licenseType;

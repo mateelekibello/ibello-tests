@@ -1,5 +1,8 @@
 package hu.ibello.tests.ibellohu.model;
 
+import hu.ibello.data.Model;
+
+@Model
 public class BillingAddress {
 	public String firstname;
 	public String lastname;
