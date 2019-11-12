@@ -1,0 +1,20 @@
+{
+  "localTests": [
+    {
+      "id": "20191112_230240",
+      "steps": [
+        {
+          "id": "gJMQOo0Y87QcyhsyFlp16Nb0ygCb5cgzRinjc8CicKk\u003d",
+          "outcome": "ERROR",
+          "durationMs": 6043,
+          "timeoutMs": 5000,
+          "tags": "",
+          "browser": "FIREFOX",
+          "headless": false,
+          "exceptionKind": "ELEMENT_NOT_DISPLAYED",
+          "failureReason": "TEST_ERROR"
+        }
+      ]
+    }
+  ]
+}

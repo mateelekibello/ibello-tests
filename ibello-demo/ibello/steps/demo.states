@@ -1,0 +1,64 @@
+title = Ibello Demo
+states LANDING, LOGIN, HOME, DOCUMENTATIONS, LICENSES
+
+LANDING + open documentation -> DOCUMENTATIONS
+LANDING + open login -> LOGIN
+! logged in ? DOCUMENTATIONS + open landing -> LANDING
+LOGIN + login -> logged in + HOME
+HOME + open licenses -> LICENSES
+HOME + open documentation -> DOCUMENTATIONS
+LICENSES + open home -> HOME
+logged in ? DOCUMENTATIONS + open home -> HOME
+HOME + logout -> LANDING - logged in
+
+[I am on the LANDING page]
+    state LANDING
+    option open documentation
+    option open login
+
+[I am on the DOCUMENTATIONS page]
+    state DOCUMENTATIONS
+    option open landing
+
+[I am on the DOCUMENTATIONS page]
+    state DOCUMENTATIONS
+    option open home
+
+[I am on the LOGIN page]
+    state LOGIN
+    option login
+
+[I am on the HOME page]
+    state HOME
+    option open licenses
+    option open documentation
+    option logout
+
+[I am on the LICENSES page]
+    state LICENSES
+    option open home
+
+[I navigate to documentations]
+    input open documentation
+
+[I navigate to landing]
+    input open landing
+
+[I navigate to login]
+    input open login
+
+[I log in with valid credentials]
+    input login
+    set logged in
+
+[I navigate to licenses]
+    input open licenses
+
+[I navigate to home]
+    input open home
+
+[I log out]
+    input logout
+
+[I am logged out]
+    unset logged in
