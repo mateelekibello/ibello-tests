@@ -1,6 +1,5 @@
 package hu.ibello.demo.pages;
 
-import hu.ibello.demo.Languages;
 import hu.ibello.elements.WebElement;
 import hu.ibello.pages.PageObject;
 import hu.ibello.search.By;
