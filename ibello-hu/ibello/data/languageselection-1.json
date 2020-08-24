@@ -1,0 +1,18 @@
+{
+  "english": {
+    "toSelect": true,
+    "texts": [
+      "ibello Test Framework",
+      "Our reasonableness strengthens our customers",
+      "If you need some good tests"
+    ]
+  },
+  "hungarian": {
+    "toSelect": false,
+    "texts": [
+      "ibello teszt keretrendszer",
+      "Észszerűségünk erőt ad ügyfeleinknek",
+      "Ha kell néhány jó teszt"
+    ]
+  }
+}
