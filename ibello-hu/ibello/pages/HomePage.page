@@ -1,0 +1,9 @@
+menuComponent = element {
+    cssSelector 'menu-component'
+    expect_menu_component_is_displayed = expect toBe displayed
+}
+
+mainLane = element {
+    cssSelector 'welcome-main-lane'
+    expect_main_lane_is_displayed = expect toBe displayed
+}
