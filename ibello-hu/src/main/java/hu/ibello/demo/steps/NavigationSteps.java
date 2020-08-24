@@ -1,7 +1,7 @@
 package hu.ibello.demo.steps;
 
 import hu.ibello.core.Name;
-import hu.ibello.demo.Languages;
+import hu.ibello.demo.LanguageSelection;
 import hu.ibello.demo.pages.HomePage;
 import hu.ibello.demo.pages.NavigationBarPage;
 import hu.ibello.steps.StepLibrary;
@@ -17,17 +17,19 @@ public class NavigationSteps extends StepLibrary {
         homePage.expect_main_lane_is_displayed();
     }
 
-    public void select_$_language(Languages language) {
-        navigationBar.click_language_link();
-        switch (language) {
-            case ENGLISH:
-                navigationBar.click_english_link();
-                break;
-            case HUNGARIAN:
-                navigationBar.click_hungarian_link();
-                break;
-            default:
-                break;
+    public void select_language_based_on_$_test_data(LanguageSelection data) {
+        if (data != null) {
+            navigationBar.click_language_link();
+            switch (data.getLanguage()) {
+                case HUNGARIAN:
+                    navigationBar.click_hungarian_link();
+                    break;
+                case ENGLISH:
+                    navigationBar.click_english_link();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

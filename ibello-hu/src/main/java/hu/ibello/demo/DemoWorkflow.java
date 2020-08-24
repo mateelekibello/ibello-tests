@@ -14,7 +14,8 @@ public class DemoWorkflow extends StepLibrary{
     }
 
     public void select_language() {
-        navigationStepsSteps.select_$_language(Languages.ENGLISH);
+        LanguageSelection data = testData().fromJson(LanguageSelection.class).withId("1").load();
+        navigationStepsSteps.select_language_based_on_$_test_data(data);
     }
 
     public void language_is_changed() {
