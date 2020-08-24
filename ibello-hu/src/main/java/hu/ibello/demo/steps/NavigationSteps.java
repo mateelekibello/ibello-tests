@@ -1,6 +1,7 @@
-package hu.ibello.demo;
+package hu.ibello.demo.steps;
 
 import hu.ibello.core.Name;
+import hu.ibello.demo.Languages;
 import hu.ibello.demo.pages.HomePage;
 import hu.ibello.demo.pages.NavigationBarPage;
 import hu.ibello.steps.StepLibrary;

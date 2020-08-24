@@ -1,6 +1,7 @@
 package hu.ibello.demo;
 
 import hu.ibello.core.Name;
+import hu.ibello.demo.steps.NavigationSteps;
 import hu.ibello.steps.StepLibrary;
 
 @Name("Demo")
