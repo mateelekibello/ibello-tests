@@ -5,3 +5,16 @@
 /ibello/.settings
 /ibello/*.pid
 /ibello/results/
+
+/.gradle/
+/gradlew
+/gradlew.bat
+/gradle/wrapper
+/gradle/
+/.idea/
+/.settings/
+/features/sandbox-*.feature
+local.properties
+/tmp/
+/test-output/
+/test-data/
