@@ -18,7 +18,7 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void select_language_based_on_$_test_data(LanguageSelection data) {
-        if (data != null) {
+        if (data != null && data.getLanguage() != null) {
             navigationBar.click_language_link();
             switch (data.getLanguage()) {
                 case HUNGARIAN:
