@@ -1,4 +1,4 @@
-package hu.ibello.demo;
+package hu.ibello.demo.pages;
 
 import hu.ibello.elements.WebElement;
 import hu.ibello.pages.PageObject;
