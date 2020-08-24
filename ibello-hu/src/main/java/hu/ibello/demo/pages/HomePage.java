@@ -13,16 +13,11 @@ public class HomePage extends PageObject {
     @Find(by = By.CSS_SELECTOR, using = "welcome-main-lane")
     private WebElement mainLane;
 
-    public void expect_homepage_is_displayed() {
-        expect_menu_component_is_displayed();
-        expect_main_lane_is_displayed();
-    }
-
-    private void expect_menu_component_is_displayed() {
+    public void expect_menu_component_is_displayed() {
         expectations().expect(menuComponent).toBe().displayed();
     }
 
-    private void expect_main_lane_is_displayed() {
+    public void expect_main_lane_is_displayed() {
         expectations().expect(mainLane).toBe().displayed();
     }
 

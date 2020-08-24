@@ -5,6 +5,7 @@ productLink = clickable {
     }
     xpath '/html[1]/body[1]/menu-component[1]/a[2]'
     click_product_link = action click
+    hidden
 }
 
 servicesLink = clickable {
@@ -14,6 +15,7 @@ servicesLink = clickable {
     }
     xpath '/html[1]/body[1]/menu-component[1]/a[3]'
     click_services_link = action click
+    hidden
 }
 
 aboutUsLink = clickable {
@@ -23,6 +25,7 @@ aboutUsLink = clickable {
     }
     xpath '/html[1]/body[1]/menu-component[1]/a[4]'
     click_about_us_link = action click
+    hidden
 }
 
 supportLink = clickable {
@@ -32,6 +35,7 @@ supportLink = clickable {
     }
     xpath '/html[1]/body[1]/menu-component[1]/a[5]'
     click_support_link = action click
+    hidden
 }
 
 languageLink = clickable {
@@ -41,4 +45,23 @@ languageLink = clickable {
     }
     xpath '/html[1]/body[1]/menu-component[1]/div[2]/a[1]'
     click_language_link = action click
+    hidden
+}
+
+hungarianLink = clickable {
+    cssSelector 'a[title=\'magyar\']'
+    descendantOf {
+        id 'language-selector'
+    }
+    click_hungarian_link = action click
+    hidden
+}
+
+englishLink = clickable {
+    cssSelector 'a[title=\'english\']'
+    descendantOf {
+        id 'language-selector'
+    }
+    click_english_link = action click
+    hidden
 }

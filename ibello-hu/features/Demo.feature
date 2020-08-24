@@ -1,4 +1,6 @@
 Feature: Demo
 
 	Scenario: Language selection
-		Given Demo: select english language
+		Given Demo: homepage is loaded
+		When Demo: select language
+		Then Demo: language is changed

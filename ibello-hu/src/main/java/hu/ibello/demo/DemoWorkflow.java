@@ -8,8 +8,18 @@ public class DemoWorkflow extends StepLibrary{
 
     private NavigationSteps navigationStepsSteps;
 
-    public void select_english_language() {
-        navigationStepsSteps.click_on_language_selector();
+    public void homepage_is_loaded() {
+       navigationStepsSteps.expect_homepage_is_loaded();
     }
+
+    public void select_language() {
+        navigationStepsSteps.select_$_language(Languages.ENGLISH);
+    }
+
+    public void language_is_changed() {
+        // TODO auto-generated method
+    }
+
+
 
 }

@@ -11,11 +11,23 @@ public class NavigationSteps extends StepLibrary {
     private NavigationBarPage navigationBar;
     private HomePage homePage;
 
-    public void homepage_is_loaded() {
-        homePage.expect_homepage_is_displayed();
+    public void expect_homepage_is_loaded() {
+        homePage.expect_menu_component_is_displayed();
+        homePage.expect_main_lane_is_displayed();
     }
 
-    public void click_on_language_selector() {
+    public void select_$_language(Languages language) {
         navigationBar.click_language_link();
+        switch (language) {
+            case ENGLISH:
+                navigationBar.click_english_link();
+                break;
+            case HUNGARIAN:
+                navigationBar.click_hungarian_link();
+                break;
+            default:
+                break;
+        }
     }
+
 }

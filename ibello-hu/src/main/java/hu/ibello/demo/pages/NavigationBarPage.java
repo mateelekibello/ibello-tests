@@ -1,5 +1,6 @@
 package hu.ibello.demo.pages;
 
+import hu.ibello.demo.Languages;
 import hu.ibello.elements.WebElement;
 import hu.ibello.pages.PageObject;
 import hu.ibello.search.By;
@@ -29,6 +30,14 @@ public class NavigationBarPage extends PageObject {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "menu-component")
     private WebElement languageLink;
 
+    @Find(by = By.CSS_SELECTOR, using = "a[title='magyar']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.ID, using = "language-selector")
+    private WebElement hungarianLink;
+
+    @Find(by = By.CSS_SELECTOR, using = "a[title='english']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.ID, using = "language-selector")
+    private WebElement englishLink;
+
     public void click_product_link() {
         doWith(productLink).click();
     }
@@ -47,6 +56,14 @@ public class NavigationBarPage extends PageObject {
 
     public void click_language_link() {
         doWith(languageLink).click();
+    }
+
+    public void click_hungarian_link() {
+        doWith(hungarianLink).click();
+    }
+
+    public void click_english_link() {
+        doWith(englishLink).click();
     }
 
 }
