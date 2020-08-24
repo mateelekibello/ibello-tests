@@ -1,0 +1,5 @@
+languageSelectorLink = clickable {
+    id 'language-selector'
+    xpath '/html[1]/body[1]/menu-component[1]/div[2]/a[1]'
+    click_language_selector_link = action click
+}
