@@ -6,6 +6,7 @@ import hu.ibello.data.Model;
 import java.util.List;
 
 @Model
+@Description("Test data for language selection")
 public class LanguageSelection {
 
     @Description("Selected language will be selected during the test.")
