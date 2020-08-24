@@ -6,9 +6,9 @@ import hu.ibello.steps.StepLibrary;
 @Name("Language steps")
 public class LanguageSteps extends StepLibrary {
 
-    private HomePage homePage;
+    private NavigationBarPage navigationBarPage;
 
     public void click_on_language_selector() {
-        homePage.click_language_selector_link();
+        navigationBarPage.click_language_link();
     }
 }

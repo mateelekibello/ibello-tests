@@ -1,0 +1,44 @@
+productLink = clickable {
+    cssSelector 'a[href=\'#home-ibello\']'
+    descendantOf {
+        cssSelector 'menu-component'
+    }
+    xpath '/html[1]/body[1]/menu-component[1]/a[2]'
+    click_product_link = action click
+}
+
+servicesLink = clickable {
+    cssSelector 'a[href=\'#home-services\']'
+    descendantOf {
+        cssSelector 'menu-component'
+    }
+    xpath '/html[1]/body[1]/menu-component[1]/a[3]'
+    click_services_link = action click
+}
+
+aboutUsLink = clickable {
+    cssSelector 'a[href=\'#home-about\']'
+    descendantOf {
+        cssSelector 'menu-component'
+    }
+    xpath '/html[1]/body[1]/menu-component[1]/a[4]'
+    click_about_us_link = action click
+}
+
+supportLink = clickable {
+    cssSelector 'a[href=\'#home-support\']'
+    descendantOf {
+        cssSelector 'menu-component'
+    }
+    xpath '/html[1]/body[1]/menu-component[1]/a[5]'
+    click_support_link = action click
+}
+
+languageLink = clickable {
+    id 'language-selector'
+    descendantOf {
+        cssSelector 'menu-component'
+    }
+    xpath '/html[1]/body[1]/menu-component[1]/div[2]/a[1]'
+    click_language_link = action click
+}
