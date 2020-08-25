@@ -202,7 +202,7 @@
       "condition": "name"
     },
     {
-      "text": "When the name will be invalid",
+      "text": "When the email will be invalid",
       "condition": "email"
     },
     {
