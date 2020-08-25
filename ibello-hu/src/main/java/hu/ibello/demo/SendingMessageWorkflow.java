@@ -38,4 +38,24 @@ public class SendingMessageWorkflow extends StepLibrary{
         sendingMessageSteps.i_see_the_error_message();
     }
 
+    public void i_see_that_there_is_no_error_message() {
+        // TODO auto-generated method
+    }
+
+    public void the_email_will_be_valid() {
+        // TODO auto-generated method
+    }
+
+    public void the_message_will_be_valid() {
+        // TODO auto-generated method
+    }
+
+    public void the_name_will_be_valid() {
+        // TODO auto-generated method
+    }
+
+    public void the_subject_will_be_valid() {
+        // TODO auto-generated method
+    }
+
 }
