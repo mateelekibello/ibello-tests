@@ -1,4 +1,4 @@
-Feature: Demo
+Feature: demo
 
 	Scenario: Language selection
 		Given Demo: homepage is loaded

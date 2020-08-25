@@ -19,6 +19,10 @@ public class HomePage extends PageObject {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "welcome-main-lane")
     private WebElement text;
 
+    @Find(by = By.CSS_SELECTOR, using = "a[au-target-id='135']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-welcome-main")
+    private WebElement ourProductButton;
+
     public void expect_menu_component_is_displayed() {
         expectations().expect(menuComponent).toBe().displayed();
     }
@@ -33,5 +37,9 @@ public class HomePage extends PageObject {
 
     public void assume_$_text_is_not_displayed(String textToCheck) {
         expectations().assume(text.applyParameters(textToCheck)).toNotBe().displayed();
+    }
+
+    public void click_our_product_button() {
+        doWith(ourProductButton).click();
     }
 }

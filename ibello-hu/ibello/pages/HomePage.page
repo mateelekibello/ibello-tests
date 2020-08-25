@@ -17,4 +17,14 @@ text = element {
     }
     assume_text_is_displayed = assume toBe displayed
     assume_text_is_not_displayed = assume toNotBe displayed
+    hidden
+}
+
+ourProductButton = clickable {
+    cssSelector 'a[au-target-id=\'135\']'
+    descendantOf {
+        className 'lane-welcome-main'
+    }
+    xpath '/html[1]/body[1]/router-view[1]/welcome-main-lane[1]/div[1]/div[2]/a[1]'
+    click_our_product_button = action click
 }
