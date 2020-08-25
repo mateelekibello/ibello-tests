@@ -1,4 +1,4 @@
-@message
+@full-test @message
 Feature: Decision table for sending a message test scenarios
 
 	Background: Loading the valid test data

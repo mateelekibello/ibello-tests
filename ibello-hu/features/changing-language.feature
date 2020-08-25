@@ -1,3 +1,4 @@
+@full-test @language
 Feature: Test for changing language
 
 	Scenario: Language selection
