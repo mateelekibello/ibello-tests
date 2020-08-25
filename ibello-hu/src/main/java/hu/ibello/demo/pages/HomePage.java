@@ -19,9 +19,29 @@ public class HomePage extends PageObject {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "welcome-main-lane")
     private WebElement text;
 
+    @Find(by = By.ID, using = "contactName")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "contact-info")
+    private WebElement contactNameField;
+
+    @Find(by = By.ID, using = "contactEmail")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "contact-info")
+    private WebElement contactEmailField;
+
+    @Find(by = By.ID, using = "contactSubject")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "contact-info")
+    private WebElement contactSubjectField;
+
+    @Find(by = By.ID, using = "contactText")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "contact-info")
+    private WebElement contactTextField;
+
     @Find(by = By.CSS_SELECTOR, using = "a[au-target-id='135']")
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-welcome-main")
     private WebElement ourProductButton;
+
+    @Find(by = By.CSS_SELECTOR, using = "a[au-target-id='118']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "contact-lane")
+    private WebElement sendMessageButton;
 
     public void expect_menu_component_is_displayed() {
         expectations().expect(menuComponent).toBe().displayed();
@@ -42,4 +62,25 @@ public class HomePage extends PageObject {
     public void click_our_product_button() {
         doWith(ourProductButton).click();
     }
+
+    public void set_contact_name_field_to_$(String value) {
+        doWith(contactNameField).setValue(value);
+    }
+
+    public void set_contact_email_field_to_$(String value) {
+        doWith(contactEmailField).setValue(value);
+    }
+
+    public void set_contact_subject_field_to_$(String value) {
+        doWith(contactSubjectField).setValue(value);
+    }
+
+    public void set_contact_text_field_to_$(String value) {
+        doWith(contactTextField).setValue(value);
+    }
+
+    public void click_send_message_button() {
+        doWith(sendMessageButton).click();
+    }
+
 }

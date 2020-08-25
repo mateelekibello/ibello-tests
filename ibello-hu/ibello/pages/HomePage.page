@@ -27,4 +27,50 @@ ourProductButton = clickable {
     }
     xpath '/html[1]/body[1]/router-view[1]/welcome-main-lane[1]/div[1]/div[2]/a[1]'
     click_our_product_button = action click
+    hidden
+}
+
+sendMessageButton = clickable {
+    cssSelector 'a[au-target-id=\'118\']'
+    descendantOf {
+        cssSelector 'contact-lane'
+    }
+    click_send_message_button = action click
+    hidden
+}
+
+contactNameField = textbox {
+    id 'contactName'
+    descendantOf {
+        className 'contact-info'
+    }
+    xpath '/html[1]/body[1]/router-view[1]/contact-lane[1]/div[1]/div[1]/input[1]'
+    set_contact_name_field_to_ = action setValue
+}
+
+contactEmailField = textbox {
+    id 'contactEmail'
+    descendantOf {
+        className 'contact-info'
+    }
+    xpath '/html[1]/body[1]/router-view[1]/contact-lane[1]/div[1]/div[1]/input[2]'
+    set_contact_email_field_to_ = action setValue
+}
+
+contactSubjectField = textbox {
+    id 'contactSubject'
+    descendantOf {
+        className 'contact-info'
+    }
+    xpath '/html[1]/body[1]/router-view[1]/contact-lane[1]/div[1]/div[1]/input[3]'
+    set_contact_subject_field_to_ = action setValue
+}
+
+contactTextField = textbox {
+    id 'contactText'
+    descendantOf {
+        className 'contact-info'
+    }
+    xpath '/html[1]/body[1]/router-view[1]/contact-lane[1]/div[1]/div[1]/textarea[1]'
+    set_contact_text_field_to_ = action setValue
 }
