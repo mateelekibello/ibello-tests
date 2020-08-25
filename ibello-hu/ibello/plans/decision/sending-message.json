@@ -1,0 +1,234 @@
+{
+  "name": "Decision table for sending a message test scenarios",
+  "description": "With this test we want to test each cases of sending a message. The parameters can be: name, email, subject, message.",
+  "tags": [
+    "negative"
+  ],
+  "limitations": {
+    "trueTextInput": {
+      "min": 1,
+      "max": 2
+    }
+  },
+  "inputParameters": [
+    {
+      "name": "name",
+      "description": "The \"name\" input parameter is invalid?"
+    },
+    {
+      "name": "email",
+      "description": "The \"email\" input parameter is invalid?"
+    },
+    {
+      "name": "subject",
+      "description": "The \"subject\" input parameter is invalid?"
+    },
+    {
+      "name": "message",
+      "description": "The \"message\" input parameter is invalid?"
+    }
+  ],
+  "outputParameters": [
+    {
+      "visible": true,
+      "logical": true,
+      "name": "errorMessages",
+      "description": "There should be an error message after sending?"
+    },
+    {
+      "visible": false,
+      "logical": false,
+      "expression": "name ? \"invalid name\" : \"\"",
+      "name": "name_out",
+      "description": "Part of scenario name"
+    },
+    {
+      "visible": false,
+      "logical": false,
+      "expression": "email ? \"invalid email\" : \"\"",
+      "name": "email_out",
+      "description": "Part of scenario name"
+    },
+    {
+      "visible": false,
+      "logical": false,
+      "expression": "subject ? \"invalid subject\" : \"\"",
+      "name": "subject_out",
+      "description": "Part of scenario name"
+    },
+    {
+      "visible": false,
+      "logical": false,
+      "expression": "message ? \"invalid massage\" : \"\"",
+      "name": "message_out",
+      "description": "Part of scenario name"
+    },
+    {
+      "visible": true,
+      "logical": false,
+      "expression": "joinStrings(\", \", name_out, email_out, subject_out, message_out)",
+      "name": "out",
+      "description": "Part of scenario name"
+    }
+  ],
+  "savedConfiguration": [
+    {
+      "name_out": "invalid name",
+      "errorMessages": true,
+      "subject": false,
+      "name": true,
+      "subject_out": "",
+      "message": false,
+      "email_out": "invalid email",
+      "message_out": "",
+      "email": true,
+      "out": "invalid name, invalid email"
+    },
+    {
+      "name_out": "invalid name",
+      "errorMessages": true,
+      "subject": true,
+      "name": true,
+      "subject_out": "invalid subject",
+      "message": false,
+      "email_out": "",
+      "message_out": "",
+      "email": false,
+      "out": "invalid name, invalid subject"
+    },
+    {
+      "name_out": "invalid name",
+      "errorMessages": true,
+      "subject": false,
+      "name": true,
+      "subject_out": "",
+      "message": true,
+      "email_out": "",
+      "message_out": "invalid massage",
+      "email": false,
+      "out": "invalid name, invalid massage"
+    },
+    {
+      "name_out": "invalid name",
+      "errorMessages": true,
+      "subject": false,
+      "name": true,
+      "subject_out": "",
+      "message": false,
+      "email_out": "",
+      "message_out": "",
+      "email": false,
+      "out": "invalid name"
+    },
+    {
+      "name_out": "",
+      "errorMessages": true,
+      "subject": true,
+      "name": false,
+      "subject_out": "invalid subject",
+      "message": false,
+      "email_out": "invalid email",
+      "message_out": "",
+      "email": true,
+      "out": "invalid email, invalid subject"
+    },
+    {
+      "name_out": "",
+      "errorMessages": true,
+      "subject": false,
+      "name": false,
+      "subject_out": "",
+      "message": true,
+      "email_out": "invalid email",
+      "message_out": "invalid massage",
+      "email": true,
+      "out": "invalid email, invalid massage"
+    },
+    {
+      "name_out": "",
+      "errorMessages": true,
+      "subject": false,
+      "name": false,
+      "subject_out": "",
+      "message": false,
+      "email_out": "invalid email",
+      "message_out": "",
+      "email": true,
+      "out": "invalid email"
+    },
+    {
+      "name_out": "",
+      "errorMessages": true,
+      "subject": true,
+      "name": false,
+      "subject_out": "invalid subject",
+      "message": true,
+      "email_out": "",
+      "message_out": "invalid massage",
+      "email": false,
+      "out": "invalid subject, invalid massage"
+    },
+    {
+      "name_out": "",
+      "errorMessages": true,
+      "subject": true,
+      "name": false,
+      "subject_out": "invalid subject",
+      "message": false,
+      "email_out": "",
+      "message_out": "",
+      "email": false,
+      "out": "invalid subject"
+    },
+    {
+      "name_out": "",
+      "errorMessages": true,
+      "subject": false,
+      "name": false,
+      "subject_out": "",
+      "message": true,
+      "email_out": "",
+      "message_out": "invalid massage",
+      "email": false,
+      "out": "invalid massage"
+    }
+  ],
+  "testSteps": [
+    {
+      "text": "Given i want to send a new message"
+    },
+    {
+      "text": "When the name will be invalid",
+      "condition": "name"
+    },
+    {
+      "text": "When the name will be invalid",
+      "condition": "email"
+    },
+    {
+      "text": "When the subject will be invalid",
+      "condition": "subject"
+    },
+    {
+      "text": "When the message will be invalid",
+      "condition": "message"
+    },
+    {
+      "text": "When i send the message",
+      "condition": ""
+    },
+    {
+      "text": "Then i see that the there is an error message",
+      "condition": "errorMessages"
+    },
+    {
+      "text": "Then i see that there is no error message",
+      "condition": "!errorMessages"
+    }
+  ],
+  "scenarioNames": [
+    {
+      "text": "Sending message with ${out}"
+    }
+  ]
+}
