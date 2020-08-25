@@ -14,14 +14,23 @@ public class SendingMessageSteps extends StepLibrary {
     }
 
     public void i_use_$_invalid_name() {
+        homePage.set_contact_name_field_to_$("");
     }
 
     public void i_use_$_invalid_email() {
+        homePage.set_contact_email_field_to_$("asdsadasd");
     }
 
     public void i_use_$_invalid_subject() {
+        homePage.set_contact_subject_field_to_$("");
     }
 
     public void i_use_$_invalid_message() {
+        homePage.set_contact_text_field_to_$("");
+    }
+
+    public void i_see_the_error_message() {
+        homePage.assume_error_message_is_displayed();
+        homePage.assume_error_message_is_not_displayed();
     }
 }

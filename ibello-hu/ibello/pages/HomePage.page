@@ -46,6 +46,7 @@ contactNameField = textbox {
     }
     xpath '/html[1]/body[1]/router-view[1]/contact-lane[1]/div[1]/div[1]/input[1]'
     set_contact_name_field_to_ = action setValue
+    hidden
 }
 
 contactEmailField = textbox {
@@ -55,6 +56,7 @@ contactEmailField = textbox {
     }
     xpath '/html[1]/body[1]/router-view[1]/contact-lane[1]/div[1]/div[1]/input[2]'
     set_contact_email_field_to_ = action setValue
+    hidden
 }
 
 contactSubjectField = textbox {
@@ -64,6 +66,7 @@ contactSubjectField = textbox {
     }
     xpath '/html[1]/body[1]/router-view[1]/contact-lane[1]/div[1]/div[1]/input[3]'
     set_contact_subject_field_to_ = action setValue
+    hidden
 }
 
 contactTextField = textbox {
@@ -73,4 +76,14 @@ contactTextField = textbox {
     }
     xpath '/html[1]/body[1]/router-view[1]/contact-lane[1]/div[1]/div[1]/textarea[1]'
     set_contact_text_field_to_ = action setValue
+    hidden
+}
+
+errorMessage = element {
+    className 'error'
+    descendantOf {
+        cssSelector 'toast-component'
+    }
+    assume_error_message_is_displayed = assume toBe displayed
+    assume_error_message_is_not_displayed = assume toNotBe displayed
 }
