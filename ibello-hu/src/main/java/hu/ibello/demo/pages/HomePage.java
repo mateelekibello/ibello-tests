@@ -48,13 +48,9 @@ public class HomePage extends PageObject {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "toast-component")
     private WebElement errorMessage;
 
-    public void expect_menu_component_is_displayed() {
-        expectations().expect(menuComponent).toBe().displayed();
-    }
-
-    public void expect_main_lane_is_displayed() {
-        expectations().expect(mainLane).toBe().displayed();
-    }
+    @Find(by = By.CLASS_NAME, using = "success")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "toast-component")
+    private WebElement successMessage;
 
     public void assume_$_text_is_displayed(String textToCheck) {
         expectations().assume(text.applyParameters(textToCheck)).toBe().displayed();
@@ -96,8 +92,32 @@ public class HomePage extends PageObject {
         expectations().withTimeout(Timeout.LONG).assume(errorMessage).toNotBe().displayed();
     }
 
-    public void open_page() {
-        browser().openURL(getConfigurationValue("ibello.url.base").toString());
+    public void assume_success_message_is_displayed() {
+        expectations().assume(successMessage).toBe().displayed();
+    }
+
+    public void assume_success_message_is_not_displayed() {
+        expectations().withTimeout(Timeout.LONG).assume(successMessage).toNotBe().displayed();
+    }
+
+    public void i_open_the_page() {
+        String url = getConfigurationValue("ibello.url.base").toString();
+        browser().resize(2000, 1000);
+        browser().maximize();
+        browser().openURL(url);
+    }
+
+    public void i_see_the_homepage() {
+        expect_menu_component_is_displayed();
+        expect_main_lane_is_displayed();
+    }
+
+    private void expect_menu_component_is_displayed() {
+        expectations().expect(menuComponent).toBe().displayed();
+    }
+
+    private void expect_main_lane_is_displayed() {
+        expectations().expect(mainLane).toBe().displayed();
     }
 
 }

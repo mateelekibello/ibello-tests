@@ -59,7 +59,7 @@
     {
       "visible": false,
       "logical": false,
-      "expression": "message ? \"invalid massage\" : \"\"",
+      "expression": "message ? \"invalid message\" : \"\"",
       "name": "message_out",
       "description": "Part of scenario name"
     },

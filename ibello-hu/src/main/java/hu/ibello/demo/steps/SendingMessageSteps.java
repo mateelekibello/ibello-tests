@@ -35,4 +35,9 @@ public class SendingMessageSteps extends StepLibrary {
         homePage.assume_error_message_is_displayed();
         homePage.assume_error_message_is_not_displayed();
     }
+
+    public void i_see_the_success_message() {
+        homePage.assume_success_message_is_displayed();
+        homePage.assume_success_message_is_not_displayed();
+    }
 }

@@ -12,11 +12,11 @@ public class DemoWorkflow extends StepLibrary{
     private NavigationSteps navigationStepsSteps;
     private LanguageSteps languageSteps;
 
-    public void homepage_is_loaded() {
+    public void i_open_the_homepage() {
         navigationStepsSteps.expect_homepage_is_loaded();
     }
 
-    public void select_language() {
+    public void i_select_the_language() {
         LanguageSelection data = testData().fromJson(LanguageSelection.class).withId("1").load();
         navigationStepsSteps.select_language_based_on_$_test_data(data);
     }

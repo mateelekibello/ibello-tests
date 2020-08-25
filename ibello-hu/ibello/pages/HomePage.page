@@ -86,4 +86,14 @@ errorMessage = element {
     }
     assume_error_message_is_displayed = assume toBe displayed
     assume_error_message_is_not_displayed = assume toNotBe displayed
+    hidden
+}
+
+successMessage = element {
+    className 'success'
+    descendantOf {
+        cssSelector 'toast-component'
+    }
+    assume_success_message_is_displayed = assume toBe displayed
+    assume_success_message_is_not_displayed = assume toNotBe displayed
 }
