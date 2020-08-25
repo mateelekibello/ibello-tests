@@ -44,14 +44,6 @@ public class HomePage extends PageObject {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "contact-lane")
     private WebElement sendMessageButton;
 
-    @Find(by = By.CLASS_NAME, using = "error")
-    @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "toast-component")
-    private WebElement errorMessage;
-
-    @Find(by = By.CLASS_NAME, using = "success")
-    @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "toast-component")
-    private WebElement successMessage;
-
     public void assume_$_text_is_displayed(String textToCheck) {
         expectations().assume(text.applyParameters(textToCheck)).toBe().displayed();
     }
@@ -82,22 +74,6 @@ public class HomePage extends PageObject {
 
     public void click_send_message_button() {
         doWith(sendMessageButton).click();
-    }
-
-    public void assume_error_message_is_displayed() {
-        expectations().assume(errorMessage).toBe().displayed();
-    }
-
-    public void assume_error_message_is_not_displayed() {
-        expectations().withTimeout(Timeout.LONG).assume(errorMessage).toNotBe().displayed();
-    }
-
-    public void assume_success_message_is_displayed() {
-        expectations().assume(successMessage).toBe().displayed();
-    }
-
-    public void assume_success_message_is_not_displayed() {
-        expectations().withTimeout(Timeout.LONG).assume(successMessage).toNotBe().displayed();
     }
 
     public void i_open_the_page() {
