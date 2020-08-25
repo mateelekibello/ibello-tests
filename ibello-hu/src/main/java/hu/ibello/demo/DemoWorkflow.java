@@ -13,7 +13,7 @@ public class DemoWorkflow extends StepLibrary{
     private LanguageSteps languageSteps;
 
     public void homepage_is_loaded() {
-       navigationStepsSteps.expect_homepage_is_loaded();
+        navigationStepsSteps.expect_homepage_is_loaded();
     }
 
     public void select_language() {

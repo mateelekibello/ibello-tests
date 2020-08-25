@@ -7,7 +7,7 @@
   "limitations": {
     "trueTextInput": {
       "min": 1,
-      "max": 2
+      "max": 1
     }
   },
   "inputParameters": [

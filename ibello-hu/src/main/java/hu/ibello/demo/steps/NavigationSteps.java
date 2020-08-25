@@ -13,6 +13,7 @@ public class NavigationSteps extends StepLibrary {
     private HomePage homePage;
 
     public void expect_homepage_is_loaded() {
+        homePage.open_page();
         homePage.expect_menu_component_is_displayed();
         homePage.expect_main_lane_is_displayed();
     }

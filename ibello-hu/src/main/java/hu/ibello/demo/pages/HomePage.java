@@ -96,4 +96,8 @@ public class HomePage extends PageObject {
         expectations().withTimeout(Timeout.LONG).assume(errorMessage).toNotBe().displayed();
     }
 
+    public void open_page() {
+        browser().openURL(getConfigurationValue("ibello.url.base").toString());
+    }
+
 }

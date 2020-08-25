@@ -1,5 +1,6 @@
 package hu.ibello.demo;
 
+import hu.ibello.demo.model.ContactData;
 import hu.ibello.demo.steps.NavigationSteps;
 import hu.ibello.demo.steps.SendingMessageSteps;
 import hu.ibello.steps.StepLibrary;
@@ -10,24 +11,30 @@ public class SendingMessageWorkflow extends StepLibrary{
     private SendingMessageSteps sendingMessageSteps;
     private NavigationSteps navigationSteps;
 
+    private ContactData data;
+
     public void i_want_to_send_a_new_message() {
         navigationSteps.expect_homepage_is_loaded();
     }
 
     public void the_name_will_be_invalid() {
-        sendingMessageSteps.i_use_$_invalid_name();
+        data = testData().fromJson(ContactData.class).withId("invalid_name").load();
+        sendingMessageSteps.i_use_$_test_data_to_fill_out_the_form(data);
     }
 
     public void the_email_will_be_invalid() {
-        sendingMessageSteps.i_use_$_invalid_email();
+        data = testData().fromJson(ContactData.class).withId("invalid_email").load();
+        sendingMessageSteps.i_use_$_test_data_to_fill_out_the_form(data);
     }
 
     public void the_subject_will_be_invalid() {
-        sendingMessageSteps.i_use_$_invalid_subject();
+        data = testData().fromJson(ContactData.class).withId("invalid_subject").load();
+        sendingMessageSteps.i_use_$_test_data_to_fill_out_the_form(data);
     }
 
     public void the_message_will_be_invalid() {
-        sendingMessageSteps.i_use_$_invalid_message();
+        data = testData().fromJson(ContactData.class).withId("invalid_message").load();
+        sendingMessageSteps.i_use_$_test_data_to_fill_out_the_form(data);
     }
 
     public void i_send_the_message() {
@@ -42,20 +49,8 @@ public class SendingMessageWorkflow extends StepLibrary{
         // TODO auto-generated method
     }
 
-    public void the_email_will_be_valid() {
-        // TODO auto-generated method
-    }
-
-    public void the_message_will_be_valid() {
-        // TODO auto-generated method
-    }
-
-    public void the_name_will_be_valid() {
-        // TODO auto-generated method
-    }
-
-    public void the_subject_will_be_valid() {
-        // TODO auto-generated method
+    public void i_load_the_valid_test_data() {
+        data = testData().fromJson(ContactData.class).load();
     }
 
 }
