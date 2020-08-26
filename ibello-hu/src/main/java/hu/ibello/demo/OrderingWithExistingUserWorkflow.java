@@ -43,12 +43,12 @@ public class OrderingWithExistingUserWorkflow extends StepLibrary{
         orderingSteps.i_see_the_error_message();
     }
 
-    public void username_and_password_will_be_valid() {
+    public void the_username_and_password_will_be_valid() {
         ExistingUserData data = testData().fromJson(ExistingUserData.class).load();
         orderingSteps.i_use_$_test_data_to_fill_out_the_ordering_form_with_existing_user(data);
     }
 
-    public void product_will_be_valid() {
+    public void the_product_will_be_valid() {
         ProductToOrder data = testData().fromJson(ProductToOrder.class).load();
         choosingProductSteps.i_choose_the_products_to_order(data);
     }
