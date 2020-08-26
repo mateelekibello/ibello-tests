@@ -8,8 +8,10 @@ import hu.ibello.steps.StepLibrary;
 //@Name("Ordering with existing user")
 public class OrderingWithExistingUserWorkflow extends StepLibrary{
 
+    private NavigationSteps navigationSteps;
+
     public void i_navigate_to_the_order_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_to_the_product_page();
     }
 
     public void the_username_will_be_invalid() {
