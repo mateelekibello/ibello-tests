@@ -5,8 +5,8 @@ import hu.ibello.demo.PopUpMessagesPanel;
 import hu.ibello.demo.pages.OrderPage;
 import hu.ibello.steps.StepLibrary;
 
-@Name("Ordering steps")
-public class OrderingSteps extends StepLibrary {
+@Name("Ordering with existing user steps")
+public class OrderingWithExistingUserSteps extends StepLibrary {
 
     private OrderPage orderPage;
     private PopUpMessagesPanel popUpMessagesPanel;
