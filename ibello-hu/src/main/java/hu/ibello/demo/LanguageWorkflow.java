@@ -6,8 +6,8 @@ import hu.ibello.demo.steps.LanguageSteps;
 import hu.ibello.demo.steps.NavigationSteps;
 import hu.ibello.steps.StepLibrary;
 
-@Name("Demo")
-public class DemoWorkflow extends StepLibrary{
+@Name("Language")
+public class LanguageWorkflow extends StepLibrary{
 
     private NavigationSteps navigationStepsSteps;
     private LanguageSteps languageSteps;
