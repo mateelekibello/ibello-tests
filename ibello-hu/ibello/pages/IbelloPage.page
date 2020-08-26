@@ -1,0 +1,9 @@
+menuComponent = element {
+    cssSelector 'menu-component'
+    expect_menu_component_is_displayed = expect toBe displayed
+}
+
+ibelloLane = element {
+    cssSelector 'welcome-ibello-lane'
+    expect_ibello_lane_is_displayed = expect toBe displayed
+}

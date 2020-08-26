@@ -33,4 +33,9 @@ public class NavigationSteps extends StepLibrary {
         }
     }
 
+    public void i_navigate_to_the_order_page(){
+        homePage.click_our_product_button();
+
+    }
+
 }
