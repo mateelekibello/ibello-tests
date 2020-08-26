@@ -1,5 +1,6 @@
 package hu.ibello.demo;
 
+import hu.ibello.core.Name;
 import hu.ibello.demo.model.ExistingUserData;
 import hu.ibello.demo.model.ProductToOrder;
 import hu.ibello.demo.steps.ChoosingProductSteps;
@@ -7,7 +8,7 @@ import hu.ibello.demo.steps.NavigationSteps;
 import hu.ibello.demo.steps.OrderingWithExistingUserSteps;
 import hu.ibello.steps.StepLibrary;
 
-//@Name("Ordering with existing user")
+@Name("Existing user order")
 public class OrderingWithExistingUserWorkflow extends StepLibrary{
 
     private NavigationSteps navigationSteps;

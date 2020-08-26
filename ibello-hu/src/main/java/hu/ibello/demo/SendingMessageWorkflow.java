@@ -1,11 +1,12 @@
 package hu.ibello.demo;
 
+import hu.ibello.core.Name;
 import hu.ibello.demo.model.ContactData;
 import hu.ibello.demo.steps.NavigationSteps;
 import hu.ibello.demo.steps.SendingMessageSteps;
 import hu.ibello.steps.StepLibrary;
 
-//@Name("Sending message")
+@Name("Message")
 public class SendingMessageWorkflow extends StepLibrary{
 
     private SendingMessageSteps sendingMessageSteps;

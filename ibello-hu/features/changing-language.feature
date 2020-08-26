@@ -2,6 +2,6 @@
 Feature: Test for changing language
 
 	Scenario: Language selection
-		Given Demo: i open the homepage
-		When Demo: i select the language
-		Then Demo: language is changed
+		Given Language: i open the homepage
+		When Language: i select the language
+		Then Language: language is changed
