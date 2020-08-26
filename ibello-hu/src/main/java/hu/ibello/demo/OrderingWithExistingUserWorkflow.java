@@ -23,7 +23,8 @@ public class OrderingWithExistingUserWorkflow extends StepLibrary{
     }
 
     public void the_password_will_be_invalid() {
-        // TODO auto-generated method
+        ExistingUserData data = testData().fromJson(ExistingUserData.class).load();
+        orderingSteps.i_use_$_test_data_to_fill_out_the_ordering_form_with_existing_user(data);
     }
 
     public void the_product_will_be_invalid() {
