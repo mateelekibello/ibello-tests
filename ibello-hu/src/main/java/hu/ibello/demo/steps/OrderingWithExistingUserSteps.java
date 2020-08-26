@@ -40,4 +40,5 @@ public class OrderingWithExistingUserSteps extends StepLibrary {
         popUpMessagesPanel.assume_success_message_is_displayed();
         popUpMessagesPanel.assume_success_message_is_not_displayed();
     }
+
 }
