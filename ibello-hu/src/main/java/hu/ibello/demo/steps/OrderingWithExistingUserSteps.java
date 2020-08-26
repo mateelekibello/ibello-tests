@@ -1,7 +1,7 @@
 package hu.ibello.demo.steps;
 
 import hu.ibello.core.Name;
-import hu.ibello.demo.PopUpMessagesPanel;
+import hu.ibello.demo.panel.PopUpMessagesPanel;
 import hu.ibello.demo.model.ExistingUserData;
 import hu.ibello.demo.pages.OrderPage;
 import hu.ibello.steps.StepLibrary;

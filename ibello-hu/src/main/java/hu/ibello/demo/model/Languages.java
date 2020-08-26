@@ -1,7 +1,7 @@
 package hu.ibello.demo.model;
 
 import hu.ibello.core.Name;
-import hu.ibello.demo.EnumTools;
+import hu.ibello.demo.tools.EnumTools;
 
 public enum Languages {
 

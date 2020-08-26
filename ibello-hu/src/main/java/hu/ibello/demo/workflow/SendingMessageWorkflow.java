@@ -1,4 +1,4 @@
-package hu.ibello.demo;
+package hu.ibello.demo.workflow;
 
 import hu.ibello.core.Name;
 import hu.ibello.demo.model.ContactData;

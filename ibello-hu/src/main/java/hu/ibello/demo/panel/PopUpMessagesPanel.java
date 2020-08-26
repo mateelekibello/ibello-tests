@@ -1,5 +1,6 @@
-package hu.ibello.demo;
+package hu.ibello.demo.panel;
 
+import hu.ibello.demo.tools.Timeout;
 import hu.ibello.elements.WebElement;
 import hu.ibello.pages.PageObject;
 import hu.ibello.search.By;

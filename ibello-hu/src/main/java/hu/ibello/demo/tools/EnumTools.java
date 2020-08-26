@@ -1,4 +1,4 @@
-package hu.ibello.demo;
+package hu.ibello.demo.tools;
 
 import hu.ibello.core.Name;
 
