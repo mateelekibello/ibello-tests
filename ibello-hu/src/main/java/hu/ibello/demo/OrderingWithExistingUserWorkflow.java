@@ -11,7 +11,7 @@ public class OrderingWithExistingUserWorkflow extends StepLibrary{
     private NavigationSteps navigationSteps;
 
     public void i_navigate_to_the_order_page() {
-        navigationSteps.i_navigate_to_the_product_page();
+        navigationSteps.i_navigate_from_homepage_to_the_order_page();
     }
 
     public void the_username_will_be_invalid() {

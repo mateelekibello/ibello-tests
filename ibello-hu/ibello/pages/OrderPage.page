@@ -1,0 +1,9 @@
+menuComponent = element {
+    cssSelector 'menu-component'
+    expect_menu_component_is_displayed = expect toBe displayed
+}
+
+orderLane = element {
+    cssSelector 'order-pack-lane'
+    expect_order_lane_is_displayed = expect toBe displayed
+}

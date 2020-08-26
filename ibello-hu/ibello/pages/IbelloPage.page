@@ -1,9 +1,17 @@
 menuComponent = element {
     cssSelector 'menu-component'
     expect_menu_component_is_displayed = expect toBe displayed
+    hidden
 }
 
 ibelloLane = element {
     cssSelector 'welcome-ibello-lane'
     expect_ibello_lane_is_displayed = expect toBe displayed
+    hidden
+}
+
+orderButton = clickable {
+    cssSelector 'a[au-target-id=\'162\']'
+    xpath '/html[1]/body[1]/router-view[1]/convert-lane[1]/div[1]/a[1]'
+    click_order_button = action click
 }
