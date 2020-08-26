@@ -17,4 +17,29 @@ sendingOrderButton = clickable {
     }
     xpath '/html[1]/body[1]/router-view[1]/order-pack-lane[1]/div[1]/button[1]'
     click_sending_order_button = action click
+    hidden
+}
+
+existingUserRadioButton = radio {
+    id 'existing-user'
+    descendantOf {
+        className 'user'
+    }
+    click_existing_user_radio_button = action click
+}
+
+usernameOrEmailField = textbox {
+    name 'usernameOrEmail'
+    descendantOf {
+        className 'user'
+    }
+    set_username_or_email_field_to_ = action setValue
+}
+
+passwordField = textbox {
+    name 'password'
+    descendantOf {
+        className 'user'
+    }
+    set_password_field_to_ = action setValue
 }
