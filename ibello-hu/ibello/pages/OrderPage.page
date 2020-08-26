@@ -11,7 +11,7 @@ orderLane = element {
 }
 
 sendingOrderButton = clickable {
-    cssSelector 'button[au-target-id=\'247\']'
+    buttonClass 'send'
     descendantOf {
         cssSelector 'order-pack-lane'
     }
@@ -26,6 +26,7 @@ existingUserRadioButton = radio {
         className 'user'
     }
     click_existing_user_radio_button = action click
+    hidden
 }
 
 usernameOrEmailField = textbox {
@@ -34,6 +35,7 @@ usernameOrEmailField = textbox {
         className 'user'
     }
     set_username_or_email_field_to_ = action setValue
+    hidden
 }
 
 passwordField = textbox {
@@ -42,4 +44,31 @@ passwordField = textbox {
         className 'user'
     }
     set_password_field_to_ = action setValue
+    hidden
+}
+
+decreaseButton = clickable {
+    buttonText '−'
+    descendantOf {
+        className 'products'
+    }
+    click_decrease_button = action click
+    hidden
+}
+
+increaseButton = clickable {
+    buttonText '+'
+    descendantOf {
+        className 'products'
+    }
+    click_increase_button = action click
+    hidden
+}
+
+numberOfProduct = element {
+    className 'number'
+    descendantOf {
+        className 'products'
+    }
+    hidden
 }

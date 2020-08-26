@@ -1,6 +1,7 @@
 package hu.ibello.demo.pages;
 
 import hu.ibello.elements.WebElement;
+import hu.ibello.elements.WebElements;
 import hu.ibello.pages.PageObject;
 import hu.ibello.search.By;
 import hu.ibello.search.Find;
@@ -27,9 +28,21 @@ public class OrderPage extends PageObject {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "user")
     private WebElement passwordField;
 
-    @Find(by = By.CSS_SELECTOR, using = "button[au-target-id='247']")
+    @Find(by = By.BUTTON_CLASS, using = "send")
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "order-pack-lane")
     private WebElement sendingOrderButton;
+
+    @Find(by = By.BUTTON_TEXT, using = "−")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "products")
+    private WebElements decreaseButtons;
+
+    @Find(by = By.BUTTON_TEXT, using = "+")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "products")
+    private WebElements increaseButtons;
+
+    @Find(by = By.CLASS_NAME, using = "number")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "products")
+    private WebElements numberOfProducts;
 
     public void expect_menu_component_is_displayed() {
         expectations().expect(menuComponent).toBe().displayed();
@@ -51,8 +64,20 @@ public class OrderPage extends PageObject {
         doWith(passwordField).setValue(value);
     }
 
+    public void click_decrease_button_with_$_index(int index) {
+        doWith(decreaseButtons.get(index)).click();
+    }
+
+    public void click_increase_button_with_$_index(int index) {
+        doWith(increaseButtons.get(index)).click();
+    }
+
     public void click_sending_order_button() {
         doWith(sendingOrderButton).click();
+    }
+
+    public String getNumberOfProduct(int index) {
+        return get(numberOfProducts.get(index)).text();
     }
 
 }

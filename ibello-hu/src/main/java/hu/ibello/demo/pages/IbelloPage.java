@@ -13,7 +13,7 @@ public class IbelloPage extends PageObject {
     @Find(by = By.CSS_SELECTOR, using = "welcome-ibello-lane")
     private WebElement ibelloLane;
 
-    @Find(by = By.CSS_SELECTOR, using = "a[au-target-id='162']")
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#order']")
     private WebElement orderButton;
 
     public void expect_menu_component_is_displayed() {

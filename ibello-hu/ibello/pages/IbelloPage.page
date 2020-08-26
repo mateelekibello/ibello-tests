@@ -11,7 +11,8 @@ ibelloLane = element {
 }
 
 orderButton = clickable {
-    cssSelector 'a[au-target-id=\'162\']'
+    cssSelector 'a[href=\'#order\']'
     xpath '/html[1]/body[1]/router-view[1]/convert-lane[1]/div[1]/a[1]'
     click_order_button = action click
+    hidden
 }

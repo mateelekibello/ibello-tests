@@ -36,11 +36,11 @@ public class HomePage extends PageObject {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "contact-info")
     private WebElement contactTextField;
 
-    @Find(by = By.CSS_SELECTOR, using = "a[au-target-id='135']")
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#ibello']")
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-welcome-main")
     private WebElement ourProductButton;
 
-    @Find(by = By.CSS_SELECTOR, using = "a[au-target-id='118']")
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#']")
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "contact-lane")
     private WebElement sendMessageButton;
 

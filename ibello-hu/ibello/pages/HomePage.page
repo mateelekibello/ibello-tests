@@ -21,7 +21,7 @@ text = element {
 }
 
 ourProductButton = clickable {
-    cssSelector 'a[au-target-id=\'135\']'
+    cssSelector 'a[href=\'#ibello\']'
     descendantOf {
         className 'lane-welcome-main'
     }
@@ -31,7 +31,7 @@ ourProductButton = clickable {
 }
 
 sendMessageButton = clickable {
-    cssSelector 'a[au-target-id=\'118\']'
+    cssSelector ' a[href=\'#\']'
     descendantOf {
         cssSelector 'contact-lane'
     }
