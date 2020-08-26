@@ -1,9 +1,20 @@
 menuComponent = element {
     cssSelector 'menu-component'
     expect_menu_component_is_displayed = expect toBe displayed
+    hidden
 }
 
 orderLane = element {
     cssSelector 'order-pack-lane'
     expect_order_lane_is_displayed = expect toBe displayed
+    hidden
+}
+
+sendingOrderButton = clickable {
+    cssSelector 'button[au-target-id=\'247\']'
+    descendantOf {
+        cssSelector 'order-pack-lane'
+    }
+    xpath '/html[1]/body[1]/router-view[1]/order-pack-lane[1]/div[1]/button[1]'
+    click_sending_order_button = action click
 }
