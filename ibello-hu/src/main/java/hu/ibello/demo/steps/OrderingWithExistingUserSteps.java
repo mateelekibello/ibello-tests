@@ -2,6 +2,7 @@ package hu.ibello.demo.steps;
 
 import hu.ibello.core.Name;
 import hu.ibello.demo.PopUpMessagesPanel;
+import hu.ibello.demo.model.ExistingUserData;
 import hu.ibello.demo.pages.OrderPage;
 import hu.ibello.steps.StepLibrary;
 
@@ -15,10 +16,19 @@ public class OrderingWithExistingUserSteps extends StepLibrary {
         orderPage.click_sending_order_button();
     }
 
-    public void i_fill_out_the_ordering_form_with_existing_user() {
-        orderPage.click_existing_user_radio_button();
-        orderPage.set_username_or_email_field_to_$("xyz");
-        orderPage.set_password_field_to_$("123");
+    public void i_use_$_test_data_to_fill_out_the_ordering_form_with_existing_user(ExistingUserData data) {
+        if (data != null) {
+            orderPage.click_existing_user_radio_button();
+            if (data.getNameOrEmail() != null) {
+                orderPage.set_username_or_email_field_to_$(data.getNameOrEmail());
+            }
+            if (data.getInvalidPwd() != null) {
+                orderPage.set_password_field_to_$(data.getInvalidPwd());
+            } else {
+                String pwd = getConfigurationValue("validUserPwd").toString();
+                orderPage.set_password_field_to_$(pwd);
+            }
+        }
     }
 
     public void i_see_the_error_message() {

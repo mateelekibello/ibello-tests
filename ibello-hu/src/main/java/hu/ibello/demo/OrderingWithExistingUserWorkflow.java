@@ -1,5 +1,6 @@
 package hu.ibello.demo;
 
+import hu.ibello.demo.model.ExistingUserData;
 import hu.ibello.demo.steps.NavigationSteps;
 import hu.ibello.demo.steps.OrderingWithExistingUserSteps;
 import hu.ibello.steps.StepLibrary;
@@ -15,8 +16,10 @@ public class OrderingWithExistingUserWorkflow extends StepLibrary{
     }
 
     public void the_username_will_be_invalid() {
-        // TODO testdata
-        orderingSteps.i_fill_out_the_ordering_form_with_existing_user();
+        // TODO donotmerge nem müködik
+//        ExistingUserData data = testData().fromJson(ExistingUserData.class).withId("invalid_user").doNotMergeObjects().load();
+        ExistingUserData data = testData().fromJson(ExistingUserData.class).withId("invalid_user").load();
+        orderingSteps.i_use_$_test_data_to_fill_out_the_ordering_form_with_existing_user(data);
     }
 
     public void the_password_will_be_invalid() {
@@ -28,11 +31,11 @@ public class OrderingWithExistingUserWorkflow extends StepLibrary{
     }
 
     public void i_send_the_order() {
-        // TODO auto-generated method
+        orderingSteps.i_send_the_order();
     }
 
     public void i_see_that_there_is_an_error_message() {
-        // TODO auto-generated method
+        orderingSteps.i_see_the_error_message();
     }
 
     public void i_use_valid_username_and_password() {
