@@ -1,5 +1,6 @@
 package hu.ibello.demo.pages;
 
+import hu.ibello.demo.tools.Timeout;
 import hu.ibello.elements.WebElement;
 import hu.ibello.pages.PageObject;
 import hu.ibello.search.By;
@@ -75,14 +76,17 @@ public class HomePage extends PageObject {
         doWith(sendMessageButton).click();
     }
 
-    public void i_open_the_page() {
-        String url = getConfigurationValue("ibello.url.base").toString();
-        browser().resize(2000, 1000);
-        browser().maximize();
-        browser().openURL(url);
+    public void i_open_the_page_if_not_opened() {
+        expectations().withTimeout(Timeout.SHORT).assume(mainLane).toBe().displayed();
+        if (!checkThat(mainLane).isDisplayed()) {
+            String url = getConfigurationValue("ibello.url.base").toString();
+            browser().resize(2000, 1000);
+            browser().maximize();
+            browser().openURL(url);
+        }
     }
 
-    public void i_see_the_homepage() {
+    public void homepage_is_displayed() {
         expect_menu_component_is_displayed();
         expect_main_lane_is_displayed();
     }

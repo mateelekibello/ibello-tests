@@ -1,10 +1,13 @@
 package hu.ibello.demo.workflow;
 
 import hu.ibello.core.Name;
+import hu.ibello.demo.steps.NavigationSteps;
 import hu.ibello.steps.StepLibrary;
 
 @Name("navigation")
 public class NavigationWorkflow extends StepLibrary{
+
+    private NavigationSteps navigationSteps;
 
     public void i_am_on_about_page() {
         // TODO auto-generated method

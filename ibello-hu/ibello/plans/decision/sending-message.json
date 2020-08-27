@@ -2,6 +2,8 @@
   "name": "Decision table for sending a message test scenarios",
   "description": "With this test we want to test each cases of sending a message. The parameters can be: name, email, subject, message.",
   "tags": [
+    "full-test",
+    "message",
     "negative"
   ],
   "limitations": {
@@ -79,70 +81,10 @@
       "name": true,
       "subject_out": "",
       "message": false,
-      "email_out": "invalid email",
-      "message_out": "",
-      "email": true,
-      "out": "invalid name, invalid email"
-    },
-    {
-      "name_out": "invalid name",
-      "errorMessages": true,
-      "subject": true,
-      "name": true,
-      "subject_out": "invalid subject",
-      "message": false,
-      "email_out": "",
-      "message_out": "",
-      "email": false,
-      "out": "invalid name, invalid subject"
-    },
-    {
-      "name_out": "invalid name",
-      "errorMessages": true,
-      "subject": false,
-      "name": true,
-      "subject_out": "",
-      "message": true,
-      "email_out": "",
-      "message_out": "invalid massage",
-      "email": false,
-      "out": "invalid name, invalid massage"
-    },
-    {
-      "name_out": "invalid name",
-      "errorMessages": true,
-      "subject": false,
-      "name": true,
-      "subject_out": "",
-      "message": false,
       "email_out": "",
       "message_out": "",
       "email": false,
       "out": "invalid name"
-    },
-    {
-      "name_out": "",
-      "errorMessages": true,
-      "subject": true,
-      "name": false,
-      "subject_out": "invalid subject",
-      "message": false,
-      "email_out": "invalid email",
-      "message_out": "",
-      "email": true,
-      "out": "invalid email, invalid subject"
-    },
-    {
-      "name_out": "",
-      "errorMessages": true,
-      "subject": false,
-      "name": false,
-      "subject_out": "",
-      "message": true,
-      "email_out": "invalid email",
-      "message_out": "invalid massage",
-      "email": true,
-      "out": "invalid email, invalid massage"
     },
     {
       "name_out": "",
@@ -155,18 +97,6 @@
       "message_out": "",
       "email": true,
       "out": "invalid email"
-    },
-    {
-      "name_out": "",
-      "errorMessages": true,
-      "subject": true,
-      "name": false,
-      "subject_out": "invalid subject",
-      "message": true,
-      "email_out": "",
-      "message_out": "invalid massage",
-      "email": false,
-      "out": "invalid subject, invalid massage"
     },
     {
       "name_out": "",
@@ -188,41 +118,42 @@
       "subject_out": "",
       "message": true,
       "email_out": "",
-      "message_out": "invalid massage",
+      "message_out": "invalid message",
       "email": false,
-      "out": "invalid massage"
+      "out": "invalid message"
     }
   ],
   "testSteps": [
     {
-      "text": "Given i want to send a new message"
-    },
-    {
-      "text": "When the name will be invalid",
-      "condition": "name"
-    },
-    {
-      "text": "When the email will be invalid",
-      "condition": "email"
-    },
-    {
-      "text": "When the subject will be invalid",
-      "condition": "subject"
-    },
-    {
-      "text": "When the message will be invalid",
-      "condition": "message"
-    },
-    {
-      "text": "When i send the message",
+      "text": "Given Message: i want to send a new message",
       "condition": ""
     },
     {
-      "text": "Then i see that the there is an error message",
+      "text": "When Message: the name will be invalid",
+      "condition": "name"
+    },
+    {
+      "text": "When Message: the email will be invalid",
+      "condition": "email"
+    },
+    {
+      "text": "When Message: the subject will be invalid",
+      "condition": "subject"
+    },
+    {
+      "text": "When Message: the message will be invalid",
+      "condition": "message"
+    },
+    {
+      "text": "When Message: i send the message",
+      "condition": ""
+    },
+    {
+      "text": "Then Message: i see that the there is an error message",
       "condition": "errorMessages"
     },
     {
-      "text": "Then i see that there is no error message",
+      "text": "Then Message: i see that there is no error message",
       "condition": "!errorMessages"
     }
   ],

@@ -16,9 +16,9 @@ public class NavigationSteps extends StepLibrary {
     private IbelloPage ibelloPage;
     private OrderPage orderPage;
 
-    public void expect_homepage_is_loaded() {
-        homePage.i_open_the_page();
-        homePage.i_see_the_homepage();
+    public void i_open_the_homepage() {
+        homePage.i_open_the_page_if_not_opened();
+        homePage.homepage_is_displayed();
     }
 
     public void select_language_based_on_$_test_data(LanguageSelection data) {
