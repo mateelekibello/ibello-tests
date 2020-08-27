@@ -1,0 +1,65 @@
+tags = @full-test @navigation
+Navigation bar test = true
+
+state TEST INIT
+state HOME PAGE
+state IBELLO HOME
+state SERVICES HOME
+state ABOUT HOME
+state SUPPORT HOME
+state IBELLO PAGE
+state SERVICES PAGE
+state ABOUT PAGE
+state SUPPORT PAGE
+
+TEST INIT -> HOME PAGE
+HOME PAGE + navigation to product page -> IBELLO PAGE
+IBELLO PAGE + navigation back -> HOME PAGE
+HOME PAGE + navigation to services page -> SERVICES PAGE
+SERVICES PAGE + navigation back -> HOME PAGE
+HOME PAGE + navigation to about page -> ABOUT PAGE
+ABOUT PAGE + navigation back -> HOME PAGE
+HOME PAGE + navigation to support page -> SUPPORT PAGE
+SUPPORT PAGE + navigation back -> HOME PAGE
+
+[navigation: test init]
+    state TEST INIT
+    no option
+
+[navigation: i am on homepage]
+    state HOME PAGE
+    option navigation to about page
+    option navigation to product page
+    option navigation to services page
+    option navigation to support page
+
+[navigation: i navigate to product page]
+    input navigation to product page
+
+[navigation: i am on product page]
+    state IBELLO PAGE
+    option navigation back
+
+[navigation: i navigate back to homepage]
+    input navigation back
+
+[navigation: i navigate to services page]
+    input navigation to services page
+
+[navigation: i am on services page]
+    state SERVICES PAGE
+    option navigation back
+
+[navigation: i navigate to about page]
+    input navigation to about page
+
+[navigation: i am on about page]
+    state ABOUT PAGE
+    option navigation back
+
+[navigation: i navigate to support page]
+    input navigation to support page
+
+[navigation: i am on support page]
+    state SUPPORT PAGE
+    option navigation back
