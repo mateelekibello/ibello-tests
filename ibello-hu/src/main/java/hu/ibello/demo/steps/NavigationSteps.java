@@ -46,4 +46,9 @@ public class NavigationSteps extends StepLibrary {
         orderPage.expect_order_lane_is_displayed();
     }
 
+    public void i_am_on_order_page() {
+        orderPage.expect_menu_component_is_displayed();
+        orderPage.expect_order_lane_is_displayed();
+    }
+
 }

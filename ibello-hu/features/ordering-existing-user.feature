@@ -2,8 +2,8 @@
 Feature: Test to order products with existing user
 
 	Scenario: Ordering product with invalid username
-		Given Existing user order: i want to take an order
-		And Existing user order: i navigate to the order page
+		Given Existing user order: i navigate to the order page
+		And Existing user order: i want to take an order
 		When Existing user order: the username will be invalid
 		When Existing user order: the product will be valid
 		When Existing user order: i send the order

@@ -16,10 +16,11 @@ public class OrderingWithExistingUserWorkflow extends StepLibrary{
     private ChoosingProductSteps choosingProductSteps;
 
     public void i_want_to_take_an_order() {
-        navigationSteps.i_open_the_homepage();
+        navigationSteps.i_am_on_order_page();
     }
 
     public void i_navigate_to_the_order_page() {
+        navigationSteps.i_open_the_homepage();
         navigationSteps.i_navigate_from_homepage_to_the_order_page();
     }
 
