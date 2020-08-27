@@ -12,6 +12,10 @@ public class LanguageWorkflow extends StepLibrary{
     private NavigationSteps navigationSteps;
     private LanguageSteps languageSteps;
 
+    public void i_am_on_homepage() {
+        navigationSteps.i_open_the_homepage();
+    }
+
     public void i_select_the_language() {
         LanguageSelection data = testData().fromJson(LanguageSelection.class).withId("1").load();
         navigationSteps.select_language_based_on_$_test_data(data);

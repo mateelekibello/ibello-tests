@@ -77,7 +77,7 @@ public class HomePage extends PageObject {
     }
 
     public void i_open_the_page_if_not_opened() {
-        expectations().withTimeout(Timeout.SHORT).assume(mainLane).toBe().displayed();
+//        expectations().withTimeout(Timeout.SHORT).assume(mainLane).toBe().displayed();
         if (!checkThat(mainLane).isDisplayed()) {
             String url = getConfigurationValue("ibello.url.base").toString();
             browser().resize(2000, 1000);
