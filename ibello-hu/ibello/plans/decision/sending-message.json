@@ -1,5 +1,5 @@
 {
-  "name": "Decision table for sending a message test scenarios",
+  "name": "Decision table for sending a message negative test scenarios",
   "description": "With this test we want to test each cases of sending a message. The parameters can be: name, email, subject, message.",
   "tags": [
     "full-test",
@@ -125,35 +125,35 @@
   ],
   "testSteps": [
     {
-      "text": "Given Message: i want to send a new message",
+      "text": "Given Message negative: i want to send a new message",
       "condition": ""
     },
     {
-      "text": "When Message: the name will be invalid",
+      "text": "When Message negative: the name will be invalid",
       "condition": "name"
     },
     {
-      "text": "When Message: the email will be invalid",
+      "text": "When Message negative: the email will be invalid",
       "condition": "email"
     },
     {
-      "text": "When Message: the subject will be invalid",
+      "text": "When Message negative: the subject will be invalid",
       "condition": "subject"
     },
     {
-      "text": "When Message: the message will be invalid",
+      "text": "When Message negative: the message will be invalid",
       "condition": "message"
     },
     {
-      "text": "When Message: i send the message",
+      "text": "When Message negative: i send the message",
       "condition": ""
     },
     {
-      "text": "Then Message: i see that the there is an error message",
+      "text": "Then Message negative: i see that the there is an error message",
       "condition": "errorMessages"
     },
     {
-      "text": "Then Message: i see that there is no error message",
+      "text": "Then Message negative: i see that there is no error message",
       "condition": "!errorMessages"
     }
   ],
