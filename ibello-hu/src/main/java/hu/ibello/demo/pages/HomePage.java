@@ -47,6 +47,8 @@ public class HomePage extends AbstractPage {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-about-summary")
     private WebElement meetUsButton;
 
+    private boolean isOpened;
+
     public void assume_$_text_is_displayed(String textToCheck) {
         expectations().assume(text.applyParameters(textToCheck)).toBe().displayed();
     }
@@ -79,14 +81,10 @@ public class HomePage extends AbstractPage {
         doWith(sendMessageButton).click();
     }
 
-    public void i_open_the_page_if_not_opened() {
-//        expectations().withTimeout(Timeout.SHORT).assume(mainLane).toBe().displayed();
-        if (!checkThat(mainLane).isDisplayed()) {
-            String url = getConfigurationValue("ibello.url.base").toString();
-            browser().resize(2000, 1000);
-            browser().maximize();
-            browser().openURL(url);
-        }
+    public void i_open_homepage() {
+        browser().resize(2000, 1000);
+        browser().maximize();
+        browser().openURL("/#home");
     }
 
     private void homepage_is_displayed() {

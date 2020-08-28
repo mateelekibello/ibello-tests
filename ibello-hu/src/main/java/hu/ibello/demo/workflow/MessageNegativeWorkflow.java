@@ -11,20 +11,23 @@ public class MessageNegativeWorkflow extends StepLibrary{
 
     private NavigationSteps navigationSteps;
     private SendingMessageSteps sendingMessageSteps;
+    private boolean isOpened;
 
     public void i_want_to_send_a_new_message() {
-        navigationSteps.i_open_the_homepage();
+        if (!isOpened) {
+            navigationSteps.i_open_the_homepage();
+            isOpened = true;
+        }
+        navigationSteps.i_am_on_homepage();
     }
 
     public void the_name_will_be_invalid() {
-        ContactData data = testData().fromJson(ContactData.class).load();
-        data = testData().fromJson(ContactData.class).withId("invalid_name").load();
+        ContactData data = testData().fromJson(ContactData.class).withId("invalid_name").load();
         sendingMessageSteps.i_use_$_test_data_to_fill_out_the_form(data);
     }
 
     public void the_email_will_be_invalid() {
-        ContactData data = testData().fromJson(ContactData.class).load();
-        data = testData().fromJson(ContactData.class).withId("invalid_email").load();
+        ContactData data = testData().fromJson(ContactData.class).withId("invalid_email").load();
         sendingMessageSteps.i_use_$_test_data_to_fill_out_the_form(data);
     }
 

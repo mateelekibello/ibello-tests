@@ -20,7 +20,10 @@ public class NavigationSteps extends StepLibrary {
     private DocumentationsPage documentationsPage;
 
     public void i_open_the_homepage() {
-        homePage.i_open_the_page_if_not_opened();
+        homePage.i_open_homepage();
+    }
+
+    public void i_am_on_homepage() {
         homePage.i_expect_main_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
