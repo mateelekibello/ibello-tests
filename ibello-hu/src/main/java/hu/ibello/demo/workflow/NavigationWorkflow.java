@@ -10,7 +10,7 @@ public class NavigationWorkflow extends StepLibrary{
     private NavigationSteps navigationSteps;
 
     public void i_am_on_about_page() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_about_page();
     }
 
     public void i_am_on_homepage() {

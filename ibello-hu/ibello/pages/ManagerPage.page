@@ -1,0 +1,4 @@
+flowLane = element {
+    cssSelector 'flow-lane'
+    expect_flow_lane_is_displayed = expect toBe displayed
+}

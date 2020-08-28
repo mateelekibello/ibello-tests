@@ -1,0 +1,16 @@
+package hu.ibello.demo.pages;
+
+import hu.ibello.elements.WebElement;
+import hu.ibello.search.By;
+import hu.ibello.search.Find;
+
+public class ManagerPage extends AbstractPage {
+
+    @Find(by = By.CSS_SELECTOR, using = "flow-lane")
+    private WebElement flowLane;
+
+    public void expect_flow_lane_is_displayed() {
+        expectations().expect(flowLane).toBe().displayed();
+    }
+
+}
