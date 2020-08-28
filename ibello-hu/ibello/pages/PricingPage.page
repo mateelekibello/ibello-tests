@@ -1,0 +1,4 @@
+detailsLane = element {
+    cssSelector 'attribute-details-lane'
+    expect_details_lane_is_displayed = expect toBe displayed
+}
