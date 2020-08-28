@@ -1,0 +1,4 @@
+aboutLane = element {
+    cssSelector 'welcome-about-lane'
+    expect_about_lane_is_displayed = expect toBe displayed
+}
