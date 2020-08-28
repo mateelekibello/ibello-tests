@@ -79,21 +79,21 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void i_am_on_product_page() {
-        String url = "https://ibello.hu/ibello/public/#ibello";
+        String url = "/#ibello";
         ibelloPage.expect_url_is_$(url);
         ibelloPage.expect_ibello_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
 
     public void i_am_on_services_page() {
-        String url = "https://ibello.hu/ibello/public/#services";
+        String url = "/#services";
         servicesPage.expect_url_is_$(url);
         servicesPage.expect_services_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
 
     public void i_am_on_about_page() {
-        String url = "https://ibello.hu/ibello/public/#about";
+        String url = "/#about";
         aboutPage.expect_url_is_$(url);
         aboutPage.expect_about_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
