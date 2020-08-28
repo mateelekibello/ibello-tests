@@ -37,6 +37,10 @@ public class NavigationBarPage extends PageObject {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.ID, using = "language-selector")
     private WebElement englishLink;
 
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#home']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "menu-component")
+    private WebElement homeLink;
+
     public void click_product_link() {
         doWith(productLink).click();
     }
@@ -63,6 +67,10 @@ public class NavigationBarPage extends PageObject {
 
     public void click_english_link() {
         doWith(englishLink).click();
+    }
+
+    public void click_home_link() {
+        doWith(homeLink).click();
     }
 
 }

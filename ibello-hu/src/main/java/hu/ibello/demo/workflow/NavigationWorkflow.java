@@ -14,11 +14,11 @@ public class NavigationWorkflow extends StepLibrary{
     }
 
     public void i_am_on_homepage() {
-        // TODO auto-generated method
+        navigationSteps.i_open_the_homepage();
     }
 
     public void i_am_on_product_page() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_product_page();
     }
 
     public void i_am_on_services_page() {
@@ -30,23 +30,23 @@ public class NavigationWorkflow extends StepLibrary{
     }
 
     public void i_navigate_back_to_homepage() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_back_to_homepage();
     }
 
     public void i_navigate_to_about_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_homepage_to_about_page();
     }
 
     public void i_navigate_to_product_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_homepage_to_product_page();
     }
 
     public void i_navigate_to_services_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_homepage_to_services_page();
     }
 
     public void i_navigate_to_support_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_homepage_to_support_page();
     }
 
     public void test_init() {

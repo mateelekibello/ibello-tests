@@ -78,3 +78,22 @@ contactTextField = textbox {
     set_contact_text_field_to_ = action setValue
     hidden
 }
+
+ourServicesButton = clickable {
+    cssSelector 'a[href=\'#services\']'
+    descendantOf {
+        className 'lane-welcome-main'
+    }
+    xpath '/html[1]/body[1]/router-view[1]/welcome-main-lane[1]/div[1]/div[3]/a[1]'
+    click_our_services_button = action click
+    hidden
+}
+
+meetUsButton = clickable {
+    cssSelector 'a[href=\'#about\']'
+    descendantOf {
+        className 'lane-about-summary'
+    }
+    xpath '/html[1]/body[1]/router-view[1]/about-summary-lane[1]/div[1]/a[1]'
+    click_meet_us_button = action click
+}

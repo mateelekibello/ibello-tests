@@ -28,5 +28,8 @@ public class IbelloPage extends PageObject {
         doWith(orderButton).click();
     }
 
+    public void expect_url_is_$(String url) {
+        expectations().assume(browser()).toHave().url(url);
+    }
 
 }

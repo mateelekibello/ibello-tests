@@ -51,4 +51,38 @@ public class NavigationSteps extends StepLibrary {
         orderPage.expect_order_lane_is_displayed();
     }
 
+    public void i_navigate_from_homepage_to_product_page() {
+        homePage.click_our_product_button();
+    }
+
+    public void i_navigate_from_homepage_to_services_page() {
+        homePage.click_our_services_button();
+    }
+
+    public void i_navigate_from_homepage_to_about_page() {
+        homePage.click_meet_us_button();
+    }
+
+    public void i_navigate_from_homepage_to_support_page() {
+
+    }
+
+    public void i_navigate_back_to_homepage() {
+        navigationBar.click_home_link();
+    }
+
+    public void i_am_on_product_page() {
+        String url = "https://ibello.hu/ibello/public/#ibello";
+        ibelloPage.expect_url_is_$(url);
+        ibelloPage.expect_ibello_lane_is_displayed();
+    }
+
+    public void i_am_on_services_page() {
+
+    }
+
+    public void i_am_on_about_page() {
+
+    }
+
 }

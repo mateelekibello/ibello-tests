@@ -44,6 +44,14 @@ public class HomePage extends PageObject {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "contact-lane")
     private WebElement sendMessageButton;
 
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#services']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-welcome-main")
+    private WebElement ourServicesButton;
+
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#about']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-about-summary")
+    private WebElement meetUsButton;
+
     public void assume_$_text_is_displayed(String textToCheck) {
         expectations().assume(text.applyParameters(textToCheck)).toBe().displayed();
     }
@@ -89,6 +97,14 @@ public class HomePage extends PageObject {
     public void homepage_is_displayed() {
         expect_menu_component_is_displayed();
         expect_main_lane_is_displayed();
+    }
+
+    public void click_our_services_button() {
+        doWith(ourServicesButton).click();
+    }
+
+    public void click_meet_us_button() {
+        doWith(meetUsButton).click();
     }
 
     private void expect_menu_component_is_displayed() {

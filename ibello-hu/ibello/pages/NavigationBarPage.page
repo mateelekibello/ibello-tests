@@ -65,3 +65,13 @@ englishLink = clickable {
     click_english_link = action click
     hidden
 }
+
+homeLink = clickable {
+    cssSelector 'a[href=\'#home\']'
+    descendantOf {
+        cssSelector 'menu-component'
+    }
+    xpath '/html[1]/body[1]/menu-component[1]/a[1]'
+    click_home_link = action click
+    hidden
+}
