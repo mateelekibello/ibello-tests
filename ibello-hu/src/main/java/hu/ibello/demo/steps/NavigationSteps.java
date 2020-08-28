@@ -3,12 +3,13 @@ package hu.ibello.demo.steps;
 import hu.ibello.core.Name;
 import hu.ibello.demo.model.LanguageSelection;
 import hu.ibello.demo.pages.*;
+import hu.ibello.demo.panel.NavigationBarPanel;
 import hu.ibello.steps.StepLibrary;
 
 @Name("Navigation steps")
 public class NavigationSteps extends StepLibrary {
 
-    private NavigationBarPage navigationBar;
+    private NavigationBarPanel navigationBar;
     private HomePage homePage;
     private IbelloPage ibelloPage;
     private OrderPage orderPage;
@@ -17,7 +18,8 @@ public class NavigationSteps extends StepLibrary {
 
     public void i_open_the_homepage() {
         homePage.i_open_the_page_if_not_opened();
-        homePage.homepage_is_displayed();
+        homePage.i_expect_main_lane_is_displayed();
+        navigationBar.expect_menu_component_is_displayed();
     }
 
     public void select_language_based_on_$_test_data(LanguageSelection data) {
@@ -48,6 +50,7 @@ public class NavigationSteps extends StepLibrary {
     public void i_am_on_order_page() {
         orderPage.expect_menu_component_is_displayed();
         orderPage.expect_order_lane_is_displayed();
+        navigationBar.expect_menu_component_is_displayed();
     }
 
     public void i_navigate_from_homepage_to_product_page() {
@@ -74,18 +77,21 @@ public class NavigationSteps extends StepLibrary {
         String url = "https://ibello.hu/ibello/public/#ibello";
         ibelloPage.expect_url_is_$(url);
         ibelloPage.expect_ibello_lane_is_displayed();
+        navigationBar.expect_menu_component_is_displayed();
     }
 
     public void i_am_on_services_page() {
         String url = "https://ibello.hu/ibello/public/#services";
         servicesPage.expect_url_is_$(url);
         servicesPage.expect_services_lane_is_displayed();
+        navigationBar.expect_menu_component_is_displayed();
     }
 
     public void i_am_on_about_page() {
         String url = "https://ibello.hu/ibello/public/#about";
         aboutPage.expect_url_is_$(url);
         aboutPage.expect_about_lane_is_displayed();
+        navigationBar.expect_menu_component_is_displayed();
     }
 
 }

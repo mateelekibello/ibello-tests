@@ -1,4 +1,4 @@
-package hu.ibello.demo.pages;
+package hu.ibello.demo.panel;
 
 import hu.ibello.elements.WebElement;
 import hu.ibello.pages.PageObject;
@@ -7,7 +7,10 @@ import hu.ibello.search.Find;
 import hu.ibello.search.Relation;
 import hu.ibello.search.RelationType;
 
-public class NavigationBarPage extends PageObject {
+public class NavigationBarPanel extends PageObject {
+
+    @Find(by = By.CSS_SELECTOR, using = "menu-component")
+    private WebElement menuComponent;
 
     @Find(by = By.CSS_SELECTOR, using = "a[href='#home-ibello']")
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "menu-component")
@@ -40,6 +43,10 @@ public class NavigationBarPage extends PageObject {
     @Find(by = By.CSS_SELECTOR, using = "a[href='#home']")
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "menu-component")
     private WebElement homeLink;
+
+    public void expect_menu_component_is_displayed() {
+        expectations().expect(menuComponent).toBe().displayed();
+    }
 
     public void click_product_link() {
         doWith(productLink).click();

@@ -75,3 +75,13 @@ homeLink = clickable {
     click_home_link = action click
     hidden
 }
+
+unknown = element {
+    hidden
+}
+
+menuComponent = element {
+    cssSelector 'menu-component'
+    expect_menu_component_is_displayed = expect toBe displayed
+    hidden
+}

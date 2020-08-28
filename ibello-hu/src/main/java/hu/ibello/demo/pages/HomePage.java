@@ -1,6 +1,5 @@
 package hu.ibello.demo.pages;
 
-import hu.ibello.demo.tools.Timeout;
 import hu.ibello.elements.WebElement;
 import hu.ibello.pages.PageObject;
 import hu.ibello.search.By;
@@ -9,9 +8,6 @@ import hu.ibello.search.Relation;
 import hu.ibello.search.RelationType;
 
 public class HomePage extends PageObject {
-
-    @Find(by = By.CSS_SELECTOR, using = "menu-component")
-    private WebElement menuComponent;
 
     @Find(by = By.CSS_SELECTOR, using = "welcome-main-lane")
     private WebElement mainLane;
@@ -94,9 +90,8 @@ public class HomePage extends PageObject {
         }
     }
 
-    public void homepage_is_displayed() {
-        expect_menu_component_is_displayed();
-        expect_main_lane_is_displayed();
+    private void homepage_is_displayed() {
+        i_expect_main_lane_is_displayed();
     }
 
     public void click_our_services_button() {
@@ -107,11 +102,7 @@ public class HomePage extends PageObject {
         doWith(meetUsButton).click();
     }
 
-    private void expect_menu_component_is_displayed() {
-        expectations().expect(menuComponent).toBe().displayed();
-    }
-
-    private void expect_main_lane_is_displayed() {
+    public void i_expect_main_lane_is_displayed() {
         expectations().expect(mainLane).toBe().displayed();
     }
 
