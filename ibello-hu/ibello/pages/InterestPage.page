@@ -1,0 +1,4 @@
+workflowLane = element {
+    cssSelector 'workflow-lane'
+    expect_workflow_lane_is_displayed = expect toBe displayed
+}
