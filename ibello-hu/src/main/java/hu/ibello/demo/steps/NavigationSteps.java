@@ -2,10 +2,7 @@ package hu.ibello.demo.steps;
 
 import hu.ibello.core.Name;
 import hu.ibello.demo.model.LanguageSelection;
-import hu.ibello.demo.pages.HomePage;
-import hu.ibello.demo.pages.IbelloPage;
-import hu.ibello.demo.pages.NavigationBarPage;
-import hu.ibello.demo.pages.OrderPage;
+import hu.ibello.demo.pages.*;
 import hu.ibello.steps.StepLibrary;
 
 @Name("Navigation steps")
@@ -15,6 +12,8 @@ public class NavigationSteps extends StepLibrary {
     private HomePage homePage;
     private IbelloPage ibelloPage;
     private OrderPage orderPage;
+    private ServicesPage servicesPage;
+    private AboutPage aboutPage;
 
     public void i_open_the_homepage() {
         homePage.i_open_the_page_if_not_opened();
@@ -78,11 +77,15 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void i_am_on_services_page() {
-
+        String url = "https://ibello.hu/ibello/public/#services";
+        servicesPage.expect_url_is_$(url);
+        servicesPage.expect_services_lane_is_displayed();
     }
 
     public void i_am_on_about_page() {
-
+        String url = "https://ibello.hu/ibello/public/#about";
+        aboutPage.expect_url_is_$(url);
+        aboutPage.expect_about_lane_is_displayed();
     }
 
 }
