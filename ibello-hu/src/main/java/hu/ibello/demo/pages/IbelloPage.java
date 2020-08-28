@@ -6,18 +6,11 @@ import hu.ibello.search.Find;
 
 public class IbelloPage extends AbstractPage {
 
-    @Find(by = By.CSS_SELECTOR, using = "menu-component")
-    private WebElement menuComponent;
-
     @Find(by = By.CSS_SELECTOR, using = "welcome-ibello-lane")
     private WebElement ibelloLane;
 
     @Find(by = By.CSS_SELECTOR, using = "a[href='#order']")
     private WebElement orderButton;
-
-    public void expect_menu_component_is_displayed() {
-        expectations().expect(menuComponent).toBe().displayed();
-    }
 
     public void expect_ibello_lane_is_displayed() {
         expectations().expect(ibelloLane).toBe().displayed();

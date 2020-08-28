@@ -43,15 +43,9 @@ public class NavigationSteps extends StepLibrary {
 
     public void i_navigate_from_homepage_to_the_order_page() {
         homePage.click_our_product_button();
-        ibelloPage.expect_menu_component_is_displayed();
+        navigationBar.expect_menu_component_is_displayed();
         ibelloPage.expect_ibello_lane_is_displayed();
         ibelloPage.click_order_button();
-        orderPage.expect_menu_component_is_displayed();
-        orderPage.expect_order_lane_is_displayed();
-    }
-
-    public void i_am_on_order_page() {
-        orderPage.expect_menu_component_is_displayed();
         orderPage.expect_order_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
@@ -74,6 +68,11 @@ public class NavigationSteps extends StepLibrary {
 
     public void i_navigate_back_to_homepage() {
         navigationBar.click_home_link();
+    }
+
+    public void i_am_on_order_page() {
+        orderPage.expect_order_lane_is_displayed();
+        navigationBar.expect_menu_component_is_displayed();
     }
 
     public void i_am_on_product_page() {
