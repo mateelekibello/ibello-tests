@@ -1,0 +1,4 @@
+docsLane = element {
+    cssSelector 'docs-lane'
+    expect_docs_lane_is_displayed = expect toBe displayed
+}

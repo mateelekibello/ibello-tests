@@ -17,6 +17,7 @@ public class NavigationSteps extends StepLibrary {
     private AboutPage aboutPage;
     private ManagerPage managerPage;
     private PricingPage pricingPage;
+    private DocumentationsPage documentationsPage;
 
     public void i_open_the_homepage() {
         homePage.i_open_the_page_if_not_opened();
@@ -107,6 +108,13 @@ public class NavigationSteps extends StepLibrary {
         String url = "https://ibello.hu/ibello/public/#pricing-details";
         pricingPage.expect_url_is_$(url);
         pricingPage.expect_details_lane_is_displayed();
+        navigationBar.expect_menu_component_is_displayed();
+    }
+
+    public void i_am_on_documentations_page() {
+        String url = "https://ibello.hu/ibello/public/#all-docs";
+        documentationsPage.expect_url_is_$(url);
+        documentationsPage.expect_docs_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
 
