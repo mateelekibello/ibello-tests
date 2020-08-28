@@ -7,7 +7,7 @@ import hu.ibello.search.Find;
 import hu.ibello.search.Relation;
 import hu.ibello.search.RelationType;
 
-public class HomePage extends PageObject {
+public class HomePage extends AbstractPage {
 
     @Find(by = By.CSS_SELECTOR, using = "welcome-main-lane")
     private WebElement mainLane;

@@ -5,7 +5,7 @@ import hu.ibello.pages.PageObject;
 import hu.ibello.search.By;
 import hu.ibello.search.Find;
 
-public class IbelloPage extends PageObject {
+public class IbelloPage extends AbstractPage {
 
     @Find(by = By.CSS_SELECTOR, using = "menu-component")
     private WebElement menuComponent;
@@ -26,10 +26,6 @@ public class IbelloPage extends PageObject {
 
     public void click_order_button() {
         doWith(orderButton).click();
-    }
-
-    public void expect_url_is_$(String url) {
-        expectations().assume(browser()).toHave().url(url);
     }
 
 }

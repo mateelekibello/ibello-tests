@@ -8,7 +8,7 @@ import hu.ibello.search.Find;
 import hu.ibello.search.Relation;
 import hu.ibello.search.RelationType;
 
-public class OrderPage extends PageObject {
+public class OrderPage extends AbstractPage {
 
     @Find(by = By.CSS_SELECTOR, using = "menu-component")
     private WebElement menuComponent;
