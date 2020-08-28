@@ -32,14 +32,12 @@ public class MessageNegativeWorkflow extends StepLibrary{
     }
 
     public void the_subject_will_be_invalid() {
-        ContactData data = testData().fromJson(ContactData.class).load();
-        data = testData().fromJson(ContactData.class).withId("invalid_subject").load();
+        ContactData data = testData().fromJson(ContactData.class).withId("invalid_subject").load();
         sendingMessageSteps.i_use_$_test_data_to_fill_out_the_form(data);
     }
 
     public void the_message_will_be_invalid() {
-        ContactData data = testData().fromJson(ContactData.class).load();
-        data = testData().fromJson(ContactData.class).withId("invalid_message").load();
+        ContactData data = testData().fromJson(ContactData.class).withId("invalid_message").load();
         sendingMessageSteps.i_use_$_test_data_to_fill_out_the_form(data);
     }
 
