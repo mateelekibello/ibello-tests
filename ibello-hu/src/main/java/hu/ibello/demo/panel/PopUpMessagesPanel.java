@@ -2,6 +2,7 @@ package hu.ibello.demo.panel;
 
 import hu.ibello.demo.tools.Timeout;
 import hu.ibello.elements.WebElement;
+import hu.ibello.elements.WebElements;
 import hu.ibello.pages.PageObject;
 import hu.ibello.search.By;
 import hu.ibello.search.Find;
@@ -32,6 +33,15 @@ public class PopUpMessagesPanel extends PageObject {
 
     public void assume_success_message_is_not_displayed() {
         expectations().withTimeout(Timeout.LONG).assume(successMessage).toNotBe().displayed();
+    }
+
+    public void assume_$_error_messages_are_displayed(int expectedNumberOfErrors) {
+        WebElements errorMessages = errorMessage.find().using(By.CSS_SELECTOR, "div").all();
+        int displayedErrors = errorMessages.size();
+        if (expectedNumberOfErrors != displayedErrors) {
+            throw new AssertionError(String.format("There are %d error(s) displayed but %d are expected!"
+                    , displayedErrors, expectedNumberOfErrors));
+        }
     }
 
 }

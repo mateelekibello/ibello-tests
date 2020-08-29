@@ -33,8 +33,9 @@ public class SendingMessageSteps extends StepLibrary {
         }
     }
 
-    public void i_see_the_error_message() {
+    public void i_see_$_error_messages(int number) {
         popUpMessagesPanel.assume_error_message_is_displayed();
+        popUpMessagesPanel.assume_$_error_messages_are_displayed(number);
         popUpMessagesPanel.assume_error_message_is_not_displayed();
     }
 

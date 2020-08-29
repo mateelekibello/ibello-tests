@@ -32,9 +32,9 @@
   "outputParameters": [
     {
       "visible": true,
-      "logical": true,
-      "name": "errorMessages",
-      "description": "There should be an error message after sending?"
+      "logical": false,
+      "name": "error",
+      "description": "How many error messeages should pop up?"
     },
     {
       "visible": false,
@@ -75,11 +75,11 @@
   "savedConfiguration": [
     {
       "name_out": "invalid name",
-      "errorMessages": true,
       "subject": false,
       "name": true,
       "subject_out": "valid subject",
       "message": false,
+      "error": "2",
       "email_out": "invalid email",
       "message_out": "valid message",
       "email": true,
@@ -87,11 +87,11 @@
     },
     {
       "name_out": "invalid name",
-      "errorMessages": true,
       "subject": true,
       "name": true,
       "subject_out": "invalid subject",
       "message": false,
+      "error": "2",
       "email_out": "valid email",
       "message_out": "valid message",
       "email": false,
@@ -99,11 +99,11 @@
     },
     {
       "name_out": "invalid name",
-      "errorMessages": true,
       "subject": false,
       "name": true,
       "subject_out": "valid subject",
       "message": true,
+      "error": "2",
       "email_out": "valid email",
       "message_out": "invalid message",
       "email": false,
@@ -111,11 +111,11 @@
     },
     {
       "name_out": "invalid name",
-      "errorMessages": true,
       "subject": false,
       "name": true,
       "subject_out": "valid subject",
       "message": false,
+      "error": "1",
       "email_out": "valid email",
       "message_out": "valid message",
       "email": false,
@@ -123,11 +123,11 @@
     },
     {
       "name_out": "valid name",
-      "errorMessages": true,
       "subject": true,
       "name": false,
       "subject_out": "invalid subject",
       "message": false,
+      "error": "2",
       "email_out": "invalid email",
       "message_out": "valid message",
       "email": true,
@@ -135,11 +135,11 @@
     },
     {
       "name_out": "valid name",
-      "errorMessages": true,
       "subject": false,
       "name": false,
       "subject_out": "valid subject",
       "message": true,
+      "error": "2",
       "email_out": "invalid email",
       "message_out": "invalid message",
       "email": true,
@@ -147,11 +147,11 @@
     },
     {
       "name_out": "valid name",
-      "errorMessages": true,
       "subject": false,
       "name": false,
       "subject_out": "valid subject",
       "message": false,
+      "error": "1",
       "email_out": "invalid email",
       "message_out": "valid message",
       "email": true,
@@ -159,11 +159,11 @@
     },
     {
       "name_out": "valid name",
-      "errorMessages": true,
       "subject": true,
       "name": false,
       "subject_out": "invalid subject",
       "message": true,
+      "error": "2",
       "email_out": "valid email",
       "message_out": "invalid message",
       "email": false,
@@ -171,11 +171,11 @@
     },
     {
       "name_out": "valid name",
-      "errorMessages": true,
       "subject": true,
       "name": false,
       "subject_out": "invalid subject",
       "message": false,
+      "error": "1",
       "email_out": "valid email",
       "message_out": "valid message",
       "email": false,
@@ -183,11 +183,11 @@
     },
     {
       "name_out": "valid name",
-      "errorMessages": true,
       "subject": false,
       "name": false,
       "subject_out": "valid subject",
       "message": true,
+      "error": "1",
       "email_out": "valid email",
       "message_out": "invalid message",
       "email": false,
@@ -195,7 +195,6 @@
     },
     {
       "name_out": "valid name",
-      "errorMessages": false,
       "subject": false,
       "name": false,
       "subject_out": "valid subject",
@@ -232,12 +231,12 @@
       "condition": ""
     },
     {
-      "text": "Then Message: i see that the there is an error message",
-      "condition": "errorMessages"
+      "text": "Then Message: i see ${error} error messages",
+      "condition": "error"
     },
     {
-      "text": "Then Message: i see that there is no error message",
-      "condition": "!errorMessages"
+      "text": "Then Message: i see that sending message was successfull",
+      "condition": "error \u003d\u003d null"
     }
   ],
   "scenarioNames": [

@@ -46,11 +46,11 @@ public class MessageWorkflow extends StepLibrary{
         sendingMessageSteps.i_send_the_message();
     }
 
-    public void i_see_that_the_there_is_an_error_message() {
-        sendingMessageSteps.i_see_the_error_message();
+    public void i_see_$_error_messages(int number) {
+        sendingMessageSteps.i_see_$_error_messages(number);
     }
 
-    public void i_see_that_there_is_no_error_message() {
+    public void i_see_that_sending_message_was_successfull() {
         sendingMessageSteps.i_see_the_success_message();
     }
 
