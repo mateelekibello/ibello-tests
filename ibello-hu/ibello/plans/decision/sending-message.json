@@ -1,15 +1,14 @@
 {
-  "name": "Decision table for sending a message negative test scenarios",
+  "name": "Decision table for sending a message test scenarios",
   "description": "With this test we want to test each cases of sending a message. The parameters can be: name, email, subject, message.",
   "tags": [
     "full-test",
-    "message",
-    "negative"
+    "message"
   ],
   "limitations": {
     "trueTextInput": {
-      "min": 1,
-      "max": 1
+      "min": 0,
+      "max": 2
     }
   },
   "inputParameters": [
@@ -40,28 +39,28 @@
     {
       "visible": false,
       "logical": false,
-      "expression": "name ? \"invalid name\" : \"\"",
+      "expression": "name ? \"invalid name\" : \"valid name\"",
       "name": "name_out",
       "description": "Part of scenario name"
     },
     {
       "visible": false,
       "logical": false,
-      "expression": "email ? \"invalid email\" : \"\"",
+      "expression": "email ? \"invalid email\" : \"valid email\"",
       "name": "email_out",
       "description": "Part of scenario name"
     },
     {
       "visible": false,
       "logical": false,
-      "expression": "subject ? \"invalid subject\" : \"\"",
+      "expression": "subject ? \"invalid subject\" : \"valid subject\"",
       "name": "subject_out",
       "description": "Part of scenario name"
     },
     {
       "visible": false,
       "logical": false,
-      "expression": "message ? \"invalid message\" : \"\"",
+      "expression": "message ? \"invalid message\" : \"valid message\"",
       "name": "message_out",
       "description": "Part of scenario name"
     },
@@ -79,85 +78,173 @@
       "errorMessages": true,
       "subject": false,
       "name": true,
-      "subject_out": "",
-      "message": false,
-      "email_out": "",
-      "message_out": "",
-      "email": false,
-      "out": "invalid name"
-    },
-    {
-      "name_out": "",
-      "errorMessages": true,
-      "subject": false,
-      "name": false,
-      "subject_out": "",
+      "subject_out": "valid subject",
       "message": false,
       "email_out": "invalid email",
-      "message_out": "",
+      "message_out": "valid message",
       "email": true,
-      "out": "invalid email"
+      "out": "invalid name, invalid email, valid subject, valid message"
     },
     {
-      "name_out": "",
+      "name_out": "invalid name",
+      "errorMessages": true,
+      "subject": true,
+      "name": true,
+      "subject_out": "invalid subject",
+      "message": false,
+      "email_out": "valid email",
+      "message_out": "valid message",
+      "email": false,
+      "out": "invalid name, valid email, invalid subject, valid message"
+    },
+    {
+      "name_out": "invalid name",
+      "errorMessages": true,
+      "subject": false,
+      "name": true,
+      "subject_out": "valid subject",
+      "message": true,
+      "email_out": "valid email",
+      "message_out": "invalid message",
+      "email": false,
+      "out": "invalid name, valid email, valid subject, invalid message"
+    },
+    {
+      "name_out": "invalid name",
+      "errorMessages": true,
+      "subject": false,
+      "name": true,
+      "subject_out": "valid subject",
+      "message": false,
+      "email_out": "valid email",
+      "message_out": "valid message",
+      "email": false,
+      "out": "invalid name, valid email, valid subject, valid message"
+    },
+    {
+      "name_out": "valid name",
       "errorMessages": true,
       "subject": true,
       "name": false,
       "subject_out": "invalid subject",
       "message": false,
-      "email_out": "",
-      "message_out": "",
-      "email": false,
-      "out": "invalid subject"
+      "email_out": "invalid email",
+      "message_out": "valid message",
+      "email": true,
+      "out": "valid name, invalid email, invalid subject, valid message"
     },
     {
-      "name_out": "",
+      "name_out": "valid name",
       "errorMessages": true,
       "subject": false,
       "name": false,
-      "subject_out": "",
+      "subject_out": "valid subject",
       "message": true,
-      "email_out": "",
+      "email_out": "invalid email",
+      "message_out": "invalid message",
+      "email": true,
+      "out": "valid name, invalid email, valid subject, invalid message"
+    },
+    {
+      "name_out": "valid name",
+      "errorMessages": true,
+      "subject": false,
+      "name": false,
+      "subject_out": "valid subject",
+      "message": false,
+      "email_out": "invalid email",
+      "message_out": "valid message",
+      "email": true,
+      "out": "valid name, invalid email, valid subject, valid message"
+    },
+    {
+      "name_out": "valid name",
+      "errorMessages": true,
+      "subject": true,
+      "name": false,
+      "subject_out": "invalid subject",
+      "message": true,
+      "email_out": "valid email",
       "message_out": "invalid message",
       "email": false,
-      "out": "invalid message"
+      "out": "valid name, valid email, invalid subject, invalid message"
+    },
+    {
+      "name_out": "valid name",
+      "errorMessages": true,
+      "subject": true,
+      "name": false,
+      "subject_out": "invalid subject",
+      "message": false,
+      "email_out": "valid email",
+      "message_out": "valid message",
+      "email": false,
+      "out": "valid name, valid email, invalid subject, valid message"
+    },
+    {
+      "name_out": "valid name",
+      "errorMessages": true,
+      "subject": false,
+      "name": false,
+      "subject_out": "valid subject",
+      "message": true,
+      "email_out": "valid email",
+      "message_out": "invalid message",
+      "email": false,
+      "out": "valid name, valid email, valid subject, invalid message"
+    },
+    {
+      "name_out": "valid name",
+      "errorMessages": false,
+      "subject": false,
+      "name": false,
+      "subject_out": "valid subject",
+      "message": false,
+      "email_out": "valid email",
+      "message_out": "valid message",
+      "email": false,
+      "out": "valid name, valid email, valid subject, valid message"
     }
   ],
   "testSteps": [
     {
-      "text": "Given Message negative: i want to send a new message",
+      "text": "Given Message: i want to send a new message",
       "condition": ""
     },
     {
-      "text": "When Message negative: the name will be invalid",
+      "text": "When Message: the name will be invalid",
       "condition": "name"
     },
     {
-      "text": "When Message negative: the email will be invalid",
+      "text": "When Message: the email will be invalid",
       "condition": "email"
     },
     {
-      "text": "When Message negative: the subject will be invalid",
+      "text": "When Message: the subject will be invalid",
       "condition": "subject"
     },
     {
-      "text": "When Message negative: the message will be invalid",
+      "text": "When Message: the message will be invalid",
       "condition": "message"
     },
     {
-      "text": "When Message negative: i send the message",
+      "text": "When Message: i fill out the form and send the message",
       "condition": ""
     },
     {
-      "text": "Then Message negative: i see that the there is an error message",
+      "text": "Then Message: i see that the there is an error message",
       "condition": "errorMessages"
     },
     {
-      "text": "Then Message negative: i see that there is no error message",
+      "text": "Then Message: i see that there is no error message",
       "condition": "!errorMessages"
     }
   ],
   "scenarioNames": [
+    {
+      "text": "Sending message with valid data",
+      "condition": "!name \u0026\u0026 !email \u0026\u0026 !subject \u0026\u0026 !message"
+    },
     {
       "text": "Sending message with ${out}"
     }

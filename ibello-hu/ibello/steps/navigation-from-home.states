@@ -3,63 +3,118 @@ Navigation bar test = true
 
 state TEST INIT
 state HOME PAGE
-state IBELLO HOME
-state SERVICES HOME
-state ABOUT HOME
-state SUPPORT HOME
 state IBELLO PAGE
 state SERVICES PAGE
 state ABOUT PAGE
 state SUPPORT PAGE
+state INTEREST PAGE
+state PRICING PAGE
+state DOCUMENTATIONS PAGE
 
 TEST INIT -> HOME PAGE
-HOME PAGE + navigation to product page -> IBELLO PAGE
-IBELLO PAGE + navigation back -> HOME PAGE
-HOME PAGE + navigation to services page -> SERVICES PAGE
-SERVICES PAGE + navigation back -> HOME PAGE
-HOME PAGE + navigation to about page -> ABOUT PAGE
-ABOUT PAGE + navigation back -> HOME PAGE
-HOME PAGE + navigation to support page -> SUPPORT PAGE
-SUPPORT PAGE + navigation back -> HOME PAGE
+IBELLO PAGE + navigation back to homepage -> HOME PAGE
+SERVICES PAGE + navigation back to homepage -> HOME PAGE
+HOME PAGE + navigation to about page using details button -> ABOUT PAGE
+ABOUT PAGE + navigation back to homepage -> HOME PAGE
+HOME PAGE + navigation to support page using more options button -> SUPPORT PAGE
+SUPPORT PAGE + navigation back to homepage -> HOME PAGE
+HOME PAGE + navigation to interest page using try it button -> INTEREST PAGE
+INTEREST PAGE + navigation back to homepage -> HOME PAGE
+HOME PAGE + navigation to pricing page using details button -> PRICING PAGE
+PRICING PAGE + navigation back to homepage -> HOME PAGE
+HOME PAGE + navigation to documentations page using documentations button -> DOCUMENTATIONS PAGE
+DOCUMENTATIONS PAGE + navigation back to homepage -> HOME PAGE
+HOME PAGE + navigation to services page using our services button -> SERVICES PAGE
+HOME PAGE + navigation to services page using work with us button -> SERVICES PAGE
+HOME PAGE + navigation to product page using learn more button -> IBELLO PAGE
+HOME PAGE + navigation to product page using our product button -> IBELLO PAGE
 
-[navigation: test init]
+[navigation from home: test init]
     state TEST INIT
     no option
 
-[navigation: i am on homepage]
-    state HOME PAGE
-    option navigation to about page
-    option navigation to product page
-    option navigation to services page
-    option navigation to support page
-
-[navigation: i navigate to product page]
-    input navigation to product page
-
-[navigation: i am on product page]
+[navigation from home: i am on product page]
     state IBELLO PAGE
     option navigation back
 
-[navigation: i navigate back to homepage]
-    input navigation back
-
-[navigation: i navigate to services page]
-    input navigation to services page
-
-[navigation: i am on services page]
+[navigation from home: i am on services page]
     state SERVICES PAGE
     option navigation back
 
-[navigation: i navigate to about page]
-    input navigation to about page
-
-[navigation: i am on about page]
+[navigation from home: i am on about page]
     state ABOUT PAGE
     option navigation back
 
-[navigation: i navigate to support page]
-    input navigation to support page
-
-[navigation: i am on support page]
+[navigation from home: i am on support page]
     state SUPPORT PAGE
     option navigation back
+
+[navigation from home: i am on homepage]
+    state HOME PAGE
+    option navigation to about page using details button
+    option navigation to documentations page using documentations button
+    option navigation to interest page using try it button
+    option navigation to pricing page using details button
+    option navigation to product page using learn more button
+    option navigation to product page using our product button
+    option navigation to services page using our services button
+    option navigation to services page using work with us button
+    option navigation to support page using more options button
+
+[navigation from home: i navigate to product page using product button]
+    input navigation to product page using our product button
+
+[navigation from home: i am on product page]
+    state IBELLO PAGE
+    option navigation back to homepage
+
+[navigation from home: i navigate back to homepage]
+    input navigation back to homepage
+
+[navigation from home: i navigate to services page using services button]
+    input navigation to services page using our services button
+
+[navigation from home: i am on services page]
+    state SERVICES PAGE
+    option navigation back to homepage
+
+[navigation from home: i am on documentations page]
+    state DOCUMENTATIONS PAGE
+    option navigation back to homepage
+
+[navigation from home: i am on pricing page]
+    state PRICING PAGE
+    option navigation back to homepage
+
+[navigation from home: i am on about page]
+    state ABOUT PAGE
+    option navigation back to homepage
+
+[navigation from home: i am on support page]
+    state SUPPORT PAGE
+    option navigation back to homepage
+
+[navigation from home: i am on interest page]
+    state INTEREST PAGE
+    option navigation back to homepage
+
+[navigation from home: i navigate to product page using learn more button]
+    input navigation to product page using learn more button
+
+[navigation from home: i navigate to about page using details button]
+    input navigation to about page using details button
+
+[navigation from home: i navigate to support page using more options button]
+    input navigation to support page using more options button
+
+[navigation from home: i navigate to services page using work with us button]
+    input navigation to services page using work with us button
+
+[navigation from home: i navigate to interest page using try it button]
+    input navigation to interest page using try it button
+
+[navigation from home: i navigate to pricing page using details button]
+    input navigation to pricing page using details button
+
+[navigation from home: i navigate to documentations page using documentations button]
+    input navigation to documentations page using documentations button

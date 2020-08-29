@@ -18,7 +18,7 @@ public class NavigationFromHomeWorkflow extends StepLibrary{
     }
 
     public void i_am_on_homepage() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_homepage();
     }
 
     public void i_am_on_interest_page() {
@@ -66,7 +66,7 @@ public class NavigationFromHomeWorkflow extends StepLibrary{
     }
 
     public void i_navigate_to_product_page_using_product_button() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_homepage_to_product_page();
     }
 
     public void i_navigate_to_services_page_using_services_button() {
@@ -82,6 +82,6 @@ public class NavigationFromHomeWorkflow extends StepLibrary{
     }
 
     public void test_init() {
-        // TODO auto-generated method
+        navigationSteps.i_open_the_homepage();
     }
 }

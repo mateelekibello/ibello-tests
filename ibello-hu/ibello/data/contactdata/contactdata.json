@@ -1,6 +1,6 @@
 {
-  "email": "valid@email.hu",
-  "message": "Valid message",
+  "email": "valid@email.com",
+  "message": "This is a valid message.",
   "name": "Mr. Valid Name",
   "subject": "Valid subject"
 }
