@@ -1,0 +1,4 @@
+quoteServicesLane = element {
+    cssSelector 'quote-services-lane'
+    expect_quote_services_lane_is_displayed = expect toBe displayed
+}

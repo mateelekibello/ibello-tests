@@ -179,27 +179,33 @@ public class NavigationWorkflow extends StepLibrary{
     }
 
     public void i_am_on_quotation_page_and_automated_tests_is_selected() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_quotation_page();
+        // TODO check selection
     }
 
     public void i_am_on_quotation_page_and_consultancy_is_selected() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_quotation_page();
+        // TODO check selection
     }
 
     public void i_am_on_quotation_page_and_dev_and_test_training_is_selected() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_quotation_page();
+        // TODO check selection
     }
 
     public void i_am_on_quotation_page_and_online_automated_test_is_selected() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_quotation_page();
+        // TODO check selection
     }
 
     public void i_am_on_quotation_page_and_test_framework_is_selected() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_quotation_page();
+        // TODO check selection
     }
 
     public void i_am_on_quotation_page_without_selected_service() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_quotation_page();
+        // TODO check selection
     }
 
     public void i_navigate_directly_to_about_page_using_the_navbar() {
