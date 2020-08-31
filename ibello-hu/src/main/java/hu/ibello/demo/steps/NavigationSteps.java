@@ -20,6 +20,7 @@ public class NavigationSteps extends StepLibrary {
     private DocumentationsPage documentationsPage;
     private InterestPage interestPage;
     private SupportPage supportPage;
+    private ChangelogPage changelogPage;
 
     public void i_open_the_homepage() {
         homePage.i_open_homepage();
@@ -65,10 +66,6 @@ public class NavigationSteps extends StepLibrary {
 
     public void i_navigate_from_homepage_to_about_page() {
         homePage.click_meet_us_button();
-    }
-
-    public void i_navigate_from_homepage_to_support_page() {
-
     }
 
     public void i_navigate_back_to_homepage() {
@@ -136,4 +133,12 @@ public class NavigationSteps extends StepLibrary {
         supportPage.expect_login_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
+
+    public void i_am_on_changelog_page() {
+        String url = "/public/#documentation-changelog";
+        supportPage.expect_url_is_$(url);
+        changelogPage.expect_doc_lane_is_displayed();
+        navigationBar.expect_menu_component_is_displayed();
+    }
+
 }

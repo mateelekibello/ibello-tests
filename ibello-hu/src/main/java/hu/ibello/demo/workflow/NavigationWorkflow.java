@@ -133,8 +133,8 @@ public class NavigationWorkflow extends StepLibrary{
         navigationSteps.i_am_on_support_page();
     }
 
-    public void i_am_on_change_log_page() {
-        // TODO auto-generated method
+    public void i_am_on_changelog_page() {
+        navigationSteps.i_am_on_changelog_page();
     }
 
     public void i_am_on_documentations_page() {
