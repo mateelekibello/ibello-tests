@@ -29,6 +29,8 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void i_am_on_homepage() {
+        String url = "/#home";
+        homePage.expect_url_is_$(url);
         homePage.i_expect_main_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
