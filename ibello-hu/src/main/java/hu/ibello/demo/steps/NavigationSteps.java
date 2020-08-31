@@ -18,6 +18,8 @@ public class NavigationSteps extends StepLibrary {
     private ManagerPage managerPage;
     private PricingPage pricingPage;
     private DocumentationsPage documentationsPage;
+    private InterestPage interestPage;
+    private SupportPage supportPage;
 
     public void i_open_the_homepage() {
         homePage.i_open_homepage();
@@ -100,24 +102,38 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void i_am_on_manager_page() {
-        String url = "https://ibello.hu/ibello/public/#flow?id=manager";
+        String url = "#flow?id=manager";
         managerPage.expect_url_is_$(url);
         managerPage.expect_flow_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
 
     public void i_am_on_pricing_page() {
-        String url = "https://ibello.hu/ibello/public/#pricing-details";
+        String url = "/#pricing-details";
         pricingPage.expect_url_is_$(url);
         pricingPage.expect_details_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
 
     public void i_am_on_documentations_page() {
-        String url = "https://ibello.hu/ibello/public/#all-docs";
+        String url = "/public/#all-docs";
         documentationsPage.expect_url_is_$(url);
         documentationsPage.expect_docs_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
 
+    public void i_am_on_interest_page() {
+        String url = "/public/#interest";
+        interestPage.expect_url_is_$(url);
+        interestPage.expect_workflow_lane_is_displayed();
+        navigationBar.expect_menu_component_is_displayed();
+    }
+
+    public void i_am_on_support_page() {
+        String url = "/public/#support";
+        supportPage.expect_url_is_$(url);
+        supportPage.expect_welcome_lane_is_displayed();
+        supportPage.expect_login_lane_is_displayed();
+        navigationBar.expect_menu_component_is_displayed();
+    }
 }

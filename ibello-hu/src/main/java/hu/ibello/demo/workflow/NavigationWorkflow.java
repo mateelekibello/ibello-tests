@@ -9,6 +9,10 @@ public class NavigationWorkflow extends StepLibrary{
 
     private NavigationSteps navigationSteps;
 
+    public void test_init() {
+        // TODO auto-generated method
+    }
+
     public void from_documentations_page_i_navigate_to_change_log_page() {
         // TODO auto-generated method
     }
@@ -109,12 +113,32 @@ public class NavigationWorkflow extends StepLibrary{
         // TODO auto-generated method
     }
 
+    public void i_am_on_about_page() {
+        // TODO auto-generated method
+    }
+
+    public void i_am_on_homepage() {
+        navigationSteps.i_am_on_homepage();
+    }
+
+    public void i_am_on_product_page() {
+        navigationSteps.i_am_on_product_page();
+    }
+
+    public void i_am_on_services_page() {
+        navigationSteps.i_am_on_services_page();
+    }
+
+    public void i_am_on_support_page() {
+        navigationSteps.i_am_on_support_page();
+    }
+
     public void i_am_on_change_log_page() {
         // TODO auto-generated method
     }
 
     public void i_am_on_documentations_page() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_documentations_page();
     }
 
     public void i_am_on_installation_documentation_page() {
@@ -122,31 +146,36 @@ public class NavigationWorkflow extends StepLibrary{
     }
 
     public void i_am_on_interest_page() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_interest_page();
     }
 
     public void i_am_on_order_page_and_hunter_is_selected() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_order_page();
+        // TODO check selection
     }
 
     public void i_am_on_order_page_and_master_hunter_is_selected() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_order_page();
+        // TODO check selection
     }
 
     public void i_am_on_order_page_and_no_product_is_selected() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_order_page();
+        // TODO check selection
     }
 
     public void i_am_on_order_page_and_outpost_is_selected() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_order_page();
+        // TODO check selection
     }
 
     public void i_am_on_order_page_and_sentinel_is_selected() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_order_page();
+        // TODO check selection
     }
 
     public void i_am_on_pricing_page() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_pricing_page();
     }
 
     public void i_am_on_quotation_page_and_automated_tests_is_selected() {

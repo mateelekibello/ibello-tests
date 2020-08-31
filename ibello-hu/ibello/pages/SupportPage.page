@@ -1,0 +1,9 @@
+welcomeLane = element {
+    cssSelector 'welcome-main-lane'
+    expect_welcome_lane_is_displayed = expect toBe displayed
+}
+
+loginLane = element {
+    cssSelector 'login-lane'
+    expect_login_lane_is_displayed = expect toBe displayed
+}
