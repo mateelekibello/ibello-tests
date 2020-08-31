@@ -21,6 +21,7 @@ public class NavigationSteps extends StepLibrary {
     private InterestPage interestPage;
     private SupportPage supportPage;
     private ChangelogPage changelogPage;
+    private InstallationDocPage installationDocPage;
 
     public void i_open_the_homepage() {
         homePage.i_open_homepage();
@@ -141,4 +142,10 @@ public class NavigationSteps extends StepLibrary {
         navigationBar.expect_menu_component_is_displayed();
     }
 
+    public void i_am_on_installation_documentation_page() {
+        String url = "/public/#documentation-installation";
+        installationDocPage.expect_url_is_$(url);
+        installationDocPage.expect_doc_lane_is_displayed();
+        navigationBar.expect_menu_component_is_displayed();
+    }
 }

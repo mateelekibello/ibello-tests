@@ -114,7 +114,7 @@ public class NavigationWorkflow extends StepLibrary{
     }
 
     public void i_am_on_about_page() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_about_page();
     }
 
     public void i_am_on_homepage() {
@@ -142,7 +142,7 @@ public class NavigationWorkflow extends StepLibrary{
     }
 
     public void i_am_on_installation_documentation_page() {
-        // TODO auto-generated method
+        navigationSteps.i_am_on_installation_documentation_page();
     }
 
     public void i_am_on_interest_page() {
