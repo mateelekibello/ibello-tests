@@ -1,5 +1,6 @@
 {
   "name": "Decision table for sending a message test scenarios",
+  "namespace": "Message",
   "description": "With this test we want to test each cases of sending a message. The parameters can be: name, email, subject, message.",
   "tags": [
     "full-test",
@@ -207,35 +208,43 @@
   ],
   "testSteps": [
     {
-      "text": "Given Message: i want to send a new message",
+      "kind": "Given",
+      "text": "i want to send a new message",
       "condition": ""
     },
     {
-      "text": "When Message: the name will be invalid",
+      "kind": "When",
+      "text": "the name will be invalid",
       "condition": "name"
     },
     {
-      "text": "When Message: the email will be invalid",
+      "kind": "When",
+      "text": "the email will be invalid",
       "condition": "email"
     },
     {
-      "text": "When Message: the subject will be invalid",
+      "kind": "When",
+      "text": "the subject will be invalid",
       "condition": "subject"
     },
     {
-      "text": "When Message: the message will be invalid",
+      "kind": "When",
+      "text": "the message will be invalid",
       "condition": "message"
     },
     {
-      "text": "When Message: i fill out the form and send the message",
+      "kind": "When",
+      "text": "i fill out the form and send the message",
       "condition": ""
     },
     {
-      "text": "Then Message: i see ${error} error messages",
+      "kind": "Then",
+      "text": "i see ${error} error messages",
       "condition": "error"
     },
     {
-      "text": "Then Message: i see that sending message was successfull",
+      "kind": "Then",
+      "text": "i see that sending message was successfull",
       "condition": "error \u003d\u003d null"
     }
   ],
