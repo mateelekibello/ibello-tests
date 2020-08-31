@@ -1,0 +1,285 @@
+tags = @full-test @navigation
+Navigation bar test = true
+
+state TEST INIT
+state HOME PAGE
+state IBELLO PAGE
+state SERVICES PAGE
+state ABOUT PAGE
+state SUPPORT PAGE
+state INTEREST PAGE
+state PRICING PAGE
+state DOCUMENTATIONS PAGE
+state ORDER PAGE WHITOUT PRODUCT
+state ORDER PAGE WITH 1 OUTPOST
+state ORDER PAGE WITH 1 SENTINEL
+state ORDER PAGE WITH 1 HUNTER
+state ORDER PAGE WITH 1 MASTER HUNTER
+state QUOTATION PAGE WITHOUT SERVICE
+state QUOTATION PAGE WITH ONLINE AUTOMATED TEST
+state QUOTATION PAGE WITH AUTOMATED TESTS
+state QUOTATION PAGE WITH TEST FRAMEWORK
+state QUOTATION PAGE WITH CONSULTANCY
+state QUOTATION PAGE WITH DEV AND TEST TRAINING
+state CHANGE LOG PAGE
+state INSTALLATION DOC PAGE
+
+TEST INIT -> HOME PAGE
+IBELLO PAGE + logo button -> HOME PAGE
+HOME PAGE + header our services -> SERVICES PAGE
+HOME PAGE + header our product -> IBELLO PAGE
+HOME PAGE + navbar product, try it button -> INTEREST PAGE
+HOME PAGE + navbar product, learn more button -> IBELLO PAGE
+HOME PAGE + navbar services, work with us button -> SERVICES PAGE
+HOME PAGE + navbar about, details button -> ABOUT PAGE
+HOME PAGE + navbar support, more options button -> SUPPORT PAGE
+HOME PAGE + navbar support, documentations button -> DOCUMENTATIONS PAGE
+HOME PAGE + order details button -> PRICING PAGE
+IBELLO PAGE + header details, download button -> INTEREST PAGE
+IBELLO PAGE + order now button -> ORDER PAGE WHITOUT PRODUCT
+IBELLO PAGE + order outpost button -> ORDER PAGE WITH 1 OUTPOST
+IBELLO PAGE + order sentinel button -> ORDER PAGE WITH 1 SENTINEL
+IBELLO PAGE + order hunter button -> ORDER PAGE WITH 1 HUNTER
+IBELLO PAGE + order master hunter button -> ORDER PAGE WITH 1 MASTER HUNTER
+IBELLO PAGE + navbar services button -> SERVICES PAGE
+IBELLO PAGE + navbar about button -> ABOUT PAGE
+IBELLO PAGE + navbar support button -> SUPPORT PAGE
+SERVICES PAGE + navbar product button -> IBELLO PAGE
+SERVICES PAGE + request quotation button -> QUOTATION PAGE WITHOUT SERVICE
+SERVICES PAGE + request quotation for online automated test -> QUOTATION PAGE WITH ONLINE AUTOMATED TEST
+SERVICES PAGE + request quotation for automated tests -> QUOTATION PAGE WITH AUTOMATED TESTS
+SERVICES PAGE + request quotation for test framework -> QUOTATION PAGE WITH TEST FRAMEWORK
+SERVICES PAGE + request quotation for consultancy -> QUOTATION PAGE WITH CONSULTANCY
+SERVICES PAGE + request quotation for dev and test training -> QUOTATION PAGE WITH DEV AND TEST TRAINING
+ORDER PAGE WHITOUT PRODUCT + logo button -> HOME PAGE
+CHANGE LOG PAGE + logo button -> HOME PAGE
+DOCUMENTATIONS PAGE + read change log button -> CHANGE LOG PAGE
+SUPPORT PAGE + support page, read it button -> DOCUMENTATIONS PAGE
+SUPPORT PAGE + support page, installation guide button -> INSTALLATION DOC PAGE
+SUPPORT PAGE + change log button -> CHANGE LOG PAGE
+SUPPORT PAGE + our product button -> IBELLO PAGE
+SUPPORT PAGE + our services -> SERVICES PAGE
+INTEREST PAGE + interest page, installation guide button -> INSTALLATION DOC PAGE
+INTEREST PAGE + interest page, read it button -> DOCUMENTATIONS PAGE
+INSTALLATION DOC PAGE + more documentations button -> DOCUMENTATIONS PAGE
+
+[navigation: i navigate directly to support page using the navbar]
+    input navbar support button
+
+[navigation: i navigate directly to homepage using the navbar]
+    input logo button
+
+[navigation: i navigate directly to about page using the navbar]
+    input navbar about button
+
+[navigation: i navigate directly to services page using the navbar]
+    input navbar services button
+
+[navigation: i navigate directly to product page using the navbar]
+    input navbar product button
+
+[navigation: i am on quotation page without selected service]
+    state QUOTATION PAGE WITHOUT SERVICE
+    no option
+
+[navigation: i am on order page and outpost is selected]
+    state ORDER PAGE WITH 1 OUTPOST
+    no option
+
+[navigation: i am on order page and sentinel is selected]
+    state ORDER PAGE WITH 1 SENTINEL
+    no option
+
+[navigation: i am on order page and hunter is selected]
+    state ORDER PAGE WITH 1 HUNTER
+    no option
+
+[navigation: from product page i navigate to order page]
+    input order now button
+
+[navigation: from product page i order an outpost product]
+    input order outpost button
+
+[navigation: from product page i order a hunter product]
+    input order hunter button
+
+[navigation: from services page i request guotation]
+    input request quotation button
+
+[navigation: i am on homepage]
+    state HOME PAGE
+    option header our product
+    option header our services
+    option navbar about, details button
+    option navbar product, learn more button
+    option navbar product, try it button
+    option navbar services, work with us button
+    option navbar support, documentations button
+    option navbar support, more options button
+    option order details button
+
+[navigation: i am on services page]
+    state SERVICES PAGE
+    option navbar product button
+    option request quotation button
+    option request quotation for automated tests
+    option request quotation for consultancy
+    option request quotation for dev and test training
+    option request quotation for online automated test
+    option request quotation for test framework
+
+[navigation: i am on product page]
+    state IBELLO PAGE
+    option header details, download button
+    option logo button
+    option navbar about button
+    option navbar services button
+    option navbar support button
+    option order hunter button
+    option order master hunter button
+    option order now button
+    option order outpost button
+    option order sentinel button
+
+[navigation: i am on interest page]
+    state INTEREST PAGE
+    option interest page, installation guide button
+    option interest page, read it button
+
+[navigation: i am on installation documentation page]
+    state INSTALLATION DOC PAGE
+    option more documentations button
+
+[navigation: i am on documentations page]
+    state DOCUMENTATIONS PAGE
+    option read change log button
+
+[navigation: i am on change log page]
+    state CHANGE LOG PAGE
+    option logo button
+
+[navigation: i am on about page]
+    state ABOUT PAGE
+    no option
+
+[navigation: i am on support page]
+    state SUPPORT PAGE
+    option change log button
+    option our product button
+    option our services
+    option support page, installation guide button
+    option support page, read it button
+
+[navigation: i am on order page and no product is selected]
+    state ORDER PAGE WHITOUT PRODUCT
+    option logo button
+
+[navigation: i am on pricing page]
+    state PRICING PAGE
+    no option
+
+[navigation: from homepage header i navigate to services page]
+    input header our services
+
+[navigation: from product page header i navigate to product page]
+    input header details, download button
+
+[navigation: from interest page i navigate to installation documentation page]
+    input interest page, installation guide button
+
+[navigation: from installation documentation page i navigate to documentations page]
+    input more documentations button
+
+[navigation: from documentations page i navigate to change log page]
+    input read change log button
+
+[navigation: from homepage i navigate to about page]
+    input navbar about, details button
+
+[navigation: from homepage i navigate to support page]
+    input navbar support, more options button
+
+[navigation: from support page i navigate to documentations page]
+    input support page, read it button
+
+[navigation: from support page i navigate to installation documentation page]
+    input support page, installation guide button
+
+[navigation: from support page i navigate to change log page]
+    input change log button
+
+[navigation: from support page i navigate to product page]
+    input our product button
+
+[navigation: from homepage i navigate to pricing page]
+    input order details button
+
+[navigation: from homepage header i navigate to product page]
+    input header our product
+
+[navigation: from product page i order a sentinel product]
+    input order sentinel button
+
+[navigation: from product page i order a master hunter product]
+    input order master hunter button
+
+[navigation: test init]
+    state TEST INIT
+    no option
+
+[navigation: i am on order page and master hunter is selected]
+    state ORDER PAGE WITH 1 MASTER HUNTER
+    no option
+
+[navigation: from homepage i navigate to documentations page]
+    input navbar support, documentations button
+
+[navigation: from homepage i navigate to services page]
+    input navbar services, work with us button
+
+[navigation: from homepage i navigate to product page]
+    input navbar product, learn more button
+
+[navigation: from homepage i navigate to interest page]
+    input navbar product, try it button
+
+[navigation: from interest page i navigate to documentations page]
+    input interest page, read it button
+
+[navigation: from support page header i navigate to services page]
+    input our services
+
+[navigation: i am on quotation page and online automated test is selected]
+    state QUOTATION PAGE WITH ONLINE AUTOMATED TEST
+    no option
+
+[navigation: i am on quotation page and dev and test training is selected]
+    state QUOTATION PAGE WITH DEV AND TEST TRAINING
+    no option
+
+[navigation: i am on quotation page and consultancy is selected]
+    state QUOTATION PAGE WITH CONSULTANCY
+    no option
+
+[navigation: i am on quotation page and test framework is selected]
+    state QUOTATION PAGE WITH TEST FRAMEWORK
+    no option
+
+[navigation: i am on quotation page and automated tests is selected]
+    state QUOTATION PAGE WITH AUTOMATED TESTS
+    no option
+
+[navigation: i request quotation for dev and test training]
+    input request quotation for dev and test training
+
+[navigation: i request quotation for consultancy]
+    input request quotation for consultancy
+
+[navigation: i request quotation for test framework]
+    input request quotation for test framework
+
+[navigation: i request quotation for automated tests]
+    input request quotation for automated tests
+
+[navigation: i request quotation for online automated test]
+    input request quotation for online automated test

@@ -1,0 +1,309 @@
+tags = @full-test @navigation
+Navigation bar test = true
+
+state TEST INIT
+state HOME PAGE
+state IBELLO PAGE
+state SERVICES PAGE
+state ABOUT PAGE
+state SUPPORT PAGE
+state INTEREST PAGE
+state PRICING PAGE
+state DOCUMENTATIONS PAGE
+state ORDER PAGE WHITOUT PRODUCT
+state ORDER PAGE WITH 1 OUTPOST
+state ORDER PAGE WITH 1 SENTINEL
+state ORDER PAGE WITH 1 HUNTER
+state ORDER PAGE WITH 1 MASTER HUNTER
+state QUOTATION PAGE WITHOUT SERVICE
+state QUOTATION PAGE WITH ONLINE AUTOMATED TEST
+state QUOTATION PAGE WITH AUTOMATED TESTS
+state QUOTATION PAGE WITH TEST FRAMEWORK
+state QUOTATION PAGE WITH CONSULTANCY
+state QUOTATION PAGE WITH DEV AND TEST TRAINING
+state CHANGE LOG PAGE
+
+TEST INIT -> HOME PAGE
+IBELLO PAGE + logo button -> HOME PAGE
+SERVICES PAGE + logo button -> HOME PAGE
+HOME PAGE + navbar, details button -> ABOUT PAGE
+ABOUT PAGE + logo button -> HOME PAGE
+HOME PAGE + more options button -> SUPPORT PAGE
+SUPPORT PAGE + logo button -> HOME PAGE
+HOME PAGE + try it button -> INTEREST PAGE
+INTEREST PAGE + logo button -> HOME PAGE
+HOME PAGE + order details button -> PRICING PAGE
+PRICING PAGE + logo button -> HOME PAGE
+HOME PAGE + documentations button -> DOCUMENTATIONS PAGE
+DOCUMENTATIONS PAGE + logo button -> HOME PAGE
+HOME PAGE + our services from header -> SERVICES PAGE
+HOME PAGE + navbar, work with us button -> SERVICES PAGE
+HOME PAGE + navbar, learn more button -> IBELLO PAGE
+HOME PAGE + our product from header -> IBELLO PAGE
+IBELLO PAGE + order now button -> ORDER PAGE WHITOUT PRODUCT
+IBELLO PAGE + download button -> INTEREST PAGE
+IBELLO PAGE + order outpost button -> ORDER PAGE WITH 1 OUTPOST
+IBELLO PAGE + order sentinel button -> ORDER PAGE WITH 1 SENTINEL
+IBELLO PAGE + order hunter button -> ORDER PAGE WITH 1 HUNTER
+IBELLO PAGE + order master hunter button -> ORDER PAGE WITH 1 MASTER HUNTER
+SERVICES PAGE + request quotation button -> QUOTATION PAGE WITHOUT SERVICE
+SERVICES PAGE + request quotation for online automated test -> QUOTATION PAGE WITH ONLINE AUTOMATED TEST
+SERVICES PAGE + request quotation for automated tests -> QUOTATION PAGE WITH AUTOMATED TESTS
+SERVICES PAGE + request quotation for test framework -> QUOTATION PAGE WITH TEST FRAMEWORK
+SERVICES PAGE + request quotation for consultancy -> QUOTATION PAGE WITH CONSULTANCY
+SERVICES PAGE + request quotation for dev and test training -> QUOTATION PAGE WITH DEV AND TEST TRAINING
+SERVICES PAGE + navbar product button -> IBELLO PAGE
+IBELLO PAGE + navbar services button -> SERVICES PAGE
+IBELLO PAGE + navbar about button -> ABOUT PAGE
+IBELLO PAGE + navbar support button -> SUPPORT PAGE
+SERVICES PAGE + navbar about button -> ABOUT PAGE
+SERVICES PAGE + navbar support button -> SUPPORT PAGE
+ABOUT PAGE + navbar product button -> IBELLO PAGE
+ABOUT PAGE + navbar services button -> SERVICES PAGE
+ABOUT PAGE + navbar support button -> SUPPORT PAGE
+SUPPORT PAGE + navbar product button -> IBELLO PAGE
+SUPPORT PAGE + navbar services button -> SERVICES PAGE
+SUPPORT PAGE + navbar about button -> ABOUT PAGE
+SUPPORT PAGE + read it button -> DOCUMENTATIONS PAGE
+INTEREST PAGE + navbar product button -> IBELLO PAGE
+INTEREST PAGE + navbar services button -> SERVICES PAGE
+INTEREST PAGE + navbar about button -> ABOUT PAGE
+INTEREST PAGE + navbar support button -> SUPPORT PAGE
+PRICING PAGE + navbar product button -> IBELLO PAGE
+PRICING PAGE + navbar services button -> SERVICES PAGE
+PRICING PAGE + navbar about button -> ABOUT PAGE
+PRICING PAGE + navbar support button -> SUPPORT PAGE
+DOCUMENTATIONS PAGE + navbar product button -> IBELLO PAGE
+DOCUMENTATIONS PAGE + navbar services button -> SERVICES PAGE
+DOCUMENTATIONS PAGE + navbar about button -> ABOUT PAGE
+DOCUMENTATIONS PAGE + navbar support button -> SUPPORT PAGE
+ORDER PAGE WHITOUT PRODUCT + logo button -> HOME PAGE
+ORDER PAGE WHITOUT PRODUCT + navbar product button -> IBELLO PAGE
+ORDER PAGE WHITOUT PRODUCT + navbar services button -> SERVICES PAGE
+ORDER PAGE WHITOUT PRODUCT + navbar about button -> ABOUT PAGE
+ORDER PAGE WHITOUT PRODUCT + navbar support button -> SUPPORT PAGE
+ORDER PAGE WITH 1 OUTPOST + logo button -> HOME PAGE
+ORDER PAGE WITH 1 OUTPOST + navbar product button -> IBELLO PAGE
+ORDER PAGE WITH 1 OUTPOST + navbar services button -> SERVICES PAGE
+ORDER PAGE WITH 1 OUTPOST + navbar about button -> ABOUT PAGE
+ORDER PAGE WITH 1 OUTPOST + navbar support button -> SUPPORT PAGE
+ORDER PAGE WITH 1 SENTINEL + logo button -> HOME PAGE
+ORDER PAGE WITH 1 SENTINEL + navbar product button -> IBELLO PAGE
+ORDER PAGE WITH 1 SENTINEL + navbar services button -> SERVICES PAGE
+ORDER PAGE WITH 1 SENTINEL + navbar about button -> ABOUT PAGE
+ORDER PAGE WITH 1 SENTINEL + navbar support button -> SUPPORT PAGE
+ORDER PAGE WITH 1 HUNTER + logo button -> HOME PAGE
+ORDER PAGE WITH 1 HUNTER + navbar product button -> IBELLO PAGE
+ORDER PAGE WITH 1 HUNTER + navbar services button -> SERVICES PAGE
+ORDER PAGE WITH 1 HUNTER + navbar about button -> ABOUT PAGE
+ORDER PAGE WITH 1 HUNTER + navbar support button -> SUPPORT PAGE
+ORDER PAGE WITH 1 MASTER HUNTER + logo button -> HOME PAGE
+ORDER PAGE WITH 1 MASTER HUNTER + navbar product button -> IBELLO PAGE
+ORDER PAGE WITH 1 MASTER HUNTER + navbar services button -> SERVICES PAGE
+ORDER PAGE WITH 1 MASTER HUNTER + navbar about button -> ABOUT PAGE
+ORDER PAGE WITH 1 MASTER HUNTER + navbar support button -> SUPPORT PAGE
+QUOTATION PAGE WITHOUT SERVICE + logo button -> HOME PAGE
+QUOTATION PAGE WITHOUT SERVICE + navbar product button -> IBELLO PAGE
+QUOTATION PAGE WITHOUT SERVICE + navbar services button -> SERVICES PAGE
+QUOTATION PAGE WITHOUT SERVICE + navbar about button -> ABOUT PAGE
+QUOTATION PAGE WITHOUT SERVICE + navbar support button -> SUPPORT PAGE
+QUOTATION PAGE WITH ONLINE AUTOMATED TEST + logo button -> HOME PAGE
+QUOTATION PAGE WITH ONLINE AUTOMATED TEST + navbar product button -> IBELLO PAGE
+QUOTATION PAGE WITH ONLINE AUTOMATED TEST + navbar services button -> SERVICES PAGE
+QUOTATION PAGE WITH ONLINE AUTOMATED TEST + navbar about button -> ABOUT PAGE
+QUOTATION PAGE WITH ONLINE AUTOMATED TEST + navbar support button -> SUPPORT PAGE
+QUOTATION PAGE WITH TEST FRAMEWORK + logo button -> HOME PAGE
+QUOTATION PAGE WITH TEST FRAMEWORK + navbar product button -> IBELLO PAGE
+QUOTATION PAGE WITH TEST FRAMEWORK + navbar services button -> SERVICES PAGE
+QUOTATION PAGE WITH TEST FRAMEWORK + navbar about button -> ABOUT PAGE
+QUOTATION PAGE WITH TEST FRAMEWORK + navbar support button -> SUPPORT PAGE
+QUOTATION PAGE WITH CONSULTANCY + logo button -> HOME PAGE
+QUOTATION PAGE WITH CONSULTANCY + navbar product button -> IBELLO PAGE
+QUOTATION PAGE WITH CONSULTANCY + navbar services button -> SERVICES PAGE
+QUOTATION PAGE WITH CONSULTANCY + navbar about button -> ABOUT PAGE
+QUOTATION PAGE WITH CONSULTANCY + navbar support button -> SUPPORT PAGE
+QUOTATION PAGE WITH DEV AND TEST TRAINING + logo button -> HOME PAGE
+QUOTATION PAGE WITH DEV AND TEST TRAINING + navbar product button -> IBELLO PAGE
+QUOTATION PAGE WITH DEV AND TEST TRAINING + navbar services button -> SERVICES PAGE
+QUOTATION PAGE WITH DEV AND TEST TRAINING + navbar about button -> ABOUT PAGE
+QUOTATION PAGE WITH DEV AND TEST TRAINING + navbar support button -> SUPPORT PAGE
+CHANGE LOG PAGE + logo button -> HOME PAGE
+CHANGE LOG PAGE + navbar product button -> IBELLO PAGE
+CHANGE LOG PAGE + navbar services button -> SERVICES PAGE
+CHANGE LOG PAGE + navbar about button -> ABOUT PAGE
+CHANGE LOG PAGE + navbar support button -> SUPPORT PAGE
+QUOTATION PAGE WITH AUTOMATED TESTS + logo button -> HOME PAGE
+QUOTATION PAGE WITH AUTOMATED TESTS + navbar product button -> IBELLO PAGE
+QUOTATION PAGE WITH AUTOMATED TESTS + navbar services button -> SERVICES PAGE
+QUOTATION PAGE WITH AUTOMATED TESTS + navbar about button -> ABOUT PAGE
+QUOTATION PAGE WITH AUTOMATED TESTS + navbar support button -> SUPPORT PAGE
+
+[navigation: i am on homepage]
+    state HOME PAGE
+    option navigation to about page using details button
+    option navigation to documentations page using documentations button
+    option navigation to interest page using try it button
+    option navigation to pricing page using details button
+    option navigation to product page using learn more button
+    option navigation to product page using our product button
+    option navigation to services page using our services button
+    option navigation to services page using work with us button
+    option navigation to support page using more options button
+
+[navigation: i am on about page]
+    state ABOUT PAGE
+    option logo button
+    option navbar product button
+    option navbar services button
+    option navbar support button
+
+[navigation: i am on homepage]
+    state HOME PAGE
+    option documentations button
+    option more options button
+    option navbar, details button
+    option navbar, learn more button
+    option navbar, work with us button
+    option order details button
+    option our product from header
+    option our services from header
+    option try it button
+
+[navigation: i am on product page]
+    state IBELLO PAGE
+    option download button
+    option logo button
+    option navbar about button
+    option navbar services button
+    option navbar support button
+    option order hunter button
+    option order master hunter button
+    option order now button
+    option order outpost button
+    option order sentinel button
+
+[navigation: i am on order page and no product is selected]
+    state ORDER PAGE WHITOUT PRODUCT
+    option logo button
+    option navbar about button
+    option navbar product button
+    option navbar services button
+    option navbar support button
+
+[navigation: i am on services page]
+    state SERVICES PAGE
+    option logo button
+    option navbar about button
+    option navbar product button
+    option navbar support button
+    option request quotation button
+    option request quotation for automated tests
+    option request quotation for consultancy
+    option request quotation for dev and test training
+    option request quotation for online automated test
+    option request quotation for test framework
+
+[navigation: i am on support page]
+    state SUPPORT PAGE
+    option logo button
+    option navbar about button
+    option navbar product button
+    option navbar services button
+    option read it button
+
+[navigation: i am on documentations page]
+    state DOCUMENTATIONS PAGE
+    option logo button
+    option navbar about button
+    option navbar product button
+    option navbar services button
+    option navbar support button
+
+[navigation: i am on interest page]
+    state INTEREST PAGE
+    option logo button
+    option navbar about button
+    option navbar product button
+    option navbar services button
+    option navbar support button
+
+[navigation: i am on pricing]
+    state PRICING PAGE
+    option logo button
+    option navbar about button
+    option navbar product button
+    option navbar services button
+    option navbar support button
+
+[navigation: i am on change log page]
+    state CHANGE LOG PAGE
+    option logo button
+    option navbar about button
+    option navbar product button
+    option navbar services button
+    option navbar support button
+
+[navigation: i navigate directly to support page using the navbar]
+    input navbar support button
+
+[navigation: i navigate directly to homepage using the navbar]
+    input logo button
+
+[navigation: i navigate directly to about page using the navbar]
+    input navbar about button
+
+[navigation: i navigate directly to services page using the navbar]
+    input navbar services button
+
+[navigation: i navigate directly to product page using the navbar]
+    input navbar product button
+
+[navigation: i am on quotation page without selected service]
+    state QUOTATION PAGE WITHOUT SERVICE
+    option logo button
+    option navbar about button
+    option navbar product button
+    option navbar services button
+    option navbar support button
+
+[navigation: i am on order page and outpost is selected]
+    state ORDER PAGE WITH 1 OUTPOST
+    option logo button
+    option navbar about button
+    option navbar product button
+    option navbar services button
+    option navbar support button
+
+[navigation: i am on order page and sentinel is selected]
+    state ORDER PAGE WITH 1 SENTINEL
+    option logo button
+    option navbar about button
+    option navbar product button
+    option navbar services button
+    option navbar support button
+
+[navigation: i am on order page and hunter is selected]
+    state ORDER PAGE WITH 1 HUNTER
+    option logo button
+    option navbar about button
+    option navbar product button
+    option navbar services button
+    option navbar support button
+
+[navigation: from product page i navigate to order page]
+    input order now button
+
+[navigation: from product page i order an outpost product]
+    input order outpost button
+
+[navigation: from product page i order a hunter product]
+    input order hunter button
+
+[navigation: from homepage i navigate to about page]
+    input navbar, details button
+
+[navigation: from services page i request guotation]
+    input request quotation button
+
+[navigation: from support page i navigate to documentations page]
+    input read it button
