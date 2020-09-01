@@ -30,7 +30,7 @@ public class NavigationWorkflow extends StepLibrary{
     }
 
     public void from_homepage_i_navigate_to_documentations_page() {
-        // TODO auto-generated method
+        navigationSteps.i_use_navbar_to_navigate_to_documentations_page();
     }
 
     public void from_homepage_i_navigate_to_interest_page() {

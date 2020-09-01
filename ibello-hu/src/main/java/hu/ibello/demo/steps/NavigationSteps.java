@@ -166,4 +166,12 @@ public class NavigationSteps extends StepLibrary {
         homePage.click_meet_us_button();
     }
 
+    public void i_use_navbar_to_navigate_to_documentations_page() {
+        navigationBar.click_support_link();
+        String url = "/#home-support";
+        homePage.expect_url_is_$(url);
+        homePage.click_documentations_button();
+    }
+
+
 }

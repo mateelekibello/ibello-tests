@@ -47,7 +47,9 @@ public class HomePage extends AbstractPage {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-about-summary")
     private WebElement meetUsButton;
 
-    private boolean isOpened;
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#all-docs']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-support-summary")
+    private WebElement documentationsButton;
 
     public void assume_$_text_is_displayed(String textToCheck) {
         expectations().assume(text.applyParameters(textToCheck)).toBe().displayed();
@@ -55,6 +57,10 @@ public class HomePage extends AbstractPage {
 
     public void assume_$_text_is_not_displayed(String textToCheck) {
         expectations().assume(text.applyParameters(textToCheck)).toNotBe().displayed();
+    }
+
+    public void i_expect_main_lane_is_displayed() {
+        expectations().expect(mainLane).toBe().displayed();
     }
 
     public void click_our_product_button() {
@@ -99,8 +105,8 @@ public class HomePage extends AbstractPage {
         doWith(meetUsButton).click();
     }
 
-    public void i_expect_main_lane_is_displayed() {
-        expectations().expect(mainLane).toBe().displayed();
+    public void click_documentations_button() {
+        doWith(documentationsButton).click();
     }
 
 }

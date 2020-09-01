@@ -90,4 +90,13 @@ meetUsButton = clickable {
     }
     xpath '/html[1]/body[1]/router-view[1]/about-summary-lane[1]/div[1]/a[1]'
     click_meet_us_button = action click
+    hidden
+}
+
+documentationsButton = clickable {
+    cssSelector 'a[href=\'#all-docs\']'
+    descendantOf {
+        className 'lane-support-summary'
+    }
+    click_documentations_button = action click
 }
