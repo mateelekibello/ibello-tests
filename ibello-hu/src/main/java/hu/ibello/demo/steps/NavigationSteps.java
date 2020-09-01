@@ -232,4 +232,30 @@ public class NavigationSteps extends StepLibrary {
     public void i_navigate_from_services_page_to_quotation_page() {
         servicesPage.click_request_button();
     }
+
+    public void i_make_a_request_for_online_automated_testing() {
+        servicesPage.open_service_with_index_$(0);
+        servicesPage.click_request_online_testing_button();
+    }
+
+    public void i_make_a_request_for_automated_testing_for_applications() {
+        servicesPage.open_service_with_index_$(1);
+        servicesPage.click_request_automated_test_button();
+    }
+
+    public void i_make_a_request_for_test_framework_building() {
+        servicesPage.open_service_with_index_$(2);
+        servicesPage.click_request_test_framework_button();
+    }
+
+    public void i_make_a_request_for_consultancy() {
+        servicesPage.open_service_with_index_$(3);
+        servicesPage.click_request_consultancy_button();
+    }
+
+    public void i_make_a_request_for_trainings() {
+        servicesPage.open_service_with_index_$(4);
+        servicesPage.click_request_trainings_button();
+    }
+
 }

@@ -225,23 +225,23 @@ public class NavigationWorkflow extends StepLibrary{
     }
 
     public void i_request_quotation_for_automated_tests() {
-        // TODO auto-generated method
+        navigationSteps.i_make_a_request_for_automated_testing_for_applications();
     }
 
     public void i_request_quotation_for_consultancy() {
-        // TODO auto-generated method
+        navigationSteps.i_make_a_request_for_consultancy();
     }
 
     public void i_request_quotation_for_dev_and_test_training() {
-        // TODO auto-generated method
+        navigationSteps.i_make_a_request_for_trainings();
     }
 
     public void i_request_quotation_for_online_automated_test() {
-        // TODO auto-generated method
+        navigationSteps.i_make_a_request_for_online_automated_testing();
     }
 
     public void i_request_quotation_for_test_framework() {
-        // TODO auto-generated method
+        navigationSteps.i_make_a_request_for_test_framework_building();
     }
 
 }

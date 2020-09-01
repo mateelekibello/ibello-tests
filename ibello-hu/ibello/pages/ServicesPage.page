@@ -10,4 +10,52 @@ requestButton = clickable {
         className 'lane-convert'
     }
     click_request_button = action click
+    hidden
+}
+
+requestOnlineTestingButton = clickable {
+    cssSelector 'a[href=\'#/quotation?service=online_testing\']'
+    descendantOf {
+        className 'lane-service-details'
+    }
+    click_request_online_testing_button = action click
+}
+
+requestAutomatedTestButton = clickable {
+    cssSelector ' a[href=\'#/quotation?service=test_apps\']'
+    descendantOf {
+        className 'lane-service-details'
+    }
+    click_request_automated_test_button = action click
+}
+
+requestTestFrameworkButton = clickable {
+    cssSelector ' a[href=\'#/quotation?service=test_framework\']'
+    descendantOf {
+        className 'lane-service-details'
+    }
+    click_request_test_framework_button = action click
+}
+
+requestConsultancyButton = clickable {
+    cssSelector ' a[href=\'#/quotation?service=consultancy\']'
+    descendantOf {
+        className 'lane-service-details'
+    }
+    click_request_consultancy_button = action click
+}
+
+requestTrainingsButton = clickable {
+    cssSelector ' a[href=\'#/quotation?service=trainings\']'
+    descendantOf {
+        className 'lane-service-details'
+    }
+    click_request_trainings_button = action click
+}
+
+serviceSector = element {
+    cssSelector 'h3'
+    descendantOf {
+        className 'lane-service-details'
+    }
 }
