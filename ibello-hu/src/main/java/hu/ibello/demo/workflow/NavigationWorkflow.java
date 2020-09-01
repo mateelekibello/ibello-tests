@@ -61,8 +61,8 @@ public class NavigationWorkflow extends StepLibrary{
         navigationSteps.i_navigate_from_interest_page_to_installation_documentation_page();
     }
 
-    public void from_product_page_header_i_navigate_to_product_page() {
-        // TODO auto-generated method
+    public void from_product_page_header_i_navigate_to_interest_page() {
+        navigationSteps.i_navigate_from_product_page_header_to_interest_page();
     }
 
     public void from_product_page_i_navigate_to_order_page() {

@@ -329,4 +329,9 @@ public class NavigationSteps extends StepLibrary {
     public void i_navigate_from_support_page_to_installation_documentation_page() {
         supportPage.click_installation_guide_button();
     }
+
+    public void i_navigate_from_product_page_header_to_interest_page() {
+        ibelloPage.click_details_technics_button();
+        ibelloPage.click_download_button();
+    }
 }

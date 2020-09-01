@@ -179,9 +179,6 @@ INSTALLATION DOC PAGE + more documentations button -> DOCUMENTATIONS PAGE
 [navigation: from homepage header i navigate to services page]
     input header our services
 
-[navigation: from product page header i navigate to product page]
-    input header details, download button
-
 [navigation: from interest page i navigate to installation documentation page]
     input interest page, installation guide button
 
@@ -281,3 +278,6 @@ INSTALLATION DOC PAGE + more documentations button -> DOCUMENTATIONS PAGE
 
 [navigation: i request quotation for online automated test]
     input request quotation for online automated test
+
+[navigation: from product page header i navigate to interest page]
+    input header details, download button

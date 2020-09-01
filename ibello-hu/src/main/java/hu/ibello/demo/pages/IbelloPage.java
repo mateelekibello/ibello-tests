@@ -30,6 +30,14 @@ public class IbelloPage extends AbstractPage {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-attribute-details")
     private WebElement orderMasterHunterButton;
 
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#ibello_technics']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-welcome-ibello")
+    private WebElement detailsTechnicsButton;
+
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#interest']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-attributes")
+    private WebElement downloadButton;
+
     public void expect_ibello_lane_is_displayed() {
         expectations().expect(ibelloLane).toBe().displayed();
     }
@@ -52,6 +60,14 @@ public class IbelloPage extends AbstractPage {
 
     public void click_order_master_hunter_button() {
         doWith(orderMasterHunterButton).click();
+    }
+
+    public void click_details_technics_button() {
+        doWith(detailsTechnicsButton).click();
+    }
+
+    public void click_download_button() {
+        doWith(downloadButton).click();
     }
 
 }

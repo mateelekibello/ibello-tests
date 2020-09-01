@@ -23,6 +23,7 @@ orderOutpostButton = clickable {
         className 'lane-attribute-details'
     }
     click_order_outpost_button = action click
+    hidden
 }
 
 orderSentintelButton = clickable {
@@ -31,6 +32,7 @@ orderSentintelButton = clickable {
         className 'lane-attribute-details'
     }
     click_order_sentintel_button = action click
+    hidden
 }
 
 orderHunterButton = clickable {
@@ -39,6 +41,7 @@ orderHunterButton = clickable {
         className 'lane-attribute-details'
     }
     click_order_hunter_button = action click
+    hidden
 }
 
 orderMasterHunterButton = clickable {
@@ -47,4 +50,21 @@ orderMasterHunterButton = clickable {
         className 'lane-attribute-details'
     }
     click_order_master_hunter_button = action click
+    hidden
+}
+
+detailsTechnicsButton = clickable {
+    cssSelector 'a[href=\'#ibello_technics\']'
+    descendantOf {
+        className 'lane-welcome-ibello'
+    }
+    click_details_technics_button = action click
+}
+
+downloadButton = clickable {
+    cssSelector 'a[href=\'#interest\']'
+    descendantOf {
+        className 'lane-attributes'
+    }
+    click_download_button = action click
 }

@@ -8,7 +8,7 @@ Scenario: Scenario #1
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -28,7 +28,7 @@ Scenario: Scenario #2
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -50,7 +50,7 @@ Scenario: Scenario #3
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -72,7 +72,7 @@ Scenario: Scenario #4
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -94,7 +94,7 @@ Scenario: Scenario #5
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -124,7 +124,7 @@ Scenario: Scenario #6
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -154,7 +154,7 @@ Scenario: Scenario #7
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -184,7 +184,7 @@ Scenario: Scenario #8
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -214,7 +214,7 @@ Scenario: Scenario #9
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -244,7 +244,7 @@ Scenario: Scenario #10
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -278,7 +278,7 @@ Scenario: Scenario #11
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -314,7 +314,7 @@ Scenario: Scenario #12
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -350,7 +350,7 @@ Scenario: Scenario #13
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -386,7 +386,7 @@ Scenario: Scenario #14
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -422,7 +422,7 @@ Scenario: Scenario #15
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -458,7 +458,7 @@ Scenario: Scenario #16
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -494,7 +494,7 @@ Scenario: Scenario #17
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -530,7 +530,7 @@ Scenario: Scenario #18
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
@@ -562,7 +562,7 @@ Scenario: Scenario #19
 	Then navigation: i am on services page
 	When navigation: i navigate directly to product page using the navbar
 	Then navigation: i am on product page
-	When navigation: from product page header i navigate to product page
+	When navigation: from product page header i navigate to interest page
 	Then navigation: i am on interest page
 	When navigation: from interest page i navigate to installation documentation page
 	Then navigation: i am on installation documentation page
