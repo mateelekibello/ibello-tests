@@ -108,6 +108,7 @@ learnMoreButton = clickable {
         className 'lane-ibello-summary'
     }
     click_learn_more_button = action click
+    hidden
 }
 
 tryItButton = clickable {
@@ -116,4 +117,22 @@ tryItButton = clickable {
         className 'lane-ibello-summary'
     }
     click_try_it_button = action click
+    hidden
+}
+
+workWithUsButton = clickable {
+    cssSelector 'a[href=\'#services\']'
+    descendantOf {
+        className 'lane-services-summary'
+    }
+    click_work_with_us_button = action click
+    hidden
+}
+
+moreOptionsButton = clickable {
+    cssSelector 'a[href=\'#support\']'
+    descendantOf {
+        className 'lane-support-summary'
+    }
+    click_more_options_button = action click
 }

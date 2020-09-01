@@ -186,4 +186,19 @@ public class NavigationSteps extends StepLibrary {
         homePage.expect_url_is_$(url);
         homePage.click_learn_more_button();
     }
+
+    public void i_use_navbar_to_navigate_to_services_page() {
+        navigationBar.click_product_link();
+        String url = "/#home-services";
+        homePage.expect_url_is_$(url);
+        homePage.click_work_with_us_button();
+    }
+
+    public void i_use_navbar_to_navigate_to_support_page() {
+        navigationBar.click_support_link();
+        String url = "/#home-support";
+        homePage.expect_url_is_$(url);
+        homePage.click_more_options_button();
+    }
+
 }
