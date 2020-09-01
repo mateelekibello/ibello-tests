@@ -16,3 +16,35 @@ orderButton = clickable {
     click_order_button = action click
     hidden
 }
+
+orderOutpostButton = clickable {
+    cssSelector 'a[href=\'#/order?product=OUTPOST\']'
+    descendantOf {
+        className 'lane-attribute-details'
+    }
+    click_order_outpost_button = action click
+}
+
+orderSentintelButton = clickable {
+    cssSelector 'a[href=\'#/order?product=SENTINEL\']'
+    descendantOf {
+        className 'lane-attribute-details'
+    }
+    click_order_sentintel_button = action click
+}
+
+orderHunterButton = clickable {
+    cssSelector 'a[href=\'#/order?product=HUNTER\']'
+    descendantOf {
+        className 'lane-attribute-details'
+    }
+    click_order_hunter_button = action click
+}
+
+orderMasterHunterButton = clickable {
+    cssSelector 'a[href=\'#/order?product=MASTER_HUNTER\']'
+    descendantOf {
+        className 'lane-attribute-details'
+    }
+    click_order_master_hunter_button = action click
+}

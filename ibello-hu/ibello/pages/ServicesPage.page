@@ -19,6 +19,7 @@ requestOnlineTestingButton = clickable {
         className 'lane-service-details'
     }
     click_request_online_testing_button = action click
+    hidden
 }
 
 requestAutomatedTestButton = clickable {
@@ -27,6 +28,7 @@ requestAutomatedTestButton = clickable {
         className 'lane-service-details'
     }
     click_request_automated_test_button = action click
+    hidden
 }
 
 requestTestFrameworkButton = clickable {
@@ -35,6 +37,7 @@ requestTestFrameworkButton = clickable {
         className 'lane-service-details'
     }
     click_request_test_framework_button = action click
+    hidden
 }
 
 requestConsultancyButton = clickable {
@@ -43,6 +46,7 @@ requestConsultancyButton = clickable {
         className 'lane-service-details'
     }
     click_request_consultancy_button = action click
+    hidden
 }
 
 requestTrainingsButton = clickable {
@@ -51,6 +55,7 @@ requestTrainingsButton = clickable {
         className 'lane-service-details'
     }
     click_request_trainings_button = action click
+    hidden
 }
 
 serviceSector = element {
@@ -58,4 +63,9 @@ serviceSector = element {
     descendantOf {
         className 'lane-service-details'
     }
+    hidden
+}
+
+onlineTestingCheckbox = checkbox {
+    hidden
 }

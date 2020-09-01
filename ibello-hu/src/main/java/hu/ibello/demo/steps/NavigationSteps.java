@@ -258,4 +258,27 @@ public class NavigationSteps extends StepLibrary {
         servicesPage.click_request_trainings_button();
     }
 
+    public void i_see_that_online_automated_testing_is_selected() {
+    }
+
+    public void i_navigate_from_product_page_to_order_page() {
+        ibelloPage.click_order_button();
+    }
+
+    public void i_order_a_hunter_product() {
+        ibelloPage.click_order_hunter_button();
+    }
+
+    public void i_order_a_master_hunter_product() {
+        ibelloPage.click_order_master_hunter_button();
+    }
+
+    public void i_order_a_sentinel_product() {
+        ibelloPage.click_order_sentintel_button();
+    }
+
+    public void i_order_an_outpost_product() {
+        ibelloPage.click_order_outpost_button();
+    }
+
 }
