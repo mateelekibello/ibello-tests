@@ -206,7 +206,7 @@ INSTALLATION DOC PAGE + more documentations button -> DOCUMENTATIONS PAGE
 [navigation: from support page i navigate to change log page]
     input change log button
 
-[navigation: from support page i navigate to product page]
+[navigation: from support page header i navigate to product page]
     input our product button
 
 [navigation: from homepage i navigate to pricing page]

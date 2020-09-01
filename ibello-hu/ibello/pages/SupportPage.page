@@ -1,9 +1,53 @@
 welcomeLane = element {
     cssSelector 'welcome-main-lane'
     expect_welcome_lane_is_displayed = expect toBe displayed
+    hidden
 }
 
 loginLane = element {
     cssSelector 'login-lane'
     expect_login_lane_is_displayed = expect toBe displayed
+    hidden
+}
+
+ourProductButton = clickable {
+    cssSelector 'a[href=\'#ibello\']'
+    descendantOf {
+        className 'lane-welcome-main'
+    }
+    click_our_product_button = action click
+    hidden
+}
+
+ourServicesButton = clickable {
+    cssSelector 'a[href=\'#services\']'
+    descendantOf {
+        className 'lane-welcome-main'
+    }
+    click_our_services_button = action click
+    hidden
+}
+
+changelogButton = clickable {
+    cssSelector 'a[href=\'#documentation-changelog\']'
+    descendantOf {
+        className 'lane-changes'
+    }
+    click_changelog_button = action click
+}
+
+installationGuideButton = clickable {
+    cssSelector 'a[href=\'#documentation-installation\']'
+    descendantOf {
+        className 'lane-download'
+    }
+    click_installation_guide_button = action click
+}
+
+readItButton = clickable {
+    cssSelector 'a[href=\'#all-docs\']'
+    descendantOf {
+        className 'lane-docs'
+    }
+    click_read_it_button = action click
 }

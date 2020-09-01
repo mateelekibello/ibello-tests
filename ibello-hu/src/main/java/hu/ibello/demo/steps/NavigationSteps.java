@@ -281,4 +281,52 @@ public class NavigationSteps extends StepLibrary {
         ibelloPage.click_order_outpost_button();
     }
 
+    public void i_see_that_no_product_is_selected() {
+        for (int i = 0; i < 4; i++) {
+            check_if_order_with_$_index_is_selected(i);
+        }
+    }
+
+    public void i_see_that_outpost_is_selected() {
+        check_if_order_with_$_index_is_selected(0);
+    }
+
+    public void i_see_that_sentinel_is_selected() {
+        check_if_order_with_$_index_is_selected(1);
+    }
+
+    public void i_see_that_hunter_is_selected() {
+        check_if_order_with_$_index_is_selected(2);
+    }
+
+    public void i_see_that_master_hunter_is_selected() {
+        check_if_order_with_$_index_is_selected(3);
+    }
+
+    private void check_if_order_with_$_index_is_selected(int index) {
+        int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
+        if (currentNum != 0) {
+            throw new AssertionError("There is product selection!");
+        }
+    }
+
+    public void i_navigate_from_support_page_header_to_product_page() {
+        supportPage.click_our_product_button();
+    }
+
+    public void i_navigate_from_support_page_header_to_services_page() {
+        supportPage.click_our_services_button();
+    }
+
+    public void i_navigate_from_support_page_to_changelog_page() {
+        supportPage.click_changelog_button();
+    }
+
+    public void i_navigate_from_support_page_to_documentations_page() {
+        supportPage.click_read_it_button();
+    }
+
+    public void i_navigate_from_support_page_to_installation_documentation_page() {
+        supportPage.click_installation_guide_button();
+    }
 }

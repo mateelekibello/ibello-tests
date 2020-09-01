@@ -106,7 +106,7 @@ Scenario: Scenario #5
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -136,7 +136,7 @@ Scenario: Scenario #6
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -166,7 +166,7 @@ Scenario: Scenario #7
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -196,7 +196,7 @@ Scenario: Scenario #8
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -226,7 +226,7 @@ Scenario: Scenario #9
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -256,7 +256,7 @@ Scenario: Scenario #10
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -290,7 +290,7 @@ Scenario: Scenario #11
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -326,7 +326,7 @@ Scenario: Scenario #12
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -362,7 +362,7 @@ Scenario: Scenario #13
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -398,7 +398,7 @@ Scenario: Scenario #14
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -434,7 +434,7 @@ Scenario: Scenario #15
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -470,7 +470,7 @@ Scenario: Scenario #16
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -506,7 +506,7 @@ Scenario: Scenario #17
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -542,7 +542,7 @@ Scenario: Scenario #18
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected
@@ -574,7 +574,7 @@ Scenario: Scenario #19
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
-	When navigation: from support page i navigate to product page
+	When navigation: from support page header i navigate to product page
 	Then navigation: i am on product page
 	When navigation: from product page i navigate to order page
 	Then navigation: i am on order page and no product is selected

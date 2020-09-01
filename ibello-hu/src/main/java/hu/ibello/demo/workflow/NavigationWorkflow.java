@@ -89,24 +89,24 @@ public class NavigationWorkflow extends StepLibrary{
         navigationSteps.i_navigate_from_services_page_to_quotation_page();
     }
 
+    public void from_support_page_header_i_navigate_to_product_page() {
+        navigationSteps.i_navigate_from_support_page_header_to_product_page();
+    }
+
     public void from_support_page_header_i_navigate_to_services_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_support_page_header_to_services_page();
     }
 
     public void from_support_page_i_navigate_to_change_log_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_support_page_to_changelog_page();
     }
 
     public void from_support_page_i_navigate_to_documentations_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_support_page_to_documentations_page();
     }
 
     public void from_support_page_i_navigate_to_installation_documentation_page() {
-        // TODO auto-generated method
-    }
-
-    public void from_support_page_i_navigate_to_product_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_support_page_to_installation_documentation_page();
     }
 
     public void i_am_on_about_page() {
@@ -147,27 +147,27 @@ public class NavigationWorkflow extends StepLibrary{
 
     public void i_am_on_order_page_and_hunter_is_selected() {
         navigationSteps.i_am_on_order_page();
-        // TODO check selection
+        navigationSteps.i_see_that_hunter_is_selected();
     }
 
     public void i_am_on_order_page_and_master_hunter_is_selected() {
         navigationSteps.i_am_on_order_page();
-        // TODO check selection
+        navigationSteps.i_see_that_master_hunter_is_selected();
     }
 
     public void i_am_on_order_page_and_no_product_is_selected() {
         navigationSteps.i_am_on_order_page();
-        // TODO check selection
+        navigationSteps.i_see_that_no_product_is_selected();
     }
 
     public void i_am_on_order_page_and_outpost_is_selected() {
         navigationSteps.i_am_on_order_page();
-        // TODO check selection
+        navigationSteps.i_see_that_outpost_is_selected();
     }
 
     public void i_am_on_order_page_and_sentinel_is_selected() {
         navigationSteps.i_am_on_order_page();
-        // TODO check selection
+        navigationSteps.i_see_that_sentinel_is_selected();
     }
 
     public void i_am_on_pricing_page() {
