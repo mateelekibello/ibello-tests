@@ -18,15 +18,15 @@ public class NavigationWorkflow extends StepLibrary{
     }
 
     public void from_homepage_header_i_navigate_to_product_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_homepage_header_to_product_page();
     }
 
     public void from_homepage_header_i_navigate_to_services_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_homepage_header_to_services_page();
     }
 
     public void from_homepage_i_navigate_to_about_page() {
-        // TODO auto-generated method
+        navigationSteps.i_use_navbar_to_navigate_to_about_page();
     }
 
     public void from_homepage_i_navigate_to_documentations_page() {
@@ -247,4 +247,5 @@ public class NavigationWorkflow extends StepLibrary{
     public void i_request_quotation_for_test_framework() {
         // TODO auto-generated method
     }
+
 }

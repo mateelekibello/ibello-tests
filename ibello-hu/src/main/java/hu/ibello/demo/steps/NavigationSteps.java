@@ -60,11 +60,11 @@ public class NavigationSteps extends StepLibrary {
         navigationBar.expect_menu_component_is_displayed();
     }
 
-    public void i_navigate_from_homepage_to_product_page() {
+    public void i_navigate_from_homepage_header_to_product_page() {
         homePage.click_our_product_button();
     }
 
-    public void i_navigate_from_homepage_to_services_page() {
+    public void i_navigate_from_homepage_header_to_services_page() {
         homePage.click_our_services_button();
     }
 
@@ -158,4 +158,12 @@ public class NavigationSteps extends StepLibrary {
         quotationPage.expect_quote_services_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
+
+    public void i_use_navbar_to_navigate_to_about_page() {
+        navigationBar.click_about_us_link();
+        String url = "/#home-about";
+        homePage.expect_url_is_$(url);
+        homePage.click_meet_us_button();
+    }
+
 }

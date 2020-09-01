@@ -15,7 +15,7 @@ Scenario: Scenario #1
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to about page
@@ -35,7 +35,7 @@ Scenario: Scenario #2
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -57,7 +57,7 @@ Scenario: Scenario #3
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -79,13 +79,13 @@ Scenario: Scenario #4
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
 	Then navigation: i am on support page
 	When navigation: from support page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 
 Scenario: Scenario #5
 	Given navigation: test init
@@ -101,7 +101,7 @@ Scenario: Scenario #5
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -129,7 +129,7 @@ Scenario: Scenario #6
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -159,7 +159,7 @@ Scenario: Scenario #7
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -189,7 +189,7 @@ Scenario: Scenario #8
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -219,7 +219,7 @@ Scenario: Scenario #9
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -249,7 +249,7 @@ Scenario: Scenario #10
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -279,7 +279,7 @@ Scenario: Scenario #11
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -313,7 +313,7 @@ Scenario: Scenario #12
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -349,7 +349,7 @@ Scenario: Scenario #13
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -385,7 +385,7 @@ Scenario: Scenario #14
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -421,7 +421,7 @@ Scenario: Scenario #15
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -457,7 +457,7 @@ Scenario: Scenario #16
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -493,7 +493,7 @@ Scenario: Scenario #17
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -529,7 +529,7 @@ Scenario: Scenario #18
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -565,7 +565,7 @@ Scenario: Scenario #19
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page
@@ -597,7 +597,7 @@ Scenario: Scenario #20
 	When navigation: from installation documentation page i navigate to documentations page
 	Then navigation: i am on documentations page
 	When navigation: from documentations page i navigate to change log page
-	Then navigation: i am on change log page
+	Then navigation: i am on changelog page
 	When navigation: i navigate directly to homepage using the navbar
 	Then navigation: i am on homepage
 	When navigation: from homepage i navigate to support page

@@ -154,7 +154,7 @@ INSTALLATION DOC PAGE + more documentations button -> DOCUMENTATIONS PAGE
     state DOCUMENTATIONS PAGE
     option read change log button
 
-[navigation: i am on change log page]
+[navigation: i am on changelog page]
     state CHANGE LOG PAGE
     option logo button
 

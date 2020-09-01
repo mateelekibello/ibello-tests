@@ -66,7 +66,7 @@ public class NavigationFromHomeWorkflow extends StepLibrary{
     }
 
     public void i_navigate_to_product_page_using_product_button() {
-        navigationSteps.i_navigate_from_homepage_to_product_page();
+        navigationSteps.i_navigate_from_homepage_header_to_product_page();
     }
 
     public void i_navigate_to_services_page_using_services_button() {
