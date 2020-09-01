@@ -10,7 +10,7 @@ public class NavigationWorkflow extends StepLibrary{
     private NavigationSteps navigationSteps;
 
     public void test_init() {
-        // TODO auto-generated method
+        navigationSteps.i_open_the_homepage();
     }
 
     public void from_homepage_header_i_navigate_to_product_page() {
@@ -176,17 +176,17 @@ public class NavigationWorkflow extends StepLibrary{
 
     public void i_am_on_quotation_page_and_automated_tests_is_selected() {
         navigationSteps.i_am_on_quotation_page();
-        // TODO check selection
+        navigationSteps.i_see_that_automated_test_for_apps_is_selected();
     }
 
     public void i_am_on_quotation_page_and_consultancy_is_selected() {
         navigationSteps.i_am_on_quotation_page();
-        // TODO check selection
+        navigationSteps.i_see_that_consultancy_is_selected();
     }
 
     public void i_am_on_quotation_page_and_dev_and_test_training_is_selected() {
         navigationSteps.i_am_on_quotation_page();
-        // TODO check selection
+        navigationSteps.i_see_that_training_is_selected();
     }
 
     public void i_am_on_quotation_page_and_online_automated_test_is_selected() {
@@ -196,12 +196,12 @@ public class NavigationWorkflow extends StepLibrary{
 
     public void i_am_on_quotation_page_and_test_framework_is_selected() {
         navigationSteps.i_am_on_quotation_page();
-        // TODO check selection
+        navigationSteps.i_see_that_test_framework_is_selected();
     }
 
     public void i_am_on_quotation_page_without_selected_service() {
         navigationSteps.i_am_on_quotation_page();
-        // TODO check selection
+        navigationSteps.i_see_that_test_nothing_is_selected();
     }
 
     public void i_navigate_directly_to_about_page_using_the_navbar() {

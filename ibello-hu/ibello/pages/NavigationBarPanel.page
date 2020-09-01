@@ -85,3 +85,35 @@ menuComponent = element {
     expect_menu_component_is_displayed = expect toBe displayed
     hidden
 }
+
+productDirectLink = clickable {
+    cssSelector 'a[href=\'#ibello\']'
+    descendantOf {
+        id 'menu'
+    }
+    click_product_direct_link = action click
+}
+
+servicesDirectLink = clickable {
+    cssSelector 'a[href=\'#services\']'
+    descendantOf {
+        id 'menu'
+    }
+    click_services_direct_link = action click
+}
+
+aboutDirectLink = clickable {
+    cssSelector 'a[href=\'#about\']'
+    descendantOf {
+        id 'menu'
+    }
+    click_about_direct_link = action click
+}
+
+supportDirectLink = clickable {
+    cssSelector 'a[href=\'#support\']'
+    descendantOf {
+        id 'menu'
+    }
+    click_support_direct_link = action click
+}

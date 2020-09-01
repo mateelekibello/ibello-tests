@@ -1,4 +1,51 @@
 quoteServicesLane = element {
     cssSelector 'quote-services-lane'
     expect_quote_services_lane_is_displayed = expect toBe displayed
+    hidden
+}
+
+onlineTestingCheckbox = checkbox {
+    id 'service-online_testing'
+    descendantOf {
+        className 'service'
+    }
+    assume_online_testing_checkbox_is_selected = assume toBe selected
+    assume_online_testing_checkbox_is_not_selected = assume toNotBe selected
+    hidden
+}
+
+automatedTestsCheckbox = checkbox {
+    id 'service-test_apps'
+    descendantOf {
+        className 'services'
+    }
+    assume_automated_tests_checkbox_is_selected = assume toBe selected
+    assume_automated_tests_checkbox_is_not_selected = assume toNotBe selected
+}
+
+frameworkCheckbox = checkbox {
+    id 'service-test_framework'
+    descendantOf {
+        className 'service'
+    }
+    assume_framework_checkbox_is_selected = assume toBe selected
+    assume_framework_checkbox_is_not_selected = assume toNotBe selected
+}
+
+consultancyCheckbox = checkbox {
+    id 'service-consultancy'
+    descendantOf {
+        className 'service'
+    }
+    assume_consultancy_checkbox_is_selected = assume toBe selected
+    assume_consultancy_checkbox_is_not_selected = assume toNotBe selected
+}
+
+traingingsCheckbox = checkbox {
+    id 'service-trainings'
+    descendantOf {
+        className 'service'
+    }
+    assume_traingings_checkbox_is_selected = assume toBe selected
+    assume_traingings_checkbox_is_not_selected = assume toNotBe selected
 }

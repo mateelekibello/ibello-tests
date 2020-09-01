@@ -65,7 +65,3 @@ serviceSector = element {
     }
     hidden
 }
-
-onlineTestingCheckbox = checkbox {
-    hidden
-}

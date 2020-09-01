@@ -44,6 +44,22 @@ public class NavigationBarPanel extends PageObject {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "menu-component")
     private WebElement homeLink;
 
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#ibello']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.ID, using = "menu")
+    private WebElement productDirectLink;
+
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#services']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.ID, using = "menu")
+    private WebElement servicesDirectLink;
+
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#about']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.ID, using = "menu")
+    private WebElement aboutDirectLink;
+
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#support']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.ID, using = "menu")
+    private WebElement supportDirectLink;
+
     public void expect_menu_component_is_displayed() {
         expectations().expect(menuComponent).toBe().displayed();
     }
@@ -78,6 +94,22 @@ public class NavigationBarPanel extends PageObject {
 
     public void click_home_link() {
         doWith(homeLink).click();
+    }
+
+    public void click_product_direct_link() {
+        doWith(productDirectLink).click();
+    }
+
+    public void click_services_direct_link() {
+        doWith(servicesDirectLink).click();
+    }
+
+    public void click_about_direct_link() {
+        doWith(aboutDirectLink).click();
+    }
+
+    public void click_support_direct_link() {
+        doWith(supportDirectLink).click();
     }
 
 }

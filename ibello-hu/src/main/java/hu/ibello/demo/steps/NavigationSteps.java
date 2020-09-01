@@ -113,21 +113,21 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void i_am_on_documentations_page() {
-        String url = "/public/#all-docs";
+        String url = "/#all-docs";
         documentationsPage.expect_url_is_$(url);
         documentationsPage.expect_docs_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
 
     public void i_am_on_interest_page() {
-        String url = "/public/#interest";
+        String url = "/#interest";
         interestPage.expect_url_is_$(url);
         interestPage.expect_workflow_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
 
     public void i_am_on_support_page() {
-        String url = "/public/#support";
+        String url = "/#support";
         supportPage.expect_url_is_$(url);
         supportPage.expect_welcome_lane_is_displayed();
         supportPage.expect_login_lane_is_displayed();
@@ -135,21 +135,21 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void i_am_on_changelog_page() {
-        String url = "/public/#documentation-changelog";
+        String url = "/#documentation-changelog";
         supportPage.expect_url_is_$(url);
         changelogPage.expect_doc_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
 
     public void i_am_on_installation_documentation_page() {
-        String url = "/public/#documentation-installation";
+        String url = "/#documentation-installation";
         installationDocPage.expect_url_is_$(url);
         installationDocPage.expect_doc_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
 
     public void i_am_on_quotation_page() {
-        String url = "/public/#quotation";
+        String url = "/#quotation";
         quotationPage.expect_url_is_$(url);
         quotationPage.expect_quote_services_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
@@ -214,19 +214,19 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void i_navigate_to_about_page_directly_from_navbar() {
-        navigationBar.click_about_us_link();
+        navigationBar.click_about_direct_link();
     }
 
     public void i_navigate_to_product_page_directly_from_navbar() {
-        navigationBar.click_product_link();
+        navigationBar.click_product_direct_link();
     }
 
     public void i_navigate_to_services_page_directly_from_navbar() {
-        navigationBar.click_services_link();
+        navigationBar.click_services_direct_link();
     }
 
     public void i_navigate_to_support_page_directly_from_navbar() {
-        navigationBar.click_support_link();
+        navigationBar.click_support_direct_link();
     }
 
     public void i_navigate_from_services_page_to_quotation_page() {
@@ -258,9 +258,6 @@ public class NavigationSteps extends StepLibrary {
         servicesPage.click_request_trainings_button();
     }
 
-    public void i_see_that_online_automated_testing_is_selected() {
-    }
-
     public void i_navigate_from_product_page_to_order_page() {
         ibelloPage.click_order_button();
     }
@@ -282,31 +279,78 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void i_see_that_no_product_is_selected() {
-        for (int i = 0; i < 4; i++) {
-            check_if_order_with_$_index_is_selected(i);
+        for (int index = 0; index < 4; index++) {
+            int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
+            if (currentNum != 0) {
+                throw new AssertionError("There is unexpected product selection!");
+            }
         }
     }
 
     public void i_see_that_outpost_is_selected() {
-        check_if_order_with_$_index_is_selected(0);
+        int porductIndex = 0;
+        for (int index = 0; index < 4; index++) {
+            int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
+            if (index == porductIndex) {
+                if (currentNum != 1) {
+                    throw new AssertionError("The outpost is not selected!");
+                }
+            }
+            if (currentNum > 0 && index != porductIndex) {
+                throw new AssertionError("There is unexpected product selection!");
+            }
+        }
     }
 
     public void i_see_that_sentinel_is_selected() {
-        check_if_order_with_$_index_is_selected(1);
+        int porductIndex = 1;
+        for (int index = 0; index < 4; index++) {
+            int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
+            if (index == porductIndex) {
+                if (currentNum != 1) {
+                    throw new AssertionError("The sentinel is not selected!");
+                }
+            }
+            if (currentNum > 0 && index != porductIndex) {
+                throw new AssertionError("There is unexpected product selection!");
+            }
+        }
     }
 
     public void i_see_that_hunter_is_selected() {
-        check_if_order_with_$_index_is_selected(2);
+        int porductIndex = 2;
+        for (int index = 0; index < 4; index++) {
+            int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
+            if (index == porductIndex) {
+                if (currentNum != 1) {
+                    throw new AssertionError("The hunter is not selected!");
+                }
+            }
+            if (currentNum > 0 && index != porductIndex) {
+                throw new AssertionError("There is unexpected product selection!");
+            }
+        }
     }
 
     public void i_see_that_master_hunter_is_selected() {
-        check_if_order_with_$_index_is_selected(3);
+        int porductIndex = 3;
+        for (int index = 0; index < 4; index++) {
+            int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
+            if (index == porductIndex) {
+                if (currentNum != 1) {
+                    throw new AssertionError("The master hunter is not selected!");
+                }
+            }
+            if (currentNum > 0 && index != porductIndex) {
+                throw new AssertionError("There is unexpected product selection!");
+            }
+        }
     }
 
     private void check_if_order_with_$_index_is_selected(int index) {
         int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
         if (currentNum != 0) {
-            throw new AssertionError("There is product selection!");
+            throw new AssertionError("There is no product selection!");
         }
     }
 
@@ -333,5 +377,53 @@ public class NavigationSteps extends StepLibrary {
     public void i_navigate_from_product_page_header_to_interest_page() {
         ibelloPage.click_details_technics_button();
         ibelloPage.click_download_button();
+    }
+
+    public void i_see_that_online_automated_testing_is_selected() {
+        quotationPage.assume_online_testing_checkbox_is_selected();
+        quotationPage.assume_automated_tests_checkbox_is_not_selected();
+        quotationPage.assume_framework_checkbox_is_not_selected();
+        quotationPage.assume_consultancy_checkbox_is_not_selected();
+        quotationPage.assume_traingings_checkbox_is_not_selected();
+    }
+
+    public void i_see_that_consultancy_is_selected() {
+        quotationPage.assume_online_testing_checkbox_is_not_selected();
+        quotationPage.assume_automated_tests_checkbox_is_not_selected();
+        quotationPage.assume_framework_checkbox_is_not_selected();
+        quotationPage.assume_consultancy_checkbox_is_selected();
+        quotationPage.assume_traingings_checkbox_is_not_selected();
+    }
+
+    public void i_see_that_training_is_selected() {
+        quotationPage.assume_online_testing_checkbox_is_not_selected();
+        quotationPage.assume_automated_tests_checkbox_is_not_selected();
+        quotationPage.assume_framework_checkbox_is_not_selected();
+        quotationPage.assume_consultancy_checkbox_is_not_selected();
+        quotationPage.assume_traingings_checkbox_is_selected();
+    }
+
+    public void i_see_that_test_framework_is_selected() {
+        quotationPage.assume_online_testing_checkbox_is_not_selected();
+        quotationPage.assume_automated_tests_checkbox_is_not_selected();
+        quotationPage.assume_framework_checkbox_is_selected();
+        quotationPage.assume_consultancy_checkbox_is_not_selected();
+        quotationPage.assume_traingings_checkbox_is_not_selected();
+    }
+
+    public void i_see_that_test_nothing_is_selected() {
+        quotationPage.assume_online_testing_checkbox_is_not_selected();
+        quotationPage.assume_automated_tests_checkbox_is_not_selected();
+        quotationPage.assume_framework_checkbox_is_not_selected();
+        quotationPage.assume_consultancy_checkbox_is_not_selected();
+        quotationPage.assume_traingings_checkbox_is_not_selected();
+    }
+
+    public void i_see_that_automated_test_for_apps_is_selected() {
+        quotationPage.assume_online_testing_checkbox_is_not_selected();
+        quotationPage.assume_automated_tests_checkbox_is_selected();
+        quotationPage.assume_framework_checkbox_is_not_selected();
+        quotationPage.assume_consultancy_checkbox_is_not_selected();
+        quotationPage.assume_traingings_checkbox_is_not_selected();
     }
 }
