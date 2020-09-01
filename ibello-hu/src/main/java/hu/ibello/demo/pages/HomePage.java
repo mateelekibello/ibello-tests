@@ -51,6 +51,14 @@ public class HomePage extends AbstractPage {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-support-summary")
     private WebElement documentationsButton;
 
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#ibello']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-ibello-summary")
+    private WebElement learnMoreButton;
+
+    @Find(by = By.CSS_SELECTOR, using = "a[href='#interest']")
+    @Relation(type = RelationType.DESCENDANT_OF, by = By.CLASS_NAME, using = "lane-ibello-summary")
+    private WebElement tryItButton;
+
     public void assume_$_text_is_displayed(String textToCheck) {
         expectations().assume(text.applyParameters(textToCheck)).toBe().displayed();
     }
@@ -107,6 +115,14 @@ public class HomePage extends AbstractPage {
 
     public void click_documentations_button() {
         doWith(documentationsButton).click();
+    }
+
+    public void click_learn_more_button() {
+        doWith(learnMoreButton).click();
+    }
+
+    public void click_try_it_button() {
+        doWith(tryItButton).click();
     }
 
 }

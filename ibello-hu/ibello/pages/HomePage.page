@@ -99,4 +99,21 @@ documentationsButton = clickable {
         className 'lane-support-summary'
     }
     click_documentations_button = action click
+    hidden
+}
+
+learnMoreButton = clickable {
+    cssSelector 'a[href=\'#ibello\']'
+    descendantOf {
+        className 'lane-ibello-summary'
+    }
+    click_learn_more_button = action click
+}
+
+tryItButton = clickable {
+    cssSelector 'a[href=\'#interest\']'
+    descendantOf {
+        className 'lane-ibello-summary'
+    }
+    click_try_it_button = action click
 }

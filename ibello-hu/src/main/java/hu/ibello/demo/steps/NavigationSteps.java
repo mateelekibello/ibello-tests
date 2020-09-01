@@ -173,5 +173,10 @@ public class NavigationSteps extends StepLibrary {
         homePage.click_documentations_button();
     }
 
-
+    public void i_use_navbar_to_navigate_to_interest_page() {
+        navigationBar.click_product_link();
+        String url = "/#home-ibello";
+        homePage.expect_url_is_$(url);
+        homePage.click_try_it_button();
+    }
 }
