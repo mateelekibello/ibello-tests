@@ -186,7 +186,7 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void i_use_navbar_to_navigate_to_services_page() {
-        navigationBar.click_product_link();
+        navigationBar.click_services_link();
         String url = "/#home-services";
         homePage.expect_url_is_$(url);
         homePage.click_work_with_us_button();
