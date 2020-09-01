@@ -201,4 +201,19 @@ public class NavigationSteps extends StepLibrary {
         homePage.click_more_options_button();
     }
 
+    public void i_navigate_from_documentations_page_to_changelog_page() {
+        documentationsPage.click_read_it_button();
+    }
+
+    public void i_navigate_from_installation_documentation_page_to_documentations_page() {
+        installationDocPage.click_more_doc_button();
+    }
+
+    public void i_navigate_from_interest_page_to_documentations_page() {
+        interestPage.click_read_it_button();
+    }
+
+    public void i_navigate_from_interest_page_to_installation_documentation_page() {
+        interestPage.click_install_guide_button();
+    }
 }

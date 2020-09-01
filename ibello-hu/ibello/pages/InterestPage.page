@@ -1,4 +1,22 @@
 workflowLane = element {
     cssSelector 'workflow-lane'
     expect_workflow_lane_is_displayed = expect toBe displayed
+    hidden
+}
+
+readItButton = clickable {
+    cssSelector 'a[href=\'#all-docs\']'
+    descendantOf {
+        className 'lane-docs'
+    }
+    click_read_it_button = action click
+    hidden
+}
+
+installGuideButton = clickable {
+    cssSelector 'a[href=\'#documentation-installation\']'
+    descendantOf {
+        className 'lane-download'
+    }
+    click_install_guide_button = action click
 }

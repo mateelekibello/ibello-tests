@@ -13,10 +13,6 @@ public class NavigationWorkflow extends StepLibrary{
         // TODO auto-generated method
     }
 
-    public void from_documentations_page_i_navigate_to_change_log_page() {
-        // TODO auto-generated method
-    }
-
     public void from_homepage_header_i_navigate_to_product_page() {
         navigationSteps.i_navigate_from_homepage_header_to_product_page();
     }
@@ -37,10 +33,6 @@ public class NavigationWorkflow extends StepLibrary{
         navigationSteps.i_use_navbar_to_navigate_to_interest_page();
     }
 
-    public void from_homepage_i_navigate_to_pricing_page() {
-        // TODO auto-generated method
-    }
-
     public void from_homepage_i_navigate_to_product_page() {
         navigationSteps.i_use_navbar_to_navigate_to_product_page();
     }
@@ -53,16 +45,20 @@ public class NavigationWorkflow extends StepLibrary{
         navigationSteps.i_use_navbar_to_navigate_to_support_page();
     }
 
+    public void from_documentations_page_i_navigate_to_change_log_page() {
+        navigationSteps.i_navigate_from_documentations_page_to_changelog_page();
+    }
+
     public void from_installation_documentation_page_i_navigate_to_documentations_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_installation_documentation_page_to_documentations_page();
     }
 
     public void from_interest_page_i_navigate_to_documentations_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_interest_page_to_documentations_page();
     }
 
     public void from_interest_page_i_navigate_to_installation_documentation_page() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_interest_page_to_installation_documentation_page();
     }
 
     public void from_product_page_header_i_navigate_to_product_page() {

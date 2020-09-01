@@ -1,4 +1,13 @@
 docsLane = element {
     cssSelector 'docs-lane'
     expect_docs_lane_is_displayed = expect toBe displayed
+    hidden
+}
+
+readItButton = clickable {
+    cssSelector 'a[href=\'#documentation-changelog\']'
+    descendantOf {
+        className 'lane-docs'
+    }
+    click_read_it_button = action click
 }

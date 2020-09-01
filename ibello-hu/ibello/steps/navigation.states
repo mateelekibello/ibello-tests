@@ -34,7 +34,6 @@ HOME PAGE + navbar services, work with us button -> SERVICES PAGE
 HOME PAGE + navbar about, details button -> ABOUT PAGE
 HOME PAGE + navbar support, more options button -> SUPPORT PAGE
 HOME PAGE + navbar support, documentations button -> DOCUMENTATIONS PAGE
-HOME PAGE + order details button -> PRICING PAGE
 IBELLO PAGE + header details, download button -> INTEREST PAGE
 IBELLO PAGE + order now button -> ORDER PAGE WHITOUT PRODUCT
 IBELLO PAGE + order outpost button -> ORDER PAGE WITH 1 OUTPOST
@@ -116,7 +115,6 @@ INSTALLATION DOC PAGE + more documentations button -> DOCUMENTATIONS PAGE
     option navbar services, work with us button
     option navbar support, documentations button
     option navbar support, more options button
-    option order details button
 
 [navigation: i am on services page]
     state SERVICES PAGE
