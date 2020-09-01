@@ -42,7 +42,7 @@ public class NavigationWorkflow extends StepLibrary{
     }
 
     public void from_homepage_i_navigate_to_product_page() {
-        // TODO auto-generated method
+        navigationSteps.i_use_navbar_to_navigate_to_product_page();
     }
 
     public void from_homepage_i_navigate_to_services_page() {
