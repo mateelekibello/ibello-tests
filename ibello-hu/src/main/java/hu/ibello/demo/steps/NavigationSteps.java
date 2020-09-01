@@ -68,11 +68,7 @@ public class NavigationSteps extends StepLibrary {
         homePage.click_our_services_button();
     }
 
-    public void i_navigate_from_homepage_to_about_page() {
-        homePage.click_meet_us_button();
-    }
-
-    public void i_navigate_back_to_homepage() {
+    public void i_navigate_to_homepage_directly_from_navbar() {
         navigationBar.click_home_link();
     }
 
@@ -215,5 +211,21 @@ public class NavigationSteps extends StepLibrary {
 
     public void i_navigate_from_interest_page_to_installation_documentation_page() {
         interestPage.click_install_guide_button();
+    }
+
+    public void i_navigate_to_about_page_directly_from_navbar() {
+        navigationBar.click_about_us_link();
+    }
+
+    public void i_navigate_to_product_page_directly_from_navbar() {
+        navigationBar.click_product_link();
+    }
+
+    public void i_navigate_to_services_page_directly_from_navbar() {
+        navigationBar.click_services_link();
+    }
+
+    public void i_navigate_to_support_page_directly_from_navbar() {
+        navigationBar.click_support_link();
     }
 }

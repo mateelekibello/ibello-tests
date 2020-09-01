@@ -205,23 +205,23 @@ public class NavigationWorkflow extends StepLibrary{
     }
 
     public void i_navigate_directly_to_about_page_using_the_navbar() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_to_about_page_directly_from_navbar();
     }
 
     public void i_navigate_directly_to_homepage_using_the_navbar() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_to_homepage_directly_from_navbar();
     }
 
     public void i_navigate_directly_to_product_page_using_the_navbar() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_to_product_page_directly_from_navbar();
     }
 
     public void i_navigate_directly_to_services_page_using_the_navbar() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_to_services_page_directly_from_navbar();
     }
 
     public void i_navigate_directly_to_support_page_using_the_navbar() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_to_support_page_directly_from_navbar();
     }
 
     public void i_request_quotation_for_automated_tests() {

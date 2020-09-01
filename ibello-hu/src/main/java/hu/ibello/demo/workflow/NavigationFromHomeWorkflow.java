@@ -42,7 +42,7 @@ public class NavigationFromHomeWorkflow extends StepLibrary{
     }
 
     public void i_navigate_back_to_homepage() {
-        navigationSteps.i_navigate_back_to_homepage();
+        navigationSteps.i_navigate_to_homepage_directly_from_navbar();
     }
 
     public void i_navigate_to_about_page_using_details_button() {
