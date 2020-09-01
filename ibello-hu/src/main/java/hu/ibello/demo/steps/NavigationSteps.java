@@ -24,6 +24,8 @@ public class NavigationSteps extends StepLibrary {
     private InstallationDocPage installationDocPage;
     private QuotationPage quotationPage;
 
+    private String quotationUrl;
+
     public void i_open_the_homepage() {
         homePage.i_open_homepage();
     }
@@ -149,8 +151,8 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void i_am_on_quotation_page() {
-        String url = "/#quotation";
-        quotationPage.expect_url_is_$(url);
+//        String url = "/#quotation";
+        quotationPage.expect_url_is_$(quotationUrl);
         quotationPage.expect_quote_services_lane_is_displayed();
         navigationBar.expect_menu_component_is_displayed();
     }
@@ -230,30 +232,36 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void i_navigate_from_services_page_to_quotation_page() {
+        quotationUrl = "/#quotation";
         servicesPage.click_request_button();
     }
 
     public void i_make_a_request_for_online_automated_testing() {
+        quotationUrl = "/#/quotation?service=online_testing";
         servicesPage.open_service_with_index_$(0);
         servicesPage.click_request_online_testing_button();
     }
 
     public void i_make_a_request_for_automated_testing_for_applications() {
+        quotationUrl = "/#/quotation?service=test_apps";
         servicesPage.open_service_with_index_$(1);
         servicesPage.click_request_automated_test_button();
     }
 
     public void i_make_a_request_for_test_framework_building() {
+        quotationUrl = "/#/quotation?service=test_framework";
         servicesPage.open_service_with_index_$(2);
         servicesPage.click_request_test_framework_button();
     }
 
     public void i_make_a_request_for_consultancy() {
+        quotationUrl = "/#/quotation?service=consultancy";
         servicesPage.open_service_with_index_$(3);
         servicesPage.click_request_consultancy_button();
     }
 
     public void i_make_a_request_for_trainings() {
+        quotationUrl = "/#/quotation?service=trainings";
         servicesPage.open_service_with_index_$(4);
         servicesPage.click_request_trainings_button();
     }
