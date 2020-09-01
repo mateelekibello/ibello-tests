@@ -25,9 +25,7 @@ public class OrderingWithExistingUserWorkflow extends StepLibrary{
     }
 
     public void the_username_will_be_invalid() {
-        // TODO donotmerge nem müködik
-//        ExistingUserData data = testData().fromJson(ExistingUserData.class).withId("invalid_user").doNotMergeObjects().load();
-        ExistingUserData data = testData().fromJson(ExistingUserData.class).withId("invalid_user").load();
+        ExistingUserData data = testData().fromJson(ExistingUserData.class).withId("invalid_user").doNotMergeObjects().load();
         orderingSteps.i_use_$_test_data_to_fill_out_the_ordering_form_with_existing_user(data);
     }
 
