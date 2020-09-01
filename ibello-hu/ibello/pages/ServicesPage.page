@@ -1,4 +1,13 @@
 servicesLane = element {
     cssSelector 'welcome-services-lane'
     expect_services_lane_is_displayed = expect toBe displayed
+    hidden
+}
+
+requestButton = clickable {
+    cssSelector 'a[href=\'#quotation\']'
+    descendantOf {
+        className 'lane-convert'
+    }
+    click_request_button = action click
 }

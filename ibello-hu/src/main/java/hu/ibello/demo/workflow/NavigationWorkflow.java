@@ -86,7 +86,7 @@ public class NavigationWorkflow extends StepLibrary{
     }
 
     public void from_services_page_i_request_guotation() {
-        // TODO auto-generated method
+        navigationSteps.i_navigate_from_services_page_to_quotation_page();
     }
 
     public void from_support_page_header_i_navigate_to_services_page() {

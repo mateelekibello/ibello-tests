@@ -228,4 +228,8 @@ public class NavigationSteps extends StepLibrary {
     public void i_navigate_to_support_page_directly_from_navbar() {
         navigationBar.click_support_link();
     }
+
+    public void i_navigate_from_services_page_to_quotation_page() {
+        servicesPage.click_request_button();
+    }
 }
