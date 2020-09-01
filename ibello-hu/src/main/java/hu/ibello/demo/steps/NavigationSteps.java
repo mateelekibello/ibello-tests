@@ -288,70 +288,19 @@ public class NavigationSteps extends StepLibrary {
     }
 
     public void i_see_that_outpost_is_selected() {
-        int porductIndex = 0;
-        for (int index = 0; index < 4; index++) {
-            int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
-            if (index == porductIndex) {
-                if (currentNum != 1) {
-                    throw new AssertionError("The outpost is not selected!");
-                }
-            }
-            if (currentNum > 0 && index != porductIndex) {
-                throw new AssertionError("There is unexpected product selection!");
-            }
-        }
+        check_if_order_with_$_index_is_selected(0);
     }
 
     public void i_see_that_sentinel_is_selected() {
-        int porductIndex = 1;
-        for (int index = 0; index < 4; index++) {
-            int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
-            if (index == porductIndex) {
-                if (currentNum != 1) {
-                    throw new AssertionError("The sentinel is not selected!");
-                }
-            }
-            if (currentNum > 0 && index != porductIndex) {
-                throw new AssertionError("There is unexpected product selection!");
-            }
-        }
+        check_if_order_with_$_index_is_selected(1);
     }
 
     public void i_see_that_hunter_is_selected() {
-        int porductIndex = 2;
-        for (int index = 0; index < 4; index++) {
-            int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
-            if (index == porductIndex) {
-                if (currentNum != 1) {
-                    throw new AssertionError("The hunter is not selected!");
-                }
-            }
-            if (currentNum > 0 && index != porductIndex) {
-                throw new AssertionError("There is unexpected product selection!");
-            }
-        }
+        check_if_order_with_$_index_is_selected(2);
     }
 
     public void i_see_that_master_hunter_is_selected() {
-        int porductIndex = 3;
-        for (int index = 0; index < 4; index++) {
-            int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
-            if (index == porductIndex) {
-                if (currentNum != 1) {
-                    throw new AssertionError("The master hunter is not selected!");
-                }
-            }
-            if (currentNum > 0 && index != porductIndex) {
-                throw new AssertionError("There is unexpected product selection!");
-            }
-        }
-    }
-
-    private void check_if_order_with_$_index_is_selected(int index) {
-        int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
-        if (currentNum != 0) {
-            throw new AssertionError("There is no product selection!");
-        }
+        check_if_order_with_$_index_is_selected(3);
     }
 
     public void i_navigate_from_support_page_header_to_product_page() {
@@ -426,4 +375,35 @@ public class NavigationSteps extends StepLibrary {
         quotationPage.assume_consultancy_checkbox_is_not_selected();
         quotationPage.assume_traingings_checkbox_is_not_selected();
     }
+
+    private void check_if_order_with_$_index_is_selected(int productIndex) {
+        String product = getProductName(productIndex);
+        for (int index = 0; index < 4; index++) {
+            int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(index));
+            if (index == productIndex) {
+                if (currentNum != 1) {
+                    throw new AssertionError(String.format("The %s is not selected!", product));
+                }
+            }
+            if (currentNum > 0 && index != productIndex) {
+                throw new AssertionError("There is unexpected product selection!");
+            }
+        }
+    }
+
+    private String getProductName(int productIndex) {
+        switch (productIndex) {
+            case 0:
+                return "outpost";
+            case 1:
+                return "sentinel";
+            case 2:
+                return "hunter";
+            case 3:
+                return "master hunter";
+            default:
+                return "";
+        }
+    }
+
 }
