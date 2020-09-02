@@ -1,10 +1,6 @@
 package hu.ibello.demo.model;
 
-import hu.ibello.core.Description;
-import hu.ibello.data.Model;
-
-@Model
-@Description("Test data for sending message")
+// Data for sending a message
 public class ContactData {
 
     private String name;
@@ -43,4 +39,10 @@ public class ContactData {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    @Override
+    public String toString() {
+        return "contact data";
+    }
+
 }

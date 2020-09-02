@@ -28,4 +28,4 @@ Feature: Test to order products with existing user
 		When Existing user order: the username and password will be valid
 		When Existing user order: the product will be valid
 		When Existing user order: i send the order
-		Then Existing user order: i see that the order is successfull
+		Then Existing user order: i see that the order is successful

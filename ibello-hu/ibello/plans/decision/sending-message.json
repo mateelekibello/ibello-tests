@@ -144,9 +144,9 @@
       "name": true,
       "subject_out": "valid subject",
       "message": false,
+      "error": "1",
       "email_out": "valid email",
       "message_out": "empty message",
-      "error": "1",
       "email": "valid",
       "out": "valid name, valid email, valid subject, empty message"
     },
@@ -156,9 +156,9 @@
       "name": true,
       "subject_out": "empty subject",
       "message": true,
+      "error": "1",
       "email_out": "valid email",
       "message_out": "valid message",
-      "error": "1",
       "email": "valid",
       "out": "valid name, valid email, empty subject, valid message"
     },
@@ -195,8 +195,13 @@
     },
     {
       "kind": "When",
-      "text": "the name will be invalid",
+      "text": "the name will be valid",
       "condition": "name"
+    },
+    {
+      "kind": "When",
+      "text": "the name will be empty",
+      "condition": "!name"
     },
     {
       "kind": "When",
@@ -205,39 +210,53 @@
     },
     {
       "kind": "When",
-      "text": "",
+      "text": "the email will be empty",
       "condition": "!email"
     },
     {
       "kind": "When",
-      "text": "the subject will be invalid",
+      "text": "the subject will be valid",
       "condition": "subject"
     },
     {
       "kind": "When",
-      "text": "the message will be invalid",
+      "text": "the subject will be empty",
+      "condition": "!subject"
+    },
+    {
+      "kind": "When",
+      "text": "the message will be valid",
       "condition": "message"
     },
     {
       "kind": "When",
-      "text": "i fill out the form and send the message",
+      "text": "the message will be empty",
+      "condition": "!message"
+    },
+    {
+      "kind": "When",
+      "text": "i fill out the form",
       "condition": ""
+    },
+    {
+      "kind": "When",
+      "text": "i send the message"
     },
     {
       "kind": "Then",
       "text": "i see ${error} error messages",
-      "condition": "error"
+      "condition": "error !\u003d \"0\""
     },
     {
       "kind": "Then",
-      "text": "i see that sending message was successfull",
-      "condition": "error \u003d\u003d null"
+      "text": "i see that sending the message was successfull",
+      "condition": "error \u003d\u003d \"0\""
     }
   ],
   "scenarioNames": [
     {
       "text": "Sending message with valid data",
-      "condition": "!name \u0026\u0026 !email \u0026\u0026 !subject \u0026\u0026 !message"
+      "condition": "name \u0026\u0026 (email \u003d\u003d \"valid\") \u0026\u0026 subject \u0026\u0026 message"
     },
     {
       "text": "Sending message with ${out}"

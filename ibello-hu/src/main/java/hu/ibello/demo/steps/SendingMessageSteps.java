@@ -16,7 +16,7 @@ public class SendingMessageSteps extends StepLibrary {
         homePage.click_send_message_button();
     }
 
-    public void i_use_$_test_data_to_fill_out_the_form(ContactData data) {
+    public void i_use_$_to_fill_out_the_form(ContactData data) {
         if (data != null) {
             if (data.getName() != null) {
                 homePage.set_contact_name_field_to_$(data.getName());
