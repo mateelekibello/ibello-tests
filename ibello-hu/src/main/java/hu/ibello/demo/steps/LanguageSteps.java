@@ -13,29 +13,33 @@ public class LanguageSteps extends StepLibrary {
     private HomePage homePage;
 
     public void check_texts_based_on_$_test_data(LanguageSelection data) {
-        if (data != null && data.getLanguage() != null) {
+        if (data != null && data.getLanguage() != null && data.getHungarianTexts() != null
+                && data.getEnglishTexts() != null) {
             switch (data.getLanguage()) {
                 case HUNGARIAN:
-                    if (data.getHungarianTexts() != null && data.getEnglishTexts() != null) {
-                        first_list_is_displayed_second_is_not(data.getHungarianTexts(), data.getEnglishTexts());
-                    }
+                    list_is_displayed(data.getHungarianTexts());
+                    list_is_not_displayed(data.getEnglishTexts());
                     break;
                 case ENGLISH:
-                    if (data.getEnglishTexts() != null && data.getHungarianTexts() != null) {
-                        first_list_is_displayed_second_is_not(data.getEnglishTexts(), data.getHungarianTexts());
-                    }
+                    list_is_displayed(data.getEnglishTexts());
+                    list_is_not_displayed(data.getHungarianTexts());
                     break;
             }
+        } else {
+            throw new AssertionError("One or more testdata are null!");
         }
     }
 
-    private void first_list_is_displayed_second_is_not(List<String>displayedList, List<String>notDisplayedList) {
+    private void list_is_displayed(List<String>displayedList) {
         for (String text : displayedList) {
             homePage.assume_$_text_is_displayed(text);
         }
+    }
+
+    private void list_is_not_displayed(List<String>notDisplayedList) {
         for (String text : notDisplayedList) {
             homePage.assume_$_text_is_not_displayed(text);
         }
-
     }
+
 }

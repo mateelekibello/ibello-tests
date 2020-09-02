@@ -1,5 +1,6 @@
 tags = @full-test @navigation
 Navigation bar test = true
+title = Cim
 
 state TEST INIT
 state HOME PAGE

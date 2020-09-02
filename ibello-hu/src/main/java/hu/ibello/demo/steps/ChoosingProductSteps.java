@@ -12,14 +12,15 @@ public class ChoosingProductSteps extends StepLibrary {
 
     public void i_choose_the_products_to_order(ProductToOrder data) {
         if (data != null) {
-            change_number_of_product(data.getOutpost(), 0);
-            change_number_of_product(data.getSentinel(), 1);
-            change_number_of_product(data.getHunter(), 2);
-            change_number_of_product(data.getMasterHunter(), 3);
+            change_number_of_product(data.getOutpost(), 1);
+            change_number_of_product(data.getSentinel(), 2);
+            change_number_of_product(data.getHunter(), 3);
+            change_number_of_product(data.getMasterHunter(), 4);
         }
     }
 
     private void change_number_of_product(int expectedNum, int productIndex) {
+        productIndex--;
         int currentNum = Integer.parseInt(orderPage.getNumberOfProduct(productIndex));
         while (expectedNum != currentNum) {
             if (expectedNum > currentNum) {

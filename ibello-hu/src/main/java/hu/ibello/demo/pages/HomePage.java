@@ -109,10 +109,6 @@ public class HomePage extends AbstractPage {
         browser().openURL("/#home");
     }
 
-    private void homepage_is_displayed() {
-        i_expect_main_lane_is_displayed();
-    }
-
     public void click_our_services_button() {
         doWith(ourServicesButton).click();
     }

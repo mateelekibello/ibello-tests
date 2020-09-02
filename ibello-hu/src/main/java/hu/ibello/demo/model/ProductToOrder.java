@@ -11,6 +11,7 @@ public class ProductToOrder {
     private int sentinel;
     private int hunter;
     private int masterHunter;
+    private String id;
 
     public int getOutpost() {
         return outpost;
@@ -27,4 +28,6 @@ public class ProductToOrder {
     public int getMasterHunter() {
         return masterHunter;
     }
+
+    // TODO to string az "id"-t adja vissza, az id tesztadatból jöjjön
 }

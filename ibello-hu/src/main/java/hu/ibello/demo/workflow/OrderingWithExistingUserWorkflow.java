@@ -24,14 +24,25 @@ public class OrderingWithExistingUserWorkflow extends StepLibrary{
         navigationSteps.i_navigate_from_homepage_to_the_order_page();
     }
 
+    // TODO the userdata will be valid (and az teljesen antipattern)
+    public void the_username_and_password_will_be_valid() {
+        ExistingUserData data = testData().fromJson(ExistingUserData.class).load();
+        orderingSteps.i_use_$_test_data_to_fill_out_the_ordering_form_with_existing_user(data);
+    }
+
     public void the_username_will_be_invalid() {
-        ExistingUserData data = testData().fromJson(ExistingUserData.class).withId("invalid_user").doNotMergeObjects().load();
+        ExistingUserData data = testData().fromJson(ExistingUserData.class).withId("invalid_user").load();
         orderingSteps.i_use_$_test_data_to_fill_out_the_ordering_form_with_existing_user(data);
     }
 
     public void the_password_will_be_invalid() {
         ExistingUserData data = testData().fromJson(ExistingUserData.class).withId("invalid_pwd").load();
         orderingSteps.i_use_$_test_data_to_fill_out_the_ordering_form_with_existing_user(data);
+    }
+
+    public void the_product_will_be_valid() {
+        ProductToOrder data = testData().fromJson(ProductToOrder.class).load();
+        choosingProductSteps.i_choose_the_products_to_order(data);
     }
 
     public void the_product_will_be_invalid() {
@@ -47,17 +58,7 @@ public class OrderingWithExistingUserWorkflow extends StepLibrary{
         orderingSteps.i_see_the_error_message();
     }
 
-    public void the_username_and_password_will_be_valid() {
-        ExistingUserData data = testData().fromJson(ExistingUserData.class).load();
-        orderingSteps.i_use_$_test_data_to_fill_out_the_ordering_form_with_existing_user(data);
-    }
-
-    public void the_product_will_be_valid() {
-        ProductToOrder data = testData().fromJson(ProductToOrder.class).load();
-        choosingProductSteps.i_choose_the_products_to_order(data);
-    }
-
-    public void i_see_that_the_order_is_successfull() {
+    public void i_see_that_the_order_is_successful() {
         orderingSteps.i_see_the_success_message();
     }
 
