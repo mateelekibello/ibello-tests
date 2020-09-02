@@ -20,6 +20,9 @@ public class LanguageSelection {
     @Description("If hungarian is not the selected language then the test will check if these languages are not displayed.")
     private List<String> hungarianTexts;
 
+    @Description("It is used to identify testdata.")
+    private String id;
+
     public List<String> getEnglishTexts() {
         return englishTexts;
     }
@@ -32,5 +35,12 @@ public class LanguageSelection {
         return language;
     }
 
+    @Override
+    public String toString() {
+        if (id != null) {
+            return id;
+        }
+        return "No given id";
+    }
 
 }
