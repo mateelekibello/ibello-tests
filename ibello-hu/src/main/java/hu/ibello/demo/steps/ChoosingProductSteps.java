@@ -10,7 +10,7 @@ public class ChoosingProductSteps extends StepLibrary {
 
     private OrderPage orderPage;
 
-    public void i_choose_the_products_to_order(ProductToOrder data) {
+    public void i_use_$_test_data_to_select_products(ProductToOrder data) {
         if (data != null) {
             change_number_of_product(data.getOutpost(), 1);
             change_number_of_product(data.getSentinel(), 2);

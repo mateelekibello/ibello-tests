@@ -24,8 +24,7 @@ public class OrderingWithExistingUserWorkflow extends StepLibrary{
         navigationSteps.i_navigate_from_homepage_to_the_order_page();
     }
 
-    // TODO the userdata will be valid (and az teljesen antipattern)
-    public void the_username_and_password_will_be_valid() {
+    public void the_user_data_will_be_valid() {
         ExistingUserData data = testData().fromJson(ExistingUserData.class).load();
         orderingSteps.i_use_$_test_data_to_fill_out_the_ordering_form_with_existing_user(data);
     }
@@ -42,12 +41,12 @@ public class OrderingWithExistingUserWorkflow extends StepLibrary{
 
     public void the_product_will_be_valid() {
         ProductToOrder data = testData().fromJson(ProductToOrder.class).load();
-        choosingProductSteps.i_choose_the_products_to_order(data);
+        choosingProductSteps.i_use_$_test_data_to_select_products(data);
     }
 
     public void the_product_will_be_invalid() {
         ProductToOrder data = testData().fromJson(ProductToOrder.class).withId("invalid").load();
-        choosingProductSteps.i_choose_the_products_to_order(data);
+        choosingProductSteps.i_use_$_test_data_to_select_products(data);
     }
 
     public void i_send_the_order() {

@@ -1,6 +1,7 @@
 {
-  "outpost": 0,
-  "sentinel": 0,
   "hunter": 0,
-  "masterHunter": 0
+  "id": "invalid_product",
+  "masterHunter": 0,
+  "outpost": 0,
+  "sentinel": 0
 }

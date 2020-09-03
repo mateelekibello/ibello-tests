@@ -11,6 +11,8 @@ public class ProductToOrder {
     private int sentinel;
     private int hunter;
     private int masterHunter;
+
+    @Description("It is used to identify testdata.")
     private String id;
 
     public int getOutpost() {
@@ -29,5 +31,11 @@ public class ProductToOrder {
         return masterHunter;
     }
 
-    // TODO to string az "id"-t adja vissza, az id tesztadatból jöjjön
+    @Override
+    public String toString() {
+        if (id != null) {
+            return id;
+        }
+        return "No given id";
+    }
 }

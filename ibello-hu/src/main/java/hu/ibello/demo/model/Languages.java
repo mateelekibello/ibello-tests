@@ -1,19 +1,19 @@
 package hu.ibello.demo.model;
 
-import hu.ibello.core.Name;
-import hu.ibello.demo.tools.EnumTools;
-
 public enum Languages {
 
-    @Name("english")
     ENGLISH,
-
-    @Name("magyar")
     HUNGARIAN;
 
     @Override
     public String toString() {
-        return EnumTools.toString(this);
+        switch (this) {
+            case ENGLISH:
+                return "english";
+            case HUNGARIAN:
+                return "hungarian";
+        }
+        return "";
     }
 
 }

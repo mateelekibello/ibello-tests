@@ -12,12 +12,23 @@ public class ExistingUserData {
     @Description("If null: the valid password from the configuration will be used")
     private String invalidPwd;
 
+    @Description("It is used to identify testdata.")
+    private String id;
+
     public String getNameOrEmail() {
         return nameOrEmail;
     }
 
     public String getInvalidPwd() {
         return invalidPwd;
+    }
+
+    @Override
+    public String toString() {
+        if (id != null) {
+            return id;
+        }
+        return "No given id";
     }
 
 }
