@@ -4,7 +4,7 @@ title = Cim
 
 state TEST INIT
 state HOME PAGE
-state IBELLO PAGE
+state PRODUCT PAGE
 state SERVICES PAGE
 state ABOUT PAGE
 state SUPPORT PAGE
@@ -26,54 +26,51 @@ state CHANGE LOG PAGE
 state INSTALLATION DOC PAGE
 
 TEST INIT -> HOME PAGE
-IBELLO PAGE + logo button -> HOME PAGE
+HOME PAGE + header our product -> PRODUCT PAGE
 HOME PAGE + header our services -> SERVICES PAGE
-HOME PAGE + header our product -> IBELLO PAGE
 HOME PAGE + navbar product, try it button -> INTEREST PAGE
-HOME PAGE + navbar product, learn more button -> IBELLO PAGE
+HOME PAGE + navbar product, learn more button -> PRODUCT PAGE
 HOME PAGE + navbar services, work with us button -> SERVICES PAGE
 HOME PAGE + navbar about, details button -> ABOUT PAGE
 HOME PAGE + navbar support, more options button -> SUPPORT PAGE
-HOME PAGE + navbar support, documentations button -> DOCUMENTATIONS PAGE
-IBELLO PAGE + header details, download button -> INTEREST PAGE
-IBELLO PAGE + order now button -> ORDER PAGE WHITOUT PRODUCT
-IBELLO PAGE + order outpost button -> ORDER PAGE WITH 1 OUTPOST
-IBELLO PAGE + order sentinel button -> ORDER PAGE WITH 1 SENTINEL
-IBELLO PAGE + order hunter button -> ORDER PAGE WITH 1 HUNTER
-IBELLO PAGE + order master hunter button -> ORDER PAGE WITH 1 MASTER HUNTER
-IBELLO PAGE + navbar services button -> SERVICES PAGE
-IBELLO PAGE + navbar about button -> ABOUT PAGE
-IBELLO PAGE + navbar support button -> SUPPORT PAGE
-SERVICES PAGE + navbar product button -> IBELLO PAGE
 SERVICES PAGE + request quotation button -> QUOTATION PAGE WITHOUT SERVICE
+QUOTATION PAGE WITHOUT SERVICE + logo button -> HOME PAGE
+SUPPORT PAGE + support page, read it button -> DOCUMENTATIONS PAGE
+DOCUMENTATIONS PAGE + read change log button -> CHANGE LOG PAGE
+CHANGE LOG PAGE + change log more documentums button -> DOCUMENTATIONS PAGE
+SUPPORT PAGE + change log button -> CHANGE LOG PAGE
+CHANGE LOG PAGE + navbar support button -> SUPPORT PAGE
+DOCUMENTATIONS PAGE + navbar support button -> SUPPORT PAGE
+PRODUCT PAGE + order now button -> ORDER PAGE WHITOUT PRODUCT
+PRODUCT PAGE + header details, download button -> INTEREST PAGE
+ABOUT PAGE + navbar services -> SERVICES PAGE
+SERVICES PAGE + navbar product -> PRODUCT PAGE
+INTEREST PAGE + interest page, installation guide button -> INSTALLATION DOC PAGE
+INSTALLATION DOC PAGE + navbar about button -> ABOUT PAGE
 SERVICES PAGE + request quotation for online automated test -> QUOTATION PAGE WITH ONLINE AUTOMATED TEST
 SERVICES PAGE + request quotation for automated tests -> QUOTATION PAGE WITH AUTOMATED TESTS
 SERVICES PAGE + request quotation for test framework -> QUOTATION PAGE WITH TEST FRAMEWORK
 SERVICES PAGE + request quotation for consultancy -> QUOTATION PAGE WITH CONSULTANCY
 SERVICES PAGE + request quotation for dev and test training -> QUOTATION PAGE WITH DEV AND TEST TRAINING
-ORDER PAGE WHITOUT PRODUCT + logo button -> HOME PAGE
-CHANGE LOG PAGE + logo button -> HOME PAGE
-DOCUMENTATIONS PAGE + read change log button -> CHANGE LOG PAGE
-SUPPORT PAGE + support page, read it button -> DOCUMENTATIONS PAGE
-SUPPORT PAGE + support page, installation guide button -> INSTALLATION DOC PAGE
-SUPPORT PAGE + change log button -> CHANGE LOG PAGE
-SUPPORT PAGE + our product button -> IBELLO PAGE
-SUPPORT PAGE + our services -> SERVICES PAGE
-INTEREST PAGE + interest page, installation guide button -> INSTALLATION DOC PAGE
-INTEREST PAGE + interest page, read it button -> DOCUMENTATIONS PAGE
-INSTALLATION DOC PAGE + more documentations button -> DOCUMENTATIONS PAGE
-ORDER PAGE WITH 1 OUTPOST + navbar product button -> IBELLO PAGE
-ORDER PAGE WITH 1 SENTINEL + navbar product button -> IBELLO PAGE
-ORDER PAGE WITH 1 HUNTER + navbar product button -> IBELLO PAGE
-ORDER PAGE WITH 1 MASTER HUNTER + navbar product button -> IBELLO PAGE
 QUOTATION PAGE WITH ONLINE AUTOMATED TEST + navbar services button -> SERVICES PAGE
 QUOTATION PAGE WITH AUTOMATED TESTS + navbar services button -> SERVICES PAGE
 QUOTATION PAGE WITH TEST FRAMEWORK + navbar services button -> SERVICES PAGE
 QUOTATION PAGE WITH CONSULTANCY + navbar services button -> SERVICES PAGE
 QUOTATION PAGE WITH DEV AND TEST TRAINING + navbar services button -> SERVICES PAGE
+ORDER PAGE WITH 1 OUTPOST + navbar product button -> PRODUCT PAGE
+ORDER PAGE WITH 1 SENTINEL + navbar product button -> PRODUCT PAGE
+ORDER PAGE WITH 1 HUNTER + navbar product button -> PRODUCT PAGE
+ORDER PAGE WITH 1 MASTER HUNTER + navbar product button -> PRODUCT PAGE
+PRODUCT PAGE + order outpost button -> ORDER PAGE WITH 1 OUTPOST
+PRODUCT PAGE + order sentinel button -> ORDER PAGE WITH 1 SENTINEL
+PRODUCT PAGE + order hunter button -> ORDER PAGE WITH 1 HUNTER
+PRODUCT PAGE + order master hunter button -> ORDER PAGE WITH 1 MASTER HUNTER
+PRODUCT PAGE + logo button -> HOME PAGE
+SERVICES PAGE + logo button -> HOME PAGE
 ABOUT PAGE + logo button -> HOME PAGE
-INSTALLATION DOC PAGE + navbar support button -> SUPPORT PAGE
 INTEREST PAGE + logo button -> HOME PAGE
+SUPPORT PAGE + logo button -> HOME PAGE
+ORDER PAGE WHITOUT PRODUCT + logo button -> HOME PAGE
 
 [navigation: i navigate directly to support page using the navbar]
     input navbar support button
