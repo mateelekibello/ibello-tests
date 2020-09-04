@@ -1,0 +1,71 @@
+tags = @full-test @navigation @nav-order
+Navigation bar test = true
+title = Testing order process on ibello.hu
+
+state TEST INIT
+state HOME PAGE
+state PRODUCT PAGE
+state ORDER PAGE WITH 1 OUTPOST
+state ORDER PAGE WITH 1 SENTINEL
+state ORDER PAGE WITH 1 HUNTER
+state ORDER PAGE WITH 1 MASTER HUNTER
+
+TEST INIT -> HOME PAGE
+HOME PAGE + header our product -> PRODUCT PAGE
+ORDER PAGE WITH 1 OUTPOST + navbar product button -> PRODUCT PAGE
+ORDER PAGE WITH 1 SENTINEL + navbar product button -> PRODUCT PAGE
+ORDER PAGE WITH 1 HUNTER + navbar product button -> PRODUCT PAGE
+ORDER PAGE WITH 1 MASTER HUNTER + navbar product button -> PRODUCT PAGE
+PRODUCT PAGE + order outpost button -> ORDER PAGE WITH 1 OUTPOST
+PRODUCT PAGE + order sentinel button -> ORDER PAGE WITH 1 SENTINEL
+PRODUCT PAGE + order hunter button -> ORDER PAGE WITH 1 HUNTER
+PRODUCT PAGE + order master hunter button -> ORDER PAGE WITH 1 MASTER HUNTER
+
+[navigation order: test init]
+    state TEST INIT
+    no option
+
+[navigation order: i am on homepage]
+    state HOME PAGE
+    option header our product
+
+[navigation order: from homepage header i navigate to product page]
+    input header our product
+
+[navigation order: i am on product page]
+    state PRODUCT PAGE
+    option order hunter button
+    option order master hunter button
+    option order outpost button
+    option order sentinel button
+
+[navigation order: from product page i order an outpost product]
+    input order outpost button
+
+[navigation order: from product page i order a sentinel product]
+    input order sentinel button
+
+[navigation order: from product page i order a hunter product]
+    input order hunter button
+
+[navigation order: from product page i order a master hunter product]
+    input order master hunter button
+
+[navigation order: i navigate directly to product page using the navbar]
+    input navbar product button
+
+[navigation order: i am on order page and outpost is selected]
+    state ORDER PAGE WITH 1 OUTPOST
+    option navbar product button
+
+[navigation order: i am on order page and sentinel is selected]
+    state ORDER PAGE WITH 1 SENTINEL
+    option navbar product button
+
+[navigation order: i am on order page and hunter is selected]
+    state ORDER PAGE WITH 1 HUNTER
+    option navbar product button
+
+[navigation order: i am on order page and master hunter is selected]
+    state ORDER PAGE WITH 1 MASTER HUNTER
+    option navbar product button

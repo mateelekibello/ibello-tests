@@ -1,0 +1,86 @@
+tags = @full-test @navigation @nav-quotation
+Navigation bar test = true
+title = Testing quotation on ibello.hu
+
+state TEST INIT
+state HOME PAGE
+state SERVICES PAGE
+state QUOTATION PAGE WITH ONLINE AUTOMATED TEST
+state QUOTATION PAGE WITH AUTOMATED TESTS
+state QUOTATION PAGE WITH TEST FRAMEWORK
+state QUOTATION PAGE WITH CONSULTANCY
+state QUOTATION PAGE WITH DEV AND TEST TRAINING
+
+TEST INIT -> HOME PAGE
+HOME PAGE + navbar services, work with us button -> SERVICES PAGE
+SERVICES PAGE + request quotation for online automated test -> QUOTATION PAGE WITH ONLINE AUTOMATED TEST
+SERVICES PAGE + request quotation for automated tests -> QUOTATION PAGE WITH AUTOMATED TESTS
+SERVICES PAGE + request quotation for test framework -> QUOTATION PAGE WITH TEST FRAMEWORK
+SERVICES PAGE + request quotation for consultancy -> QUOTATION PAGE WITH CONSULTANCY
+SERVICES PAGE + request quotation for dev and test training -> QUOTATION PAGE WITH DEV AND TEST TRAINING
+QUOTATION PAGE WITH ONLINE AUTOMATED TEST + navbar services button -> SERVICES PAGE
+QUOTATION PAGE WITH AUTOMATED TESTS + navbar services button -> SERVICES PAGE
+QUOTATION PAGE WITH TEST FRAMEWORK + navbar services button -> SERVICES PAGE
+QUOTATION PAGE WITH CONSULTANCY + navbar services button -> SERVICES PAGE
+QUOTATION PAGE WITH DEV AND TEST TRAINING + navbar services button -> SERVICES PAGE
+
+[navigation quotation: i am on homepage]
+    state HOME PAGE
+    option navbar services, work with us button
+
+[navigation quotation: i am on services page]
+    state SERVICES PAGE
+    option request quotation for automated tests
+    option request quotation for consultancy
+    option request quotation for dev and test training
+    option request quotation for online automated test
+    option request quotation for test framework
+
+[navigation quotation: test init]
+    state TEST INIT
+    no option
+
+[navigation quotation: i am on order page and master hunter is selected]
+    state ORDER PAGE WITH 1 MASTER HUNTER
+    no option
+
+[navigation quotation: from homepage i navigate to services page]
+    input navbar services, work with us button
+
+[navigation quotation: i am on quotation page and online automated test is selected]
+    state QUOTATION PAGE WITH ONLINE AUTOMATED TEST
+    option navbar services button
+
+[navigation quotation: i am on quotation page and dev and test training is selected]
+    state QUOTATION PAGE WITH DEV AND TEST TRAINING
+    option navbar services button
+
+[navigation quotation: i am on quotation page and consultancy is selected]
+    state QUOTATION PAGE WITH CONSULTANCY
+    option navbar services button
+
+[navigation quotation: i am on quotation page and test framework is selected]
+    state QUOTATION PAGE WITH TEST FRAMEWORK
+    option navbar services button
+
+[navigation quotation: i am on quotation page and automated tests is selected]
+    state QUOTATION PAGE WITH AUTOMATED TESTS
+    option navbar services button
+
+[navigation quotation: i request quotation for dev and test training]
+    input request quotation for dev and test training
+
+[navigation quotation: i request quotation for consultancy]
+    input request quotation for consultancy
+
+[navigation quotation: i request quotation for test framework]
+    input request quotation for test framework
+
+[navigation quotation: i request quotation for automated tests]
+    input request quotation for automated tests
+
+[navigation quotation: i request quotation for online automated test]
+    input request quotation for online automated test
+
+[navigation quotation: i navigate directly to services page using the navbar]
+    input navbar services button

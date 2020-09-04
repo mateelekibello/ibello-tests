@@ -1,10 +1,10 @@
 tags = @full-test @navigation
 Navigation bar test = true
-title = Cim
+title = Testing navigation on ibello.hu
 
 state TEST INIT
 state HOME PAGE
-state IBELLO PAGE
+state PRODUCT PAGE
 state SERVICES PAGE
 state ABOUT PAGE
 state SUPPORT PAGE
@@ -26,54 +26,33 @@ state CHANGE LOG PAGE
 state INSTALLATION DOC PAGE
 
 TEST INIT -> HOME PAGE
-IBELLO PAGE + logo button -> HOME PAGE
+HOME PAGE + header our product -> PRODUCT PAGE
 HOME PAGE + header our services -> SERVICES PAGE
-HOME PAGE + header our product -> IBELLO PAGE
 HOME PAGE + navbar product, try it button -> INTEREST PAGE
-HOME PAGE + navbar product, learn more button -> IBELLO PAGE
+HOME PAGE + navbar product, learn more button -> PRODUCT PAGE
 HOME PAGE + navbar services, work with us button -> SERVICES PAGE
 HOME PAGE + navbar about, details button -> ABOUT PAGE
 HOME PAGE + navbar support, more options button -> SUPPORT PAGE
-HOME PAGE + navbar support, documentations button -> DOCUMENTATIONS PAGE
-IBELLO PAGE + header details, download button -> INTEREST PAGE
-IBELLO PAGE + order now button -> ORDER PAGE WHITOUT PRODUCT
-IBELLO PAGE + order outpost button -> ORDER PAGE WITH 1 OUTPOST
-IBELLO PAGE + order sentinel button -> ORDER PAGE WITH 1 SENTINEL
-IBELLO PAGE + order hunter button -> ORDER PAGE WITH 1 HUNTER
-IBELLO PAGE + order master hunter button -> ORDER PAGE WITH 1 MASTER HUNTER
-IBELLO PAGE + navbar services button -> SERVICES PAGE
-IBELLO PAGE + navbar about button -> ABOUT PAGE
-IBELLO PAGE + navbar support button -> SUPPORT PAGE
-SERVICES PAGE + navbar product button -> IBELLO PAGE
 SERVICES PAGE + request quotation button -> QUOTATION PAGE WITHOUT SERVICE
-SERVICES PAGE + request quotation for online automated test -> QUOTATION PAGE WITH ONLINE AUTOMATED TEST
-SERVICES PAGE + request quotation for automated tests -> QUOTATION PAGE WITH AUTOMATED TESTS
-SERVICES PAGE + request quotation for test framework -> QUOTATION PAGE WITH TEST FRAMEWORK
-SERVICES PAGE + request quotation for consultancy -> QUOTATION PAGE WITH CONSULTANCY
-SERVICES PAGE + request quotation for dev and test training -> QUOTATION PAGE WITH DEV AND TEST TRAINING
-ORDER PAGE WHITOUT PRODUCT + logo button -> HOME PAGE
-CHANGE LOG PAGE + logo button -> HOME PAGE
-DOCUMENTATIONS PAGE + read change log button -> CHANGE LOG PAGE
+QUOTATION PAGE WITHOUT SERVICE + logo button -> HOME PAGE
 SUPPORT PAGE + support page, read it button -> DOCUMENTATIONS PAGE
-SUPPORT PAGE + support page, installation guide button -> INSTALLATION DOC PAGE
+DOCUMENTATIONS PAGE + read change log button -> CHANGE LOG PAGE
+CHANGE LOG PAGE + change log more documents button -> DOCUMENTATIONS PAGE
 SUPPORT PAGE + change log button -> CHANGE LOG PAGE
-SUPPORT PAGE + our product button -> IBELLO PAGE
-SUPPORT PAGE + our services -> SERVICES PAGE
+CHANGE LOG PAGE + navbar support button -> SUPPORT PAGE
+DOCUMENTATIONS PAGE + navbar support button -> SUPPORT PAGE
+PRODUCT PAGE + order now button -> ORDER PAGE WHITOUT PRODUCT
+PRODUCT PAGE + header details, download button -> INTEREST PAGE
+ABOUT PAGE + navbar services button -> SERVICES PAGE
+SERVICES PAGE + navbar product button -> PRODUCT PAGE
 INTEREST PAGE + interest page, installation guide button -> INSTALLATION DOC PAGE
-INTEREST PAGE + interest page, read it button -> DOCUMENTATIONS PAGE
-INSTALLATION DOC PAGE + more documentations button -> DOCUMENTATIONS PAGE
-ORDER PAGE WITH 1 OUTPOST + navbar product button -> IBELLO PAGE
-ORDER PAGE WITH 1 SENTINEL + navbar product button -> IBELLO PAGE
-ORDER PAGE WITH 1 HUNTER + navbar product button -> IBELLO PAGE
-ORDER PAGE WITH 1 MASTER HUNTER + navbar product button -> IBELLO PAGE
-QUOTATION PAGE WITH ONLINE AUTOMATED TEST + navbar services button -> SERVICES PAGE
-QUOTATION PAGE WITH AUTOMATED TESTS + navbar services button -> SERVICES PAGE
-QUOTATION PAGE WITH TEST FRAMEWORK + navbar services button -> SERVICES PAGE
-QUOTATION PAGE WITH CONSULTANCY + navbar services button -> SERVICES PAGE
-QUOTATION PAGE WITH DEV AND TEST TRAINING + navbar services button -> SERVICES PAGE
+INSTALLATION DOC PAGE + navbar about button -> ABOUT PAGE
+PRODUCT PAGE + logo button -> HOME PAGE
+SERVICES PAGE + logo button -> HOME PAGE
 ABOUT PAGE + logo button -> HOME PAGE
-INSTALLATION DOC PAGE + navbar support button -> SUPPORT PAGE
 INTEREST PAGE + logo button -> HOME PAGE
+SUPPORT PAGE + logo button -> HOME PAGE
+ORDER PAGE WHITOUT PRODUCT + logo button -> HOME PAGE
 
 [navigation: i navigate directly to support page using the navbar]
     input navbar support button
@@ -92,19 +71,7 @@ INTEREST PAGE + logo button -> HOME PAGE
 
 [navigation: i am on quotation page without selected service]
     state QUOTATION PAGE WITHOUT SERVICE
-    no option
-
-[navigation: i am on order page and outpost is selected]
-    state ORDER PAGE WITH 1 OUTPOST
-    no option
-
-[navigation: i am on order page and sentinel is selected]
-    state ORDER PAGE WITH 1 SENTINEL
-    no option
-
-[navigation: i am on order page and hunter is selected]
-    state ORDER PAGE WITH 1 HUNTER
-    no option
+    option logo button
 
 [navigation: from product page i navigate to order page]
     input order now button
@@ -126,59 +93,48 @@ INTEREST PAGE + logo button -> HOME PAGE
     option navbar product, learn more button
     option navbar product, try it button
     option navbar services, work with us button
-    option navbar support, documentations button
     option navbar support, more options button
 
 [navigation: i am on services page]
     state SERVICES PAGE
+    option logo button
     option navbar product button
     option request quotation button
-    option request quotation for automated tests
-    option request quotation for consultancy
-    option request quotation for dev and test training
-    option request quotation for online automated test
-    option request quotation for test framework
 
 [navigation: i am on product page]
-    state IBELLO PAGE
+    state PRODUCT PAGE
     option header details, download button
     option logo button
-    option navbar about button
-    option navbar services button
-    option navbar support button
-    option order hunter button
-    option order master hunter button
     option order now button
-    option order outpost button
-    option order sentinel button
 
 [navigation: i am on interest page]
     state INTEREST PAGE
     option interest page, installation guide button
-    option interest page, read it button
+    option logo button
 
 [navigation: i am on installation documentation page]
     state INSTALLATION DOC PAGE
-    option more documentations button
+    option navbar about button
 
 [navigation: i am on documentations page]
     state DOCUMENTATIONS PAGE
+    option navbar support button
     option read change log button
 
 [navigation: i am on changelog page]
     state CHANGE LOG PAGE
-    option logo button
+    option change log more documents button
+    option navbar support button
 
 [navigation: i am on about page]
     state ABOUT PAGE
-    no option
+    option logo button
+    option navbar services button
 
 [navigation: i am on support page]
     state SUPPORT PAGE
     option change log button
-    option our product button
-    option our services
-    option support page, installation guide button
+    option logo button
     option support page, read it button
 
 [navigation: i am on order page and no product is selected]
@@ -235,10 +191,6 @@ INTEREST PAGE + logo button -> HOME PAGE
     state TEST INIT
     no option
 
-[navigation: i am on order page and master hunter is selected]
-    state ORDER PAGE WITH 1 MASTER HUNTER
-    no option
-
 [navigation: from homepage i navigate to documentations page]
     input navbar support, documentations button
 
@@ -257,40 +209,8 @@ INTEREST PAGE + logo button -> HOME PAGE
 [navigation: from support page header i navigate to services page]
     input our services
 
-[navigation: i am on quotation page and online automated test is selected]
-    state QUOTATION PAGE WITH ONLINE AUTOMATED TEST
-    no option
-
-[navigation: i am on quotation page and dev and test training is selected]
-    state QUOTATION PAGE WITH DEV AND TEST TRAINING
-    no option
-
-[navigation: i am on quotation page and consultancy is selected]
-    state QUOTATION PAGE WITH CONSULTANCY
-    no option
-
-[navigation: i am on quotation page and test framework is selected]
-    state QUOTATION PAGE WITH TEST FRAMEWORK
-    no option
-
-[navigation: i am on quotation page and automated tests is selected]
-    state QUOTATION PAGE WITH AUTOMATED TESTS
-    no option
-
-[navigation: i request quotation for dev and test training]
-    input request quotation for dev and test training
-
-[navigation: i request quotation for consultancy]
-    input request quotation for consultancy
-
-[navigation: i request quotation for test framework]
-    input request quotation for test framework
-
-[navigation: i request quotation for automated tests]
-    input request quotation for automated tests
-
-[navigation: i request quotation for online automated test]
-    input request quotation for online automated test
-
 [navigation: from product page header i navigate to interest page]
     input header details, download button
+
+[navigation: from changelog page i navigate to documentations page]
+    input change log more documents button

@@ -69,22 +69,6 @@ public class NavigationWorkflow extends StepLibrary{
         navigationSteps.i_navigate_from_product_page_to_order_page();
     }
 
-    public void from_product_page_i_order_a_hunter_product() {
-        navigationSteps.i_order_a_hunter_product();
-    }
-
-    public void from_product_page_i_order_a_master_hunter_product() {
-        navigationSteps.i_order_a_master_hunter_product();
-    }
-
-    public void from_product_page_i_order_a_sentinel_product() {
-        navigationSteps.i_order_a_sentinel_product();
-    }
-
-    public void from_product_page_i_order_an_outpost_product() {
-        navigationSteps.i_order_an_outpost_product();
-    }
-
     public void from_services_page_i_request_guotation() {
         navigationSteps.i_navigate_from_services_page_to_quotation_page();
     }
@@ -143,31 +127,6 @@ public class NavigationWorkflow extends StepLibrary{
 
     public void i_am_on_interest_page() {
         navigationSteps.i_am_on_interest_page();
-    }
-
-    public void i_am_on_order_page_and_hunter_is_selected() {
-        navigationSteps.i_am_on_order_page();
-        navigationSteps.i_see_that_hunter_is_selected();
-    }
-
-    public void i_am_on_order_page_and_master_hunter_is_selected() {
-        navigationSteps.i_am_on_order_page();
-        navigationSteps.i_see_that_master_hunter_is_selected();
-    }
-
-    public void i_am_on_order_page_and_no_product_is_selected() {
-        navigationSteps.i_am_on_order_page();
-        navigationSteps.i_see_that_no_product_is_selected();
-    }
-
-    public void i_am_on_order_page_and_outpost_is_selected() {
-        navigationSteps.i_am_on_order_page();
-        navigationSteps.i_see_that_outpost_is_selected();
-    }
-
-    public void i_am_on_order_page_and_sentinel_is_selected() {
-        navigationSteps.i_am_on_order_page();
-        navigationSteps.i_see_that_sentinel_is_selected();
     }
 
     public void i_am_on_pricing_page() {
