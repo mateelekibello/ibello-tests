@@ -1,4 +1,4 @@
-tags = @full-test @navigation
+tags = @full-test @navigation @nav
 Navigation bar test = true
 title = Testing navigation on ibello.hu
 

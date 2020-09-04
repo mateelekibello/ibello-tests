@@ -1,6 +1,6 @@
 tags = @full-test @navigation @nav-order
 Navigation bar test = true
-title = Testing order process on ibello.hu
+title = Testing navigation to different order pages of products
 
 state TEST INIT
 state HOME PAGE

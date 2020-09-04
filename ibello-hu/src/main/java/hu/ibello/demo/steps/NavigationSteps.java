@@ -319,6 +319,10 @@ public class NavigationSteps extends StepLibrary {
         ibelloPage.click_download_button();
     }
 
+    public void i_navigate_from_changelog_page_to_documentations_page() {
+        changelogPage.click_more_documentation_button();
+    }
+
     public void i_see_that_online_automated_testing_is_selected() {
         quotationPage.assume_online_testing_checkbox_is_selected();
         quotationPage.assume_automated_tests_checkbox_is_not_selected();

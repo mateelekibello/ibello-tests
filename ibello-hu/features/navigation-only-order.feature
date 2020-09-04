@@ -1,7 +1,7 @@
 @full-test @navigation @nav-order
-Feature: Testing order process on ibello.hu
+Feature: Testing navigation to different order pages of products
 
-Scenario: Testing order process on ibello.hu #1
+Scenario: Testing navigation to different order pages of products #1
 	Given navigation order: test init
 	And navigation order: i am on homepage
 	When navigation order: from homepage header i navigate to product page

@@ -1,4 +1,14 @@
 docLane = element {
     cssSelector 'doc-lane'
     expect_doc_lane_is_displayed = expect toBe displayed
+    hidden
+}
+
+moreDocumentationButton = clickable {
+    cssSelector 'a[href=\'#all-docs\']'
+    descendantOf {
+        className 'lane-doc-footer'
+    }
+    xpath '/html[1]/body[1]/router-view[1]/doc-footer-lane[1]/div[1]/a[1]'
+    click_more_documentation_button = action click
 }

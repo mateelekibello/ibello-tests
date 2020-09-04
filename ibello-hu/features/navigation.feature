@@ -1,4 +1,4 @@
-@full-test @navigation
+@full-test @navigation @nav
 Feature: Testing navigation on ibello.hu
 
 Scenario: Testing navigation on ibello.hu #1

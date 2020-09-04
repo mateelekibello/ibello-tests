@@ -93,6 +93,10 @@ public class NavigationWorkflow extends StepLibrary{
         navigationSteps.i_navigate_from_support_page_to_installation_documentation_page();
     }
 
+    public void from_changelog_page_i_navigate_to_documentations_page() {
+       navigationSteps.i_navigate_from_changelog_page_to_documentations_page();
+    }
+
     public void i_am_on_about_page() {
         navigationSteps.i_am_on_about_page();
     }
