@@ -1,5 +1,4 @@
 {
   "id": "invalid_password",
-  "invalidPwd": "xxx",
-  "nameOrEmail": "test_valid"
+  "invalidPwd": "xxx"
 }
