@@ -18,3 +18,5 @@ local.properties
 /tmp/
 /test-output/
 /test-data/
+/.classpath
+/.project
