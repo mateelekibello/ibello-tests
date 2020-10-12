@@ -38,6 +38,11 @@
     {
       "visible": true,
       "logical": false,
+      "possibleValues": [
+        "0",
+        "1",
+        "2"
+      ],
       "name": "error",
       "description": "How many error messeages should pop up?"
     },
@@ -261,5 +266,6 @@
     {
       "text": "Sending message with ${out}"
     }
-  ]
+  ],
+  "scenarioTags": []
 }
