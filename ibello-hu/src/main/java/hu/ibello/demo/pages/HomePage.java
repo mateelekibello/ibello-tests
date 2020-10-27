@@ -137,8 +137,4 @@ public class HomePage extends AbstractPage {
         doWith(moreOptionsButton).click();
     }
 
-    public void test() {
-        
-    }
-
 }
