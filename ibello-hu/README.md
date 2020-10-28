@@ -4,12 +4,24 @@
 
 1. Töltse le az ibello legfrissebb verzióját az alábbi oldalról: 
    https://ibello.hu/ibello/public/#interest
-2. Indítsa el, majd kövesse a telepítő utasításait.
+
+2. Indítsa el a telepítőt, majd kövesse az utasításait.
+
 3.  A `git clone https://github.com/kokog78/ibello-tests.git választott-könyvtár` parancs segítségével végezze el a klónozást, egy Ön által meghatározott könyvtárba.
+
+4. Indítsa el az ibello-t, amit két módon is megtehet:
+
+   - A leklónozott demo projekt könyvtárában az `ibello` parancs segítségével
+
+   - Az ibello telepítési könyvtárából az inditófájlra kattintással. Ebben az esetben az ibello grafikus felületén, a 'Projektek' menüben válassza ki az előzetesen leklónozott projekt könyvtárát, majd kattintson a 'Projekt megnyitása' gombra.
+
+5. Sikeres megnyitás esetén az alábbi ablakhoz hasonló fogadja Önt.
+
+   ![](/home/zolkasza/Képek/demo_projekt/nyito.png)
 
 ### Konfiguráció
 
-A teszt környezet alapértelmezett konfigurációját az ibello grafikus felületén, a `Konfiguráció` menüben végezhetjük el. Az itt beállított értékek a  `default.properties` fájlban kerülnek mentésre.
+Első lépésként érdemes a teszt környezet alap beállításait konfigurálni. Ezt az ibello grafikus felületén, a 'Konfiguráció' menüben végezhetjük el. Az itt beállított értékek a  `default.properties` fájlban kerülnek mentésre. A demo projektben az alábbi beállításokat használjuk:
 
 ![](/home/zolkasza/Képek/demo_projekt/config_hu.png)
 
