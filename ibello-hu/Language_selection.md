@@ -159,11 +159,19 @@ public class NavigationBarPanel extends PageObject {
 }
 ```
 
+#### Teszt első futtatása
 
+Ezzel a forgatókönyvünk első lépése elkészült. Az ibello grafikus felületén a 'Teszt tervezés/Forgatókönyvek' menüben a forgatókönyv mellett lévő 'Lejátszás' gomb segítségével futtassuk le a tesztet. 
 
+![](/home/zolkasza/Képek/demo_projekt/lejatszas.png)
 
+Ehhez azonban előszőr a 'Lejátszás' menüpontban indítsuk el a lejátszó ablakot, a "https://ibello.hu/ibello/public/" URL megadása után.
 
+![](/home/zolkasza/Képek/demo_projekt/lejatszo_ablak.png)
 
+Amennyiben mindent jól csináltunk, a teszt egy új böngésző ablakban lefut. Egyelőre csak elnavigál a kezdőoldalra és leellenőrzi annak megjelenését. A teszt futásának végeztével egy új ablak ugrik fel a teszt eredményével.
+
+![](/home/zolkasza/Képek/demo_projekt/elso_Teszt_siker.png)
 
 
 
