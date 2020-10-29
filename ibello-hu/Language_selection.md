@@ -72,8 +72,7 @@ Implementáljuk a kezdőoldal oldal-leíró osztályában az i_open_homepage() m
 
 #### `i_open_homepage()` metódus kifejtése
 
-Ehhez első lépésként hozzuk létre a 'HomePage' oldal-leíró fájlt az ibello grafikus felületén. Navigáljunk az 'Oldal-leírók' menübe majd kattintsunk az 'Új fájl' gombra. Adjunk a fájlnak valami beszédes nevet. A demo projektben a 'HomePage' nevet használtuk. Mivel ehhez a metódushoz nincs szükségünk semmilyen `WebElement` felvételére ezért térjünk vissza az általunk használt IDE-be és hozzunk létre egy 'HomePage' osztályt ami a 'PageObject' ősosztályból származik. Ezután már tudjuk használni a `browser()` metódust, aminek segítségével meg tudjuk nyitni a kezdőoldalt a kívánt méretben. Mivel a konfigurációban már megadtuk a tesztelendő alkalmazásunk URL előtagját (https://ibello.hu/ibello/public/) ezért az `openURL(String url)` metódusban már csak a kiegészítést kell megadnunk.
-
+Ehhez első lépésként hozzuk létre a 'HomePage' oldal-leíró fájlt az ibello grafikus felületén. Navigáljunk az 'Oldal-leírók' menübe majd kattintsunk az 'Új fájl' gombra. Adjunk a fájlnak valami beszédes nevet. A demo projektben a 'HomePage' nevet használtuk. Mivel ehhez a metódushoz nincs szükségünk semmilyen `WebElement` felvételére ezért térjünk vissza az általunk használt IDE-be és hozzunk létre egy 'HomePage' osztályt ami a 'PageObject' ősosztályból származik. Ezután már tudjuk használni a `browser()` metódust, aminek segítségével meg tudjuk nyitni a kezdőoldalt a kivánt méretben. Mivel a konfigurációban már megadtuk a tesztelendő alkalmazásunk URL előtagját (https://ibello.hu/ibello/public/) ezért az `openURL(String url)` metódusban már csak a kiegészítést kell megadnunk.
 ```
 public class HomePage extends PageObject { 
 
@@ -163,7 +162,11 @@ public class NavigationBarPanel extends PageObject {
 
 #### Teszt első futtatása
 
+<<<<<<< HEAD
 Ezzel a forgatókönyvünk első lépése elkészült. Az ibello grafikus felületén a 'Teszt tervezés/Forgatókönyvek' menüben a forgatókönyv mellett lévő 'Lejátszás' gomb segítségével futtassuk le a tesztet. **Fontos, hogy az IDE-ben történt változtatások csak akkor jelennek meg az ibello-ban ha már lefordítottuk a forráskódot.**
+=======
+Ezzel a forgatókönyvünk első lépése elkészült. Az ibello grafikus felületén a 'Teszt tervezés/Forgatókönyvek' menüben a forgatókönyv mellett lévő 'Lejátszás' gomb segítségével futtassuk le a tesztet. **Fontos, hogy az IDE-ben történt változtatások csak akkor jelennek meg az ibelloban ha már lefordítottuk a forráskódot.**
+>>>>>>> b85a72829f1ad7c942c0f09d92ae5b416d02445c
 
 ![](/home/zolkasza/Képek/demo_projekt/lejatszas.png)
 
@@ -245,7 +248,11 @@ A `@Model` annotáció segítségével az ibello tudja, hogy ez egy tesztadat mo
 
 #### `Languages` enum létrehozása
 
+<<<<<<< HEAD
 Hozzunk létre egy enum osztályt amiben a kiválasztható nyelveket tároljuk.
+=======
+Hozzunk létre egy enum osztályt amiben a kiválasztható nyelveket kezeljük.
+>>>>>>> b85a72829f1ad7c942c0f09d92ae5b416d02445c
 
 ```
 public enum Languages {
@@ -255,6 +262,7 @@ public enum Languages {
 ```
 
 #### Tesztadatok létrehozása
+<<<<<<< HEAD
 
 Annak érdekében, hogy a tesztadat vezérelt működés megvalósuljon, a magyar és az angol nyelvre is létre kell hoznunk egy-egy tesztadatot. Mivel azonban mind a két esetben ellenőrizni kell a megjelenített szövegeket ezért egy harmadik, 'alap' teszt adatra is szükségünk lesz.
 
@@ -327,6 +335,80 @@ public class LanguageSteps extends StepLibrary {
 }
 ```
 
+=======
+
+Annak érdekében, hogy a tesztadat vezérelt működés megvalósuljon, a magyar és az angol nyelvre is létre kell hoznunk egy-egy tesztadatot. Mivel azonban mind a két esetben ellenőrizni kell a megjelenített szövegeket ezért egy harmadik, 'alap' teszt adatra is szükségünk lesz.
+
+Az ibello grafikus felületén navigáljunk el a 'Tesztadatok/Fájlok' menübe és válasszuk ki az általunk létrehozott tesztadat modellt. A demo projektben ez 'Language Selection' néven szerepel. Amennyiben nem látjuk a modellt, bizonyosodjunk meg róla, hogy a `@Model` annotáció szerepel az osztályban illetve, hogy lefordítottuk a forráskódot. 
+
+Hozzuk létre az 'alap' tesztadatot:
+
+A 'Fájlok' menüpontban kattintsunk az 'Új fájl létrehozása' gombra, majd nevezzük el a fájlunkat. A demo projektben ez 'languageselection.json' néven szerepel. A 'Szerkesztés' gombot megnyomva, hozzuk létre az alábbi tesztadatot:
+
+```
+{
+  "id": "Texts",
+  "englishTexts": [
+    "ibello Test Framework",
+    "Our reasonableness strengthens our customers",
+    "If you need some good tests"
+  ],
+  "hungarianTexts": [
+    "ibello teszt keretrendszer",
+    "Észszerűségünk erőt ad ügyfeleinknek",
+    "Ha kell néhány jó teszt"
+  ]
+}
+```
+
+Amint létrehoztuk a fájlt, az megjelenik elérhető az általunk használt IDE-ben is a 'data' könyvtárban. 
+
+Látható, hogy a 'language' mezőt ebben a fájlban nem használjuk. Ez azért van mert az ibello működéséből adódóan tesztadatok betöltésekor először a cimke nélküli, majd a cimkével ellátott adatok töltődnek be. 
+
+Hozzunk létre a fentiek szerint két másik tesztadatot az angol és magyar nyelvhez! Fontos, hogy ezuttal lássuk el a tesztadatunkat különböző cimkékkel, amik segítségével a tesztünket futtatni fogjuk. 
+
+Az első tesztfájlunkhoz használjunk 'hu' cimkét. Ennek segítségével fogjuk a tesztben először ellenőrizni, hogy az alapértelmezett nyelv magyar. Utána az ebben szereplő 'language' érték alapján állítjuk majd át a nyelvet angolra.
+
+```
+{
+  "id": "HunToEng",
+  "language": "ENGLISH"
+}
+```
+
+A második tesztfájlunkhoz használjunk 'eng' cimkét. Ennek segítségével fogjuk a tesztben először ellenőrizni, hogy az alapértelmezett nyelv angol. Utána az ebben szereplő 'language' érték alapján állítjuk majd át a nyelvet magyarra.
+
+```
+{
+  "id": "EngToHun",
+  "language": "HUNGARIAN"
+}
+```
+
+#### `languageSteps.based_on_$_test_data_i_check_if_the_language_is_default(data)` metódus implementálása
+
+A tesztadat elkészítése után térjünk vissza a nyelv választást ellenőrző workflow-hoz. 
+
+```
+public void the_current_language_is_the_default() {
+    LanguageSelection data = testData().fromJson(LanguageSelection.class).load();
+    languageSteps.based_on_$_test_data_i_check_if_the_language_is_default(data);
+}
+```
+
+Ahogy azt korábban tárgyaltuk, a `testData().fromJson(LanguageSelection.class).load()` fogja betölteni a megadott cimke szerinti tesztadatot. A következő lépés a `languageSteps.based_on_$_test_data_i_check_if_the_language_is_default(data)` metódus implementálása. Ehhez a korábban bemutatott módon készítsünk egy 'LanguageSteps' osztályt. 
+
+```
+@Name("Language steps")
+public class LanguageSteps extends StepLibrary {
+
+	public void based_on_$_test_data_i_check_if_the_language_is_default(LanguageSelection 		data) { 
+	}
+	
+}
+```
+
+>>>>>>> b85a72829f1ad7c942c0f09d92ae5b416d02445c
 Ezután az alábbi módon egészítsük ki a létrehozott osztályunkat:
 
 ```
@@ -341,7 +423,11 @@ public class LanguageSteps extends StepLibrary {
     }
 ```
 
+<<<<<<< HEAD
 Hozzuk létre a `check_texts_based_on_$_test_data_with_$_boolean(LanguageSelection data, boolean isDefault)` metódust az osztályon belül. Ennek lesz a feladata az átadott tesztadat alapján ellenőrizni a kezdőoldalon megjelenő szövegeket. Az `isDefault` logikai paraméterre azért lesz szükségünk mert így, ezt az egy metódust használva le tudjuk ellenőrizni, hogy változtatás előtt az alapértelmezett nyelv megfelel-e az elvárt nyelvvel. Ezen kívül ismételt ellenőrzésre is alkalmas, miután a teszt későbbi szakaszában megváltoztatjuk a nyelvet. Utóbbihoz csupán `false` értéket kell átadnunk `isDefault` paraméterként. 
+=======
+Hozzuk létre a `check_texts_based_on_$_test_data_with_$_boolean(LanguageSelection data, boolean isDefault)` metódust az osztályon belül. Ennek lesz a feladata az átadott tesztadat alapján ellenőrizni a kezdőoldalon megjelenő szövegeket. Az `isDefault` logikai paraméterre azért lesz szükségünk mert így, ezt az egy metódust használva le tudjuk ellenőrizni, hogy változtatás előtt az alapértelmezett nyelv megfelel-e az elvárt nyelvvel. Ezen kívűl ismételt ellenőrzésre is alkalmas, miután a teszt későbbi szakaszában megváltoztatjuk a nyelvet. Utobbihoz csupán `false` értéket kell átadnunk `isDefault` paraméterként. 
+>>>>>>> b85a72829f1ad7c942c0f09d92ae5b416d02445c
 
 ```
 @Internal
@@ -382,7 +468,11 @@ A fenti kód működéséhez a korábban létrehozott 'NavigationBarPanel' oldal
 
 #### `navigationBar.click_language_link()` metódus implementálása
 
+<<<<<<< HEAD
 Az implementáláshoz használjuk ezúttal az ibello automatikus elem felvevőjét. Ehhez navigáljunk el az 'Oldal-leírók' menübe és válasszuk ki, az előzőleg létrehozott 'HomePage' oldal-leíró fájlt. Ezután kattintsunk az 'Új elem hozzáadása' gombra és a felugró ablakban válasszuk ki az 'Elem felvétele kattintással' opciót. Ennek működésének előfeltétele, hogy a felvevőablak meg legyen nyitva. Ezt a 'Felvevőablak' menüben  a 'https://ibello.hu/ibello/public/' URL megadásával tehetjük meg. Miután rákattintottunk az 'Elem felvétele' gombra, az egerünk mutatója egy piros körré változik. Ezt húzzuk rá a felvenni kívánt elemre, jelen esetben a nyelv választó gombra, majd kattintsunk. Ennek eredménye az alábbi képen látható:
+=======
+Az implementáláshoz használjuk ezőttal az ibello automatikus elem felvevőjét. Ehhez navigáljunk el az 'Oldal-leírók' menübe és válasszuk ki, az előzőleg létrehozott 'HomePage' oldal-leíró fájlt. Ezután kattintsunk az 'Új elem hozzáadása' gombra és a felugró ablakban válasszuk ki az 'Elem felvétele kattintással' opciót. Ennek működésének előfeltéte, hogy a felvevőablak meg legyen nyitva. Ezt a 'Felvevőablak' menüben  a 'https://ibello.hu/ibello/public/' URL megadásával tehetjük meg. Miután rákattintottunk az 'Elem felvétele' gombra, az egerünk mutatója egy piros körré változik. Ezt huzzuk rá a felvenni kívánt elemre, jelen esetben a nyelv választó gombra, majd kattintsunk. Ennek eredménye az alábbi képen látható:
+>>>>>>> b85a72829f1ad7c942c0f09d92ae5b416d02445c
 
 ![](/home/zolkasza/Képek/demo_projekt/elemfelvétel.png)
 
@@ -390,12 +480,21 @@ Az implementáláshoz használjuk ezúttal az ibello automatikus elem felvevőj�
 
 A felismerés sikerességét az 'Elem elhelyezkedésének tesztelése' gombra kattintva tudjuk ellenőrizni. Ezt megnyomva, a felvevőablakban megjelölésre kerül a felismert elem. Lehetőségünk van saját keresési szempontok alapján is rögzíteni egy elemet. Ebben az esetben különösen hasznos lehet a sikeresség visszaellenőrzése.
 
+<<<<<<< HEAD
 ![](/home/zolkasza/Képek/demo_projekt/elem_felvetel_ellenorzes.png)
 
 Ezután az 'elemmel történő műveletek' opcióban válasszuk ki a 'Kattintás' lehetőséget és a 'Műveletek automatikus elnevezése' gombbal töltsük ki a megnevezés mezőt. A 'Bezárás' gombra kattintás után a felvett elemünk készen van a használatra. Ahhoz, hogy ezt a forráskódba be tudjuk illeszteni először java kódot kell generálni belőle. Ehhez jelöljük ki a felvett elemünk melletti jelölőnégyzetet és kattintsunk a 'Generált kód' opcióra. Innen a generált kódot másoljuk be az oldal-leíró osztályunkba.
 
 ```
 @Find(by = By.BUTTON_TEXT, using = "▼")
+=======
+![](/home/zolkasza/Képek/demo_projekt/elemkijeloles.png)
+
+Ezután az 'elemmel történő műveletek' opcióban válasszuk ki a 'Kattintás' lehetőséget és a 'Műveletek automatikus elnevezése' gombbal töltsük ki a megnevezés mezőt. A 'Bezárás' gombra kattintás után a felvett elemünk készen van a használatra. Ahhoz, hogy ezt a forráskódba be tudjuk illeszteni először java kódot kell generálni belőle. Ehhez jelöljük ki a felvett elemünk melletti jelőlőnégyzetet és kattintsunk a 'Generált kód' opcióra. Innen a generált kódot másoljuk be az oldal-leíró osztályunkba.
+
+```
+@Find(by = By.ID, using = "language-selector")
+>>>>>>> b85a72829f1ad7c942c0f09d92ae5b416d02445c
 private WebElement languageLink;
 
 public void click_language_link() {
@@ -403,7 +502,17 @@ public void click_language_link() {
 }
 ```
 
+<<<<<<< HEAD
 A bemutatott módon vegyük fel az angol és magyar nyelvi választó gombjához tartozó `WebElement` objektumokat is.  Ezzel a tesztünk második lépésével is készen vagyunk. Ahhoz azonban, hogy tesztelni tudjuk a konzolból, a cucumber segítségével kell elindítanunk a tesztet. Erre a tesztadatokban használt címkék miatt van szükség. Ugyanis a grafikus felületről indított futtatás esetén nincs lehetőség címkék megadására. A konzolban navigáljunk el a projektünket tartalmazó könyvtárba majd adjuk ki az `ibello cucumber -thu -tlanguage` parancsot. A `-thu` megadja, hogy a 'hu' címkével rendelkező tesztadatot töltse be. A '-tlanguage' nyelvválasztó ellenőrzésére megírt forgatókönyvhöz tartozó cimkét jelöli. Mivel a tesztelés ezen fázisában még csak ez az egy jellemzőnk van, ezért ez elhagyható.
 
 A teszt további lépéseit nem részletezzük, de a demó projektben a teljes teszt implementálásra került.
+=======
+A demo projektben erre az elemre saját, `id` alapú keresést alkalmaztunk.
 
+A bemutatott módon vegyük fel az angol és magyar nyelvi választó gombjához tartozó `WebElement` objektumokat is.  Ezzel a tesztünk második lépésével is készen vagyunk. Ahhoz azonban, hogy tesztelni tudjuk a konzolból, a cucumber segítségével kell elindítanunk a tesztet. Erre a tesztadatokban használt cimkék miatt van szükség. Ugyanis a grafikus felületről indított futtatás esetén nincs lehetőség cimkék megadására. A konzolban navigáljunk el a projektünket tartalmazó könyvtárba majd adjuk ki az `ibello cucumber -thu -tlanguage` parancsot. A `-thu` megadja, hogy a 'hu' cimkével rendelkező tesztadatot töltse be. A '-tlanguage' nyelvválasztó ellenőrzésére megírt forgatókönyvhöz tartozó cimkét jelöli. Mivel a tesztelés ezen fázisában még csak ez az egy jellemzőnk van, ezért ez elhagyható.
+
+A teszt további lépéseit nem részletezzuk, de a demo projektben a teljes teszt implementálásra került.
+>>>>>>> b85a72829f1ad7c942c0f09d92ae5b416d02445c
+
+
+```
