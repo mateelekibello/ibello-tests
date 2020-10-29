@@ -135,4 +135,5 @@ moreOptionsButton = clickable {
         className 'lane-support-summary'
     }
     click_more_options_button = action click
+    hidden
 }

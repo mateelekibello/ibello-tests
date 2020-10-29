@@ -28,8 +28,7 @@ public class NavigationBarPanel extends PageObject {
     @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "menu-component")
     private WebElement supportLink;
 
-    @Find(by = By.ID, using = "language-selector")
-    @Relation(type = RelationType.DESCENDANT_OF, by = By.CSS_SELECTOR, using = "menu-component")
+    @Find(by = By.BUTTON_TEXT, using = "▼")
     private WebElement languageLink;
 
     @Find(by = By.CSS_SELECTOR, using = "a[title='magyar']")

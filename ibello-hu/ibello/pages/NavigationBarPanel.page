@@ -39,13 +39,9 @@ supportLink = clickable {
 }
 
 languageLink = clickable {
-    id 'language-selector'
-    descendantOf {
-        cssSelector 'menu-component'
-    }
+    buttonText '▼'
     xpath '/html[1]/body[1]/menu-component[1]/div[2]/a[1]'
     click_language_link = action click
-    hidden
 }
 
 hungarianLink = clickable {
@@ -76,10 +72,6 @@ homeLink = clickable {
     hidden
 }
 
-unknown = element {
-    hidden
-}
-
 menuComponent = element {
     cssSelector 'menu-component'
     expect_menu_component_is_displayed = expect toBe displayed
@@ -92,6 +84,7 @@ productDirectLink = clickable {
         id 'menu'
     }
     click_product_direct_link = action click
+    hidden
 }
 
 servicesDirectLink = clickable {
@@ -100,6 +93,7 @@ servicesDirectLink = clickable {
         id 'menu'
     }
     click_services_direct_link = action click
+    hidden
 }
 
 aboutDirectLink = clickable {
@@ -108,6 +102,7 @@ aboutDirectLink = clickable {
         id 'menu'
     }
     click_about_direct_link = action click
+    hidden
 }
 
 supportDirectLink = clickable {
@@ -116,4 +111,5 @@ supportDirectLink = clickable {
         id 'menu'
     }
     click_support_direct_link = action click
+    hidden
 }
