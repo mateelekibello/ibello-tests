@@ -38,7 +38,7 @@ Ez a kód nem kerül be automatikus a forráskódba. Ehhez először hozzunk lé
 
 #### `i_am_on_homepage()` metódus kifejtése
 
-A teszt első lépéseként implementáljuk az `i_am_on_homepage()` metódust, amivel megnyitjuk a kezdő oldalt. Mivel ez egy egyszerű lépés ezért ennek a metódusnak a törzsében egyetlen metódus hívás lesz. Ennek ellenére a különböző szinteket (workflow, steps, page object) meg kell tartanunk a későbbi újrafelhasználhatóság érdekében. A kezdőoldal megnyitásának logikáját szervezzük ki a 'NavigationSteps' osztályba, hogy a workflow áttekinthető maradjon. 
+A teszt első lépéseként implementáljuk az `i_am_on_homepage()` metódust, amivel megnyitjuk a kezdő oldalt. Mivel ez egy egyszerű lépés ezért ennek a metódusnak a törzsében egyetlen metódus hívás lesz. Ennek ellenére a különböző szinteket (workflow, steps, page object) meg kell tartanunk a későbbi újrafelhasználhatóság érdekében. A kezdőoldal megnyitásának logikáját szervezzük ki a 'NavigationSteps' osztályba, hogy későbbi forgatókönyvekhez is fel tudjuk használni. 
 
 ```
 private NavigationSteps navigationSteps;
@@ -53,24 +53,115 @@ public void i_am_on_homepage() {
 Hozzunk létre az IDE-ben egy új, 'NavigationSteps' osztályt. Fontos, hogy minden 'steps' osztály a 'StepLibrary' osztályból kell, hogy leszármazzon. 
 
 ```
-public void i_open_the_homepage() {
-    homePage.i_open_homepage();
-    i_am_on_homepage();
+@Name("Navigation steps")
+public class NavigationSteps extends StepLibrary {
+
+	private HomePage homePage;
+
+	public void i_open_the_homepage() {
+    	homePage.i_open_homepage();
+    	i_am_on_homepage();
+	}
+
+}
+```
+
+Ebben a metódusban két másik metódust is meghívunk. Az első, `homePage.i_open_homepage()` a kezdőoldalhoz tartozó oldal-leíró osztályban lévő metódus, ami ténylegesen megnyitja az ibello kezdőoldalát. TODO Először az oldal-leíró osztályt injektálnunk kell ahhoz, hogy a metódusait használni tudjuk (private HomePage homePage). A második,  `i_am_on_homepage()` metódus azt ellenőrzi, hogy valóban a kezdőoldalon vagyunk.
+
+Implementáljuk a kezdőoldal oldal-leíró osztályában az i_open_homepage() metódust!
+
+#### `i_open_homepage()` metódus kifejtése
+
+Ehhez első lépésként hozzuk létre a 'HomePage' osztályt ami a 'PageObject' ősosztályból származik. Ezután már tudjuk használni a `browser()` metódust, aminek segítségével meg tudjuk nyitni a kezdőoldalt a kivánt méretben. Mivel a konfigurációban már megadtuk a tesztelendő alkalmazásunk URL előtagját (https://ibello.hu/ibello/public/) ezért az `openURL(String url)` metódusban már csak a kiegészítést kell megadnunk.
+
+```
+public class HomePage extends PageObject { 
+
+    public void i_open_homepage() {
+        browser().resize(2000, 1000);
+        browser().maximize();
+        browser().openURL("/#home");
+    }
+    
+}
+```
+
+Következő lépésként fejtsük ki az `i_am_on_homepage()` metódust a 'NavigationSteps' osztályunkban!
+
+#### `i_am_on_homepage()` metódus kifejtése
+
+Ezzel a metódussal ellenőrizzük, hogy valóban a kezdő oldalon vagyunk. Ehhez három további metódust használunk:
+
+1. `homePage.expect_url_is_$(url)`: egy átadott paraméter segítségével ellenőrizzük a megjelenő url-t
+2. `homePage.i_expect_main_lane_is_displayed()`: ellenőrizzük, hogy egy általunk választott elem megjelent
+3. `navigationBar.expect_menu_component_is_displayed()`: ellenőrizzük, hogy az oldal tetején lévő navigációs panel megjelent
+
+```
+@Name("Navigation steps")
+public class NavigationSteps extends StepLibrary {
+
+	private HomePage homePage;
+	private NavigationBarPanel navigationBar;
+
+	public void i_am_on_homepage() {
+    	String url = "/#home";
+    	homePage.expect_url_is_$(url);
+   		homePage.i_expect_main_lane_is_displayed();
+    	navigationBar.expect_menu_component_is_displayed();
+	}
+	
+}
+```
+
+Az első két metódust a már létrehozott 'HomePage' oldal-leíró osztályunkban kell implementálni. A harmadik metódus viszont egy új 'NavigationBar' oldal-leíró osztályba kerül kifejtésre. Ennek oka csupán a struktúráltság növelése. Ezek az ellenőrzések elhagyhatóak lehetnek, de előfordulhat olyan eset, hogy egy oldal lassan töltődik be és ellenőrzés nélkül a tesztünk eltörne. 
+
+Egészítsük ki a már létrehozott 'HomePage' osztályunkat a fent említett két metódussal!
+
+#### `homePage.expect_url_is_$(url)` és `homePage.i_expect_main_lane_is_displayed()`kifejtése
+
+Az URL vizsgálatához ismét a `browser()` metódust alkalmazzuk. Az ellvárt URL-t paraméterként adjuk át a metódusnak és lágy ellenőrzést használunk, hogy egy esetleges hiba esetén a teszt tovább fusson.
+
+```
+public void expect_url_is_$(String url) {
+    expectations().assume(browser()).toHave().url(url);
+}
+```
+
+A demo projektben ezt a metódust egy abstract oldal-leíró osztályba szerveztük ki, mivel a további tesztek folyamán más oldal-leíró osztályok is használják.
+
+A második metódus segítségével leellenőrizzük, hogy az oldal egy része megjelenet-e.
+
+![](/home/zolkasza/Képek/demo_projekt/main_lane.png)
+
+    @Find(by = By.CSS_SELECTOR, using = "welcome-main-lane")
+    private WebElement mainLane;
+    
+    public void i_expect_main_lane_is_displayed() {
+        expectations().expect(mainLane).toBe().displayed();
+    }
+A harmadik, `navigationBar.expect_menu_component_is_displayed()` metódus segítségével az oldal tetején látható navigációs mező megjelenését ellenőrizzük. Ezt a fent említett módon, egy külön oldal-leíró osztályban implementáljuk.
+
+Hozzunk létre egy 'NavigationBarPanel' osztályt ami szintén a 'PageObject' ősosztályból származik.
+
+Vegyük fel a képen pirossal bekeretezett navigációs mező elemet, és ellenőrizzük a láthatóságát. 
+
+![](/home/zolkasza/Képek/demo_projekt/navbar.png)
+
+```
+public class NavigationBarPanel extends PageObject {
+
+    @Find(by = By.CSS_SELECTOR, using = "menu-component")
+    private WebElement menuComponent;
+
+    public void expect_menu_component_is_displayed() {
+        expectations().expect(menuComponent).toBe().displayed();
+    }
 }
 ```
 
 
 
-```
-public void i_am_on_homepage() {
-    String url = "/#home";
-    homePage.expect_url_is_$(url);
-    homePage.i_expect_main_lane_is_displayed();
-    navigationBar.expect_menu_component_is_displayed();
-}
-```
 
-Ehhez tartozo homePAge és navigationBar page objectek
 
 
 
