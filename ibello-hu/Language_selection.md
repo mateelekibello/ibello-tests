@@ -66,7 +66,7 @@ public class NavigationSteps extends StepLibrary {
 }
 ```
 
-Ebben a metódusban két másik metódust is meghívunk. Az első, `homePage.i_open_homepage()` a kezdőoldalhoz tartozó oldal-leíró osztályban lévő metódus, ami ténylegesen megnyitja az ibello kezdőoldalát. TODO Először az oldal-leíró osztályt injektálnunk kell ahhoz, hogy a metódusait használni tudjuk (private HomePage homePage). A második,  `i_am_on_homepage()` metódus azt ellenőrzi, hogy valóban a kezdőoldalon vagyunk.
+Ebben a metódusban két másik metódust is meghívunk. Az első, `homePage.i_open_homepage()` a kezdőoldalhoz tartozó oldal-leíró osztályban lévő metódus, ami ténylegesen megnyitja az ibello kezdőoldalát. Először az oldal-leíró osztályt injektálnunk kell ahhoz, hogy a metódusait használni tudjuk (private HomePage homePage). A második,  `i_am_on_homepage()` metódus azt ellenőrzi, hogy valóban a kezdőoldalon vagyunk.
 
 Implementáljuk a kezdőoldal oldal-leíró osztályában az i_open_homepage() metódust!
 
@@ -390,20 +390,18 @@ Az implementáláshoz használjuk ezúttal az ibello automatikus elem felvevőj�
 
 A felismerés sikerességét az 'Elem elhelyezkedésének tesztelése' gombra kattintva tudjuk ellenőrizni. Ezt megnyomva, a felvevőablakban megjelölésre kerül a felismert elem. Lehetőségünk van saját keresési szempontok alapján is rögzíteni egy elemet. Ebben az esetben különösen hasznos lehet a sikeresség visszaellenőrzése.
 
-![](/home/zolkasza/Képek/demo_projekt/elemkijeloles.png)
+![](/home/zolkasza/Képek/demo_projekt/elem_felvetel_ellenorzes.png)
 
 Ezután az 'elemmel történő műveletek' opcióban válasszuk ki a 'Kattintás' lehetőséget és a 'Műveletek automatikus elnevezése' gombbal töltsük ki a megnevezés mezőt. A 'Bezárás' gombra kattintás után a felvett elemünk készen van a használatra. Ahhoz, hogy ezt a forráskódba be tudjuk illeszteni először java kódot kell generálni belőle. Ehhez jelöljük ki a felvett elemünk melletti jelölőnégyzetet és kattintsunk a 'Generált kód' opcióra. Innen a generált kódot másoljuk be az oldal-leíró osztályunkba.
 
 ```
-@Find(by = By.ID, using = "language-selector")
+@Find(by = By.BUTTON_TEXT, using = "▼")
 private WebElement languageLink;
 
 public void click_language_link() {
     doWith(languageLink).click();
 }
 ```
-
-A demó projektben erre az elemre saját, `id` alapú keresést alkalmaztunk.
 
 A bemutatott módon vegyük fel az angol és magyar nyelvi választó gombjához tartozó `WebElement` objektumokat is.  Ezzel a tesztünk második lépésével is készen vagyunk. Ahhoz azonban, hogy tesztelni tudjuk a konzolból, a cucumber segítségével kell elindítanunk a tesztet. Erre a tesztadatokban használt címkék miatt van szükség. Ugyanis a grafikus felületről indított futtatás esetén nincs lehetőség címkék megadására. A konzolban navigáljunk el a projektünket tartalmazó könyvtárba majd adjuk ki az `ibello cucumber -thu -tlanguage` parancsot. A `-thu` megadja, hogy a 'hu' címkével rendelkező tesztadatot töltse be. A '-tlanguage' nyelvválasztó ellenőrzésére megírt forgatókönyvhöz tartozó cimkét jelöli. Mivel a tesztelés ezen fázisában még csak ez az egy jellemzőnk van, ezért ez elhagyható.
 
