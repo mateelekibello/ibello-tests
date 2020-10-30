@@ -16,7 +16,7 @@ Ebben a dokumentumban végigvesszük az https://ibello.hu/ oldalon elérhető ny
 
 Jellemzőknek nevezzük azokat a `.feature` kiterjesztésű fájlokat, amik a teszt forgatókönyveket tartalmazzák. 
 
-Új jellemző létrehozásához kattintsunk a 'Teszt tervezés' menün belül a 'Forgatókönyvek' opcióra. Az 'Új fájl' gombra kattintva adjuk meg a létrehozni kívánt fájl, illetve a jellemző nevét. Az 'Ok' gomb megnyomásával a jellemző létrejön. A demó projektben használt jellemző a 'changing-language' nevet viseli. Az újonnan létrehozott jellemzőbe vegyünk fel egy új forgatókönyvet. Ehhez kattintsunk az 'Új forgatókönyv létrehozása' gombra. A forgatókönyvek elkészítésekor a Gherkin nyelv szabályai alapján a 'Given', 'When', 'Then' és 'And' kulcsszavak használhatóak. A nyelv választó teszteléséhez a forgatókönyvet a 'teszt lépései' szekcióban lévő pontok alapján írjuk meg. 
+Új jellemző létrehozásához kattintsunk a 'Teszt tervezés' menün belül a 'Forgatókönyvek' opcióra. Az 'Új fájl' gombra kattintva adjuk meg a létrehozni kívánt fájl, illetve a jellemző nevét. Az 'Ok' gomb megnyomásával a jellemző létrejön. A demó projektben használt jellemző a 'changing-language' nevet viseli. Az újonnan létrehozott jellemzőbe vegyünk fel egy új forgatókönyvet. Ehhez kattintsunk az 'Új forgatókönyv létrehozása' gombra. A forgatókönyvek elkészítésekor a Gherkin nyelv szabályai alapján a 'Given', 'When', 'Then' és 'And' kulcsszavak használhatóak. A nyelv választó teszteléséhez a forgatókönyvet a 'teszt lépései' szekcióban lévő pontok alapján írjuk meg. Mivel a tesztlépések még nincsenek implementálva ezért a grafikus felületen pirossal aláhúzva jelennek meg.
 
 ![](/home/zolkasza/Képek/demo_projekt/forgatókönyv.png)
 
@@ -34,7 +34,7 @@ Ennek létrehozásához navigáljunk a 'Tesztlépések' menün belül a 'Nem lé
 
 ![](/home/zolkasza/Képek/demo_projekt/generalt_lépések.png)
 
-Ez a kód nem kerül be automatikus a forráskódba. Ehhez először hozzunk létre egy java osztályt, majd a generált kódot másoljuk be abba. A demó projektben az ehhez a teszthez tartozó workflow-t 'LanguageWorkflow' néven találja meg.
+Ez a kód nem kerül be automatikus a forráskódba. Ehhez először hozzunk létre egy java osztályt a workflow-nak, majd a generált kódot másoljuk be abba. A demó projektben az ehhez a teszthez tartozó workflow-t 'LanguageWorkflow' néven található meg.
 
 ### `i_am_on_homepage()` metódus kifejtése
 
@@ -66,7 +66,7 @@ public class NavigationSteps extends StepLibrary {
 }
 ```
 
-Ebben a metódusban két másik metódust is meghívunk. Az első, `homePage.i_open_homepage()` a kezdőoldalhoz tartozó oldal-leíró osztályban lévő metódus, ami ténylegesen megnyitja az ibello kezdőoldalát. Először az oldal-leíró osztályt injektálnunk kell ahhoz, hogy a metódusait használni tudjuk (private HomePage homePage). A második,  `i_am_on_homepage()` metódus azt ellenőrzi, hogy valóban a kezdőoldalon vagyunk.
+Ebben a metódusban két másik metódust is meghívunk. Az első, `homePage.i_open_homepage()` a kezdőoldalhoz tartozó, oldal-leíró osztályban lévő metódus, ami ténylegesen megnyitja az ibello kezdőoldalát. Először az oldal-leíró osztályt injektálnunk kell ahhoz, hogy a metódusait használni tudjuk (private HomePage homePage). A második,  `i_am_on_homepage()` metódus azt ellenőrzi, hogy valóban a kezdőoldalon vagyunk.
 
 Implementáljuk a kezdőoldal oldal-leíró osztályában az `i_open_homepage()` metódust!
 
@@ -89,7 +89,7 @@ Következő lépésként fejtsük ki az `i_am_on_homepage()` metódust a 'Naviga
 
 #### `i_am_on_homepage()` metódus kifejtése
 
-Ezzel a metódussal ellenőrizzük, hogy valóban a kezdő oldalon vagyunk. Ehhez három további metódust használunk:
+Ezzel a metódussal ellenőrizzük, hogy valóban a kezdőoldalon vagyunk. Ehhez három további metódust használunk:
 
 1. `homePage.expect_url_is_$(url)`: egy átadott paraméter segítségével ellenőrizzük a megjelenő URL-t
 2. `homePage.i_expect_main_lane_is_displayed()`: ellenőrizzük, hogy egy általunk választott elem megjelent
@@ -162,13 +162,13 @@ public class NavigationBarPanel extends PageObject {
 
 #### Teszt első futtatása
 
-Ezzel a forgatókönyvünk első lépése elkészült. Az ibello grafikus felületén a 'Teszt tervezés/Forgatókönyvek' menüben a forgatókönyv mellett lévő 'Lejátszás' gomb segítségével futtassuk le a tesztet. **Fontos, hogy az IDE-ben történt változtatások csak akkor jelennek meg az ibelloban ha már lefordítottuk a forráskódot.**
-
-![](/home/zolkasza/Képek/demo_projekt/lejatszas.png)
-
-Ehhez azonban először a 'Lejátszás' menüpontban indítsuk el a lejátszó ablakot, a "https://ibello.hu/ibello/public/" URL megadása után.
+Ezzel a forgatókönyvünk első lépése elkészült. Az ibello grafikus felületén a 'Teszt tervezés/Forgatókönyvek' menüben a forgatókönyv mellett lévő 'Lejátszás' gomb segítségével futtassuk le a tesztet. Ehhez azonban először a 'Lejátszás' menüpontban indítsuk el a lejátszó ablakot, a "https://ibello.hu/ibello/public/" URL megadása után.**Fontos, hogy az IDE-ben történt változtatások csak akkor jelennek meg az ibelloban ha már lefordítottuk a forráskódot.**
 
 ![](/home/zolkasza/Képek/demo_projekt/lejatszo_ablak.png)
+
+
+
+![](/home/zolkasza/Képek/demo_projekt/lejatszas.png)
 
 Amennyiben mindent jól csináltunk, a teszt egy új böngésző ablakban lefut. Egyelőre csak elnavigál a kezdőoldalra és leellenőrzi annak megjelenését. A teszt futásának végeztével egy új ablak ugrik fel a teszt eredményével.
 
@@ -279,7 +279,7 @@ A 'Fájlok' menüpontban kattintsunk az 'Új fájl létrehozása' gombra, majd n
 
 Amint létrehoztuk a fájlt, az megjelenik elérhető az általunk használt IDE-ben is a 'data' könyvtárban. 
 
-Látható, hogy a 'language' mezőt ebben a fájlban nem használjuk. Ez azért van mert az ibello működéséből adódóan tesztadatok betöltésekor először a címke nélküli, majd a címkével ellátott adatok töltődnek be. 
+Látható, hogy a 'language' mezőt ebben a fájlban nem használjuk. Ez azért van, mert az ibello működéséből adódóan tesztadatok betöltésekor először a címke nélküli, majd a címkével ellátott adatok töltődnek be. Mi a 'language' mező értékét egy másik tesztadatból szeretnénk feltölteni.
 
 Hozzunk létre a fentiek szerint két másik tesztadatot az angol és magyar nyelvhez! Fontos, hogy ezúttal lássuk el a tesztadatunkat különböző címkékkel, amik segítségével a tesztünket futtatni fogjuk. 
 
@@ -388,7 +388,11 @@ Mivel a nyelvválaszó gomb egy interaktív elem ezért használhatjuk az ibello
 A felismerés sikerességét az 'Elem elhelyezkedésének tesztelése' gombra kattintva tudjuk ellenőrizni. Ezt megnyomva, a felvevőablakban megjelölésre kerül a felismert elem. Lehetőségünk van saját keresési szempontok alapján is rögzíteni egy elemet. Ebben az esetben különösen hasznos lehet a sikeresség visszaellenőrzése.
 ![](/home/zolkasza/Képek/demo_projekt/elem_felvetel_ellenorzes.png)
 
-Ezután az 'elemmel történő műveletek' opcióban válasszuk ki a 'Kattintás' lehetőséget és a 'Műveletek automatikus elnevezése' gombbal töltsük ki a megnevezés mezőt. A 'Bezárás' gombra kattintás után a felvett elemünk készen van a használatra. Ahhoz, hogy ezt a forráskódba be tudjuk illeszteni először java kódot kell generálni belőle. Jelöljük ki a felvett elemünk melletti jelölőnégyzetet és kattintsunk a 'Generált kód' opcióra. Innen, a generált kódot másoljuk be az oldal-leíró osztályunkba.
+Ezután az 'elemmel történő műveletek' opcióban válasszuk ki a 'Kattintás' lehetőséget és a 'Műveletek automatikus elnevezése' gombbal töltsük ki a megnevezés mezőt.
+
+![](/home/zolkasza/Képek/demo_projekt/webelement_muvelet.png)
+
+ A 'Bezárás' gombra kattintás után a felvett elemünk készen van a használatra. Ahhoz, hogy ezt a forráskódba be tudjuk illeszteni először java kódot kell generálni belőle. Jelöljük ki a felvett elemünk melletti jelölőnégyzetet és kattintsunk a 'Generált kód' opcióra. Innen, a generált kódot másoljuk be az oldal-leíró osztályunkba.
 
 ```
 @Find(by = By.BUTTON_TEXT, using = "▼")
