@@ -10,17 +10,17 @@ Ebben a dokumentumban végigvesszük az https://ibello.hu/ oldalon elérhető ny
   ![](/home/zolkasza/Képek/demo_projekt/nyelvvalasztas.png)
 - leellenőrizzük, hogy a nyelv megváltozott
 - visszaállítjuk az eredeti nyelvet
-- leellenőrizzük, hogy a megjelenő oldal a rendszerünknek megfelelő nyelven jelenik meg
+- leellenőrizzük, hogy az oldal ismét a rendszerünknek megfelelő nyelven jelenik meg
 
 ### Jellemző létrehozása
 
 Jellemzőknek nevezzük azokat a `.feature` kiterjesztésű fájlokat, amik a teszt forgatókönyveket tartalmazzák. 
 
-Új jellemző létrehozásához kattintsunk a 'Teszt tervezés' menün belül a 'Forgatókönyvek' opcióra. Az 'Új fájl' gombra kattintva adjuk meg a létrehozni kívánt fájl, illetve a jellemző nevét. Az 'Ok' gomb megnyomásával a jellemző létrejön. A demó projektben használt jellemző a 'changing-language' nevet viseli. Az újonnan létrehozott jellemzőbe vegyünk fel egy új forgatókönyvet. Ehhez kattintsunk az 'Új forgatókönyv létrehozása' gombra. A forgatókönyvek elkészítésekor a Gherkin nyelvi szabályok alapján a 'Given', 'When', 'Then' és 'And' kulcsszavak használhatóak. A nyelv választó teszteléséhez a forgatókönyvet a 'teszt lépései' szekcióban lévő pontok alapján írjuk meg. 
+Új jellemző létrehozásához kattintsunk a 'Teszt tervezés' menün belül a 'Forgatókönyvek' opcióra. Az 'Új fájl' gombra kattintva adjuk meg a létrehozni kívánt fájl, illetve a jellemző nevét. Az 'Ok' gomb megnyomásával a jellemző létrejön. A demó projektben használt jellemző a 'changing-language' nevet viseli. Az újonnan létrehozott jellemzőbe vegyünk fel egy új forgatókönyvet. Ehhez kattintsunk az 'Új forgatókönyv létrehozása' gombra. A forgatókönyvek elkészítésekor a Gherkin nyelv szabályai alapján a 'Given', 'When', 'Then' és 'And' kulcsszavak használhatóak. A nyelv választó teszteléséhez a forgatókönyvet a 'teszt lépései' szekcióban lévő pontok alapján írjuk meg. 
 
 ![](/home/zolkasza/Képek/demo_projekt/forgatókönyv.png)
 
-A tesztlépésekben látható 'Language' a használt névteret jelöli. Ahhoz, hogy később az egyes jellemzőket külön is tudjuk futtatni érdemes cimkéket használni. A demo projektben a @full-test címke az összes jellemzőben a @language csak ebben a jellemzőben van használva. 
+A tesztlépésekben látható 'Language' a használt névteret jelöli. Ahhoz, hogy később az egyes jellemzőket külön is tudjuk futtatni érdemes cimkéket használni. A demó projektben a @full-test címke az összes jellemzőben, a @language csak ebben a jellemzőben van használva. 
 
 Ezzel a jellemző a forgatókönyvvel elkészült és a projekt/fetatures/ mappában megtalálható.  
 
@@ -38,7 +38,7 @@ Ez a kód nem kerül be automatikus a forráskódba. Ehhez először hozzunk lé
 
 ### `i_am_on_homepage()` metódus kifejtése
 
-A teszt első lépéseként implementáljuk az `i_am_on_homepage()` metódust, amivel megnyitjuk a kezdő oldalt. Mivel ez egy egyszerű lépés ezért ennek a metódusnak a törzsében egyetlen metódus hívás lesz. Ennek ellenére a különböző szinteket (workflow, steps, page object) meg kell tartanunk a későbbi újrafelhasználhatóság érdekében. A kezdőoldal megnyitásának logikáját szervezzük ki a 'NavigationSteps' osztályba, hogy a későbbi forgatókönyvekhez is fel tudjuk használni. 
+A teszt első lépéseként implementáljuk az `i_am_on_homepage()` metódust, amivel a kezdő oldalt nyitjuk meg. Mivel ez egy egyszerű lépés ezért ennek a metódusnak a törzsében egyetlen metódus hívás lesz. Ennek ellenére a különböző szinteket (workflow, steps, page object) meg kell tartanunk a későbbi újrafelhasználhatóság érdekében. A kezdőoldal megnyitásának logikáját szervezzük ki a 'NavigationSteps' osztályba, hogy a későbbi forgatókönyvekhez is fel tudjuk használni. 
 
 ```
 private NavigationSteps navigationSteps;
@@ -68,11 +68,11 @@ public class NavigationSteps extends StepLibrary {
 
 Ebben a metódusban két másik metódust is meghívunk. Az első, `homePage.i_open_homepage()` a kezdőoldalhoz tartozó oldal-leíró osztályban lévő metódus, ami ténylegesen megnyitja az ibello kezdőoldalát. Először az oldal-leíró osztályt injektálnunk kell ahhoz, hogy a metódusait használni tudjuk (private HomePage homePage). A második,  `i_am_on_homepage()` metódus azt ellenőrzi, hogy valóban a kezdőoldalon vagyunk.
 
-Implementáljuk a kezdőoldal oldal-leíró osztályában az i_open_homepage() metódust!
+Implementáljuk a kezdőoldal oldal-leíró osztályában az `i_open_homepage()` metódust!
 
 #### `i_open_homepage()` metódus kifejtése
 
-Ehhez első lépésként hozzuk létre a 'HomePage' oldal-leíró fájlt az ibello grafikus felületén. Navigáljunk az 'Oldal-leírók' menübe majd kattintsunk az 'Új fájl' gombra. Adjunk a fájlnak valami beszédes nevet. A demo projektben a 'HomePage' nevet használtuk. Mivel ehhez a metódushoz nincs szükségünk semmilyen `WebElement` felvételére ezért térjünk vissza az általunk használt IDE-be és hozzunk létre egy 'HomePage' osztályt ami a 'PageObject' ősosztályból származik. Ezután már tudjuk használni a `browser()` metódust, aminek segítségével meg tudjuk nyitni a kezdőoldalt a kivánt méretben. Mivel a konfigurációban már megadtuk a tesztelendő alkalmazásunk URL előtagját (https://ibello.hu/ibello/public/) ezért az `openURL(String url)` metódusban már csak a kiegészítést kell megadnunk.
+Első lépésként hozzuk létre a 'HomePage' oldal-leíró fájlt az ibello grafikus felületén. Ehhez navigáljunk az 'Oldal-leírók' menübe majd kattintsunk az 'Új fájl' gombra. Adjunk a fájlnak valami beszédes nevet. A demo projektben a 'HomePage' nevet használtuk. Mivel ehhez a metódushoz nincs szükségünk semmilyen `WebElement` felvételére ezért térjünk vissza az általunk használt IDE-be és hozzunk létre egy 'HomePage' osztályt ami a 'PageObject' ősosztályból származik. Ezután már tudjuk használni a `browser()` metódust, aminek segítségével meg tudjuk nyitni a kezdőoldalt a kivánt méretben. Mivel a konfigurációban már megadtuk a tesztelendő alkalmazásunk URL előtagját (https://ibello.hu/ibello/public/) ezért az `openURL(String url)` metódusban már csak a kiegészítést kell megadnunk.
 ```
 public class HomePage extends PageObject { 
 
@@ -126,7 +126,7 @@ public void expect_url_is_$(String url) {
 }
 ```
 
-A demo projektben ezt a metódust egy abstract oldal-leíró osztályba szerveztük ki, mivel a további tesztek folyamán más oldal-leíró osztályok is használják.
+A demó projektben ezt a metódust egy abstract oldal-leíró osztályba szerveztük ki, mivel a további tesztek folyamán más oldal-leíró osztályok is használják.
 
 A második metódus segítségével leellenőrizzük, hogy az oldal egy része megjelent-e.
 
@@ -162,11 +162,7 @@ public class NavigationBarPanel extends PageObject {
 
 #### Teszt első futtatása
 
-<<<<<<< HEAD
-Ezzel a forgatókönyvünk első lépése elkészült. Az ibello grafikus felületén a 'Teszt tervezés/Forgatókönyvek' menüben a forgatókönyv mellett lévő 'Lejátszás' gomb segítségével futtassuk le a tesztet. **Fontos, hogy az IDE-ben történt változtatások csak akkor jelennek meg az ibello-ban ha már lefordítottuk a forráskódot.**
-=======
 Ezzel a forgatókönyvünk első lépése elkészült. Az ibello grafikus felületén a 'Teszt tervezés/Forgatókönyvek' menüben a forgatókönyv mellett lévő 'Lejátszás' gomb segítségével futtassuk le a tesztet. **Fontos, hogy az IDE-ben történt változtatások csak akkor jelennek meg az ibelloban ha már lefordítottuk a forráskódot.**
->>>>>>> b85a72829f1ad7c942c0f09d92ae5b416d02445c
 
 ![](/home/zolkasza/Képek/demo_projekt/lejatszas.png)
 
