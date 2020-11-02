@@ -11,6 +11,7 @@
    - Ha az oktató dokumentumok szerint magad hoznád létre a demó projekt feladatát, az `ibello init --gradle` (maven esetén `--maven`) parancs segítségével hozz létre egy új projektet egy általad választott könyvtárban.
 
 4. Indítsd el az ibello-t:
+- ![#f03c15](Itt nem sikerült magamtól rejönni, hogy itt nem egy háromlépéses folyamatról van szó, így szükségét érzem, hogy meg legyen jelölve, hogy minek függvényében melyik lépésre van szükség.) `#f03c15`
 
    - A leklónozott demo projekt könyvtárában az `ibello` parancs segítségével
    - Az általad létrehozott új projekt könyvtárában az `ibello` parancs segítségével
